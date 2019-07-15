@@ -102,9 +102,11 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
             sourceCodeNode.type = "sourcecode"
             sourceCodeNode.url = `https://github.com/${elem.uri}`;
             parent.add(sourceCodeNode);
+            break;
           }
           case "repository": {
             //
+            break;
           }
         }
       }

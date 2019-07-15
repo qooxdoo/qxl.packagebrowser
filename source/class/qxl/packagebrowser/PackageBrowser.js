@@ -28,8 +28,15 @@
 /**
  * The GUI definition of the qooxdoo unit test runner.
  *
- * @asset(qx/icon/Tango/22/actions/media-playback-start.png)
  * @asset(qx/icon/Tango/16/actions/edit-find.png)
+ * @asset(qx/icon/Tango/16/places/folder.png)
+ * @asset(qx/icon/Tango/16/places/folder-open.png)
+ * @asset(qx/icon/Tango/16/mimetypes/text-plain.png)
+ * @asset(qx/icon/Tango/16/mimetypes/archive.png)
+ * @asset(qx/icon/Tango/16/actions/document-properties.png)
+ * @asset(qx/icon/Tango/16/actions/go-home.png)
+ * @asset(qx/icon/Tango/16/apps/utilities-archiver.png)
+ * @asset(qx/icon/Tango/22/actions/media-playback-start.png)
  * @asset(qx/icon/Tango/22/actions/go-previous.png)
  * @asset(qx/icon/Tango/22/actions/go-next.png)
  * @asset(qx/icon/Tango/22/actions/edit-redo.png)
@@ -44,9 +51,8 @@
  * @asset(qx/icon/Tango/22/actions/help-about.png)
  * @asset(qx/icon/Tango/22/actions/media-seek-forward.png)
  * @asset(qx/icon/Tango/22/mimetypes/text-html.png)
- * @asset(qx/icon/Tango/16/places/folder.png)
- * @asset(qx/icon/Tango/16/places/folder-open.png)
- * @asset(qx/icon/Tango/16/mimetypes/text-plain.png)
+
+ * @asset(resource/qxl/packagebrowser/icon/github-16x16.png)
  *
  * @ignore(location.*)
  * @ignore(qx.$$appRoot)
@@ -54,6 +60,17 @@
 qx.Class.define("qxl.packagebrowser.PackageBrowser",
 {
   extend : qx.ui.container.Composite,
+
+  statics: {
+    icons: {
+      owner: "resource/qxl/packagebrowser/icon/github-16x16.png",
+      repository: "qx/icon/Tango/16/apps/utilities-archiver.png",
+      folder: "qx/icon/Tango/16/apps/utilities-archiver.png",
+      library: "qx/icon/Tango/16/mimetypes/archive.png",
+      homepage: "qx/icon/Tango/16/actions/go-home.png",
+      sourcecode: "qx/icon/Tango/16/actions/document-properties.png"
+    }
+  },
 
   construct : function()
   {
@@ -361,7 +378,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
         converter : function(data) {
           return data === "visible";
         }
-      }
+      };
       qx.data.SingleValueBinding.bind(this._runbutton, "visibility", prevbutt, "enabled", navButtonOptions);
       qx.data.SingleValueBinding.bind(this._runbutton, "visibility", nextbutt, "enabled", navButtonOptions);
 
@@ -649,7 +666,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       this.tree = this.widgets["treeview.flat"] = tree1;
 
       tree1.addListener("changeSelection", this.treeGetSelection, this);
-      tree1.addListener("dbltap", function(e){
+      tree1.addListener("tap", function(e){
         qx.event.Timer.once(this.runSample, this, 50);
       }, this);
 
@@ -742,6 +759,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
         }
       }
 
+      let icons = this.self(arguments).icons;
+
       // use tree struct
       /**
        * create widget tree from model
@@ -752,8 +771,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
        *        model root for the tree from which the widgets representation
        *        will be built
        */
-      function buildSubTree(widgetR, modelR)
-      {
+      const buildSubTree = (widgetR, modelR) => {
         var children = modelR.getChildren();
         var t;
 
@@ -764,8 +782,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
           if (currNode.hasChildren())
           {
             t = new qx.ui.tree.TreeFolder(currNode.label);
-            // set icon based on type here
-
             t.setUserData("filled", false);
             t.setUserData("node", currNode);
 
@@ -810,12 +826,18 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
             _sampleToTreeNodeMap[fullName] = t;
           }
 
+          // set icon
+          let type = currNode.type;
+          if (type && icons[type]) {
+            t.setIcon(icons[type]);
+          }
+
           // make connections
           widgetR.add(t);
           t.setUserData("modelLink", currNode);
           currNode.widgetLinkFull = t;
         }
-      }
+      };
 
       // -- Main --------------------------------
       var ttree = this.tests.handler.ttree;
@@ -877,19 +899,23 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       }
 
       if (value instanceof qxl.packagebrowser.Tree) {
-        if (value.url) {
-          url = value.url;
-        } else if (value.manifest) {
-         html = `<pre>${JSON.stringify(value.manifest, null, 2)}</pre>`;
+        switch (value.type) {
+          case "sourcecode":
+          case "homepage":
+            url = value.url;
+            break;
+          case "library":
+            html = `<pre>${JSON.stringify(value.manifest, null, 2)}</pre>`;
+            break;
         }
       }
 
       if (!html && !url) {
-        url = qx.$$appRoot + this.defaultUrl;
+        url = location.origin + "/" + this.defaultUrl;
       }
 
       // if we have a cross-domain url, we cannot open it in the iFrame
-      if (url && !url.startsWith(qx.$$appRoot) ) {
+      if (url && !url.startsWith(location.origin) ) {
         html = `<p>Click on the following link to open it in a new window: <a target="_blank" href="${url}">${url}</a>`;
       }
 
