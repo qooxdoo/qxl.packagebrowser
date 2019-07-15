@@ -40,7 +40,6 @@ qx.Class.define("qxl.packagebrowser.Application",
   construct : function()
   {
     this.base(arguments);
-
     // Include CSS files
     var uri = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/css/style.css");
     qx.bom.Stylesheet.includeFile(uri);

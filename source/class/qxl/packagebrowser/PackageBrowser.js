@@ -217,6 +217,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     __jsView: null,
     __logView: null,
     __viewGroup: null,
+    __selectedModelNode: null,
 
     defaultUrl : "../resource/qxl/packagebrowser/welcome.html",
 
@@ -709,7 +710,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       var treeNode = this.tree.getSelection()[0];
       this._runbutton.setEnabled(!treeNode.hasChildren());
       var modelNode = treeNode.getUserData("modelLink");
-      this.tests.selected = this.tests.handler.getFullName(modelNode);
+      this.__selectedModelNode = modelNode;
     },
 
 
@@ -845,9 +846,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
      */
     runSample : function(e)
     {
-      if (this.tests.selected && this.tests.selected != "") {
-        var file = this.tests.selected.replace(".", "/");
-        this.setCurrentSample(file);
+      if (this.__selectedModelNode) {
+        this.setCurrentSample(this.__selectedModelNode);
       } else {
         this.playNext();
       }
@@ -865,21 +865,39 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       if (!value) {
         return;
       }
+      let url;
+      let html;
 
-      if (!this._sampleToTreeNodeMap) {
+      if (typeof value == "string" && !value.startsWith("http") && this._sampleToTreeNodeMap) {
+        var treeNode = this._sampleToTreeNodeMap[value];
+        if (treeNode) {
+          treeNode.getTree().setSelection([treeNode]);
+          value = treeNode;
+        }
+      }
+
+      if (value instanceof qxl.packagebrowser.Tree) {
+        if (value.url) {
+          url = value.url;
+        } else if (value.manifest) {
+         html = `<pre>${JSON.stringify(value.manifest, null, 2)}</pre>`;
+        }
+      }
+
+      if (!html && !url) {
+        url = qx.$$appRoot + this.defaultUrl;
+      }
+
+      // if we have a cross-domain url, we cannot open it in the iFrame
+      if (url && !url.startsWith(qx.$$appRoot) ) {
+        html = `<p>Click on the following link to open it in a new window: <a target="_blank" href="${url}">${url}</a>`;
+      }
+
+      // write html instead of loading from remote url
+      if (html) {
+        this._iframe.getDocument().body.innerHTML = html;
         return;
       }
-
-      var url;
-      var treeNode = this._sampleToTreeNodeMap[value];
-      if (treeNode){
-        treeNode.getTree().setSelection([treeNode]);
-        url = 'demo/' + value;
-      } else {
-        url = this.defaultUrl;
-      }
-
-      url = qx.$$appRoot + url;
 
       if (this._iframe.getSource() === url)
       {

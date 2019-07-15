@@ -35,7 +35,9 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
 
     __makeSorter(prop) {
       return (a, b) => {
-        return (a[prop] < b[prop]) ? -1 : (a[prop] > b[prop]) ? 1 : 0;
+        return (
+          a[prop].toLocaleLowerCase() < b[prop].toLocaleLowerCase()) ? -1 :
+          (a[prop].toLocaleLowerCase() > b[prop].toLocaleLowerCase()) ? 1 : 0;
       };
     },
 
@@ -81,16 +83,28 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
       for (let elem of pkgData) {
         let path = elem.uri.split("/");
         let parent = this.__createPath(root, path, types);
-        if (elem.type === "library") {
-          let lib = new qxl.packagebrowser.Tree(elem.name);
-          lib.type = "library";
-          lib.info = elem.info;
-          parent.add(lib);
-
-          if (elem.info.homepage) {
-            let homepageNode = new qxl.packagebrowser.Tree("Homepage");
-            homepageNode.type = "homepage";
-            parent.add(homepageNode);
+        switch (elem.type) {
+          case "library": {
+            let description = elem.description;
+            let label = elem.name;
+            let lib = new qxl.packagebrowser.Tree(label);
+            lib.type = "library";
+            lib.manifest = elem.manifest;
+            parent.add(lib);
+            let homepage = elem.manifest.info.homepage;
+            if (homepage) {
+              let homepageNode = new qxl.packagebrowser.Tree("Homepage");
+              homepageNode.type = "homepage";
+              homepageNode.url = homepage;
+              parent.add(homepageNode);
+            }
+            let sourceCodeNode = new qxl.packagebrowser.Tree("Source code");
+            sourceCodeNode.type = "sourcecode"
+            sourceCodeNode.url = `https://github.com/${elem.uri}`;
+            parent.add(sourceCodeNode);
+          }
+          case "repository": {
+            //
           }
         }
       }

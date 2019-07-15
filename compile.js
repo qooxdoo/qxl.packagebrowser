@@ -1,12 +1,18 @@
-qx.Class.define("qxl.demobrowser.compile.LibraryApi", {
+qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
   extend: qx.tool.cli.api.LibraryApi,
 
   members: {
+    __initialCompile : false,
     async load() {
       let command = this.getCompilerApi().getCommand();
-      command.addListener("writtenApplication", (e) => this.__appCompiling(e.getData()));
+      command.addListener("remaking", this.__onRemaking);
+      command.addListener("writtenApplication", (e) => this.__onWrittenApplication(e.getData()));
     },
-    __appCompiling(application) {
+    __onRemaking() {
+      console.log("__onRemaking");
+    },
+
+    __onWrittenApplication(application) {
       let className = application.getClassName();
       if (className !== "qxl.packagebrowser.Application") {
         return;
@@ -15,7 +21,7 @@ qx.Class.define("qxl.demobrowser.compile.LibraryApi", {
       const outputDir = maker.getTarget().getOutputDir();
       const {execSync} = require('child_process');
       let cmds = [
-        `qx pkg update`,
+        //`qx pkg update`,
         `qx pkg list --json --all > ${outputDir}/resource/qxl/packagebrowser/package-data.json`
       ];
       for (let cmd of cmds){
@@ -27,5 +33,5 @@ qx.Class.define("qxl.demobrowser.compile.LibraryApi", {
 });
 
 module.exports = {
-  LibraryApi: qxl.demobrowser.compile.LibraryApi
+  LibraryApi: qxl.packagebrowser.compile.LibraryApi
 };

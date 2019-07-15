@@ -35,7 +35,8 @@ qx.Class.define("qxl.packagebrowser.Tree",
     this.label = arguments[0] || "";
     this.children = [];
     this.parent = null;
-    this.data = null;
+    this.manifest = null;
+    this.url = null;
   },
 
 
@@ -228,7 +229,9 @@ qx.Class.define("qxl.packagebrowser.Tree",
           return i;
         }
       }
-    }
+    },
+
+
   },
 
 
