@@ -745,19 +745,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       var _initialNode = null;
 
       // set a section to open initially
-      var state = this._history.getState();
-
-      var section =  state.match(/([^~]+)~/);
-      if (section) {
-        // demo preselected, e.g. #bom~Clip.html
-        _initialSection = section[1];
-      } else {
-        var category = state.match(/([^~][\w]*)/);
-        if (category) {
-          // category preselected, e.g. #widget
-          _initialSection = category[1];
-        }
-      }
+      var state = this._history.getState().replace(/\~/g,"/");
 
       let icons = this.self(arguments).icons;
 
@@ -777,7 +765,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
 
         for (var i=0; i<children.length; i++)
         {
-          var currNode = children[i];
+          let currNode = children[i];
+          let fullPath;
 
           if (currNode.hasChildren())
           {
@@ -808,22 +797,21 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
             t.setUserData("tags", tags);
 
             buildSubTree(t, t.getUserData("node"));
-
-            if (currNode.label === _initialSection) {
-              _initialNode = t;
-              t.setOpen(true);
-            }
+            fullPath = currNode.pwd().slice(1).concat([currNode.label]).join("/");
           }
           else
           {
-            // When the node has no type, it is a folder without childeren
-            if (!currNode.type) {
-              continue;
-            }
-
             t = new qx.ui.tree.TreeFile(currNode.label);
-            var fullName = currNode.pwd().slice(1).join("/") + "/" + currNode.label;
-            _sampleToTreeNodeMap[fullName] = t;
+            fullPath = currNode.pwd().slice(1).concat([currNode.type]).join("/");
+          }
+
+          _sampleToTreeNodeMap[fullPath] = t;
+          if (fullPath === state) {
+            _initialNode = t;
+            if (t instanceof qx.ui.tree.TreeFolder)
+            {
+              t.setOpen(true);
+            }
           }
 
           // set icon
@@ -849,9 +837,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       this.tree.getRoot().setOpen(true)
       buildSubTree(this.tree.getRoot(), ttree);
 
-
       if (_initialNode != null) {
-        this.tree.setSelection([_initialNode]);
+        this.setCurrentSample(_initialNode);
       }
       else {
         this.tree.setSelection([this.tree.getRoot()]);
@@ -882,23 +869,35 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
      * @param value {var} TODOC
      * @return {void}
      */
-    setCurrentSample : function(value)
-    {
+    setCurrentSample : function(value){
+
+      if ( value === this.__currentSample) {
+        return;
+      }
+      this.__currentSample = value;
       if (!value) {
         return;
       }
-      let url;
+
+      let treeNode;
+      let state;
+      let url = location.origin + "/" + this.defaultUrl;
       let html;
 
-      if (typeof value == "string" && !value.startsWith("http") && this._sampleToTreeNodeMap) {
-        var treeNode = this._sampleToTreeNodeMap[value];
-        if (treeNode) {
-          treeNode.getTree().setSelection([treeNode]);
-          value = treeNode;
+      if (typeof value == "string") {
+        state = value;
+        if (!value.startsWith("http") && this._sampleToTreeNodeMap) {
+          treeNode = this._sampleToTreeNodeMap[value];
+          if (treeNode) {
+            value = treeNode;
+            treeNode.getTree().setSelection([treeNode]);
+          }
         }
       }
 
       if (value instanceof qxl.packagebrowser.Tree) {
+        treeNode = value;
+        state = state || treeNode.pwd().slice(1).concat([treeNode.type]).join("/");
         switch (value.type) {
           case "sourcecode":
           case "homepage":
@@ -907,11 +906,14 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
           case "library":
             html = `<pre>${JSON.stringify(value.manifest, null, 2)}</pre>`;
             break;
+          default:
+            state = treeNode.pwd().slice(1).concat([treeNode.label]).join("/");
         }
       }
 
-      if (!html && !url) {
-        url = location.origin + "/" + this.defaultUrl;
+      if (state) {
+        state = state.replace(/\//g,"~");
+        this._history.setState(state);
       }
 
       // if we have a cross-domain url, we cannot open it in the iFrame
@@ -925,12 +927,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
         return;
       }
 
-      if (this._iframe.getSource() === url)
-      {
-        this._iframe.reload();
-      }
-      else
-      {
+      if (this._iframe.getSource() !== url) {
         this.__logDone = false;
         this._iframe.setSource(url);
         this._iframe.addListener("load", function () {
@@ -1025,12 +1022,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
             }
 
             // update state on example change
-            this._history.addToHistory(this._currentSample.replace("/", "~"), document.title);
+            this._history.addToHistory(this._currentSample.replace(/\//g, "~"), document.title);
 
-            // load sample source code
-            if (this._currentSampleUrl != this.defaultUrl) {
-              this.__getPageSource(this._currentSampleUrl);
-            }
           }
         }
         else
@@ -1118,85 +1111,24 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     },
 
 
-    /**
-     * This method re-gets (through XHR) the HTML page of the current demo.  The page is
-     * then scanned (in the request callback) for the second "<script>" tag, which
-     * supposedly loads the demo application .js.  The 'src' uri of this script tag is
-     * then used to construct the uri of the corresponding Javascript source file, which
-     * is then loaded into the source tab (through another XHR).
-     *
-     * @param url {var} TODOC
-     * @return {String} TODOC
-     */
-    __getPageSource : function(url)
-    {
-      if( typeof(url) != "string" ){
-        return;
-      }
-
-      // create a and config request to the given url
-      var req = new qx.io.request.Xhr(url);
-      req.setTimeout(180000);
-
-      req.addListener("success", function(evt)
-      {
-        // get the content of the request
-        var content = evt.getTarget().getResponse();
-        // if there is a content
-        if (content) {
-          if (qx.core.Environment.get("qx.contrib") == false) {
-            // extract the name of the js file
-            var secondSrcTagPosition = content.indexOf("<script", content.indexOf("<script")+7);
-            var srcAttributeStart = content.indexOf("src", secondSrcTagPosition);
-            var srcAttributeEnd = content.indexOf("\"", srcAttributeStart + 5);
-            var jsFileName = content.substring(srcAttributeStart + 5, srcAttributeEnd);
-            var jsSourceFileName = jsFileName.substring(4, jsFileName.length - 3) + ".src.js";
-
-
-            // construct url to demo script source
-            var u = "script/qxl.packagebrowser.demo";
-            var parts = url.split('/');
-            var cat = parts[1];
-            var base = parts[2];
-            base = base.substr(0, base.indexOf('.html'))
-            u += "." + cat + "." + base + ".src.js";
-            jsSourceFileName = u;
-
-            // get the javascript code
-            var reqJSFile = new qx.io.request.Xhr(jsSourceFileName);
-            reqJSFile.setTimeout(18000);
-
-            reqJSFile.addListener("success", function() {
-              var jsCode = reqJSFile.getResponse();
-
-              // store the current visible code
-              this.__setCurrentJSCode(jsCode);
-
-              if (jsCode) {
-                // set the javascript code to the javascript page
-                this.widgets["outputviews.sourcepage.js.page"].setHtml(this.__beautySource(jsCode, "javascript"));
-              }
-            }, this);
-
-            reqJSFile.addListener("fail", function() {
-              this.error("Couldn't load file: " + url);
-            }, this);
-
-            // send the request for the javascript code
-            reqJSFile.send();
-
-            // write the html code to the html page
-            this.widgets["outputviews.sourcepage.html.page"].setHtml(this.__beautySource(content));
+    async __getPageSource(url) {
+      return new Promise((resolve,reject) => {
+        var req = new qx.io.request.Xhr(url);
+        req.setTimeout(180000);
+        req.addListener("success", function(evt)
+        {
+          var content = evt.getTarget().getResponse();
+          if (content) {
+            return resolve(content);
           }
-        }
-      }, this);
-      // add a listener which handles the failure of the request
-      req.addListener("fail", function(evt) {
-        this.error("Couldn't load file: " + url);
-      }, this);
-      // send the request for the html file
-
-      req.send();
+          return reject(new Error("No content from request "));
+        }, this);
+        // add a listener which handles the failure of the request
+        req.addListener("fail", function(evt) {
+          return reject(new Error("Couldn't load file: " + url));
+        }, this);
+        req.send();
+      });
     },
 
 
@@ -1234,10 +1166,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
           this.leftReloadTree();
 
           // read initial state
-          var state = this._history.getState();
+          var state = this._history.getState().replace(/\~/g,"/");
 
           if (state) {
-            this.setCurrentSample(state.replace("~", "/"));
+            this.setCurrentSample(state);
           } else {
             this.setCurrentSample(this.defaultUrl);
           }
@@ -1326,7 +1258,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
           return;
         }
 
-        if (otherSamp.getParent() == this.tree.getRoot()) {
+        if (otherSamp.getParent() === this.tree.getRoot()) {
           otherSamp.setOpen(true);
           otherSamp = this.tree.getNextNodeOf(otherSamp);
         }
@@ -1341,7 +1273,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
             // reached the last item
             return;
           }
-          if (candidate.getParent() == this.tree.getRoot()) {
+          if (candidate.getParent() === this.tree.getRoot()) {
             // found a folder
             otherSamp.setOpen(true);
             var candidate = this.tree.getNextNodeOf(candidate);
