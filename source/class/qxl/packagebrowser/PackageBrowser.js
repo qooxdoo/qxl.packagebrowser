@@ -36,6 +36,7 @@
  * @asset(qx/icon/Tango/16/actions/document-properties.png)
  * @asset(qx/icon/Tango/16/actions/go-home.png)
  * @asset(qx/icon/Tango/16/apps/utilities-archiver.png)
+ * @asset(qx/icon/Tango/16/status/dialog-information.png)
  * @asset(qx/icon/Tango/22/actions/media-playback-start.png)
  * @asset(qx/icon/Tango/22/actions/go-previous.png)
  * @asset(qx/icon/Tango/22/actions/go-next.png)
@@ -65,9 +66,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     icons: {
       owner: "resource/qxl/packagebrowser/icon/github-16x16.png",
       repository: "qx/icon/Tango/16/apps/utilities-archiver.png",
-      folder: "qx/icon/Tango/16/apps/utilities-archiver.png",
-      library: "qx/icon/Tango/16/mimetypes/archive.png",
+      folder: "qx/icon/Tango/16/mimetypes/archive.png",
+      library: "qx/icon/Tango/16/status/dialog-information.png",
       homepage: "qx/icon/Tango/16/actions/go-home.png",
+      readme: "qx/icon/Tango/16/mimetypes/text-plain.png",
       sourcecode: "qx/icon/Tango/16/actions/document-properties.png"
     }
   },
@@ -173,7 +175,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     this._history = qx.bom.History.getInstance();
     this._history.addListener("changeState", function(e)
     {
-      var newSample = e.getData().replace("~", "/");
+      var newSample = e.getData().replace(/~/g, "/");
 
       if (this._currentSample !== newSample) {
         this.setCurrentSample(newSample);
@@ -236,7 +238,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     __viewGroup: null,
     __selectedModelNode: null,
 
-    defaultUrl : "../resource/qxl/packagebrowser/welcome.html",
+    defaultUrl : location.origin + "/../resource/qxl/packagebrowser/welcome.html",
 
     __makeCommands : function()
     {
@@ -607,7 +609,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       var iframe = new qx.ui.embed.Iframe().set({
         nativeContextMenu: true
       });
-      iframe.addListener("load", this.__ehIframeLoaded, this);
+      iframe.addListener("load", this.__onIframeLoaded, this);
       this._iframe = iframe;
 
       return iframe;
@@ -863,135 +865,174 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     },
 
 
-    /**
-     * TODOC
-     *
-     * @param value {var} TODOC
-     * @return {void}
-     */
-    setCurrentSample : function(value){
-
-      if ( value === this.__currentSample) {
+    async setCurrentSample(value){
+      if ( value === this._currentSample) {
         return;
       }
-      this.__currentSample = value;
+
       if (!value) {
         return;
       }
 
       let treeNode;
+      let modelNode;
       let state;
-      let url = location.origin + "/" + this.defaultUrl;
+      let url;
       let html;
 
       if (typeof value == "string") {
-        state = value;
-        if (!value.startsWith("http") && this._sampleToTreeNodeMap) {
+        if (value.startsWith("http")) {
+          url = state = value;
+        } else {
+          state = value;
           treeNode = this._sampleToTreeNodeMap[value];
           if (treeNode) {
-            value = treeNode;
             treeNode.getTree().setSelection([treeNode]);
           }
         }
+      } else if (value instanceof qx.ui.tree.core.AbstractTreeItem) {
+        treeNode = value;
+      } else if (value instanceof qxl.packagebrowser.Tree) {
+        modelNode = value;
       }
 
-      if (value instanceof qxl.packagebrowser.Tree) {
-        treeNode = value;
-        state = state || treeNode.pwd().slice(1).concat([treeNode.type]).join("/");
-        switch (value.type) {
-          case "sourcecode":
-          case "homepage":
-            url = value.url;
-            break;
-          case "library":
-            html = `<pre>${JSON.stringify(value.manifest, null, 2)}</pre>`;
-            break;
-          default:
-            state = treeNode.pwd().slice(1).concat([treeNode.label]).join("/");
+      if (treeNode) {
+        modelNode = treeNode.getUserData("modelLink");
+        if (!modelNode) {
+          this.error("Could not find model node for " + value + " from tree node");
+          return;
         }
       }
 
-      if (state) {
+      if (modelNode) {
+        state = state || modelNode.pwd().slice(1).concat([modelNode.type]).join("/");
+        switch (modelNode.type) {
+          case "sourcecode":
+          case "homepage":
+            url = modelNode.url;
+            break;
+          case "library":
+            html = this.__getLibraryInfoHtml(modelNode.manifest);
+            break;
+          case "readme":
+            html = await this.__getHtmlFromGitHubApi(modelNode.url);
+            break;
+          default:
+            state = modelNode.pwd().slice(1).concat([modelNode.label]).join("/");
+            url = this.defaultUrl
+        }
+      } else if (!url) {
+        url = this.defaultUrl;
+      }
+
+      if (state && state !== this.defaultUrl) {
         state = state.replace(/\//g,"~");
         this._history.setState(state);
       }
 
       // if we have a cross-domain url, we cannot open it in the iFrame
       if (url && !url.startsWith(location.origin) ) {
-        html = `<p>Click on the following link to open it in a new window: <a target="_blank" href="${url}">${url}</a>`;
+        html = this.__getOpenLinkHtml(url);
       }
 
       // write html instead of loading from remote url
       if (html) {
+        if (this._iframe.getSource() !== this.defaultUrl) {
+          this.__replaceBody = html;
+          this.setCurrentSample(this.defaultUrl);
+          return;
+        }
         this._iframe.getDocument().body.innerHTML = html;
-        return;
-      }
-
-      if (this._iframe.getSource() !== url) {
-        this.__logDone = false;
-        this._iframe.setSource(url);
-        this._iframe.addListener("load", function () {
-          window.setTimeout(function() {
-            var cw = this._iframe.getWindow();
-          }.bind(this), 333);
-        }, this);
-      }
-
-      // Toggle menu buttons
-      if (url === this.defaultUrl) {
-        this.disableMenuButtons();
       } else {
-        this.enableMenuButtons();
+        if (this._iframe.getSource() !== url) {
+          this.__logDone = false;
+          this._iframe.setSource(url);
+          this._iframe.addListener("load", function () {
+            window.setTimeout(function() {
+              var cw = this._iframe.getWindow();
+              if (this.__replaceBody) {
+                this._iframe.getDocument().body.innerHTML = this.__replaceBody;
+                this.__replaceBody = null;
+              }
+            }.bind(this), 500);
+          }, this);
+        }
+        // Toggle menu buttons
+        if (url === this.defaultUrl) {
+          this.disableMenuButtons();
+        } else {
+          this.enableMenuButtons();
+        }
       }
 
       this._currentSample = value;
       this._currentSampleUrl = url;
     },
 
+    __getLibraryInfoHtml(manifest) {
+      return `<pre>${JSON.stringify(manifest, null, 2)}</pre>`;
+    },
 
-    __ehIframeLoaded : function()
-    {
-      var fwindow = this._iframe.getWindow();
-      var furl = this._iframe.getSource();
-      if (furl != null && furl !== this.defaultUrl)
-      {
-        var url;
-        try
-        {
-          url = fwindow.location.href;
-        }
-        catch(ex)
-        {
-          url = window.location.href;
-          var splitIndex = url.lastIndexOf("/");
-          if (splitIndex !== -1) {
-            url = url.substring(0, splitIndex + 1);
-          }
-          url += furl;
-        }
+    __getOpenLinkHtml(url) {
+      return `<p>Click on the following link to open it in a new window: <a target="_blank" href="${url}">${url}</a>`;
+    },
 
-        var posHtml = url.indexOf("/demo/") + 6;
-        var posSearch = url.indexOf("?");
-        posSearch = posSearch === -1 ? url.length : posSearch;
-        var split = url.substring(posHtml, posSearch).split("/");
-        var div = String.fromCharCode(187);
-
-        let title;
-        if (split.length === 2)
-        {
-          let category = split[0];
-          category = category.charAt(0).toUpperCase() + category.substring(1);
-          let pagename = split[1].replace(".html", "").replace(/_/g, " ");
-          pagename = pagename.charAt(0).toUpperCase() + pagename.substring(1);
-          title = "qooxdoo " + div + " Package Browser " + div + " " + category + " " + div + " " + pagename;
-        }
-        else
-        {
-          title = "qooxdoo " + div + " Package Browser " + div + " Start";
-        }
-
-        document.title = title;
+    async __getHtmlFromGitHubApi(url) {
+      if (!url) {
+        console.error("NO url!");
       }
+      console.log("Loading " + url);
+      try {
+        let result = await (await fetch(url)).json();
+        return await (await fetch(result.html_url)).text();
+      } catch (e) {
+        return `<p>Error retrieving ${url}: ${e.message}.</p>`;
+      }
+    },
+
+    __onIframeLoaded : function()
+    {
+      // var fwindow = this._iframe.getWindow();
+      // var furl = this._iframe.getSource();
+      // if (furl != null && furl !== this.defaultUrl)
+      // {
+      //   var url;
+      //   try
+      //   {
+      //     url = fwindow.location.href;
+      //   }
+      //   catch(ex)
+      //   {
+      //     url = window.location.href;
+      //     var splitIndex = url.lastIndexOf("/");
+      //     if (splitIndex !== -1) {
+      //       url = url.substring(0, splitIndex + 1);
+      //     }
+      //     url += furl;
+      //   }
+      //
+      //   var posHtml = url.indexOf("/demo/") + 6;
+      //   var posSearch = url.indexOf("?");
+      //   posSearch = posSearch === -1 ? url.length : posSearch;
+      //   var split = url.substring(posHtml, posSearch).split("/");
+      //   var div = String.fromCharCode(187);
+      //
+      //   let title;
+      //   if (split.length === 2)
+      //   {
+      //     let category = split[0];
+      //     category = category.charAt(0).toUpperCase() + category.substring(1);
+      //     let pagename = split[1].replace(".html", "").replace(/_/g, " ");
+      //     pagename = pagename.charAt(0).toUpperCase() + pagename.substring(1);
+      //     title = "qooxdoo " + div + " Package Browser " + div + " " + category + " " + div + " " + pagename;
+      //   }
+      //   else
+      //   {
+      //     title = "qooxdoo " + div + " Package Browser " + div + " Start";
+      //   }
+      //
+      //   document.title = title;
+      //}
     },
 
 

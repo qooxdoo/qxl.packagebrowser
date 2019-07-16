@@ -102,7 +102,12 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
             sourceCodeNode.type = "sourcecode"
             sourceCodeNode.url = `https://github.com/${elem.uri}`;
             parent.add(sourceCodeNode);
+            let readmeNode = new qxl.packagebrowser.Tree("Readme");
+            readmeNode.type = "readme"
+            readmeNode.url = `https://api.github.com/repos/${elem.uri}/readme`;
+            parent.add(readmeNode);
             break;
+
           }
           case "repository": {
             //
