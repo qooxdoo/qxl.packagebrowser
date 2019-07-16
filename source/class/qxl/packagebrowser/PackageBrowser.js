@@ -55,7 +55,6 @@
  * @asset(qxl/packagebrowser/icon/github-16x16.png)
  *
  * @ignore(location.*)
- * @ignore(qx.$$appRoot)
  */
 qx.Class.define("qxl.packagebrowser.PackageBrowser",
 {

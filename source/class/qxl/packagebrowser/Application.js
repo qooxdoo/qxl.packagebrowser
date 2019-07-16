@@ -34,7 +34,7 @@ qx.Class.define("qxl.packagebrowser.Application",
   extend : qx.application.Standalone,
 
   statics: {
-    PKG_DATA_URL : "../resource/qxl/packagebrowser/package-data.json"
+    PKG_DATA_URL : "qxl/packagebrowser/"
   },
 
   construct : function()
@@ -76,7 +76,7 @@ qx.Class.define("qxl.packagebrowser.Application",
     finalize : function()
     {
       this.base(arguments);
-      this.viewer.dataLoader(this.self(arguments).PKG_DATA_URL);
+      this.viewer.dataLoader(qx.$$appRoot + "package-data.json");
     }
   },
 
