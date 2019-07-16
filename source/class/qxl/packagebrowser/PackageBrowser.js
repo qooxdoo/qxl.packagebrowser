@@ -52,8 +52,7 @@
  * @asset(qx/icon/Tango/22/actions/help-about.png)
  * @asset(qx/icon/Tango/22/actions/media-seek-forward.png)
  * @asset(qx/icon/Tango/22/mimetypes/text-html.png)
-
- * @asset(resource/qxl/packagebrowser/icon/github-16x16.png)
+ * @asset(qxl/packagebrowser/icon/github-16x16.png)
  *
  * @ignore(location.*)
  * @ignore(qx.$$appRoot)
@@ -64,7 +63,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
 
   statics: {
     icons: {
-      owner: "resource/qxl/packagebrowser/icon/github-16x16.png",
+      owner: "qxl/packagebrowser/icon/github-16x16.png",
       repository: "qx/icon/Tango/16/apps/utilities-archiver.png",
       folder: "qx/icon/Tango/16/mimetypes/archive.png",
       library: "qx/icon/Tango/16/status/dialog-information.png",
@@ -79,6 +78,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     this.base(arguments);
 
     this.__menuItemStore = {};
+    this.defaultUrl = qx.$$appRoot.split(/\//).slice(0,-2).join("/") + "/resource/qxl/packagebrowser/welcome.html";
+    if (!this.defaultUrl.startsWith("http")) {
+      this.defaultUrl = location.origin + "/" + this.defaultUrl;
+    }
+    console.log(this.defaultUrl);
 
     // Configure layout
     var layout = new qx.ui.layout.VBox;
@@ -237,8 +241,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     __logView: null,
     __viewGroup: null,
     __selectedModelNode: null,
-
-    defaultUrl : location.origin + "/../resource/qxl/packagebrowser/welcome.html",
+    defaultUrl : null,
 
     __makeCommands : function()
     {
@@ -936,7 +939,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       }
 
       // write html instead of loading from remote url
-      if (html) {
+      if (html && this.defaultUrl) {
         if (this._iframe.getSource() !== this.defaultUrl) {
           this.__replaceBody = html;
           this.setCurrentSample(this.defaultUrl);
