@@ -912,7 +912,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
             url = modelNode.url;
             break;
           case "library":
-            html = this.__getLibraryInfoHtml(modelNode.manifest);
+            html = this.__getLibraryInfoHtml(modelNode);
             break;
           case "readme":
             html = await this.__getHtmlFromGitHubApi(modelNode.url);
@@ -969,8 +969,34 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       this._currentSampleUrl = url;
     },
 
-    __getLibraryInfoHtml(manifest) {
-      return `<pre>${JSON.stringify(manifest, null, 2)}</pre>`;
+    __getLibraryInfoHtml(modelNode) {
+      const lib = modelNode.manifest;
+      const req = lib.requires || {};
+      const repo_url = "https://github.com/" + modelNode.uri.split(/\//).slice(0,2).join("/");
+      const display = v => v ? "" : "display:none";
+      const dependencies = Object.entries(req).map(([pkg_uri, range]) => {
+        if (!pkg_uri.startsWith("@") && !pkg_uri.startsWith("qooxdoo-")) {
+          return `<li><a href="javascript:void(top.location.href='/#${pkg_uri}~library');">${pkg_uri}</a>: ${range}</li>`;
+        }
+      }).filter(v => Boolean(v));
+      html = `
+        <h1>${lib.info.name}</h1>
+        <h2 style="font-weight:bold;${display(lib.info.summary)}">${lib.info.summary}</h2>
+        <p>Version: ${lib.info.version}</p>
+        <p>Namespace: ${lib.provides.namespace}</p>
+        <p>Homepage: <a href="${lib.info.homepage}" target="_blank">${lib.info.homepage}</a></p>
+        <p>Repository: <a href="${repo_url}" target="_blank">${repo_url}</a></p>
+        <h2 style="${display(lib.info.description)}">Description</h2>
+        <p style="${display(lib.info.description)}">${lib.info.description}</p>
+        <h2>Dependencies</h2>
+        <ul>
+          <li>qooxdoo version: ${req["@qooxdoo/framework"] || req["qooxdoo-sdk"] }</li>
+          <li>Compiler version: ${req["@qooxdoo/compiler"] || req["qooxdoo-compiler"]}</li>        
+          ${dependencies.join("\n")}
+        </ul>
+        
+       `;
+      return html;
     },
 
     __getOpenLinkHtml(url) {
@@ -984,7 +1010,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       console.log("Loading " + url);
       try {
         let result = await (await fetch(url)).json();
-        return await (await fetch(result.html_url)).text();
+        return this.__getOpenLinkHtml(result.html_url);
       } catch (e) {
         return `<p>Error retrieving ${url}: ${e.message}.</p>`;
       }

@@ -90,6 +90,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
             let lib = new qxl.packagebrowser.Tree(label);
             lib.type = "library";
             lib.manifest = elem.manifest;
+            lib.uri = elem.uri;
             parent.add(lib);
             let homepage = elem.manifest.info.homepage;
             if (homepage) {
