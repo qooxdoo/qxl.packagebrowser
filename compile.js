@@ -18,7 +18,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       const {execSync} = require('child_process');
       let cmds = [
         `qx pkg update`,
-        `qx pkg list --json --all > ${outputDir}/resource/qxl/packagebrowser/package-data.json`
+        `qx pkg list --json --all > ${outputDir}resource/qxl/packagebrowser/package-data.json`
       ];
       for (let cmd of cmds){
         console.info(`>>> Executing '${cmd}'`);
