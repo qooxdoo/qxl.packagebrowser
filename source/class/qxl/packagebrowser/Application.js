@@ -33,9 +33,6 @@ qx.Class.define("qxl.packagebrowser.Application",
 {
   extend : qx.application.Standalone,
 
-  statics: {
-    PKG_DATA_URL : "qxl/packagebrowser/"
-  },
 
   construct : function()
   {
