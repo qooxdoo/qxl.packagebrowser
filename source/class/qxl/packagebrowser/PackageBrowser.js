@@ -78,11 +78,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
     this.base(arguments);
 
     this.__menuItemStore = {};
-    this.defaultUrl = qx.$$appRoot.split(/\//).slice(0,-2).join("/") + "/resource/qxl/packagebrowser/welcome.html";
-    if (!this.defaultUrl.startsWith("http")) {
-      this.defaultUrl = location.origin + "/" + this.defaultUrl;
-    }
-    console.log(this.defaultUrl);
+    this.defaultUrl = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/welcome.html");
 
     // Configure layout
     var layout = new qx.ui.layout.VBox;
