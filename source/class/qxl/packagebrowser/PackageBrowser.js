@@ -934,7 +934,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       }
 
       // write html instead of loading from remote url
-      if (html && this.defaultUrl) {
+      if (html && this.defaultUrl && !this.defaultUrl.startsWith(qx.$$appRoot) ) {
         if (this._iframe.getSource() !== this.defaultUrl) {
           this.__replaceBody = html;
           this.setCurrentSample(this.defaultUrl);
