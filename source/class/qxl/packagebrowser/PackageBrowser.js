@@ -37,6 +37,8 @@
  * @asset(qx/icon/Tango/16/actions/go-home.png)
  * @asset(qx/icon/Tango/16/apps/utilities-archiver.png)
  * @asset(qx/icon/Tango/16/status/dialog-information.png)
+ * @asset(qx/icon/Tango/16/apps/internet-web-browser.png)
+ * @asset(qx/icon/Tango/16/emblems/emblem-important.png)
  * @asset(qx/icon/Tango/22/actions/media-playback-start.png)
  * @asset(qx/icon/Tango/22/actions/go-previous.png)
  * @asset(qx/icon/Tango/22/actions/go-next.png)
@@ -55,6 +57,7 @@
  * @asset(qxl/packagebrowser/icon/github-16x16.png)
  *
  * @ignore(location.*)
+ * @ignore(qx.$$appRoot)
  */
 qx.Class.define("qxl.packagebrowser.PackageBrowser",
 {
@@ -68,7 +71,9 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       library: "qx/icon/Tango/16/status/dialog-information.png",
       homepage: "qx/icon/Tango/16/actions/go-home.png",
       readme: "qx/icon/Tango/16/mimetypes/text-plain.png",
-      sourcecode: "qx/icon/Tango/16/actions/document-properties.png"
+      sourcecode: "qx/icon/Tango/16/actions/document-properties.png",
+      demos: "qx/icon/Tango/16/apps/internet-web-browser.png",
+      problems: "qx/icon/Tango/16/emblems/emblem-important.png"
     }
   },
 
@@ -815,7 +820,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
           }
 
           // set icon
-          let type = currNode.type;
+          let type = currNode.data && currNode.data.problems ? "problems" : currNode.type;
           if (type && icons[type]) {
             t.setIcon(icons[type]);
           }
@@ -907,6 +912,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
         switch (modelNode.type) {
           case "sourcecode":
           case "homepage":
+          case "demos":
             url = modelNode.url;
             break;
           case "library":
@@ -914,6 +920,9 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
             break;
           case "readme":
             html = await this.__getHtmlFromGitHubApi(modelNode.url);
+            break;
+          case "problems":
+            html = "<h1>Compilation Log</h1><p>" + modelNode.data.compilation_log.replace("\n", "<br/>") + "</p>";
             break;
           default:
             state = modelNode.pwd().slice(1).concat([modelNode.label]).join("/");
@@ -928,13 +937,14 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
         this._history.setState(state);
       }
 
-      // if we have a cross-domain url, we cannot open it in the iFrame
-      if (url && !url.startsWith(location.origin) ) {
+      // if we have a cross-domain url, we cannot open it in the iFrame.
+      // create some html with a link instead.
+      if (url && !(url.startsWith(location.origin) || url.startsWith(qx.$$appRoot) )) {
         html = this.__getOpenLinkHtml(url);
       }
 
       // write html instead of loading from remote url
-      if (html && this.defaultUrl && !this.defaultUrl.startsWith(qx.$$appRoot) ) {
+      if (html) {
         if (this._iframe.getSource() !== this.defaultUrl) {
           this.__replaceBody = html;
           this.setCurrentSample(this.defaultUrl);
@@ -982,6 +992,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
         <h2 style="font-weight:bold;${display(lib.info.summary)}">${lib.info.summary}</h2>
         <p>Version: ${lib.info.version}</p>
         <p>Namespace: ${lib.provides.namespace}</p>
+        <p>Authors:${this.__getAuthorsHtml(lib.info.authors)}</p>
         <p>Homepage: <a href="${lib.info.homepage}" target="_blank">${lib.info.homepage}</a></p>
         <p>Repository: <a href="${repo_url}" target="_blank">${repo_url}</a></p>
         <h2 style="${display(lib.info.description)}">Description</h2>
@@ -1001,14 +1012,27 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
       return `<p>Click on the following link to open it in a new window: <a target="_blank" href="${url}">${url}</a>`;
     },
 
+    __getAuthorsHtml(authors) {
+      return authors.map( author => {
+        let html = `${author.name}`;
+        if (author.githubUser) {
+          let img_src = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/icon/github-16x16.png");
+          html += ` <img src="${img_src}" /><a href="https://github.com/${author.githubUser}">@${author.githubUser}</a>`;
+        }
+        return html;
+      }).join(", ");
+    },
+
     async __getHtmlFromGitHubApi(url) {
       if (!url) {
         console.error("NO url!");
       }
-      console.log("Loading " + url);
       try {
         let result = await (await fetch(url)).json();
-        return this.__getOpenLinkHtml(result.html_url);
+        if (result.html_url) {
+          return this.__getOpenLinkHtml(result.html_url);
+        }
+        return `<p>The repository does not have a README file.`;
       } catch (e) {
         return `<p>Error retrieving ${url}: ${e.message}.</p>`;
       }

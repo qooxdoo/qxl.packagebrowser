@@ -28,6 +28,7 @@
  * The main application class.
  *
  * @asset(qxl/packagebrowser/*)
+ * @ignore(qx.$$appRoot)
  */
 qx.Class.define("qxl.packagebrowser.Application",
 {

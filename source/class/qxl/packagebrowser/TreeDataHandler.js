@@ -18,6 +18,10 @@
 
 ************************************************************************ */
 
+
+/**
+ * @ignore(qx.$$appRoot)
+ */
 qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
   extend: qx.core.Object,
 
@@ -100,15 +104,26 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
               parent.add(homepageNode);
             }
             let sourceCodeNode = new qxl.packagebrowser.Tree("Source code");
-            sourceCodeNode.type = "sourcecode"
+            sourceCodeNode.type = "sourcecode";
             sourceCodeNode.url = `https://github.com/${elem.uri}`;
             parent.add(sourceCodeNode);
             let readmeNode = new qxl.packagebrowser.Tree("Readme");
-            readmeNode.type = "readme"
+            readmeNode.type = "readme";
             readmeNode.url = `https://api.github.com/repos/${elem.uri}/readme`;
             parent.add(readmeNode);
+            let demosNode = new qxl.packagebrowser.Tree("Demos");
+            demosNode.type = "demos";
+            demosNode.data = elem.data;
+            demosNode.url = `${qx.$$appRoot}/demos/${elem.uri}`;
+            parent.add(demosNode);
+            if (elem.data && elem.data.problems) {
+              let problemsNode = new qxl.packagebrowser.Tree("Problems");
+              problemsNode.type = "problems";
+              problemsNode.data = elem.data;
+              parent.add(problemsNode);
+              parent.data = {problems: true};
+            }
             break;
-
           }
           case "repository": {
             //

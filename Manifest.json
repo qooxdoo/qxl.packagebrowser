@@ -8,8 +8,9 @@
     "license": "MIT license",
     "authors": [
       {
-        "name": "Christian Boulanger (cboulanger)",
-        "email": "info@bibliograph.org"
+        "name": "Christian Boulanger",
+        "email": "info@bibliograph.org",
+        "githubUser": "cboulanger"
       }
     ],
     "version": "0.2.3"
