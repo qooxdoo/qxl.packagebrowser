@@ -71,6 +71,10 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       const packages_data = await this.__loadJson(datafile_path);
       console.log(`\n>>> Preparing compilation. Please check the following messages for errors and warnings.`);
       for (let [index, pkg_data] of packages_data.entries()) {
+        if (pkg_data.uri === "qooxdoo/qxl.packagebrowser") {
+          // do not compile the packagebrowser unless you want infinite recursion!
+          continue;
+        }
         let install_data = lockfile_data.libraries.find(d => d.uri === pkg_data.uri);
         if (! install_data) {
           console.log(`${pkg_data.uri} is not installed (maybe internal or incompatible).`);
