@@ -922,7 +922,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
             html = await this.__getHtmlFromGitHubApi(modelNode.url);
             break;
           case "problems":
-            html = "<h1>Compilation Log</h1><p>" + modelNode.data.compilation_log.replace("\n", "<br/>") + "</p>";
+            html = "<h1>Compilation Log</h1><p>" + modelNode.data.compilation_log.split("\n").join("</p><p>") + "</p>";
             break;
           default:
             state = modelNode.pwd().slice(1).concat([modelNode.label]).join("/");
