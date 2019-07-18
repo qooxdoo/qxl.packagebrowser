@@ -6,9 +6,9 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
   extend: qx.tool.cli.api.LibraryApi,
 
   statics: {
-    CONTAINER_PATH: "packages"
+    CONTAINER_PATH: "packages",
+    TARGET_TYPE: "build"
   },
-
 
   members: {
     __pkgDataGenerated: false,
@@ -87,8 +87,9 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
           continue;
         }
         // compile the application
+        const target_type = this.self(arguments).TARGET_TYPE;
         this.__addCmd(
-          `cd ${pkg_dir} && qx pkg migrate && qx compile --target=source --warnAsError=false --force`,
+          `cd ${pkg_dir} && qx pkg migrate && qx compile --target=${target_type} --warnAsError=false --force`,
           `Compiling ${manifest.info.name} v${manifest.info.version}...`,
           compilation_log => {
             packages_data[index].data = {
@@ -96,9 +97,10 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
               compilation_log,
               applications: compileData.applications
             };
-            let outputPath = path.join(pkg_dir, compileData.targets.find(target => target.type === "source").outputPath);
+            let outputPath = path.join(pkg_dir, compileData.targets.find(target => target.type === target_type).outputPath);
             let appTgtPath = path.join(tgtDir, pkg_data.uri);
             this.__mkdirp(appTgtPath);
+            this.__deleteFolderRecursive(path.join(outputPath, "transpiled"));
             console.log(`>>> Moving generated applications from ${outputPath} to ${appTgtPath}`);
             fs.renameSync(outputPath, appTgtPath);
           },
