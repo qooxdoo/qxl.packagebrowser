@@ -953,11 +953,13 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
         this._iframe.getDocument().body.innerHTML = html;
       } else {
         if (this._iframe.getSource() !== url) {
+          qxl.packagebrowser.Popup.getInstance().useIcon("waiting").display(`Loading, please wait... `);
           this.__logDone = false;
           this._iframe.setSource(url);
           this._iframe.addListener("load", function () {
             window.setTimeout(function() {
               var cw = this._iframe.getWindow();
+              qxl.packagebrowser.Popup.getInstance().hide();
               if (this.__replaceBody) {
                 this._iframe.getDocument().body.innerHTML = this.__replaceBody;
                 this.__replaceBody = null;
@@ -1095,12 +1097,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
         // security restrictions when trying to access some fwindow properties
         if (fwindow && fwindow.qx && fwindow.qx.log && fwindow.qx.log.appender)
         {
-          if (!this.__logDone)
-          {
+          if (!this.__logDone) {
             this.__logDone = true;
-
-            this.debug("Demo loaded: " + this._currentSample);
-
             this.__logView.clear();
 
             try {
@@ -1112,7 +1110,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser",
 
             // update state on example change
             this._history.addToHistory(this._currentSample.replace(/\//g, "~"), document.title);
-
           }
         }
         else
