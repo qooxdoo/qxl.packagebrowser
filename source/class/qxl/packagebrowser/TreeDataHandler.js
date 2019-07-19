@@ -34,15 +34,10 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
 
   members: {
 
-    tmap: null,
-    ttree: null,
+    tmap: null, ttree: null,
 
     __makeSorter(prop) {
-      return (a, b) => {
-        return (
-          a[prop].toLocaleLowerCase() < b[prop].toLocaleLowerCase()) ? -1 :
-          (a[prop].toLocaleLowerCase() > b[prop].toLocaleLowerCase()) ? 1 : 0;
-      };
+      return (a, b) => (a[prop].toLocaleLowerCase() < b[prop].toLocaleLowerCase()) ? -1 : (a[prop].toLocaleLowerCase() > b[prop].toLocaleLowerCase()) ? 1 : 0;
     },
 
     /**
@@ -63,7 +58,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
       }
 
       // else create new
-      if (nextRoot == null) {
+      if (nextRoot === null) {
         nextRoot = new qxl.packagebrowser.Tree(head);
         nextRoot.type = types[0];
         parent.add(nextRoot);
@@ -82,14 +77,13 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
     __readPkgData: function (pkgData) {
       var root = new qxl.packagebrowser.Tree("All");
       pkgData.sort(this.__makeSorter("uri"));
-      const types = ["owner","repository","folder"];
+      const types = ["owner", "repository", "folder"];
 
       for (let elem of pkgData) {
         let path = elem.uri.split("/");
         let parent = this.__createPath(root, path, types);
         switch (elem.type) {
           case "library": {
-            let description = elem.description;
             let label = elem.name;
             let lib = new qxl.packagebrowser.Tree(label);
             lib.type = "library";
@@ -142,7 +136,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
       }
 
       var path = node.pwd();
-      path.shift();  // remove leading 'All'
+      path.shift(); // remove leading 'All'
       path = path.concat(node.label);
       return path;
     },
@@ -153,8 +147,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
      * @param node {Tree} a model node
      * @return {var} fullName {String} like "qxl.packagebrowser.test.Class.testEmptyClass"
      */
-    getFullName: function (node)  // node is a tree node
-    {
+    getFullName: function (node) {
       if (!node) {
         return "";
       }

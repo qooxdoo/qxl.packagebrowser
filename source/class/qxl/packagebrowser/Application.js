@@ -30,13 +30,11 @@
  * @asset(qxl/packagebrowser/*)
  * @ignore(qx.$$appRoot)
  */
-qx.Class.define("qxl.packagebrowser.Application",
-{
-  extend : qx.application.Standalone,
+qx.Class.define("qxl.packagebrowser.Application", {
+  extend: qx.application.Standalone,
 
 
-  construct : function()
-  {
+  construct: function () {
     this.base(arguments);
     // Include CSS files
     var uri = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/css/style.css");
@@ -52,27 +50,23 @@ qx.Class.define("qxl.packagebrowser.Application",
   *****************************************************************************
   */
 
-  members :
-  {
+  members: {
     // overridden
-    main : function()
-    {
+    main: function () {
       this.base(arguments);
 
       // Enable logging in source (or debug build)
-      if (qx.core.Environment.get("qx.debug"))
-      {
+      if (qx.core.Environment.get("qx.debug")) {
         qx.log.appender.Native;
       }
 
       // Initialize the viewer
-      this.viewer = new qxl.packagebrowser.PackageBrowser;
-      this.getRoot().add(this.viewer, {edge:0});
+      this.viewer = new qxl.packagebrowser.PackageBrowser();
+      this.getRoot().add(this.viewer, {edge: 0});
     },
 
     // overridden
-    finalize : function()
-    {
+    finalize: function () {
       this.base(arguments);
       this.viewer.dataLoader(qx.$$appRoot + "package-data.json");
     }
@@ -85,7 +79,7 @@ qx.Class.define("qxl.packagebrowser.Application",
   *****************************************************************************
   */
 
-  destruct : function() {
+  destruct: function () {
     this._disposeObjects("viewer");
   }
 });
