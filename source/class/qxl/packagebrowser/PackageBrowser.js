@@ -125,11 +125,13 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
     var searchIcon = new qx.ui.basic.Image("icon/16/actions/edit-find.png");
     searchComposlite.add(searchIcon);
+    searchIcon.addListener("tap", () => this._searchTextField.setValue(""));
 
-    this._searchTextField = new qx.ui.form.TextField();
-    this._searchTextField.setLiveUpdate(true);
-    this._searchTextField.setAppearance("widget");
-    this._searchTextField.setPlaceholder("Filter...");
+    let stf = this._searchTextField = new qx.ui.form.TextField();
+    stf.setLiveUpdate(true);
+    stf.setAppearance("widget");
+    stf.setPlaceholder("Filter...");
+
 
     var filterTimer = new qx.event.Timer(500);
     filterTimer.addListener("interval", function (ev) {
@@ -915,9 +917,9 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       var searchRegExp = new RegExp("^.*" + term + ".*", "ig");
       var items = this._tree.getRoot().getItems(true, true);
 
-      var showing = 0;
+      var found = 0;
       var count = 0;
-      for (var i = 0; i < items.length; i++) {
+      for (let i = 0; i < items.length; i++) {
         var folder = items[i];
         var parent = folder.getParent();
 
@@ -926,7 +928,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         var inTags = false;
 
         if (tags != null) {
-          for (var j = 0; j < tags.length; j++) {
+          count++;
+          for (let j = 0; j < tags.length; j++) {
             inTags = Boolean(tags[j].match(searchRegExp));
             if (inTags) {
               break;
@@ -934,29 +937,31 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           }
         }
 
-        if (folder.getChildren().length === 0) {
-          count++;
-        }
-
         if ((inTags || (folder.getLabel().search(searchRegExp) !== -1) || (parent.getLabel().search(searchRegExp) !== -1))) {
-          if (folder.getChildren().length === 0) {
-            showing++;
-          }
+          found++;
+          folder.setOpen(false);
+          folder.setUserData("show", true);
           folder.show();
-          folder.getParent().setOpen(true);
-          folder.getParent().show();
+          while (parent) {
+            parent.setOpen(true);
+            parent.show();
+            parent = parent.getParent();
+          }
         } else {
-          folder.exclude();
+          folder.setUserData("show", false);
+          if (!parent.getUserData("show")) {
+            folder.exclude();
+          }
         }
       }
 
-      // special case for the empty sting
+      // special case for the empty string
       if (term === "") {
         var folders = this._tree.getRoot().getItems(false, true);
         var selection = this._tree.getSelection();
 
         // close all folders
-        for (var i = 0; i < folders.length; i++) {
+        for (let i = 0; i < folders.length; i++) {
           // don't close the current selected
           if (folders[i] === selection[0] || folders[i] === selection[0].getParent()) {
             continue;
@@ -966,7 +971,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       }
 
       // update the status
-      this._status.setValue(showing + "/" + count);
+      this._status.setValue(found + "/" + count);
     },
 
     /**
