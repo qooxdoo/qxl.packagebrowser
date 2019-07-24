@@ -121,7 +121,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         );
       }
       this.__executeCommands();
-      await qx.tool.utils.Json.saveJsonAsync(datafile_path, packages_data);
+      await qx.tool.utils.Json.saveJsonAsync(datafile_path, packages_data.filter(pkg => Boolean(pkg)));
       this.__pkgDataGenerated = true;
       console.log("\n>>> Done.");
     },

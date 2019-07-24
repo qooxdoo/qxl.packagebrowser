@@ -21,6 +21,7 @@
   },
   "applications": [
     {
+      "title": "Qooxdoo Package Browser",
       "class": "qxl.packagebrowser.Application",
       "theme": "qxl.packagebrowser.Theme",
       "name": "qxl.packagebrowser"
