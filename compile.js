@@ -78,6 +78,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         let install_data = lockfile_data.libraries.find(d => d.uri === pkg_data.uri);
         if (! install_data) {
           console.log(`${pkg_data.uri} is not installed (maybe internal or incompatible).`);
+          delete packages_data[index];
           continue;
         }
         let pkg_dir = path.join(container_path, install_data.path);
@@ -97,16 +98,18 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
           `Compiling ${manifest.info.name} v${manifest.info.version}...`,
           compilation_log => {
             packages_data[index].data = {
-              problems: Boolean(compilation_log.match(/(error|warn)/i)),
-              compilation_log,
-              applications: compileData.applications
+              problems: Boolean(compilation_log.match(/(error|warn|missing|cannot find|unresolved|unexpected)/i)),
+              compilation_log
             };
-            let outputPath = path.join(pkg_dir, compileData.targets.find(target => target.type === target_type).outputPath);
+            let target = compileData.targets.find(target => target.type === target_type) || compileData.targets[0];
+            let outputPath = path.join(pkg_dir, target.outputPath);
             let appTgtPath = path.join(tgtDir, pkg_data.uri);
             this.__mkdirp(appTgtPath);
             this.__deleteFolderRecursive(path.join(outputPath, "transpiled"));
             console.log(`>>> Moving generated applications from ${outputPath} to ${appTgtPath}`);
             fs.renameSync(outputPath, appTgtPath);
+            // inform client that we have one or more application demos
+            packages_data[index].data.applications = compileData.applications;
           },
           error => {
             console.error(error.message);

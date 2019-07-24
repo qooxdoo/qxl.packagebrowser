@@ -105,7 +105,8 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
             readmeNode.type = "readme";
             readmeNode.url = `https://api.github.com/repos/${elem.uri}/readme`;
             parent.add(readmeNode);
-            if (elem.uri !== "qooxdoo/qxl.packagebrowser") {
+            if (elem.data && elem.data.applications) {
+              // for the moment, just show the default one
               let demosNode = new qxl.packagebrowser.Tree("Demos");
               demosNode.type = "demos";
               demosNode.data = elem.data;
@@ -117,7 +118,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
               problemsNode.type = "problems";
               problemsNode.data = elem.data;
               parent.add(problemsNode);
-              parent.data = {problems: true};
+              //parent.data = {problems: true};
             }
             break;
           }

@@ -864,10 +864,13 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     __getProblemsHtml(data) {
       let html = `<h1>Compilation problems</h1>
         <p>During the compilation of this package, warnings or errors have been logged.
-        This does not necessarily mean that the package is broken. Many problems
-        can be removed by running</p>
-        <blockquote><pre>qx package migrate</pre> </blockquote>
-        <p>in the root folder of this package. This has been done automatically by the 
+        These messages might point to problems of the compiled library or might be
+        the symptom of an unresolved bug of the compiler. If in doubt, 
+        <a href="javascript:void(window.open('https://gitter.im/qooxdoo/qooxdoo'))">report the problems on Gitter</a> or 
+        <a href="javascript:void(window.open('https://github.com/qooxdoo/qooxdoo-compiler/issues/new'))">open an issue on GitHub</a>.</p> 
+        <p>This <span style="font-weight: bold"> does not necessarily mean that the package is broken</span>. 
+        Many problems can be removed by running <span class="code">qx package migrate</span> in the root folder of this package. 
+        This has been done automatically by the 
          compilation script and might have logged messages, too.</p>  
         <p style="font-weight: bold">Please check the following compilation messages:</p>
         <p><pre>${data.compilation_log.split("\n").join("</pre></p>\n<p><pre>")}</pre></p>`;
