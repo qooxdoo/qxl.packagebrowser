@@ -84,8 +84,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
         let parent = this.__createPath(root, path, types);
         switch (elem.type) {
           case "library": {
-            let label = elem.name;
-            let lib = new qxl.packagebrowser.Tree(label);
+            let lib = new qxl.packagebrowser.Tree("Library Info");
             lib.type = "library";
             lib.manifest = elem.manifest;
             lib.uri = elem.uri;
@@ -112,14 +111,13 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
               demosNode.data = elem.data;
               parent.add(demosNode);
               applications.forEach(app => {
-                if (app.showInPackageBrowser === "off") {
-                  return;
+                if (app.publish !== false) {
+                  let appNode = new qxl.packagebrowser.Tree(`${app.title || app.name}`);
+                  appNode.data = app;
+                  appNode.type = "demo";
+                  appNode.url = `${qx.$$appRoot}/demos/${elem.uri}/${app.name}`;
+                  demosNode.add(appNode);
                 }
-                let appNode = new qxl.packagebrowser.Tree(`${app.title || app.name}`);
-                appNode.data = app;
-                appNode.type = "demo";
-                appNode.url = `${qx.$$appRoot}/demos/${elem.uri}/${app.name}`;
-                demosNode.add(appNode);
               });
             }
             if (elem.data && elem.data.problems) {

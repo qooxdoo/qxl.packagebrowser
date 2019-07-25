@@ -29,6 +29,7 @@
  * The GUI definition of the qooxdoo unit test runner.
  *
  * @asset(qx/icon/Tango/16/actions/edit-find.png)
+ * @asset(qx/icon/Tango/16/actions/edit-delete.png)
  * @asset(qx/icon/Tango/16/places/folder.png)
  * @asset(qx/icon/Tango/16/places/folder-open.png)
  * @asset(qx/icon/Tango/16/mimetypes/text-plain.png)
@@ -118,20 +119,18 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     mainsplit.add(leftComposite, 0);
 
     // search
-    var searchComposlite = new qx.ui.container.Composite();
-    searchComposlite.setLayout(new qx.ui.layout.HBox(3));
-    searchComposlite.setAppearance("textfield");
-    leftComposite.add(searchComposlite);
+    var searchComposite = new qx.ui.container.Composite();
+    searchComposite.setLayout(new qx.ui.layout.HBox(3));
+    searchComposite.setAppearance("textfield");
+    leftComposite.add(searchComposite);
 
     var searchIcon = new qx.ui.basic.Image("icon/16/actions/edit-find.png");
-    searchComposlite.add(searchIcon);
-    searchIcon.addListener("tap", () => this._searchTextField.setValue(""));
+    searchComposite.add(searchIcon);
 
     let stf = this._searchTextField = new qx.ui.form.TextField();
     stf.setLiveUpdate(true);
     stf.setAppearance("widget");
     stf.setPlaceholder("Filter...");
-
 
     var filterTimer = new qx.event.Timer(500);
     filterTimer.addListener("interval", function (ev) {
@@ -141,18 +140,19 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       filterTimer.stop();
     }, this);
 
-    this._searchTextField.addListener("changeValue", function (ev) {
+    this._searchTextField.addListener("changeValue", function (e) {
+      this._clearIcon.setEnabled(Boolean(e.getData()));
       filterTimer.restart();
     }, this);
 
-    searchComposlite.add(this._searchTextField, {flex: 1});
+    searchComposite.add(this._searchTextField, {flex: 1});
 
-    // create the status of the tree
-    this._status = new qx.ui.basic.Label("");
-    this._status.setAppearance("widget");
-    this._status.setWidth(80);
-    this._status.setTextAlign("right");
-    searchComposlite.add(this._status);
+    // clear
+    let clearIcon = this._clearIcon = new qx.ui.basic.Image("qx/icon/Tango/16/actions/edit-delete.png");
+    clearIcon.setMarginTop(3);
+    clearIcon.setEnabled(false);
+    clearIcon.addListener("tap", () => this._searchTextField.setValue(""));
+    searchComposite.add(clearIcon);
 
     mainsplit.add(infosplit, 1);
     this._tree = this.__makeTree();
@@ -197,7 +197,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     _iframe: null,
     __logDone: null,
     _tree: null,
-    _status: null,
     _searchTextField: null,
     __currentJSCode: null,
     __menuElements: null,
@@ -941,8 +940,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       var searchRegExp = new RegExp("^.*" + term + ".*", "ig");
       var items = this._tree.getRoot().getItems(true, true);
 
-      var found = 0;
-      var count = 0;
       for (let i = 0; i < items.length; i++) {
         var folder = items[i];
         var parent = folder.getParent();
@@ -950,9 +947,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         // check for the tags
         var tags = folder.getUserData("tags");
         var inTags = false;
-
         if (tags != null) {
-          count++;
           for (let j = 0; j < tags.length; j++) {
             inTags = Boolean(tags[j].match(searchRegExp));
             if (inTags) {
@@ -962,7 +957,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         }
 
         if ((inTags || (folder.getLabel().search(searchRegExp) !== -1) || (parent.getLabel().search(searchRegExp) !== -1))) {
-          found++;
           folder.setOpen(false);
           folder.setUserData("show", true);
           folder.show();
@@ -993,9 +987,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           folders[i].setOpen(false);
         }
       }
-
-      // update the status
-      this._status.setValue(found + "/" + count);
     },
 
     /**
@@ -1200,6 +1191,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
   destruct: function () {
     this.widgets = this.tests = this._sampleToTreeNodeMap = this.tree = this.logelem = null;
-    this._disposeObjects("mainsplit", "tree1", "left", "toolbar", "f1", "f2", "_history", "logappender", "_cmdObjectSummary", "_cmdRunSample", "_cmdPrevSample", "_cmdNextSample", "_cmdSampleInOwnWindow", "_navPart", "__ownWindowButton", "__viewPart", "__viewGroup", "__menuBar", "_infosplit", "_searchTextField", "_status", "_tree", "_iframe", "_demoView", "__menuElements", "__logSync", "_leftComposite", "_urlWindow", "_nextButton", "_prevButton", "__menuItemStore", "__overflowMenu");
+    this._disposeObjects("mainsplit", "tree1", "left", "toolbar", "f1", "f2", "_history", "logappender", "_cmdObjectSummary", "_cmdRunSample", "_cmdPrevSample", "_cmdNextSample", "_cmdSampleInOwnWindow", "_navPart", "__ownWindowButton", "__viewPart", "__viewGroup", "__menuBar", "_infosplit", "_searchTextField", "_tree", "_iframe", "_demoView", "__menuElements", "__logSync", "_leftComposite", "_urlWindow", "_nextButton", "_prevButton", "__menuItemStore", "__overflowMenu");
   }
 });
