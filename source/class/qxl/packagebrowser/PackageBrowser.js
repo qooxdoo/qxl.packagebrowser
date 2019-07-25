@@ -71,7 +71,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       homepage: "qx/icon/Tango/16/actions/go-home.png",
       readme: "qx/icon/Tango/16/mimetypes/text-plain.png",
       sourcecode: "qx/icon/Tango/16/actions/document-properties.png",
-      demos: "qx/icon/Tango/16/apps/internet-web-browser.png",
+      demo: "qx/icon/Tango/16/apps/internet-web-browser.png",
       problems: "qx/icon/Tango/16/emblems/emblem-important.png"
     }
   },
@@ -616,14 +616,14 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             }
 
             t.setUserData("tags", tags);
-
             buildSubTree(t, t.getUserData("node"));
-            fullPath = currNode.pwd().slice(1).concat([currNode.label]).join("/");
           } else {
             t = new qx.ui.tree.TreeFile(currNode.label);
-            fullPath = currNode.pwd().slice(1).concat([currNode.type]).join("/");
+            if (currNode.type !== "demo") {
+              fullPath = currNode.pwd().slice(1).concat([currNode.type]).join("/");
+            }
           }
-
+          fullPath = fullPath || currNode.pwd().slice(1).concat([currNode.label]).join("/");
           _sampleToTreeNodeMap[fullPath] = t;
           if (fullPath === state) {
             _initialNode = t;
@@ -716,8 +716,17 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         switch (modelNode.type) {
           case "sourcecode":
           case "homepage":
-          case "demos":
             url = modelNode.url;
+            break;
+          case "demo":
+            if (modelNode.hasChildren()) {
+              // demo parent (without url)
+              html = this.__getApplicationsHtml(modelNode.children);
+            } else {
+              // demo child (with url)
+              url = modelNode.url;
+              state = modelNode.pwd().slice(1).concat([modelNode.label]).join("/");
+            }
             break;
           case "library":
             html = this.__getLibraryInfoHtml(modelNode);
@@ -814,7 +823,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
       const dependencies = Object.entries(req).map(([pkg_uri, range]) => {
         if (!pkg_uri.startsWith("@") && !pkg_uri.startsWith("qooxdoo-")) {
-          return createTableRow(createAnchor(`javascript:void(top.location.href='/#${pkg_uri.replace("/", "~")}~library');`, pkg_uri), range);
+          return createTableRow(createAnchor(`javascript:void(top.location.hash='${pkg_uri.replace("/", "~")}~library')`, pkg_uri), range);
         }
       }).filter(v => Boolean(v));
       let html = `
@@ -875,6 +884,18 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         <p style="font-weight: bold">Please check the following compilation messages:</p>
         <p><pre>${data.compilation_log.split("\n").join("</pre></p>\n<p><pre>")}</pre></p>`;
       return html;
+    },
+
+    __getApplicationsHtml(children) {
+      const appsHtml = children.map(childNode => {
+          const hash = childNode.pwd().slice(1).concat([childNode.label]).join("~");
+          return `<a href="javascript:void(top.location.hash='${hash}')"><h2>${childNode.label}</h2></a>` +
+            (childNode.description ? `<p>${childNode.description}</p>` : "")
+        }
+      ).join("\n");
+      return `<h1>Demo Applications</h1>
+      <p>This package contains the following executable applications:</p>
+      ${appsHtml}`;
     },
 
     /**

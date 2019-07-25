@@ -3,73 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>qooxdoo &raquo; Package Browser</title>
-  <style type="text/css">
-    *{
-      box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body{
-      font-size: 14px;
-      font-family: "Trebuchet MS", Tahoma, Arial, "Bitstream Vera Sans", Verdana, sans-serif;
-      margin: 0;
-      padding: 10px;
-    }
-
-    img{
-      box-sizing: content-box;
-      -moz-box-sizing: content-box;
-      border: 1px #134275 solid;
-    }
-
-    #content{
-      margin: 20px;
-      width: 600px;
-    }
-
-    h1{
-      padding-top: 10px;
-      font-size: 22px;
-      color: #134275;
-      padding-bottom: 5px;
-    }
-
-    h2{
-      padding-top: 10px;
-      font-size: 16px;
-      color: #134275;
-    }
-
-    li{
-      margin-left: 16px;
-      margin-bottom: 3px;
-      margin-top: 3px;
-      list-style: square;
-    }
-
-    p{
-      font-size: 14px;
-      margin: 6px 0;
-    }
-
-    a{
-      text-decoration: none;
-      color: #134275;
-    }
-
-    td{
-      padding-top: 3px;
-      padding-right: 3px;
-      vertical-align: top;
-    }
-
-    td:first-child {
-      font-weight: bold;
-      padding-right: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/pages.css">
 </head>
 
 <body>
@@ -99,13 +33,13 @@
       the URL, so you can link to the application state via its URL.
     </li>
     <li>
-      Check out the <span style="font-weight: bold">live
-      demos</span> of <a href="javascript:void(top.location.href='/#filter~demos')">
+      Check out the <span style="font-weight: bold">live demos</span> of
+      <a href="javascript:void(top.location.hash='filter~demos')">
       all packages that contain a compilable application</a>.
     </li>
     <li>
       This web app can also be used to control the quality of the packages. It
-      displays  <a href="javascript:void(top.location.href='/#filter~problems')">
+      displays  <a href="javascript:void(top.location.hash='filter~problems')">
       warnings and errors</a> that were logged during the compilation. In a future
       version, linting and test results will also be displayed.
     </li>
@@ -114,8 +48,8 @@
       so you will see new packages and new releases after a certain delay. To
       browse the latest and greatest versions of the packages, clone the
       <a href="javascript:void(window.open('https://github.com/qooxdoo/qxl.packageviewer'))">
-        qooxdoo/qxl.packageviewer repo</a>
-      and (re)build it with  <pre>qx serve --clean</pre>.
+        qooxdoo/qxl.packageviewer repo</a> and (re)build it with
+      <span class="code">qx serve --clean</span>.
   </ul>
 </body>
 </html>
