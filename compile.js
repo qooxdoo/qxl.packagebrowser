@@ -7,7 +7,8 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
 
   statics: {
     CONTAINER_PATH: "packages",
-    TARGET_TYPE: "build"
+    TARGET_TYPE: "build",
+    QX_LIST_ADDITIONAL_PARAMS: "--all --prereleases"
   },
 
   members: {
@@ -46,7 +47,11 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       const srcDir = path.relative(process.cwd(), path.join(container_path,"compiled","source"));
       const tgtDir = path.relative(process.cwd(), path.join(outputDir, app, "demos"));
       this.__addCmd(`qx pkg update`, "Updating package data...");
-      this.__addCmd(`qx pkg list --json --all > ${datafile_path}`, "Generating local metadata file...");
+      const additionalParams = this.self(arguments).QX_LIST_ADDITIONAL_PARAMS;
+      this.__addCmd(
+        `qx pkg list --json ${additionalParams} > ${datafile_path}`,
+        "Generating local metadata file..."
+      );
       if (fs.existsSync(tgtDir)) {
         this.__executeCommands();
         return;
@@ -115,7 +120,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
             console.error(error.message);
               packages_data[index].data = {
                 problems: true,
-                compilation_log: error.message
+                compilation_log: error.message + "\n\n" + error.stderr.toString() + "\n\n" + error.stdout.toString()
             };
           }
         );
