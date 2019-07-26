@@ -89,26 +89,26 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
             lib.manifest = elem.manifest;
             lib.uri = elem.uri;
             parent.add(lib);
-            let homepage = elem.manifest.info.homepage;
-            if (homepage) {
-              let homepageNode = new qxl.packagebrowser.Tree("Homepage");
-              homepageNode.type = "homepage";
-              homepageNode.url = homepage;
-              parent.add(homepageNode);
-            }
-            let sourceCodeNode = new qxl.packagebrowser.Tree("Source code");
-            sourceCodeNode.type = "sourcecode";
-            sourceCodeNode.url = `https://github.com/${elem.uri}`;
-            parent.add(sourceCodeNode);
+            // Omit these nodes for now....
+            // let homepage = elem.manifest.info.homepage;
+            // if (homepage) {
+            //   let homepageNode = new qxl.packagebrowser.Tree("Homepage");
+            //   homepageNode.type = "homepage";
+            //   homepageNode.url = homepage;
+            //   parent.add(homepageNode);
+            // }
+            // let sourceCodeNode = new qxl.packagebrowser.Tree("Source code");
+            // sourceCodeNode.type = "sourcecode";
+            // sourceCodeNode.url = `https://github.com/${elem.uri}`;
+            // parent.add(sourceCodeNode);
             let readmeNode = new qxl.packagebrowser.Tree("Readme");
             readmeNode.type = "readme";
-            readmeNode.url = `https://api.github.com/repos/${elem.uri}/readme`;
+            readmeNode.uri = elem.uri;
             parent.add(readmeNode);
             let applications = elem.data && elem.data.applications;
             if (Array.isArray(applications) && applications.length > 0) {
               let demosNode = new qxl.packagebrowser.Tree("Demos");
               demosNode.type = "demo";
-              demosNode.data = elem.data;
               parent.add(demosNode);
               applications.forEach(app => {
                 if (app.publish !== false) {

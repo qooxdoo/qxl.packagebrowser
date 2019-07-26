@@ -15,6 +15,14 @@
       "uri": "qooxdoo/qxl.versionlabel",
       "repo_name": "qooxdoo/qxl.versionlabel",
       "repo_tag": "v1.0.0-beta.1"
+    },
+    {
+      "library_name": "qxShowdown",
+      "library_version": "1.8.7",
+      "path": "qx_packages/maettu_qx-showdown_v1_8_7",
+      "uri": "maettu/qx-showdown",
+      "repo_name": "maettu/qx-showdown",
+      "repo_tag": "v1.8.7"
     }
   ],
   "version": "2.1.0"

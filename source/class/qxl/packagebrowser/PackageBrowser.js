@@ -78,6 +78,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
   },
 
   construct: function () {
+
+    qxShowdown.Load;
     this.base(arguments);
 
     this.__menuItemStore = {};
@@ -731,7 +733,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             html = this.__getLibraryInfoHtml(modelNode);
             break;
           case "readme":
-            html = await this.__getHtmlFromGitHubApi(modelNode.url);
+            html = await this.__getReadmeHtml(modelNode.uri);
             break;
           case "problems":
             html = this.__getProblemsHtml(modelNode.data);
@@ -899,19 +901,27 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
     /**
      *
-     * @param url
+     * @param uri {String} The GitHub uri
      * @return {Promise<string|*|string>}
      * @private
      * @ignore(fetch)
+     * @ignore(showdown)
      */
-    async __getHtmlFromGitHubApi(url) {
-      if (!url) {
-        console.error("NO url!");
-      }
+    async __getReadmeHtml(uri) {
+      let url = `https://api.github.com/repos/${uri}/readme`;
       try {
         let result = await (await fetch(url)).json();
-        if (result.html_url) {
-          return this.__getOpenLinkHtml(result.html_url);
+        if (result.content) {
+          let markdown = atob(result.content);
+          let converter = new showdown.Converter();
+          let urlPrefix = `https://github.com/${uri}/tree/master/`;
+
+          let html = converter
+            .makeHtml(markdown)
+            .replace(/href="([^h][^t][^t][^p])/g,
+              (match, urlFragment) => 'target="_blank" href="' + urlPrefix + urlFragment
+            );
+          return html;
         }
         return `<p>The repository does not have a README file.`;
       } catch (e) {
