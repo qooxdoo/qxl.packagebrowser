@@ -33,23 +33,6 @@
 qx.Class.define("qxl.packagebrowser.Application", {
   extend: qx.application.Standalone,
 
-
-  construct: function () {
-    this.base(arguments);
-    // Include CSS files
-    var uri = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/css/style.css");
-    qx.bom.Stylesheet.includeFile(uri);
-    uri = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/css/sourceview.css");
-    qx.bom.Stylesheet.includeFile(uri);
-  },
-
-
-  /*
-  *****************************************************************************
-     MEMBERS
-  *****************************************************************************
-  */
-
   members: {
     // overridden
     main: function () {

@@ -7,7 +7,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
 
   statics: {
     CONTAINER_PATH: "packages",
-    TARGET_TYPE: "source",
+    TARGET_TYPE: "build",
     QX_LIST_ADDITIONAL_PARAMS: "--all --prereleases"
   },
 
@@ -30,31 +30,36 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       if (this.__pkgDataGenerated) {
         return;
       }
-      console.log("=== Creating metadata for package browser...");
-      let maker = this.getCompilerApi().getCommand().getMaker();
-      const outputDir = maker.getTarget().getOutputDir();
-      const app = "qxl.packagebrowser";
-      const target_type = this.self(arguments).TARGET_TYPE;
-      const datafile_path = path.join(outputDir, app, "package-data.json");
 
-      if (fs.existsSync(datafile_path)) {
+      const maker = this.getCompilerApi().getCommand().getMaker();
+      const app = "qxl.packagebrowser";
+      const outputDir = maker.getTarget().getOutputDir();
+      const datafilePath = path.join(outputDir, app, "package-data.json");
+      if (fs.existsSync(datafilePath)) {
         console.log(">>> Package data exists.");
         return;
       }
-      const container_path = this.self(arguments).CONTAINER_PATH;
-      //const srcDir = path.relative(process.cwd(), path.join(container_path,"compiled", "source"));
-      const tgtDir = path.relative(process.cwd(), path.join(outputDir, app, "demos"));
-      this.__addCmd(`qx pkg update`, "Updating package data...");
+
+      const header = "   Creating metadata for package browser...   ";
+      console.log("=".repeat(header.length));
+      console.log(header);
+      console.log("=".repeat(header.length));
+
+      const targetType = this.self(arguments).TARGET_TYPE;
+      const containerPath = this.self(arguments).CONTAINER_PATH;
       const additionalParams = this.self(arguments).QX_LIST_ADDITIONAL_PARAMS;
+      const targetDir = path.relative(process.cwd(), path.join(outputDir, app, "demos"));
+
+      // update and generate list data
+      this.__addCmd(`qx pkg update`, "Updating package data...");
       this.__addCmd(
-        `qx pkg list --json ${additionalParams} > ${datafile_path}`,
+        `qx pkg list --json ${additionalParams} > ${datafilePath}`,
         "Generating local metadata file..."
       );
-      if (fs.existsSync(tgtDir)) {
-        await this.__executeCommands();
-        return;
+      if (fs.existsSync(targetDir)) {
+        this.__deleteFolderRecursiveSync(targetDir);
       }
-      fs.mkdirSync(tgtDir);
+      fs.mkdirSync(targetDir);
       console.log(`>>> Starting compilation of all compatible packages. This might take a while.`);
       let stdout = execSync(`qx pkg list --uris-only`);
       let packages =
@@ -64,18 +69,18 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
           .map(pkg => pkg.trim())
           .filter(pkg => Boolean(pkg))
           .sort();
-      this.__deleteFolderRecursive(container_path);
+      this.__deleteFolderRecursiveSync(containerPath);
       this.__addCmd(
-        `qx create ${container_path} -I`,
+        `qx create ${containerPath} -I`,
         `Creating container application...`
       );
       for (let pkg of packages) {
-        this.__addCmd(`cd ${container_path} && qx pkg install ${pkg}`, `Installing ${pkg}...`);
+        this.__addCmd(`cd ${containerPath} && qx pkg install ${pkg}`, `Installing ${pkg}...`);
       }
       await this.__executeCommands();
-      const packages_dir = path.join(container_path, "qx_packages");
-      const lockfile_data = await this.__loadJson(path.join(container_path, "qx-lock.json"));
-      const packages_data = await this.__loadJson(datafile_path);
+      const packages_dir = path.join(containerPath, "qx_packages");
+      const lockfile_data = await this.__loadJson(path.join(containerPath, "qx-lock.json"));
+      const packages_data = await this.__loadJson(datafilePath);
       console.log(`\n>>> Preparing compilation. Please check the following messages for errors and warnings.`);
       for (let [index, pkg_data] of packages_data.entries()) {
         if (pkg_data.uri === "qooxdoo/qxl.packagebrowser") {
@@ -88,7 +93,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
           delete packages_data[index];
           continue;
         }
-        let pkg_dir = path.join(container_path, install_data.path);
+        let pkg_dir = path.join(containerPath, install_data.path);
         let manifest;
         let compileData;
         try {
@@ -100,19 +105,21 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         }
         // compile the application
         this.__addCmd(
-          `cd ${pkg_dir} && qx pkg migrate && qx compile --target=${target_type} --warnAsError=false --feedback=0 --force 2>&1`,
+          `cd ${pkg_dir} && qx pkg migrate && qx compile --target=${targetType} --warnAsError=false --feedback=0 --force 2>&1`,
           `Compiling ${manifest.info.name} v${manifest.info.version}...`,
           (stdout, stderr) => {
             let compilation_log = stdout + "\n\n" +stderr;
             packages_data[index].data = {
-              problems: Boolean(compilation_log.match(/(error|warn|missing|cannot find|unresolved|unexpected)/i)),
+              problems: Boolean(compilation_log.match(/(error|warn|missing|cannot find|unresolved|unexpected|deprecated)/i)),
               compilation_log
             };
-            let target = compileData.targets.find(target => target.type === target_type) || compileData.targets[0];
+            let target = compileData.targets.find(target => target.type === targetType) || compileData.targets[0];
             let outputPath = path.join(pkg_dir, target.outputPath);
-            let appTgtPath = path.join(tgtDir, pkg_data.uri);
+            let appTgtPath = path.join(targetDir, pkg_data.uri);
             this.__mkdirp(appTgtPath);
-            this.__deleteFolderRecursive(path.join(outputPath, "transpiled"));
+            if (targetType === "build") {
+              this.__deleteFolderRecursiveSync(path.join(outputPath, "transpiled"));
+            }
             console.log(`>>> Moving generated applications from ${outputPath} to ${appTgtPath}`);
             fs.renameSync(outputPath, appTgtPath);
             // inform client that we have one or more application demos
@@ -128,7 +135,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         );
       }
       await this.__executeCommands();
-      await qx.tool.utils.Json.saveJsonAsync(datafile_path, packages_data.filter(pkg => Boolean(pkg)));
+      await qx.tool.utils.Json.saveJsonAsync(datafilePath, packages_data.filter(pkg => Boolean(pkg)));
       this.__pkgDataGenerated = true;
       console.log("\n>>> Done.");
     },
@@ -212,12 +219,12 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
      * @param {String} file_path
      * @private
      */
-    __deleteFolderRecursive(file_path) {
+    __deleteFolderRecursiveSync(file_path) {
       if (fs.existsSync(file_path)) {
         fs.readdirSync(file_path).forEach((file, index) => {
           let curPath = path.join(file_path, file);
           if (fs.lstatSync(curPath).isDirectory()) {
-            this.__deleteFolderRecursive(curPath);
+            this.__deleteFolderRecursiveSync(curPath);
           } else {
             fs.unlinkSync(curPath);
           }

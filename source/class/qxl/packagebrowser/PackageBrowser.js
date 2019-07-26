@@ -715,10 +715,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         url = this.defaultUrl;
         state = state || modelNode.pwd().slice(1).concat([modelNode.type]).join("/");
         switch (modelNode.type) {
-          case "sourcecode":
-          case "homepage":
-            url = modelNode.url;
-            break;
+          // case "sourcecode":
+          // case "homepage":
+          //   url = modelNode.url;
+          //   break;
           case "demo":
             if (modelNode.hasChildren()) {
               // demo parent (without url)
@@ -841,7 +841,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         <h2 style="${display(lib.info.description)}">Description</h2>
         <p style="${display(lib.info.description)}">${lib.info.description}</p>
         <h2>Installation</h2>
-        <p><pre>qx package install ${modelNode.uri}</pre></p>
+        <p><code>qx package install ${modelNode.uri}</code></p>
         <h2>Dependencies</h2>
         <table>
           ${createTableRow("qooxdoo version:", req["@qooxdoo/framework"] || req["qooxdoo-sdk"])}
@@ -872,18 +872,26 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     },
 
     __getProblemsHtml(data) {
+      let log = data.compilation_log.split("\n").filter(line => Boolean(line.trim())).join("\n");
+      let migrateMsg = "";
+      const migrateSignal = "Migration completed.\n";
+      if (log.includes(migrateSignal)) {
+        migrateMsg = `<p>The package <b>must be migrated</b> to the new compiler version.  
+          The package author should run <span class="code">qx package migrate</span> 
+          in the root folder of this package, follow the instructions, and 
+          release a new version of the package.</p>`;
+        log = log.replace(migrateSignal,"");
+      }
       let html = `<h1>Compilation problems</h1>
         <p>During the compilation of this package, warnings or errors have been logged.
         These messages might point to problems of the compiled library or might be
         the symptom of an unresolved bug of the compiler. If in doubt, 
         <a href="javascript:void(window.open('https://gitter.im/qooxdoo/qooxdoo'))">report the problems on Gitter</a> or 
         <a href="javascript:void(window.open('https://github.com/qooxdoo/qooxdoo-compiler/issues/new'))">open an issue on GitHub</a>.</p> 
-        <p>This <span style="font-weight: bold"> does not necessarily mean that the package is broken</span>. 
-        Many problems can be removed by running <span class="code">qx package migrate</span> in the root folder of this package. 
-        This has been done automatically by the 
-         compilation script and might have logged messages, too.</p>  
+        <p>This does not mean that the package is broken.</p> 
+        ${migrateMsg}
         <p style="font-weight: bold">Please check the following compilation messages:</p>
-        <p><pre>${data.compilation_log.split("\n").join("</pre></p>\n<p><pre>")}</pre></p>`;
+        <pre>${log}</pre>`;
       return html;
     },
 
@@ -907,21 +915,21 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @ignore(fetch)
      * @ignore(showdown)
      */
-    async __getReadmeHtml(uri) {
+    __getReadmeHtml: async function (uri) {
       let url = `https://api.github.com/repos/${uri}/readme`;
       try {
         let result = await (await fetch(url)).json();
         if (result.content) {
           let markdown = atob(result.content);
           let converter = new showdown.Converter();
-          let urlPrefix = `https://github.com/${uri}/tree/master/`;
 
-          let html = converter
+
+          return converter
             .makeHtml(markdown)
-            .replace(/href="([^h][^t][^t][^p])/g,
-              (match, urlFragment) => 'target="_blank" href="' + urlPrefix + urlFragment
-            );
-          return html;
+            .replace(/(href|src)="([^h][^t][^t][^p])/g, (match, attr, urlFragment) => {
+              let urlPrefix = attr === "href" ? `https://github.com/${uri}/tree/master` : `https://raw.githubusercontent.com/${uri}/master`;
+              return `target="_blank" ${attr}="${urlPrefix}/${urlFragment}`;
+            });
         }
         return `<p>The repository does not have a README file.`;
       } catch (e) {
