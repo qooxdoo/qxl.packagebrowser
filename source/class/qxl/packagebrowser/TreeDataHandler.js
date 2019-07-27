@@ -88,6 +88,8 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
             lib.type = "library";
             lib.manifest = elem.manifest;
             lib.uri = elem.uri;
+            lib.latestVersion = elem.latestVersion;
+            lib.latestCompatible = elem.latestCompatible;
             parent.add(lib);
             let readmeNode = new qxl.packagebrowser.Tree("Readme");
             readmeNode.type = "readme";
@@ -118,6 +120,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
               let problemsNode = new qxl.packagebrowser.Tree("Problems");
               problemsNode.type = "problems";
               problemsNode.data = elem.data;
+              problemsNode.uri = elem.uri;
               parent.add(problemsNode);
               //parent.data = {problems: true};
             }

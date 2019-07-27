@@ -738,7 +738,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             html = await this.__getReleasesHtml(modelNode, treeNode);
             break;
           case "problems":
-            html = this.__getProblemsHtml(modelNode.data);
+            html = this.__getProblemsHtml(modelNode);
             break;
           default:
             let children = modelNode.getChildren();
@@ -820,8 +820,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         return "<tr>" + args.map(arg => `<td>${arg}</td>`).join("") + "</tr>";
       }
 
-      function createAnchor(href, linktext, target) {
-        return `<a href="${href}" ${target ? "target=\"" + target + "\"" : ""}>${linktext}</a>`;
+      function createAnchor(href, linktext, target="_blank") {
+        return `<a href="${href}" ${target ? "target=\"" + target + "\"" : ""}>${linktext || href}</a>`;
       }
 
       const dependencies = Object.entries(req).map(([pkg_uri, range]) => {
@@ -836,8 +836,9 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           ${createTableRow("Version:", lib.info.version)}
           ${createTableRow("Namespace:", lib.provides.namespace)}
           ${createTableRow("Authors:", this.__getAuthorsHtml(lib.info.authors))}
-          ${createTableRow("Homepage:", createAnchor(lib.info.homepage, lib.info.homepage, "_blank"))}
-          ${createTableRow("Repository:", createAnchor(repo_url, repo_url, "_blank"))}
+          ${createTableRow("Homepage:", createAnchor(lib.info.homepage))}
+          ${createTableRow("Repository:", createAnchor(repo_url))}
+          ${createTableRow("Issues:", createAnchor(this.__getNewIssueUrl(modelNode.uri), "List of issues") + " | " + createAnchor(this.__getNewIssueUrl(modelNode.uri,true), "Create new issue"))}
           ${createTableRow("Keywords:", this.__getKeywordssHtml(lib.info.keywords || []))}
         </table>
         <h2 style="${display(lib.info.description)}">Description</h2>
@@ -873,18 +874,24 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       return keywords.join(", ");
     },
 
-    __getProblemsHtml(data) {
+    __getNewIssueUrl(uri, newIssue=false) {
+      return `https://github.com/${uri}/issues${newIssue ? "/new" : ""}`;
+    },
+
+    __getProblemsHtml(modelNode) {
+      let {compilation_log} = modelNode.data;
       const lineStartsWith = [
         "One or more libraries",
         "Writing",
         "Minifying",
         "Everything is up-to-date"
       ];
-      let log = data.compilation_log
-        .split("\n")
-        .filter(line => Boolean(line.trim()))
-        .filter(line => !lineStartsWith.some(string => line.startsWith(string)))
-        .join("\n");
+      let log =
+        compilation_log
+          .split("\n")
+          .filter(line => Boolean(line.trim()))
+          .filter(line => !lineStartsWith.some(string => line.startsWith(string)))
+          .join("\n");
       let migrateMsg = "";
       const migrateSignal = "Migration completed.\n";
       if (log.includes(migrateSignal)) {
@@ -894,12 +901,16 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           release a new version of the package.</p>`;
         log = log.replace(migrateSignal,"");
       }
+      const newIssueUrl =
+        this.__getNewIssueUrl(modelNode.uri, true) +
+        "?title=" + encodeURIComponent("Compilation problems") +
+        "&body=" + encodeURIComponent(log);
       let html = `<h1>Compilation problems</h1>
         <p>During the compilation of this package, warnings or errors have been logged.
         These messages might point to problems of the compiled library or might be
-        the symptom of an unresolved bug of the compiler. If in doubt, 
-        <a href="javascript:void(window.open('https://gitter.im/qooxdoo/qooxdoo'))">report the problems on Gitter</a> or 
-        <a href="javascript:void(window.open('https://github.com/qooxdoo/qooxdoo-compiler/issues/new'))">open an issue on GitHub</a>. 
+        the symptom of an unresolved bug of the compiler. You can 
+        <a target="_blank" href="${newIssueUrl}">create an issue in the package repo</a>, and/or
+        <a target="_blank" href="https://gitter.im/qooxdoo/qooxdoo">report the problems on Gitter</a>. 
         The messages do not necessarily imply that the package is broken.</p> 
         ${migrateMsg}
         <p style="font-weight: bold">Please check the following compilation messages:</p>
@@ -929,18 +940,20 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         }
         //
       ];
-      const explainMessages = data.compilation_log
-        .split("\n")
-        .reduce((result, line) => {
-          let explanation = explanations.find(expl => line.match(expl.regex));
-          if (explanation) {
-            result.push(line.replace(explanation.regex, explanation.description));
-          }
-          return result;
-        },[]);
+      const explainMessages =
+        compilation_log
+          .split("\n")
+          .reduce((result, line) => {
+            let explanation = explanations.find(expl => line.match(expl.regex));
+            if (explanation) {
+              result.push(line.replace(explanation.regex, explanation.description));
+            }
+            return result;
+          },[]);
       if (explainMessages.length) {
         html += `<p style="font-weight: bold">explanation</p>
-        <p>If you are the author of the mentioned classes or files, the following points might help you to fix the problems:</p>
+        <p>If you have access to mentioned classes or files, the following points 
+        might help you to fix the problems.</p>
         <ul><li>${explainMessages.join("</li><li>")}</li></ul>`;
       }
       return html;
