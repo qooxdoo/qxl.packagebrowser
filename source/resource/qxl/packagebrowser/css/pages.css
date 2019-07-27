@@ -81,10 +81,21 @@ pre {
     border: solid 1px #e1e1e1
 }
 
+.notice {
+    width: auto;
+    display: block;
+    clear: both;
+    padding: 1em 1em;
+    margin: 10px;
+    background: rgba(255, 20, 0, 0.35);
+    border: solid 1px #e1e1e1
+}
+
 code, .code {
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
     font-size: 10pt;
     display: inline;
     color: #555555;
     background: #f4f4f4;
+    padding: 2px;
 }

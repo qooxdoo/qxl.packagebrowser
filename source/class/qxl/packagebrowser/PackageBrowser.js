@@ -30,16 +30,18 @@
  *
  * @asset(qx/icon/Tango/16/actions/edit-find.png)
  * @asset(qx/icon/Tango/16/actions/edit-delete.png)
- * @asset(qx/icon/Tango/16/places/folder.png)
- * @asset(qx/icon/Tango/16/places/folder-open.png)
- * @asset(qx/icon/Tango/16/mimetypes/text-plain.png)
- * @asset(qx/icon/Tango/16/mimetypes/archive.png)
  * @asset(qx/icon/Tango/16/actions/document-properties.png)
  * @asset(qx/icon/Tango/16/actions/go-home.png)
- * @asset(qx/icon/Tango/16/apps/utilities-archiver.png)
- * @asset(qx/icon/Tango/16/status/dialog-information.png)
  * @asset(qx/icon/Tango/16/apps/internet-web-browser.png)
+ * @asset(qx/icon/Tango/16/apps/utilities-archiver.png)
+ * @asset(qx/icon/Tango/16/apps/preferences-clock.png)
  * @asset(qx/icon/Tango/16/emblems/emblem-important.png)
+ * @asset(qx/icon/Tango/16/mimetypes/text-plain.png)
+ * @asset(qx/icon/Tango/16/mimetypes/archive.png)
+ * @asset(qx/icon/Tango/16/places/folder.png)
+ * @asset(qx/icon/Tango/16/places/folder-open.png)
+ * @asset(qx/icon/Tango/16/status/dialog-information.png)
+ * @asset(qx/icon/Tango/16/status/mail-unread.png)
  * @asset(qx/icon/Tango/22/actions/media-playback-start.png)
  * @asset(qx/icon/Tango/22/actions/go-previous.png)
  * @asset(qx/icon/Tango/22/actions/go-next.png)
@@ -73,7 +75,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       readme: "qx/icon/Tango/16/mimetypes/text-plain.png",
       sourcecode: "qx/icon/Tango/16/actions/document-properties.png",
       demo: "qx/icon/Tango/16/apps/internet-web-browser.png",
-      problems: "qx/icon/Tango/16/emblems/emblem-important.png"
+      problems: "qx/icon/Tango/16/emblems/emblem-important.png",
+      releases: "qx/icon/Tango/16/apps/preferences-clock.png"
     }
   },
 
@@ -715,10 +718,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         url = this.defaultUrl;
         state = state || modelNode.pwd().slice(1).concat([modelNode.type]).join("/");
         switch (modelNode.type) {
-          // case "sourcecode":
-          // case "homepage":
-          //   url = modelNode.url;
-          //   break;
           case "demo":
             if (modelNode.hasChildren()) {
               // demo parent (without url)
@@ -734,6 +733,9 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             break;
           case "readme":
             html = await this.__getReadmeHtml(modelNode.uri);
+            break;
+          case "releases":
+            html = await this.__getReleasesHtml(modelNode, treeNode);
             break;
           case "problems":
             html = this.__getProblemsHtml(modelNode.data);
@@ -872,11 +874,21 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     },
 
     __getProblemsHtml(data) {
-      let log = data.compilation_log.split("\n").filter(line => Boolean(line.trim())).join("\n");
+      const lineStartsWith = [
+        "One or more libraries",
+        "Writing",
+        "Minifying",
+        "Everything is up-to-date"
+      ];
+      let log = data.compilation_log
+        .split("\n")
+        .filter(line => Boolean(line.trim()))
+        .filter(line => !lineStartsWith.some(string => line.startsWith(string)))
+        .join("\n");
       let migrateMsg = "";
       const migrateSignal = "Migration completed.\n";
       if (log.includes(migrateSignal)) {
-        migrateMsg = `<p>The package <b>must be migrated</b> to the new compiler version.  
+        migrateMsg = `<p class="notice">The package must be migrated to a new compiler version.  
           The package author should run <span class="code">qx package migrate</span> 
           in the root folder of this package, follow the instructions, and 
           release a new version of the package.</p>`;
@@ -887,11 +899,50 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         These messages might point to problems of the compiled library or might be
         the symptom of an unresolved bug of the compiler. If in doubt, 
         <a href="javascript:void(window.open('https://gitter.im/qooxdoo/qooxdoo'))">report the problems on Gitter</a> or 
-        <a href="javascript:void(window.open('https://github.com/qooxdoo/qooxdoo-compiler/issues/new'))">open an issue on GitHub</a>.</p> 
-        <p>This does not mean that the package is broken.</p> 
+        <a href="javascript:void(window.open('https://github.com/qooxdoo/qooxdoo-compiler/issues/new'))">open an issue on GitHub</a>. 
+        The messages do not necessarily imply that the package is broken.</p> 
         ${migrateMsg}
         <p style="font-weight: bold">Please check the following compilation messages:</p>
         <pre>${log}</pre>`;
+
+      const explanations = [
+        {
+          regex: /^([^:]+): (.+) Unresolved use of symbol (.+)$/,
+          description:
+            `The compiler cannot find a reference for the given symbol '$3'. 
+            If this does not indicate a bug, it can usually fixed with adding <span class="code">@ignore($3)</span> 
+            in class <span class="code">$1</span>.`
+        },
+        {
+          regex: /^Cannot find path (.+) required by library (.+)$/,
+          description:
+            `The <span class="code">Manifest.json</span> file of the class 
+            <span class="code">$2</span> declares to provide a path 
+            <span class="code">$1</span>, which does not exist.`
+        },
+        {
+          regex: /^(.*)Error validating data for ([^:]+): (.+)$/,
+          description:
+            `The file <span class="code">$2</span> is not valid according to 
+             <a target="_blank" href="https://github.com/qooxdoo/qooxdoo-compiler/tree/master/source/resource/qx/tool/schema">
+             the current JSON Schema</a>. The validation error is: $3.`
+        }
+        //
+      ];
+      const explainMessages = data.compilation_log
+        .split("\n")
+        .reduce((result, line) => {
+          let explanation = explanations.find(expl => line.match(expl.regex));
+          if (explanation) {
+            result.push(line.replace(explanation.regex, explanation.description));
+          }
+          return result;
+        },[]);
+      if (explainMessages.length) {
+        html += `<p style="font-weight: bold">explanation</p>
+        <p>If you are the author of the mentioned classes or files, the following points might help you to fix the problems:</p>
+        <ul><li>${explainMessages.join("</li><li>")}</li></ul>`;
+      }
       return html;
     },
 
@@ -916,14 +967,13 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @ignore(showdown)
      */
     __getReadmeHtml: async function (uri) {
-      let url = `https://api.github.com/repos/${uri}/readme`;
+      let apiUrl = `https://api.github.com/repos/${uri}/readme`;
+      qxl.packagebrowser.Popup.getInstance().useIcon("waiting").display(`Loading, please wait... `);
       try {
-        let result = await (await fetch(url)).json();
+        let result = await (await fetch(apiUrl)).json();
         if (result.content) {
           let markdown = atob(result.content);
           let converter = new showdown.Converter();
-
-
           return converter
             .makeHtml(markdown)
             .replace(/(href|src)="([^h][^t][^t][^p])/g, (match, attr, urlFragment) => {
@@ -933,7 +983,60 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         }
         return `<p>The repository does not have a README file.`;
       } catch (e) {
-        return `<p>Error retrieving ${url}: ${e.message}.</p>`;
+        return `<p>Error retrieving ${apiUrl}: ${e.message}.</p>`;
+      } finally {
+        qxl.packagebrowser.Popup.getInstance().hide();
+      }
+    },
+
+    async __getReleasesHtml(modelNode, treeNode) {
+
+      let uri = modelNode.uri.split("/").slice(0,2).join("/");
+      let apiUrl = `https://api.github.com/repos/${uri}/releases`;
+      qxl.packagebrowser.Popup.getInstance().useIcon("waiting").display(`Loading, please wait... `);
+      try {
+        const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+        const today = new Date();
+        let html="";
+        let result = await (await fetch(apiUrl)).json();
+        if (result.length) {
+          html = `<h1>Releases</h1>`;
+          html += result.map( release => {
+            if (release.draft) {
+              return null;
+            }
+            const datePublished = new Date(release.published_at);
+            const daysSincePublished = Math.round(Math.abs((today.getTime() - datePublished.getTime())/(oneDay)));
+            if (treeNode && daysSincePublished < 7) {
+              treeNode.setIcon("qx/icon/Tango/16/status/mail-unread.png");
+              treeNode.setLabel("New release available");
+            }
+            const tagHtml = release.tag_name !== release.name ? `Tag name: ${release.tag_name}. ` : "";
+            const titleSuffixes = [];
+            if (release.prerelease) {
+              titleSuffixes.push("prerelease");
+            }
+            if (release.tag_name === modelNode.latestCompatible) {
+              titleSuffixes.push("latest compatible release");
+            }
+            if (release.tag_name === modelNode.latestVersion) {
+              titleSuffixes.push("current version");
+            }
+            let div = document.createElement('div');
+            div.innerText = release.body;
+            let description = div.innerHTML;
+            return `
+              <h2>${release.name} ${titleSuffixes.length ? ("(" + titleSuffixes.join(", ") + ")") : ""}</h2>
+              <p style="font-weight: bold">${tagHtml}Published at ${datePublished.toLocaleDateString()}, ${datePublished.toLocaleTimeString()} (${daysSincePublished} days ago)</p>
+              <p>${description}</p>
+            `;
+          }).filter(release => Boolean(release)).join("\n");
+        }
+        return html;
+      } catch (e) {
+        return `<p>Error retrieving ${apiUrl}: ${e.message}.</p>`;
+      } finally {
+        qxl.packagebrowser.Popup.getInstance().hide();
       }
     },
 

@@ -89,18 +89,6 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
             lib.manifest = elem.manifest;
             lib.uri = elem.uri;
             parent.add(lib);
-            // Omit these nodes for now....
-            // let homepage = elem.manifest.info.homepage;
-            // if (homepage) {
-            //   let homepageNode = new qxl.packagebrowser.Tree("Homepage");
-            //   homepageNode.type = "homepage";
-            //   homepageNode.url = homepage;
-            //   parent.add(homepageNode);
-            // }
-            // let sourceCodeNode = new qxl.packagebrowser.Tree("Source code");
-            // sourceCodeNode.type = "sourcecode";
-            // sourceCodeNode.url = `https://github.com/${elem.uri}`;
-            // parent.add(sourceCodeNode);
             let readmeNode = new qxl.packagebrowser.Tree("Readme");
             readmeNode.type = "readme";
             readmeNode.uri = elem.uri;
@@ -120,6 +108,12 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
                 }
               });
             }
+            let releasesNode = new qxl.packagebrowser.Tree("Releases");
+            releasesNode.type = "releases";
+            releasesNode.uri = elem.uri;
+            releasesNode.latestVersion = elem.latestVersion;
+            releasesNode.latestCompatible = elem.latestCompatible;
+            parent.add(releasesNode);
             if (elem.data && elem.data.problems) {
               let problemsNode = new qxl.packagebrowser.Tree("Problems");
               problemsNode.type = "problems";
