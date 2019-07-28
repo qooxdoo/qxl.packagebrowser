@@ -118,6 +118,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
             parent.add(releasesNode);
             if (elem.data && elem.data.problems) {
               let problemsNode = new qxl.packagebrowser.Tree("Problems");
+              problemsNode.manifest = elem.manifest;
               problemsNode.type = "problems";
               problemsNode.data = elem.data;
               problemsNode.uri = elem.uri;

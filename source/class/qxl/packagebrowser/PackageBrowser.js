@@ -878,8 +878,13 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       return `https://github.com/${uri}/issues${newIssue ? "/new" : ""}`;
     },
 
+    /**
+     * @param {qxl.packagebrowser.Tree} modelNode
+     * @return {string}
+     * @private
+     */
     __getProblemsHtml(modelNode) {
-      let {compilation_log} = modelNode.data;
+      let {data:{compilation_log}, manifest:{info, requires}} = modelNode;
       const lineStartsWith = [
         "One or more libraries",
         "Writing",
@@ -901,16 +906,30 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           release a new version of the package.</p>`;
         log = log.replace(migrateSignal,"");
       }
-      const newIssueUrl =
+      const newIssueBody = [
+        `Compiling package '${info.name}' with the following environment:`, "",
+        ` - qooxdoo version: ${requires["@qooxdoo/framework"]}`,
+        ` - compiler: ${requires["@qooxdoo/compiler"]}`, "",
+        `results in the following warnings/errors:`, "", log, "",
+        `Please visit https://www.qooxdoo.org/qxl.packagebrowser/${top.location.hash} for more information how to fix the problems.`
+      ].join("\n");
+      const newPackageIssueUrl =
         this.__getNewIssueUrl(modelNode.uri, true) +
         "?title=" + encodeURIComponent("Compilation problems") +
-        "&body=" + encodeURIComponent(log);
+        "&body=" + encodeURIComponent(newIssueBody);
+      const newCompilerIssueUrl =
+        `https://github.com/qooxdoo/qooxdoo-compiler/issues/new` +
+        "?title=" + encodeURIComponent("Compilation problems") +
+        "&body=" + encodeURIComponent(newIssueBody);
       let html = `<h1>Compilation problems</h1>
         <p>During the compilation of this package, warnings or errors have been logged.
         These messages might point to problems of the compiled library or might be
         the symptom of an unresolved bug of the compiler. You can 
-        <a target="_blank" href="${newIssueUrl}">create an issue in the package repo</a>, and/or
-        <a target="_blank" href="https://gitter.im/qooxdoo/qooxdoo">report the problems on Gitter</a>. 
+        <a target="_blank" href="${newPackageIssueUrl}">create an issue in the package repo</a>,
+        or, if you think that a compiler bug is concerned,
+        <a target="_blank" href="https://gitter.im/qooxdoo/qooxdoo">report the problems on Gitter</a> and/or
+        <a target="_blank" href="${newCompilerIssueUrl}">
+        create an issue in the compiler repo</a>.
         The messages do not necessarily imply that the package is broken.</p> 
         ${migrateMsg}
         <p style="font-weight: bold">Please check the following compilation messages:</p>
@@ -951,7 +970,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             return result;
           },[]);
       if (explainMessages.length) {
-        html += `<p style="font-weight: bold">explanation</p>
+        html += `<p style="font-weight: bold">Explanation</p>
         <p>If you have access to mentioned classes or files, the following points 
         might help you to fix the problems.</p>
         <ul><li>${explainMessages.join("</li><li>")}</li></ul>`;
