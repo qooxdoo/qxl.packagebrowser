@@ -308,21 +308,20 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       prevNextPart.add(nextbutt);
       this._nextButton = nextbutt;
 
-      var navButtonOptions = {
-        converter: function (data) {
-          return data === "visible";
-        }
-      };
-
-      var externLinksPart1 = this._navPart = new qx.ui.toolbar.Part();
-      bar.add(externLinksPart1);
-      // -- spin-out sample
+      // -- spin-out demo
       var ownWinBtn = new qx.ui.toolbar.Button(this.tr("Own Window"), "icon/22/actions/edit-redo.png");
       ownWinBtn.addListener("execute", this.__openWindow, this);
       ownWinBtn.setToolTipText("Open demo in new window");
       this.__ownWindowButton = ownWinBtn;
-      externLinksPart1.add(ownWinBtn);
+      bar.add(ownWinBtn);
 
+      // -- documentaton
+      var docButton = new qx.ui.toolbar.Button(this.tr("Documentation"), "icon/22/apps/internet-web-browser.png");
+      docButton.addListener("execute",() => {
+        window.open('https://www.qooxdoo.org/docs/#/cli/packages');
+      }, this);
+      docButton.setToolTipText("Open package system documentation");
+      bar.add(docButton);
 
       // VIEWS
       // -----------------------------------------------------
@@ -342,7 +341,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
       // set priorities for overflow handling
       bar.setRemovePriority(viewPart, 6);
-      bar.setRemovePriority(externLinksPart1, 3);
       bar.setRemovePriority(prevNextPart, 2);
       bar.setRemovePriority(this._navPart, 1);
 
@@ -910,7 +908,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         `Compiling package '${info.name}' with the following environment:`, "",
         ` - qooxdoo version: ${requires["@qooxdoo/framework"]}`,
         ` - compiler: ${requires["@qooxdoo/compiler"]}`, "",
-        `results in the following warnings/errors:`, "", log, "",
+        `results in the following warnings/errors:`, "```", log, "```",
         `Please visit https://www.qooxdoo.org/qxl.packagebrowser/${top.location.hash} for more information how to fix the problems.`
       ].join("\n");
       const newPackageIssueUrl =
@@ -922,17 +920,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         "?title=" + encodeURIComponent("Compilation problems") +
         "&body=" + encodeURIComponent(newIssueBody);
       let html = `<h1>Compilation problems</h1>
-        <p>During the compilation of this package, warnings or errors have been logged.
-        These messages might point to problems of the compiled library or might be
-        the symptom of an unresolved bug of the compiler. You can 
-        <a target="_blank" href="${newPackageIssueUrl}">create an issue in the package repo</a>,
-        or, if you think that a compiler bug is concerned,
-        <a target="_blank" href="https://gitter.im/qooxdoo/qooxdoo">report the problems on Gitter</a> and/or
-        <a target="_blank" href="${newCompilerIssueUrl}">
-        create an issue in the compiler repo</a>.
-        The messages do not necessarily imply that the package is broken.</p> 
         ${migrateMsg}
-        <p style="font-weight: bold">Please check the following compilation messages:</p>
+        <p>During the compilation of this package, the following warnings or errors have been logged.
+        The messages do not necessarily imply that the package is broken.
+        They might point to problems of the compiled library or might be
+        the symptom of an unresolved bug of the compiler.</p> 
         <pre>${log}</pre>`;
 
       const explanations = [
@@ -970,11 +962,15 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             return result;
           },[]);
       if (explainMessages.length) {
-        html += `<p style="font-weight: bold">Explanation</p>
-        <p>If you have access to mentioned classes or files, the following points 
-        might help you to fix the problems.</p>
+        html += `<h2>Explanation</h2>
         <ul><li>${explainMessages.join("</li><li>")}</li></ul>`;
       }
+      html += `<h2>What you can do</h2>
+      <ul>
+        <li><a target="_blank" href="${newPackageIssueUrl}">Create an issue in the package repo</a>;</li>    
+        <li>If you think that a compiler bug is concerned, <a target="_blank" href="${newCompilerIssueUrl}">create an issue in the compiler repo</a>;</li>
+        <li>Or, if you are unsure, <a target="_blank" href="https://gitter.im/qooxdoo/qooxdoo">report the problems on Gitter</a>.</li>
+      </ul>`;
       return html;
     },
 
