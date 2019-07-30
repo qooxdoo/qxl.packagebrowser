@@ -117,9 +117,11 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
             let outputPath = path.join(pkg_dir, target.outputPath);
             let appTgtPath = path.join(targetDir, pkg_data.uri);
             this.__mkdirp(appTgtPath);
+/* transpiled is needed for apiviewer
             if (targetType === "build") {
-              this.__deleteFolderRecursiveSync(path.join(outputPath, "transpiled"));
+               this.__deleteFolderRecursiveSync(path.join(outputPath, "transpiled"));
             }
+*/			
             console.log(`>>> Moving generated applications from ${outputPath} to ${appTgtPath}`);
             fs.renameSync(outputPath, appTgtPath);
             // inform client that we have one or more application demos
