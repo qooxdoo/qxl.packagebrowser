@@ -1,4 +1,4 @@
-const {execSync} = require("child_process");
+const {execSync, spawnSync} = require("child_process");
 const path = require("path");
 const process = require("process");
 const fs = require("fs");
@@ -40,7 +40,8 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         return;
       }
 
-      const header = "   Creating metadata for package browser...   ";
+      const header = "   Creating metadata for package browser. This will take a while.   ";
+      console.log();
       console.log("=".repeat(header.length));
       console.log(header);
       console.log("=".repeat(header.length));
@@ -60,7 +61,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         this.__deleteFolderRecursiveSync(targetDir);
       }
       fs.mkdirSync(targetDir);
-      console.log(`>>> Starting compilation of all compatible packages. This might take a while.`);
+      console.log(`>>> Starting compilation of all compatible packages...`);
       let stdout = execSync(`qx pkg list --uris-only`);
       let packages =
         stdout
@@ -75,7 +76,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         `Creating container application...`
       );
       for (let pkg of packages) {
-        this.__addCmd(`cd ${containerPath} && qx pkg install ${pkg}`, `Installing ${pkg}...`);
+        this.__addCmd(`qx pkg install ${pkg}`, `Installing ${pkg}...`,  containerPath);
       }
       await this.__executeCommands();
       const packages_dir = path.join(containerPath, "qx_packages");
@@ -105,8 +106,9 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         }
         // compile the application
         this.__addCmd(
-          `cd ${pkg_dir} && qx pkg migrate && qx compile --target=${targetType} --warnAsError=false --feedback=0 --force 2>&1`,
+          `qx pkg migrate 2>&1 && qx compile --target=${targetType} --warnAsError=false --feedback=0 --force 2>&1`,
           `Compiling ${manifest.info.name} v${manifest.info.version}...`,
+          pkg_dir,
           (stdout, stderr) => {
             let compilation_log = stdout + "\n\n" +stderr;
             packages_data[index].data = {
@@ -121,17 +123,18 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
             if (targetType === "build") {
                this.__deleteFolderRecursiveSync(path.join(outputPath, "transpiled"));
             }
-*/			
+*/
             console.log(`>>> Moving generated applications from ${outputPath} to ${appTgtPath}`);
             fs.renameSync(outputPath, appTgtPath);
             // inform client that we have one or more application demos
             packages_data[index].data.applications = compileData.applications;
           },
           error => {
-            console.error(error.message);
+            let compilation_log = error.message + "\n\n" + error.stderr.toString() + "\n\n" + error.stdout.toString();
+            console.error(compilation_log);
               packages_data[index].data = {
                 problems: true,
-                compilation_log: error.message + "\n\n" + error.stderr.toString() + "\n\n" + error.stdout.toString()
+                compilation_log
             };
           }
         );
@@ -158,18 +161,20 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
      * Adds a command to the command queue
      * @param {String} cmd The CLI command
      * @param {String|undefined} info An explanatory text for the log, defaults to the CLI command
-     * @param {Function} onSuccess
+     * @param {String|undefined} cwd
+     *    If given, the working directory in which the commands will be executed
+     * @param {Function|undefined} onSuccess
      *    A function that is executed when the command has succesfully terminated.
      *    Receives the output of the command
-     * @param {Function} onFail
+     * @param {Function|undefined} onFail
      *    A function that is executed when the command has finished with a non-zero
      *    exit code or an error has been thrown in the onSuccess function. Receives
      *    an error object.
      * @private
      */
-    __addCmd(cmd, info, onSuccess, onFail) {
+    __addCmd(cmd, info, cwd, onSuccess, onFail) {
       this.__cmds = this.__cmds || [];
-      this.__cmds.push([cmd, info, onSuccess, onFail]);
+      this.__cmds.push([cmd, info, cwd, onSuccess, onFail]);
     },
 
     /**
@@ -177,10 +182,14 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
      * @private
      */
     async __executeCommands() {
-      for (let [cmd, info, onSuccess, onFail] of this.__cmds){
+      for (let [cmd, info, cwd, onSuccess, onFail] of this.__cmds){
         console.log( ">>> " + (info || `Executing '${cmd}'`));
+        const options = {};
+        if (cwd) {
+          options.cwd = cwd;
+        }
         try {
-          let stdout = execSync(cmd);
+          let stdout = execSync(cmd, options);
           stdout = stdout.toString().trim();
           if (stdout) {
             console.log(stdout);

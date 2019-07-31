@@ -873,6 +873,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     },
 
     __getNewIssueUrl(uri, newIssue=false) {
+      uri = uri.split("/").slice(0,2).join("/");
       return `https://github.com/${uri}/issues${newIssue ? "/new" : ""}`;
     },
 
@@ -882,7 +883,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @private
      */
     __getProblemsHtml(modelNode) {
-      let {data:{compilation_log}, manifest:{info, requires}} = modelNode;
+      let {data:{compilation_log}, manifest:{info, requires={}}} = modelNode;
       const lineStartsWith = [
         "One or more libraries",
         "Writing",
@@ -931,7 +932,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         {
           regex: /^([^:]+): (.+) Unresolved use of symbol (.+)$/,
           description:
-            `The compiler cannot find a reference for the given symbol '$3'. 
+            `The compiler cannot find a reference for the given symbol <span class="code">$3</span>. 
             If this does not indicate a bug, it can usually fixed with adding <span class="code">@ignore($3)</span> 
             in class <span class="code">$1</span>.`
         },
@@ -947,9 +948,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           description:
             `The file <span class="code">$2</span> is not valid according to 
              <a target="_blank" href="https://github.com/qooxdoo/qooxdoo-compiler/tree/master/source/resource/qx/tool/schema">
-             the current JSON Schema</a>. The validation error is: $3.`
+             the current JSON Schema</a>. The validation error is: <span class="code">$3</span>.`
         }
-        //
       ];
       const explainMessages =
         compilation_log
@@ -1054,7 +1054,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             div.innerText = release.body;
             let description = div.innerHTML;
             return `
-              <h2>${release.name} ${titleSuffixes.length ? ("(" + titleSuffixes.join(", ") + ")") : ""}</h2>
+              <h2><a href="${release.html_url}" target="_blank">${release.name} ${titleSuffixes.length ? ("(" + titleSuffixes.join(", ") + ")") : ""}</a></h2>
               <p style="font-weight: bold">${tagHtml}Published at ${datePublished.toLocaleDateString()}, ${datePublished.toLocaleTimeString()} (${daysSincePublished} days ago)</p>
               <p>${description}</p>
             `;
