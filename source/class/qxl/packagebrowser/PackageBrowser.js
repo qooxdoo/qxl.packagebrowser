@@ -20,13 +20,9 @@
 
 ************************************************************************ */
 
-/* ************************************************************************
-
-
-************************************************************************ */
 
 /**
- * The GUI definition of the qooxdoo unit test runner.
+ * The GUI + business logic of the package browser.
  *
  * @asset(qx/icon/Tango/16/actions/edit-find.png)
  * @asset(qx/icon/Tango/16/actions/edit-delete.png)

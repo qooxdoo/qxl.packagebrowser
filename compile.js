@@ -1,7 +1,8 @@
-const {execSync, spawnSync} = require("child_process");
+const {execSync} = require("child_process");
 const path = require("path");
 const process = require("process");
 const fs = require("fs");
+
 qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
   extend: qx.tool.cli.api.LibraryApi,
 
@@ -61,7 +62,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         this.__deleteFolderRecursiveSync(targetDir);
       }
       fs.mkdirSync(targetDir);
-      console.log(`>>> Starting compilation of all compatible packages...`);
+      console.log(`>>> Installing all compatible packages...`);
       let stdout = execSync(`qx pkg list --uris-only`);
       let packages =
         stdout
@@ -75,6 +76,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         `qx create ${containerPath} -I`,
         `Creating container application...`
       );
+      console.log(`>>> The following packages will be installed:\n - ${packages.join("\n - ")}`);
       for (let pkg of packages) {
         this.__addCmd(`qx pkg install ${pkg}`, `Installing ${pkg}...`,  containerPath);
       }
@@ -89,19 +91,40 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
           continue;
         }
         let install_data = lockfile_data.libraries.find(d => d.uri === pkg_data.uri);
-        if (! install_data) {
-          console.log(`${pkg_data.uri} is not installed (maybe internal or incompatible).`);
+        if (!install_data) {
+          console.log(`>>> ${pkg_data.name} (${pkg_data.uri}) has not been installed, skipping...`);
           delete packages_data[index];
           continue;
         }
         let pkg_dir = path.join(containerPath, install_data.path);
         let manifest;
         let compileData;
+        const compileDataPath = path.join(pkg_dir, "compile.json");
         try {
-          manifest = await this.__loadJson(path.join(pkg_dir, "Manifest.json"));
-          compileData = await this.__loadJson(path.join(pkg_dir, "compile.json"));
+          const manifestInstance = new qx.tool.config.Manifest();
+          manifestInstance.set({
+            baseDir: pkg_dir,
+            validate: false
+          });
+          await manifestInstance.load();
+          manifest = manifestInstance.getData();
+          if (!fs.existsSync(compileDataPath)) {
+            console.log(`>>> ${manifest.info.name} does not contain a compilable application.`);
+            // reload & check manifest
+            manifestInstance.set({
+              loaded: false,
+              validate: true
+            });
+            await manifestInstance.load();
+            continue;
+          }
+          compileData = await this.__loadJson(compileDataPath);
         } catch (e) {
           console.warn(e.message);
+          packages_data[index].data = {
+            problems: true,
+            compilation_log: e.message
+          };
           continue;
         }
         // compile the application
@@ -112,7 +135,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
           (stdout, stderr) => {
             let compilation_log = stdout + "\n\n" +stderr;
             packages_data[index].data = {
-              problems: Boolean(compilation_log.match(/(error|warn|missing|cannot find|unresolved|unexpected|deprecated)/i)),
+              problems: Boolean(compilation_log.match(/(error|warn|missing|failed|cannot find|unresolved|unexpected|deprecated)/i)),
               compilation_log
             };
             let target = compileData.targets.find(target => target.type === targetType) || compileData.targets[0];
