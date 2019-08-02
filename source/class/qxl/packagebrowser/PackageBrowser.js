@@ -944,7 +944,9 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           description:
             `The file <span class="code">$2</span> is not valid according to 
              <a target="_blank" href="https://github.com/qooxdoo/qooxdoo-compiler/tree/master/source/resource/qx/tool/schema">
-             the current JSON Schema</a>. The validation error is: <span class="code">$3</span>.`
+             the current JSON Schema</a> 
+             (see documentation <a href="http://www.qooxdoo.org/docs/#/configuration/overview?id=configuration-files" target="_blank">
+             here</a>). Validation errors are: <span class="code">$3</span>.`
         }
       ];
       const explainMessages =
