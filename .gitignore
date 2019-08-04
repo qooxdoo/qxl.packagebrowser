@@ -2,5 +2,6 @@
 /compiled
 /qx_packages
 /packages
+/node_modules
 .idea
 .DS_Store
