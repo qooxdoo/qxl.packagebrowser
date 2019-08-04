@@ -1,4 +1,4 @@
-const {execSync} = require("child_process");
+const {execSync, spawnSync} = require("child_process");
 const path = require("path");
 const process = require("process");
 const fs = require("fs");
@@ -40,6 +40,11 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         console.log(">>> Package data exists.");
         return;
       }
+  
+      let s = 'npm install --no-save --no-package-lock mkdirp';
+      console.info(s);
+      execSync(s);
+      const mkdirp = require('mkdirp');
 
       const header = "   Creating metadata for package browser. This will take a while.   ";
       console.log();
@@ -80,8 +85,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       for (let pkg of packages) {
         this.__addCmd(`qx pkg install ${pkg}`, `Installing ${pkg}...`,  containerPath);
       }
-      await this.__executeCommands();
-      const packages_dir = path.join(containerPath, "qx_packages");
+      this.__executeCommands();
       const lockfile_data = await this.__loadJson(path.join(containerPath, "qx-lock.json"));
       const packages_data = await this.__loadJson(datafilePath);
       console.log(`\n>>> Preparing compilation. Please check the following messages for errors and warnings.`);
@@ -129,11 +133,11 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         }
         // compile the application
         this.__addCmd(
-          `qx pkg migrate 2>&1 && qx compile --target=${targetType} --warnAsError=false --feedback=0 --force 2>&1`,
+          `qx pkg migrate && qx compile --target=${targetType} --warnAsError=false --feedback=0 --force `,
           `Compiling ${manifest.info.name} v${manifest.info.version}...`,
           pkg_dir,
           (stdout, stderr) => {
-            let compilation_log = stdout + "\n\n" +stderr;
+            let compilation_log = stdout + "\n\n" + stderr;
             packages_data[index].data = {
               problems: Boolean(compilation_log.match(/(error|warn|missing|failed|cannot find|unresolved|unexpected|deprecated)/i)),
               compilation_log
@@ -141,7 +145,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
             let target = compileData.targets.find(target => target.type === targetType) || compileData.targets[0];
             let outputPath = path.join(pkg_dir, target.outputPath);
             let appTgtPath = path.join(targetDir, pkg_data.uri);
-            this.__mkdirp(appTgtPath);
+            mkdirp.sync(path.dirname(appTgtPath));
 /* transpiled is needed for apiviewer
             if (targetType === "build") {
                this.__deleteFolderRecursiveSync(path.join(outputPath, "transpiled"));
@@ -153,7 +157,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
             packages_data[index].data.applications = compileData.applications;
           },
           error => {
-            let compilation_log = error.message + "\n\n" + error.stderr.toString() + "\n\n" + error.stdout.toString();
+            let compilation_log = error.message + "\n\n" + error.stderr + "\n\n" + error.stdout;
             console.error(compilation_log);
               packages_data[index].data = {
                 problems: true,
@@ -162,7 +166,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
           }
         );
       }
-      await this.__executeCommands();
+      this.__executeCommands();
       await qx.tool.utils.Json.saveJsonAsync(datafilePath, packages_data.filter(pkg => Boolean(pkg)));
       this.__pkgDataGenerated = true;
       console.log("\n>>> Done.");
@@ -204,24 +208,33 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
      * Executes the commands in the queue.
      * @private
      */
-    async __executeCommands() {
+    __executeCommands() {
       for (let [cmd, info, cwd, onSuccess, onFail] of this.__cmds){
         console.log( ">>> " + (info || `Executing '${cmd}'`));
         const options = {};
         if (cwd) {
           options.cwd = cwd;
         }
+        options.shell = true;
+        let sout;
+        let serr;
         try {
-          let stdout = execSync(cmd, options);
-          stdout = stdout.toString().trim();
-          if (stdout) {
-            console.log(stdout);
+          let {stdout, stderr} = spawnSync(cmd, options);
+          sout = stdout.toString().trim();
+          if (sout) {
+            console.log(sout);
+          }
+          serr = stderr.toString().trim();
+          if (serr) {
+            console.log(serr);
           }
           if (typeof onSuccess == "function") {
-            onSuccess(stdout,"");
+            onSuccess(sout, serr);
           }
         } catch (e) {
           if (typeof onFail == "function") {
+            e.stdout = sout;
+            e.stderr = serr;
             onFail(e);
           } else {
             throw e;
@@ -230,22 +243,6 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       }
       // clear command queue
       this.__cmds = [];
-    },
-
-    /**
-     * Equivalent for `mkdir -p` on bash
-     * @param {String} targetDir
-     * @private
-     */
-    __mkdirp(targetDir){
-      const initDir = path.isAbsolute(targetDir) ? '/': '';
-      targetDir.split("/").reduce((parentDir, childDir) => {
-        const curDir = path.resolve(parentDir, childDir);
-        if (!fs.existsSync(curDir)) {
-          fs.mkdirSync(curDir);
-        }
-        return curDir;
-      }, initDir);
     },
 
     /**
