@@ -967,6 +967,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       <ul>
         <li><a target="_blank" href="${newPackageIssueUrl}">Create an issue in the package repo</a>;</li>    
         <li>If you think that a compiler bug is concerned, <a target="_blank" href="${newCompilerIssueUrl}">create an issue in the compiler repo</a>;</li>
+        <li>If the problem concerns a dependency of this package, try upgrading the dependent package to its most recent compatible version; if that doesn't help, contact the package author;</li>
         <li>Or, if you are unsure, <a target="_blank" href="https://gitter.im/qooxdoo/qooxdoo">report the problems on Gitter</a>.</li>
       </ul>`;
       return html;
