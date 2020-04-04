@@ -14,6 +14,25 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
 
   members: {
     __pkgDataGenerated: false,
+     require: function(module) {
+        try {
+          require.resolve(module);
+        } catch (e) {
+          if ( e.code === 'MODULE_NOT_FOUND' ) {
+            this.loadNpmModule(module);
+          }
+        }
+        return require(module);
+     }, 
+
+     loadNpmModule: function(module) {
+       const {execSync} = require("child_process");
+       let s = `npm install --no-save --no-package-lock ${module}`;
+       qx.tool.compiler.Console.info(s);
+       execSync(s, {
+         stdio: "inherit"
+       });
+     },
 
     async load() {
       let command = this.getCompilerApi().getCommand();
@@ -41,10 +60,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         return;
       }
   
-      let s = 'npm install --no-save --no-package-lock mkdirp';
-      console.info(s);
-      execSync(s);
-      const mkdirp = require('mkdirp');
+      const mkdirp = this.require('mkdirp');
 
       const header = "   Creating metadata for package browser. This will take a while.   ";
       console.log();
