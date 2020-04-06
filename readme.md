@@ -1,6 +1,8 @@
 # Qooxdoo Package Browser
 
-This qooxdoo application lets you browse the available packages
+![Build and Deploy](https://github.com/qooxdoo/qxl.packagebrowser/workflows/Build%20and%20Deploy/badge.svg)
+
+This qooxdoo application lets you browse the available packages.
 
 ## Online version
 
@@ -16,4 +18,3 @@ npx qx serve
 ```
 
 Then open [http://localhost:8080](http://localhost:8080)
-
