@@ -1,11 +1,17 @@
 name: Build and Deploy
 on:
+  # run when the master branch is updated
   push:
     branches:
       - master
+  # run every day at 01:00
+  schedule:
+    - cron: "0 1 * * *"
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip')"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,6 +22,7 @@ jobs:
         run: |
           npm install @qooxdoo/compiler
           npx qx compile --target=build -v
+          git reset --hard HEAD
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
