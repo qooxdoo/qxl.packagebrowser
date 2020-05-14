@@ -17,4 +17,4 @@ npm install @qooxdoo/compiler
 npx qx serve
 ```
 
-Then open [http://localhost:8080](http://localhost:8080)
+Then open [http://localhost:8080](http://localhost:8080).
