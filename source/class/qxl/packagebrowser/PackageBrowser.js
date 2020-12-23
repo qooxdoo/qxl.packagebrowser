@@ -96,12 +96,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     this.widgets = {};
     this.tests = {};
 
-
     // Commands & Menu Bar
     this.__makeCommands();
     this.__menuBar = this.__makeToolBar();
     this.add(this.__menuBar);
-
 
     // Main Split Pane
     var mainsplit = new qx.ui.splitpane.Pane("horizontal");
@@ -163,7 +161,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     this._demoView = this.__makeDemoView();
     infosplit.add(this._demoView, 2);
 
-
     // Back button and bookmark support
     this._history = qx.bom.History.getInstance();
     this._history.addListener("changeState", function (e) {
@@ -178,17 +175,9 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     }, this);
 
     this.__menuElements = [this.__ownWindowButton, this.__viewPart];
-
     this.__infoWindow = new qxl.packagebrowser.InfoWindow(this.tr("Info"));
     this.__infoWindow.setAutoCenter(true);
   },
-
-
-  /*
-  *****************************************************************************
-     MEMBERS
-  *****************************************************************************
-  */
 
   members: {
     // ------------------------------------------------------------------------
@@ -199,7 +188,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     __logDone: null,
     _tree: null,
     _searchTextField: null,
-    __currentJSCode: null,
     __menuElements: null,
     _versionFilter: null,
     _navPart: null,
@@ -220,9 +208,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     welcomeUrl: null,
 
     __makeCommands: function () {
-      this._cmdObjectSummary = new qx.ui.command.Command("Ctrl+O");
-      this._cmdObjectSummary.addListener("execute", this.__getObjectSummary, this);
-
       this._cmdRunSample = new qx.ui.command.Command("F5");
       this._cmdRunSample.addListener("execute", this.runSample, this);
 
@@ -236,54 +221,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       this._cmdSampleInOwnWindow.addListener("execute", this.__openWindow, this);
     },
 
-    /**
-     * TODOC
-     *
-     */
-    __getObjectSummary: function () {
-      var cw = this._iframe.getWindow();
-      var msg;
-      if (cw && cw.qx) {
-        msg = cw.qx.dev.ObjectSummary.getInfo();
-      } else {
-        msg = "Unable to access namespace. Maybe no demo loaded.";
-      }
-
-      var area = new qx.ui.form.TextArea(msg);
-      area.setDecorator(null);
-      area.setAutoSize(true);
-      area.setMaxHeight(qx.bom.Viewport.getHeight() - 100);
-      this.__infoWindow.setContent(area);
-      this.__infoWindow.setWidth(400);
-      this.__infoWindow.show();
-    },
-
     __openWindow: function () {
       var sampUrl = this._iframe.getSource();
       window.open(sampUrl, "_blank");
     },
-
-
-    __setCurrentJSCode: function (code) {
-      this.__currentJSCode = code;
-    },
-
-
-    /**
-     * Handler for opening the api viewer.
-     */
-    __onApiOpen: function () {
-      window.open("./apiviewer");
-    },
-
-
-    /**
-     * Handler for opening the manual.
-     */
-    __onManualOpen: function () {
-      window.open("../docs");
-    },
-
 
     __makeToolBar: function () {
       var bar = new qx.ui.toolbar.ToolBar();
@@ -478,7 +419,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
     /**
      * Tree View in Left Pane
-     * - only make root node; rest will befilled when iframe has loaded (with
+     * - only make root node; rest will be filled when iframe has loaded (with
      *   leftReloadTree)
      *
      * @return {var} TODOC
@@ -554,9 +495,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
 
     /**
-     * TODOC
-     *
-     * @param e {Event} TODOC
+     * @param e {Event}
      * @return {void}
      */
     leftReloadTree: function (e) {
@@ -566,7 +505,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       var _initialNode = null;
 
       // set a section to open initially
-      var state = this._history.getState().replace(/\~/g, "/");
+      var state = this._history.getState().replace(/~/g, "/");
 
       let icons = this.self(arguments).icons;
 
@@ -877,6 +816,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @param {qxl.packagebrowser.Tree} modelNode
      * @return {string}
      * @private
+     * @ignore(top)
      */
     __getProblemsHtml(modelNode) {
       let {data:{compilation_log}, manifest:{info, requires={}}} = modelNode;
@@ -937,7 +877,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           description:
             `The <span class="code">Manifest.json</span> file of the class 
             <span class="code">$2</span> declares to provide a path 
-            <span class="code">$1</span>, which does not exist.`
+            <span class="code">$1</span>, which does not exist. 
+            If no such path is needed, consider removing the entry in Manifest.json.`
         },
         {
           regex: /^(.*)Error validating data for ([^:]+): (.+)$/,
@@ -1339,6 +1280,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
   destruct: function () {
     this.widgets = this.tests = this._sampleToTreeNodeMap = this.tree = this.logelem = null;
-    this._disposeObjects("mainsplit", "tree1", "left", "toolbar", "f1", "f2", "_history", "logappender", "_cmdObjectSummary", "_cmdRunSample", "_cmdPrevSample", "_cmdNextSample", "_cmdSampleInOwnWindow", "_navPart", "__ownWindowButton", "__viewPart", "__viewGroup", "__menuBar", "_infosplit", "_searchTextField", "_tree", "_iframe", "_demoView", "__menuElements", "__logSync", "_leftComposite", "_urlWindow", "_nextButton", "_prevButton", "__menuItemStore", "__overflowMenu");
+    this._disposeObjects("mainsplit", "tree1", "left", "toolbar", "f1", "f2", "_history", "logappender", "_cmdRunSample", "_cmdPrevSample", "_cmdNextSample", "_cmdSampleInOwnWindow", "_navPart", "__ownWindowButton", "__viewPart", "__viewGroup", "__menuBar", "_infosplit", "_searchTextField", "_tree", "_iframe", "_demoView", "__menuElements", "__logSync", "_leftComposite", "_urlWindow", "_nextButton", "_prevButton", "__menuItemStore", "__overflowMenu");
   }
 });

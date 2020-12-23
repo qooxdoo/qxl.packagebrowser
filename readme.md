@@ -13,7 +13,7 @@ http://www.qooxdoo.org/qxl.packagebrowser/
 ```bash
 git clone https://github.com/qooxdoo/qxl.packagebrowser.git
 cd qxl.packagebrowser
-npm install @qooxdoo/compiler
+npm install --no-save --no-package-lock @qooxdoo/compiler
 npx qx serve
 ```
 

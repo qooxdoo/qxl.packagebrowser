@@ -3,5 +3,6 @@
 /qx_packages
 /packages
 /node_modules
+/html
 .idea
 .DS_Store

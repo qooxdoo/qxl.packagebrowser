@@ -19,13 +19,17 @@ jobs:
           persist-credentials: false
 
       - name: Install
-        run: npm install @qooxdoo/compiler --no-save
+        run: npm install @qooxdoo/compiler --no-save --no-package-lock
 
       - name: Build
-        run:  npx qx deploy --out=./html  --clean --source-maps
+        run:  |
+          npx qx deploy --out=./html --source-maps
+          rm -rf ./html/qxl.packagebrowser/demos
+          mv ./compiled/build/qxl.packagebrowser/demos ./html/qxl.packagebrowser
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./html
+          keep_files: true
