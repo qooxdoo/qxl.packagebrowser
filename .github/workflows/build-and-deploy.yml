@@ -24,6 +24,8 @@ jobs:
       - name: Build
         run:  |
           npx qx deploy --out=./html --source-maps
+          ls -al ./html/qxl.packagebrowser
+          cat ./compiled/build/qxl.packagebrowser/package-data.json
           rm -rf ./html/qxl.packagebrowser/demos
           mv ./compiled/build/qxl.packagebrowser/demos ./html/qxl.packagebrowser
 
