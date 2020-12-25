@@ -22,16 +22,10 @@ jobs:
         run: npm install @qooxdoo/compiler --no-save --no-package-lock
 
       - name: Build
-        run:  |
-          npx qx deploy --out=./html --source-maps
-          ls -al ./html/qxl.packagebrowser
-          cat ./compiled/build/qxl.packagebrowser/package-data.json
-          rm -rf ./html/qxl.packagebrowser/demos
-          mv ./compiled/build/qxl.packagebrowser/demos ./html/qxl.packagebrowser
+        run:  npx qx compile --target=build -v
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html
-          keep_files: true
+          publish_dir: ./compiled/build
