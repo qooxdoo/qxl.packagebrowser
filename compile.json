@@ -1,14 +1,12 @@
 {
   "$schema": "https://qooxdoo.org/schema/compile-1-0-0.json",
-  "targets": [
-    {
+  "targets": [{
       "type": "source",
       "outputPath": "compiled/source",
       "bundle": {
         "include": "qx.*"
       }
-    },
-    {
+    }, {
       "type": "build",
       "outputPath": "compiled/build"
     }
@@ -17,14 +15,19 @@
   "locales": ["en"],
 
   "environment": {
-    "qxl.packagebrowser.cache-url" : "https://raw.githubusercontent.com/qooxdoo/qx-contrib/master/cache.json"
+    "qxl.packagebrowser.cache-url": "https://raw.githubusercontent.com/qooxdoo/qx-contrib/master/cache.json"
   },
-  "applications": [
-    {
+  "applications": [{
       "title": "Qooxdoo Package Browser",
       "class": "qxl.packagebrowser.Application",
       "theme": "qxl.packagebrowser.Theme",
       "name": "qxl.packagebrowser"
     }
-  ]
+  ],
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2018
+    }
+  }
+
 }

@@ -109,6 +109,9 @@ qx.Class.define("qxl.packagebrowser.Tree", {
       var agenda = [this];
       var depthfirst = style === "depth" ? 1 : 0;
 
+      /**
+       *
+       */
       function f() {
         var curr;
 

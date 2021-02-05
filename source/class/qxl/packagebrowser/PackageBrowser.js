@@ -56,8 +56,10 @@
  * @asset(qxl/packagebrowser/icon/github-16x16.png)
  *
  * @ignore(location.*)
+ * @ignore(showdown)
  * @ignore(qx.$$appRoot)
  */
+/* global showdown */
 qx.Class.define("qxl.packagebrowser.PackageBrowser", {
   extend: qx.ui.container.Composite,
 
@@ -77,7 +79,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
   },
 
   construct: function () {
-
     qxShowdown.Load;
     this.base(arguments);
 
@@ -254,8 +255,8 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
       // -- documentaton
       var docButton = new qx.ui.toolbar.Button(this.tr("Documentation"), "icon/22/apps/internet-web-browser.png");
-      docButton.addListener("execute",() => {
-        window.open('https://www.qooxdoo.org/docs/#/cli/packages');
+      docButton.addListener("execute", () => {
+        window.open("https://www.qooxdoo.org/docs/#/cli/packages");
       }, this);
       docButton.setToolTipText("Open package system documentation");
       bar.add(docButton);
@@ -501,7 +502,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     leftReloadTree: function (e) {
       this._sampleToTreeNodeMap = {};
       var _sampleToTreeNodeMap = this._sampleToTreeNodeMap;
-      var _initialSection = null;
       var _initialNode = null;
 
       // set a section to open initially
@@ -584,7 +584,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
       // -- Main --------------------------------
       var ttree = this.tests.handler.ttree;
-      var that = this;
 
       // Handle current Tree Selection and Content
       this.tree.setUserData("modelLink", ttree); // link top level widgets and model
@@ -592,7 +591,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       this.tree.getRoot().setOpen(true);
       buildSubTree(this.tree.getRoot(), ttree);
 
-      if (_initialNode != null) {
+      if (_initialNode !== null) {
         this.updateIframe(_initialNode);
       } else {
         this.tree.setSelection([this.tree.getRoot()]);
@@ -673,13 +672,15 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           case "problems":
             html = this.__getProblemsHtml(modelNode);
             break;
-          default:
+          default: {
             let children = modelNode.getChildren();
             if (Array.isArray(children) && children.length && children[0].type === "library") {
+              /* eslint-disable-next-line consistent-return */
               return this.updateIframe(children[0]);
             }
             state = modelNode.pwd().slice(1).concat([modelNode.label]).join("/");
             url = this.welcomeUrl;
+          }
         }
       } else if (!url) {
         url = this.welcomeUrl;
@@ -749,10 +750,18 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       const repo_url = "https://github.com/" + modelNode.uri.split(/\//).slice(0, 2).join("/");
       const display = v => v ? "" : "display:none";
 
+      /**
+       * @param {...any} args
+       */
       function createTableRow(...args) {
         return "<tr>" + args.map(arg => `<td>${arg}</td>`).join("") + "</tr>";
       }
 
+      /**
+       * @param href
+       * @param linktext
+       * @param target
+       */
       function createAnchor(href, linktext, target="_blank") {
         return `<a href="${href}" ${target ? "target=\"" + target + "\"" : ""}>${linktext || href}</a>`;
       }
@@ -761,6 +770,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         if (!pkg_uri.startsWith("@") && !pkg_uri.startsWith("qooxdoo-")) {
           return createTableRow(createAnchor(`javascript:void(top.location.hash='${pkg_uri.replace("/", "~")}~library')`, pkg_uri), range);
         }
+        return null;
       }).filter(v => Boolean(v));
       let html = `
         <h1>${lib.info.name}</h1>
@@ -771,7 +781,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           ${createTableRow("Authors:", this.__getAuthorsHtml(lib.info.authors))}
           ${createTableRow("Homepage:", createAnchor(lib.info.homepage))}
           ${createTableRow("Repository:", createAnchor(repo_url))}
-          ${createTableRow("Issues:", createAnchor(this.__getNewIssueUrl(modelNode.uri), "List of issues") + " | " + createAnchor(this.__getNewIssueUrl(modelNode.uri,true), "Create new issue"))}
+          ${createTableRow("Issues:", createAnchor(this.__getNewIssueUrl(modelNode.uri), "List of issues") + " | " + createAnchor(this.__getNewIssueUrl(modelNode.uri, true), "Create new issue"))}
           ${createTableRow("Keywords:", this.__getKeywordssHtml(lib.info.keywords || []))}
         </table>
         <h2 style="${display(lib.info.description)}">Description</h2>
@@ -808,7 +818,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     },
 
     __getNewIssueUrl(uri, newIssue=false) {
-      uri = uri.split("/").slice(0,2).join("/");
+      uri = uri.split("/").slice(0, 2).join("/");
       return `https://github.com/${uri}/issues${newIssue ? "/new" : ""}`;
     },
 
@@ -839,7 +849,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           The package author should run <span class="code">qx package migrate</span> 
           in the root folder of this package, follow the instructions, and 
           release a new version of the package.</p>`;
-        log = log.replace(migrateSignal,"");
+        log = log.replace(migrateSignal, "");
       }
       const newIssueBody = [
         `Compiling package '${info.name}' with the following environment:`, "",
@@ -899,7 +909,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
               result.push(line.replace(explanation.regex, explanation.description));
             }
             return result;
-          },[]);
+          }, []);
       if (explainMessages.length) {
         html += `<h2>Explanation</h2>
         <ul><li>${explainMessages.join("</li><li>")}</li></ul>`;
@@ -918,7 +928,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       const appsHtml = children.map(childNode => {
           const hash = childNode.pwd().slice(1).concat([childNode.label]).join("~");
           return `<a href="javascript:void(top.location.hash='${hash}')"><h2>${childNode.label}</h2></a>` +
-            (childNode.description ? `<p>${childNode.description}</p>` : "")
+            (childNode.description ? `<p>${childNode.description}</p>` : "");
         }
       ).join("\n");
       return `<h1>Demo Applications</h1>
@@ -958,8 +968,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     },
 
     async __getReleasesHtml(modelNode, treeNode) {
-
-      let uri = modelNode.uri.split("/").slice(0,2).join("/");
+      let uri = modelNode.uri.split("/").slice(0, 2).join("/");
       let apiUrl = `https://api.github.com/repos/${uri}/releases`;
       qxl.packagebrowser.Popup.getInstance().useIcon("waiting").display(`Loading, please wait... `);
       try {
@@ -969,7 +978,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         let result = await (await fetch(apiUrl)).json();
         if (result.length) {
           html = `<h1>Releases</h1>`;
-          html += result.map( release => {
+          html += result.map(release => {
             if (release.draft) {
               return null;
             }
@@ -990,7 +999,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             if (release.tag_name === modelNode.latestVersion) {
               titleSuffixes.push("current version");
             }
-            let div = document.createElement('div');
+            let div = document.createElement("div");
             div.innerText = release.body;
             let description = div.innerHTML;
             return `
@@ -1036,7 +1045,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         // check for the tags
         var tags = folder.getUserData("tags");
         var inTags = false;
-        if (tags != null) {
+        if (tags !== null) {
           for (let j = 0; j < tags.length; j++) {
             inTags = Boolean(tags[j].match(searchRegExp));
             if (inTags) {
@@ -1097,10 +1106,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       req.addListener("success", function (evt) {
         var content = evt.getTarget().getResponse();
         if (!content) {
-          alert("Failed to load package data");
+        /* eslint-disable-next-line no-alert */
+        alert("Failed to load package data");
           return;
         }
-
+        /* eslint-disable-next-line no-eval */
         let treeData = eval(content);
 
         // give the browser a chance to update its UI before doing more
@@ -1114,7 +1124,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             if (state.startsWith("filter/")) {
               qx.event.Timer.once(() => {
                 this._searchTextField.setValue(state.slice(7));
-              },null,1000);
+              }, null, 1000);
             } else {
               this.updateIframe(state);
             }

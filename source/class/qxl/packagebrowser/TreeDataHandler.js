@@ -42,6 +42,9 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
 
     /**
      * create a new tree path from path, under parent node
+     * @param parent
+     * @param path
+     * @param types
      */
     __createPath(parent, path, types) {
       var head = path[0];
