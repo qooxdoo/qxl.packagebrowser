@@ -256,7 +256,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       // -- documentaton
       var docButton = new qx.ui.toolbar.Button(this.tr("Documentation"), "icon/22/apps/internet-web-browser.png");
       docButton.addListener("execute", () => {
-        window.open("https://www.qooxdoo.org/docs/#/cli/packages");
+        window.open("https://www.qooxdoo.org/docs/#/development/cli/packages");
       }, this);
       docButton.setToolTipText("Open package system documentation");
       bar.add(docButton);
