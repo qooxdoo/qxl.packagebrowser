@@ -1,0 +1,24 @@
+{
+  "className": "scro34.theme.graydient.Color",
+  "packageName": "scro34.theme.graydient",
+  "name": "Color",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 14,
+        "column": 0
+      },
+      "end": {
+        "line": 152,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "descendants": []
+}

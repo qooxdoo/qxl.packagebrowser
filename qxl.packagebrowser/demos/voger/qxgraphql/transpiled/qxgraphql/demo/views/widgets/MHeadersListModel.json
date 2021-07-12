@@ -1,0 +1,40 @@
+{
+  "className": "qxgraphql.demo.views.widgets.MHeadersListModel",
+  "packageName": "qxgraphql.demo.views.widgets",
+  "name": "MHeadersListModel",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 13,
+        "column": 3
+      }
+    }
+  },
+  "type": "mixin",
+  "members": {
+    "isEmpty": {
+      "location": {
+        "start": {
+          "line": 6,
+          "column": 4
+        },
+        "end": {
+          "line": 11,
+          "column": 5
+        }
+      },
+      "jsdoc": {},
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": []
+}

@@ -1,0 +1,43 @@
+{
+  "className": "darktheme.theme.Theme",
+  "packageName": "darktheme.theme",
+  "name": "Theme",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 14,
+        "column": 0
+      },
+      "end": {
+        "line": 24,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "themeMeta": {
+    "location": {
+      "start": {
+        "line": 16,
+        "column": 2
+      },
+      "end": {
+        "line": 23,
+        "column": 3
+      }
+    },
+    "themeMetaMap": {
+      "appearance": "darktheme.theme.Appearance",
+      "decoration": "darktheme.theme.Decoration",
+      "color": "darktheme.theme.Color",
+      "font": "darktheme.theme.Font",
+      "icon": "qx.theme.icon.Oxygen"
+    }
+  },
+  "descendants": []
+}

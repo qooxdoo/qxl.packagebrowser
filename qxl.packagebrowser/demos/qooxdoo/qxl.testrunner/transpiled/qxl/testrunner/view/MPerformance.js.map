@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testrunner_v6_0_1/source/class/qxl/testrunner/view/MPerformance.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Mixin",
+    "define",
+    "construct",
+    "__measurements",
+    "properties",
+    "nativeProfiling",
+    "check",
+    "init",
+    "members",
+    "logMeasurement",
+    "clazz",
+    "msg",
+    "iterations",
+    "ownTime",
+    "renderTime",
+    "push",
+    "join",
+    "qxl",
+    "testrunner",
+    "view",
+    "MPerformance"
+  ],
+  "mappings": ";;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,kCAAhB,EAAoD;AAElDC,IAAAA,SAAS,EAAG,qBAAW;AACrB,WAAKC,SAAL,GAAsB,EAAtB;AACD,KAJiD;AAMlDC,IAAAA,UAAU,EACV;AACE;AACJ;AACA;AACA;AACA;AACIC,MAAAA,eAAe,EACf;AACEC,QAAAA,KAAK,EAAG,SADV;AAEEC,QAAAA,IAAI,EAAG;AAFT;AAPF,KAPkD;AAoBlDC,IAAAA,OAAO,EACP;AACEL,MAAAA,SAAc,EAAG,IADnB;;AAGE;AACJ;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACIM,MAAAA,cAAc,EAAG,wBAASC,KAAT,EAAgBC,GAAhB,EAAqBC,UAArB,EAAiCC,OAAjC,EAA0CC,UAA1C,EAAsD;AACrE,aAAKX,SAAL,CAAoBY,IAApB,CAAyB,CAACL,KAAD,EAAQC,GAAR,EAAaC,UAAb,EAAyBC,OAAzB,EAAkCC,UAAlC,EAA8CE,IAA9C,CAAmD,IAAnD,CAAzB;AACD;AAdH;AArBkD,GAApD;AArBAC,EAAAA,GAAG,CAACC,UAAJ,CAAeC,IAAf,CAAoBC,YAApB,CAAiCrB,aAAjC,GAAiDA,aAAjD",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2012 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Daniel Wagner (d_wagner)\n\n************************************************************************ */\n\n/**\n * Provides support for performance tests\n */\nqx.Mixin.define(\"qxl.testrunner.view.MPerformance\", {\n\n  construct : function() {\n    this.__measurements = [];\n  },\n\n  properties :\n  {\n    /**\n     * Whether the browser's built-in profiling capabilities\n     * (<code>console.profile</code>) should additionally be used for\n     * performance tests\n     */\n    nativeProfiling :\n    {\n      check : \"Boolean\",\n      init : false\n    }\n  },\n\n  members :\n  {\n    __measurements : null,\n\n    /**\n     * Adds an entry to the stored results\n     *\n     * @param clazz {String} Name of the test class\n     * @param msg {String} Test description\n     * @param iterations {Integer} Number of iterations\n     * @param ownTime {Integer} JavaScript execution time\n     * @param renderTime {Integer} browser rendering time\n     */\n    logMeasurement : function(clazz, msg, iterations, ownTime, renderTime) {\n      this.__measurements.push([clazz, msg, iterations, ownTime, renderTime].join(\"; \"));\n    }\n  }\n});\n"
+  ]
+}

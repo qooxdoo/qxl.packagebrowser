@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testtapper_v1_0_11/source/class/qxl/testtapperdemo/test/Test06SkipTest.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "include",
+    "MRequirements",
+    "members",
+    "require",
+    "unknownFunction",
+    "qxl",
+    "testtapperdemo",
+    "test",
+    "Test06SkipTest"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wCAAhB,EAA0D;AACxDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADoC;AAExDC,IAAAA,OAAO,EAAE,CAACV,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYG,aAAb,CAF+C;AAGxDC,IAAAA,OAAO,EAAE;AACP,sBAAgB,wBAAY;AACxB,eAAO,KAAP;AACH,OAHM;AAIP,2BAAqB,0BAAY;AAC7B,aAAKC,OAAL,CAAa,CAAC,WAAD,CAAb;AACH,OANM;AAOP,iDAA2C,6CAAY;AACnD,aAAKA,OAAL,CAAa,CAAC,WAAD,CAAb;;AACA,aAAKC,eAAL;AACH;AAVM;AAH+C,GAA1D;AAAAC,EAAAA,GAAG,CAACC,cAAJ,CAAmBC,IAAnB,CAAwBC,cAAxB,CAAuCf,aAAvC,GAAuDA,aAAvD",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.testtapperdemo.test.Test06SkipTest\", {\n  extend: qx.dev.unit.TestCase,\n  include: [qx.dev.unit.MRequirements],\n  members: {\n    \"hasNevertrue\": function () {\n        return false;\n    },\n    \"test01: Skip Test\": function () {\n        this.require([\"nevertrue\"]);\n    },\n    \"test02: Skip Test followed by Exception\": function () {\n        this.require([\"nevertrue\"]);\n        this.unknownFunction();\n    }\n  }\n\n});\n"
+  ]
+}

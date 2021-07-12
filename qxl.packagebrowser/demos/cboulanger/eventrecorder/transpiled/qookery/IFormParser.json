@@ -1,0 +1,79 @@
+{
+  "className": "qookery.IFormParser",
+  "packageName": "qookery",
+  "name": "IFormParser",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 36,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Interface providing access to some internals of the Qookery XML parser</p>"
+        }
+      ]
+    }
+  },
+  "type": "interface",
+  "members": {
+    "parseXmlDocument": {
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 2
+        },
+        "end": {
+          "line": 34,
+          "column": 62
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Parse and generate a Qookery form</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "xmlDocument {qx.xml.Document} input DOM XML document structured according to the form.xsd schema",
+            "paramName": "xmlDocument",
+            "description": " input DOM XML document structured according to the form.xsd schema",
+            "type": "qx.xml.Document"
+          },
+          {
+            "name": "@param",
+            "body": "parentComponent {qookery.IContainerComponent} an optional parent component that will hold generated results or <code>null</code>",
+            "paramName": "parentComponent",
+            "description": " an optional parent component that will hold generated results or <code>null</code>",
+            "type": "qookery.IContainerComponent"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qookery.IComponent} the root of the generated component hierarchy - typically a form component",
+            "type": "qookery.IComponent",
+            "description": " the root of the generated component hierarchy - typically a form component"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": []
+}

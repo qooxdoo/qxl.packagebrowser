@@ -1,0 +1,53 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/oetiker_CanvasCell_v1_0_4/source/class/canvascell/plotter/DoubleBar.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "core",
+    "Object",
+    "construct",
+    "cfg",
+    "__cfg",
+    "reset",
+    "members",
+    "__max",
+    "plot",
+    "c",
+    "cellInfo",
+    "w",
+    "h",
+    "d",
+    "value",
+    "redraw",
+    "i",
+    "hr",
+    "Math",
+    "round",
+    "strokeWidth",
+    "upWidth",
+    "fillStyle",
+    "upFill",
+    "strokeStyle",
+    "upBorder",
+    "fillRect",
+    "strokeRect",
+    "downWidth",
+    "downFill",
+    "downBorder",
+    "canvascell",
+    "plotter",
+    "DoubleBar"
+  ],
+  "mappings": "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",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n     2010 OETIKER+PARTNER AG, http://www.oetiker.ch\n     \n   License:\n     LGPL: http://www.gnu.org/licenses/lgpl.html\n     EPL: http://www.eclipse.org/org/documents/epl-v10.php\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Tobias Oetiker (oetiker)\n\n************************************************************************ */\n// Utf8Check: äöü\n\n/**\n * Plotter Plugin for the Canvas cellrenderer.\n * This Plugin draws two bars. It expects to find a array with two values in the cell.\n */\n\nqx.Class.define(\"canvascell.plotter.DoubleBar\", {\n    extend : qx.core.Object,\n\n    /**\n     * Instanciate the plotter\n     *\n     * @param cfg {Map} configuration map\n     * \n     * <pre class='javascript'>\n     * cfg = {\n     *    upFill:   '#color',\n     *    upBorder: '#color' \n     *    downFill:   '#color',\n     *    downBorder: '#color' \n     * };\n     * </pre>\n     */\n    construct : function(cfg) {\n        this.base(arguments);\n        this.__cfg = cfg;\n        this.reset();\n    },\n\n    members : {\n        __cfg : null,\n        __max : null,\n\n\n        /**\n         * Plot the Bar\n         *\n         * @param c {var} canvas drawing context\n         * @param cellInfo {var} cellInfo from cellrender\n         * @param w {var} canvas width\n         * @param h {Map} canvas height\n         * @return {boolean} should the other cells be redrawn because the scaling has changed?\n         */\n        plot : function(c, cellInfo, w, h) {\n            var d = cellInfo.value;\n            var redraw = false;\n            for (var i=0;i<2;i++){\n                if (d[i] > this.__max) {\n                    this.__max = d[i];\n                    redraw = true;\n                }\n                if (this.__max == 0){\n                    return false;\n                }\n            }\n            var cfg = this.__cfg;\n            var hr = Math.round(h/2-2);\n            c.strokeWidth = 0.5;\n            var upWidth = Math.round(d[0] * (w - 4) / this.__max);\n            c.fillStyle = cfg.upFill;\n            c.strokeStyle = cfg.upBorder;            \n            c.fillRect(0.5, 2.5, upWidth, hr - 2);\n            c.strokeRect(0.5, 2.5, upWidth, hr - 2);\n            var downWidth = Math.round(d[1] * (w - 4) / this.__max);\n            c.fillStyle = cfg.downFill;\n            c.strokeStyle = cfg.downBorder;            \n            c.fillRect(0.5, hr+2.5, downWidth, hr - 2);\n            c.strokeRect(0.5, hr+2.5, downWidth, hr - 2);\n            return redraw;\n        },\n\n\n        /**\n         * reset any context data stored inside the plotter\n         */\n        reset : function() {\n            this.__max = 0;\n        }\n    }\n});\n"
+  ]
+}

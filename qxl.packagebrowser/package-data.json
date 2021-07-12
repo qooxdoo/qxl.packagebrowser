@@ -1,0 +1,4147 @@
+[
+  {
+    "type": "library",
+    "uri": "adrelino/qxex",
+    "namespace": "qxex",
+    "name": "qxex",
+    "description": "Additional GUI widgets and utilities for qooxdoo apps.",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "mail@adrian-haarbach.de",
+            "name": "Adrian Haarbach (adrelino)"
+          }
+        ],
+        "description": "Additional GUI widgets (in ui/*) and utilities (static/singleton Manager's in util/) for qooxdoo apps. These are extensions of core qooxdoo widgets, especially from the qx.ui.form and qx.ui.table packages.",
+        "homepage": "adrelino.github.io/qxex",
+        "license": "MIT license",
+        "name": "qxex",
+        "summary": "Additional GUI widgets and utilities for qooxdoo apps.",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxex",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0",
+        "qooxdoo/qxl.apiviewer": "^1.0.18"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "ENOENT: no such file or directory, rename 'packages/qx_packages/adrelino_qxex_v1_0_1/compiled/build' -> 'compiled/build/qxl.packagebrowser/demos/adrelino/qxex'\n\nError: Added missing library information from Manifest. Please restart the compilation.\n\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nInstalled versionlabel (qooxdoo/qxl.versionlabel, 1.0.5)\nInstalled Qooxdoo API Viewer (qooxdoo/qxl.apiviewer, 1.0.18)"
+    }
+  },
+  {
+    "type": "library",
+    "uri": "bidefi-irhs/qxfileio",
+    "namespace": "qxfileio",
+    "name": "qxfileio",
+    "description": "Utilitary class to read and write file client side",
+    "installedVersion": false,
+    "latestVersion": "v0.4.1",
+    "latestCompatible": "v0.4.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "sylvain.gaillard@inra.fr",
+            "name": "Sylvain Gaillard (sgaillard)"
+          }
+        ],
+        "description": "This application contains classes that allow reading and writing files to user file system using the W3C File API.",
+        "homepage": "https://github.com/sgaillard/qxfileio",
+        "license": "CeCILL",
+        "name": "qxfileio",
+        "summary": "Utilitary class to read and write file client side",
+        "version": "0.4.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxfileio",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-alpha"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application qxfileio\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxfileio.demo.Application",
+          "theme": "qxfileio.theme.Theme",
+          "name": "qxfileio",
+          "bootPath": "source/boot"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/eventrecorder",
+    "namespace": "cboulanger.eventrecorder",
+    "name": "UI Event Recorder",
+    "description": "A qooxdoo package that allows to record user interaction for replay in testing or presentations",
+    "installedVersion": false,
+    "latestVersion": "v0.18.0",
+    "latestCompatible": "v0.18.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "UI Event Recorder",
+        "summary": "",
+        "version": "0.18.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "cboulanger.eventrecorder.editor.Application",
+          "description": "The script editor in a separate browser window (doesn't work standalone)",
+          "environment": {
+            "qx.icontheme": [
+              "Tango"
+            ]
+          },
+          "include": [
+            "qx.theme.Modern",
+            "cboulanger.eventrecorder.player.*"
+          ],
+          "name": "eventrecorder_scripteditor",
+          "publish": false,
+          "theme": "qx.theme.Indigo",
+          "title": "Script Editor"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "cboulanger.eventrecorder",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "ergobyte/qookery/qookery": "892f44d1d1ae5d65c7dd99b18da6876de2f2a920",
+        "ergobyte/qookery/qookeryace": "892f44d1d1ae5d65c7dd99b18da6876de2f2a920",
+        "qooxdoo/qxl.dialog": "^3.0.1"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application eventrecorder\nWriting application eventrecorder_tooltips\nWriting application eventrecorder_imports\nWriting application widgetbrowser_recorder\nWriting application eventrecorder_scripteditor\nWriting application widgetbrowser_externaleditor\nWriting application widgetbrowser_engine\nWriting application apiviewer\nWriting application remote_binding_test\nApplications are made\n\nergobyte/qookery/qookery: Cannot check whether commit hash 892f44d1d1ae5d65c7dd99b18da6876de2f2a920 corresponds to version 0.6.0\nergobyte/qookery/qookeryace: Cannot check whether commit hash 892f44d1d1ae5d65c7dd99b18da6876de2f2a920 corresponds to version 0.6.0\nqx.data.MRemoteBinding: [263,34] warning: Unresolved use of symbol qx.io.channel.IChannel.CHANNEL_STATUS_OPEN\nqxl.versionlabel.VersionLabel: [59,4] warning: Environment check 'versionLabel.name' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxl.versionlabel.VersionLabel: [65,4] warning: Environment check 'versionLabel.version' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "default": true,
+          "class": "cboulanger.eventrecorder.demo.Application",
+          "theme": "cboulanger.eventrecorder.theme.Theme",
+          "name": "eventrecorder",
+          "title": "Event recorder demo, autoplaying a presentation from a gist",
+          "include": [
+            "qx.theme.Modern",
+            "qx.data.marshal.Json",
+            "cboulanger.eventrecorder.UiController"
+          ],
+          "environment": {
+            "eventrecorder.scriptable": true,
+            "eventrecorder.gist_id": "64ed4149a27d48de38d9cb176907355e",
+            "eventrecorder.autoplay": true
+          }
+        },
+        {
+          "class": "cboulanger.eventrecorder.demo.Application",
+          "theme": "cboulanger.eventrecorder.theme.Theme",
+          "name": "eventrecorder_tooltips",
+          "title": "Event recorder demo with object id tooltips",
+          "include": [
+            "qx.theme.Modern",
+            "qx.data.marshal.Json",
+            "cboulanger.eventrecorder.UiController",
+            "cboulanger.eventrecorder.ObjectIdTooltip"
+          ],
+          "environment": {
+            "eventrecorder.gist_id": "ae41a3c54b81c0447f1e152a5c6ba4f8"
+          }
+        },
+        {
+          "class": "cboulanger.eventrecorder.demo.Application",
+          "theme": "cboulanger.eventrecorder.theme.Theme",
+          "name": "eventrecorder_imports",
+          "title": "Event recorder demo demonstrating the use of imports",
+          "include": [
+            "qx.theme.Modern",
+            "qx.data.marshal.Json",
+            "cboulanger.eventrecorder.UiController"
+          ],
+          "environment": {
+            "eventrecorder.gist_id": "8a27af215845b16400e98328623b6c13",
+            "eventrecorder.autoplay": true
+          }
+        },
+        {
+          "class": "qxl.widgetbrowser.Application",
+          "theme": "qx.theme.Indigo",
+          "name": "widgetbrowser_recorder",
+          "title": "WidgetBrowser with autogenerated object ids, id tooltips and event recorder, showcasing the use of variables and macros",
+          "include": [
+            "qx.theme.Modern",
+            "cboulanger.eventrecorder.UiController",
+            "cboulanger.eventrecorder.ObjectIdGenerator",
+            "cboulanger.eventrecorder.ObjectIdTooltip"
+          ],
+          "environment": {
+            "qx.icontheme": [
+              "Tango"
+            ],
+            "eventrecorder.show_progress": true,
+            "eventrecorder.gist_id": "2ce4d5f7107661f1c53b146c498560aa",
+            "eventrecorder.autoplay": true
+          }
+        },
+        {
+          "class": "cboulanger.eventrecorder.editor.Application",
+          "theme": "qx.theme.Indigo",
+          "name": "eventrecorder_scripteditor",
+          "title": "Script Editor",
+          "description": "The script editor in a separate browser window (doesn't work standalone)",
+          "publish": false,
+          "standalone": false,
+          "include": [
+            "qx.theme.Modern",
+            "cboulanger.eventrecorder.player.*"
+          ],
+          "environment": {
+            "qx.icontheme": [
+              "Tango"
+            ]
+          }
+        },
+        {
+          "class": "qxl.widgetbrowser.Application",
+          "theme": "qx.theme.Indigo",
+          "name": "widgetbrowser_externaleditor",
+          "title": "WidgetBrowser with empty external script editor",
+          "description": "This demo uses an external native window to display the script recorder and is compiled to have all eventrecorder-related code in a separate file ('part').",
+          "include": [
+            "qx.theme.Modern",
+            "cboulanger.eventrecorder.UiController",
+            "cboulanger.eventrecorder.ObjectIdGenerator",
+            "cboulanger.eventrecorder.Loader"
+          ],
+          "environment": {
+            "qx.icontheme": [
+              "Tango"
+            ],
+            "eventrecorder.show_progress": true,
+            "eventrecorder.editor.placement": "outside"
+          },
+          "parts": {
+            "boot": {
+              "include": [
+                "qx.*",
+                "qxl.*",
+                "cboulanger.eventrecorder.Loader"
+              ]
+            },
+            "eventrecorder": {
+              "include": [
+                "qookery.*",
+                "cboulanger.eventrecorder.*"
+              ],
+              "exclude": [
+                "cboulanger.eventrecorder.Loader"
+              ]
+            }
+          }
+        },
+        {
+          "class": "qxl.widgetbrowser.Application",
+          "theme": "qx.theme.Indigo",
+          "name": "widgetbrowser_engine",
+          "title": "WidgetBrowser using new decoupled architecture",
+          "description": "This is the exmperimental new code architecture that tries to completely decouple UI and event recording. Work in progress!",
+          "include": [
+            "qx.theme.Modern",
+            "cboulanger.eventrecorder.Engine",
+            "cboulanger.eventrecorder.ObjectIdGenerator"
+          ],
+          "exclude": [
+            "cboulanger.eventrecorder.UiController"
+          ],
+          "environment": {
+            "qx.icontheme": [
+              "Tango"
+            ],
+            "eventrecorder.show_progress": true,
+            "eventrecorder.editor.placement": "inside",
+            "eventrecorder.uicontroller.placement": "inside"
+          }
+        },
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "Eventrecorder API Viewer",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "excludeFromAPIViewer": [
+              "qxl.apiviewer.*"
+            ]
+          },
+          "include": [
+            "qx.*"
+          ],
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ]
+        },
+        {
+          "class": "cboulanger.eventrecorder.window.TestApplication",
+          "theme": "cboulanger.eventrecorder.theme.Theme",
+          "name": "remote_binding_test",
+          "title": "Application for testing remote binding",
+          "description": "This is another experiment that is not part of the eventrecorder but tests new code for the framework that will be used in it.",
+          "environment": {
+            "qx.icontheme": "Tango"
+          },
+          "include": [
+            "cboulanger.eventrecorder.window.*"
+          ],
+          "exclude": [
+            "cboulanger.eventrecorder.window.TestApplicationNew",
+            "qx.io.channel.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/qx-contrib-Dialog",
+    "namespace": "dialog",
+    "name": "Dialog",
+    "description": "Dialog Contribution",
+    "installedVersion": false,
+    "latestVersion": "v2.1.1",
+    "latestCompatible": "v2.1.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "The dialog package provides many often-used widgets required in user interaction, such as alert, confirm, prompt, and others that simplify the web developer's daily work.",
+        "homepage": "https://github.com/cboulanger/qx-contrib-Dialog",
+        "license": "LGPL/EPL",
+        "name": "Dialog",
+        "summary": "Dialog Contribution",
+        "version": "2.1.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "dialog",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-alpha"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application dialog.demo\nWriting application apiviewer\nApplications are made\n\nqxl.versionlabel.VersionLabel: [59,4] warning: Environment check 'versionLabel.name' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxl.versionlabel.VersionLabel: [65,4] warning: Environment check 'versionLabel.version' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "title": "Dialog Contrib Demo",
+          "class": "dialog.demo.Application",
+          "theme": "dialog.theme.Theme",
+          "name": "dialog.demo"
+        },
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "Qooxdoo API Viewer",
+          "outputPath": "apiviewer",
+          "include": [
+            "qx.*"
+          ],
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ],
+          "environment": {
+            "qx.icontheme": "Tango",
+            "excludeFromAPIViewer": [
+              "qxl.apiviewer.*"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/qx-contrib-TokenField",
+    "namespace": "tokenfield",
+    "name": "TokenField",
+    "description": "TokenField Contribution",
+    "installedVersion": false,
+    "latestVersion": "v1.3.0",
+    "latestCompatible": "v1.3.0",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "A widget implementing the token field concept",
+        "homepage": "https://github.com/cboulanger/qx-contrib-TokenField",
+        "keywords": [
+          "form",
+          "autocomplete"
+        ],
+        "license": "LGPL/EPL",
+        "name": "TokenField",
+        "summary": "TokenField Contribution",
+        "version": "1.3.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "tokenfield",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tokenfield.demo\nWriting application apiviewer\nApplications are made\n\nqxl.versionlabel.VersionLabel: [59,4] warning: Environment check 'versionLabel.name' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxl.versionlabel.VersionLabel: [65,4] warning: Environment check 'versionLabel.version' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "tokenfield.demo.Application",
+          "theme": "tokenfield.theme.modern.Theme",
+          "name": "tokenfield.demo",
+          "title": "Tokenfield Demo"
+        },
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "Qooxdoo API Viewer",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "excludeFromAPIViewer": [
+              "qxl.apiviewer.*"
+            ]
+          },
+          "include": [
+            "qx.*"
+          ],
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/qxl.taskmanager",
+    "namespace": "qxl.taskmanager",
+    "name": "qxl.taskmanager",
+    "description": "A manager for objects that represent background tasks",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": "v1.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "This package provides a manager for objects representing real tasks which are running in the background of the application. The manager offers bindable properties and events that allow you to visualize the progress of the task(s) or to determine the busy/idle state of the application.",
+        "homepage": "https://github.com/cboulanger/qxl.taskmanager",
+        "license": "MIT license",
+        "name": "qxl.taskmanager",
+        "summary": "A manager for objects that represent background tasks",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.taskmanager",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta.20200613-2032",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application qxl.taskmanager\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.taskmanager.demo.Application",
+          "theme": "qxl.taskmanager.theme.Theme",
+          "name": "qxl.taskmanager"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/darktheme",
+    "namespace": "darktheme",
+    "name": "DarkTheme",
+    "description": "Dark Theme Contribution",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": "v1.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "schroeder@scro34.de",
+            "name": "scro34"
+          }
+        ],
+        "description": "A dark theme for qx 6.0.",
+        "homepage": "https://github.com/goldim/DarkTheme",
+        "license": "MIT",
+        "name": "DarkTheme",
+        "summary": "Dark Theme Contribution",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "darktheme.theme.Theme",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "darktheme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application widgetbrowser\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "widgetbrowser.Application",
+          "theme": "darktheme.theme.Theme",
+          "name": "widgetbrowser",
+          "title": "WidgetBrowser",
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "exclude": [
+            "qx.theme.Modern"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/GraydientTheme",
+    "namespace": "graydienttheme",
+    "name": "GraydientTheme",
+    "description": "Graydient Theme Contribution",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "schroeder@scro34.de",
+            "name": "Norbert Schröder (scro34)"
+          }
+        ],
+        "description": "A graydient theme for qx 6.0.",
+        "homepage": "https://github.com/goldim/GraydientTheme",
+        "license": "MIT license",
+        "name": "GraydientTheme",
+        "summary": "Graydient Theme Contribution",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "graydienttheme.theme.Theme",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "graydienttheme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application graydienttheme\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "widgetbrowser.Application",
+          "theme": "graydienttheme.theme.Theme",
+          "name": "graydienttheme",
+          "title": "WidgetBrowser",
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "exclude": [
+            "qx.theme.Modern"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/scro34-qxthemes",
+    "namespace": "scro34.theme",
+    "name": "scro34-qxthemes",
+    "description": "bunch of themes",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": "v1.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "schroeder@scro34.de",
+            "name": "Norbert Schröder (scro34)"
+          }
+        ],
+        "description": "a bunch of themes: Dark, SilverBlue, Gradient and etc.",
+        "homepage": "https://github.com/goldim/scro34-themes",
+        "license": "MIT license",
+        "name": "scro34-qxthemes",
+        "summary": "bunch of themes",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "include": [
+            "scro34.theme.Dark",
+            "scro34.theme.Graydient",
+            "scro34.theme.SilverBlue",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "scro34.theme.Dark",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "scro34.theme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application widgetbrowser\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "widgetbrowser.Application",
+          "theme": "scro34.theme.Dark",
+          "name": "widgetbrowser",
+          "title": "WidgetBrowser",
+          "include": [
+            "scro34.theme.Dark",
+            "scro34.theme.Graydient",
+            "scro34.theme.SilverBlue",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/SilverBlueTheme",
+    "namespace": "silverbluetheme",
+    "name": "SilverBlueTheme",
+    "description": "SilverBlue Theme Contribution",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "schroeder@scro34.de",
+            "name": "Norbert Schröder (scro34)"
+          }
+        ],
+        "description": "A silverblue theme for qx 6.0.",
+        "homepage": "https://github.com/goldim/SilverBlueTheme",
+        "license": "MIT license",
+        "name": "SilverBlueTheme",
+        "summary": "SilverBlue Theme Contribution",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "silverbluetheme.theme.Theme",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "silverbluetheme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0",
+        "qooxdoo/qxl.formdemo": "^1.0.2",
+        "qooxdoo/qxl.versionlabel": "^1.0.5"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application widgetbrowser\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "widgetbrowser.Application",
+          "theme": "silverbluetheme.theme.Theme",
+          "name": "widgetbrowser",
+          "title": "WidgetBrowser",
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "exclude": [
+            "qx.theme.Modern"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "hkollmann/hkollmann.mobilegrid",
+    "namespace": "hkollmann.mobilegrid",
+    "name": "mobilegrid",
+    "description": "adds a grid  widget to qx mobile",
+    "installedVersion": false,
+    "latestVersion": "v1.0.9",
+    "latestCompatible": "v1.0.9",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "With this you have a grid layout in qx.mobile",
+        "homepage": "https://github.com/hkollmann/hkollmann.mobilegrid",
+        "license": "MIT license",
+        "name": "mobilegrid",
+        "summary": "adds a grid  widget to qx mobile",
+        "version": "1.0.9"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "hkollmann.mobilegrid",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-alpha"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "ENOENT: no such file or directory, rename 'packages/qx_packages/hkollmann_hkollmann_mobilegrid_v1_0_9/compiled/build' -> 'compiled/build/qxl.packagebrowser/demos/hkollmann/hkollmann.mobilegrid'\n\nError validating data for Manifest.json: 1) /$schema should be equal to one of the allowed values\nError validating data for Manifest.json: 1) /$schema should be equal to one of the allowed values\nError: Error validating data for compile.json: 1) /$schema should be equal to one of the allowed values\n\nOne or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary."
+    }
+  },
+  {
+    "type": "library",
+    "uri": "ITISFoundation/qx-iconfont-fontawesome5",
+    "namespace": "iconfont.fontawesome5",
+    "name": "qx-iconfont-fontawesome5",
+    "description": "font awesome 5 iconfont",
+    "installedVersion": false,
+    "latestVersion": "v0.2.2",
+    "latestCompatible": "v0.2.2",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "qooxdoo integration of the font awesome iconfonts",
+        "homepage": "https://github.com/ITISFoundation/qx-iconfont-fontawesome5",
+        "license": "MIT license",
+        "name": "qx-iconfont-fontawesome5",
+        "summary": "font awesome 5 iconfont",
+        "version": "0.2.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "iconfont.fontawesome5",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "webfonts": [
+          {
+            "comparisonString": "uf26euf368",
+            "defaultSize": 32,
+            "mapping": "iconfont/fontawesome5/fa-brands.json",
+            "name": "FontAwesome5Brands",
+            "resources": [
+              "iconfont/fontawesome5/fa-brands-400.eot",
+              "iconfont/fontawesome5/fa-brands-400.woff2",
+              "iconfont/fontawesome5/fa-brands-400.woff",
+              "iconfont/fontawesome5/fa-brands-400.ttf"
+            ]
+          },
+          {
+            "comparisonString": "uf2b9uf2bb",
+            "defaultSize": 32,
+            "mapping": "iconfont/fontawesome5/fa-regular.json",
+            "name": "FontAwesome5Regular",
+            "resources": [
+              "iconfont/fontawesome5/fa-regular-400.eot",
+              "iconfont/fontawesome5/fa-regular-400.woff2",
+              "iconfont/fontawesome5/fa-regular-400.woff",
+              "iconfont/fontawesome5/fa-regular-400.ttf"
+            ]
+          },
+          {
+            "comparisonString": "uf2b9uf2bb",
+            "defaultSize": 32,
+            "mapping": "iconfont/fontawesome5/fa-solid.json",
+            "name": "FontAwesome5Solid",
+            "resources": [
+              "iconfont/fontawesome5/fa-solid-900.eot",
+              "iconfont/fontawesome5/fa-solid-900.woff2",
+              "iconfont/fontawesome5/fa-solid-900.woff",
+              "iconfont/fontawesome5/fa-solid-900.ttf"
+            ]
+          }
+        ]
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-alpha"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application iconbrowser\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "iconbrowser.Application",
+          "theme": "qx.theme.Simple",
+          "name": "iconbrowser",
+          "include": [
+            "iconfont.fontawesome5.Load"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "ITISFoundation/qx-iconfont-material",
+    "namespace": "iconfont.material",
+    "name": "qx-iconfont-material",
+    "description": "theme for the osparc web ui",
+    "installedVersion": false,
+    "latestVersion": "v0.1.7",
+    "latestCompatible": "v0.1.7",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@itis.ethz.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "a material design ispired dark theme for osparc",
+        "homepage": "https://github.com/ITISFoundation/qx-osparc-theme",
+        "license": "MIT license",
+        "name": "qx-iconfont-material",
+        "summary": "theme for the osparc web ui",
+        "version": "0.1.7"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "iconfont.material",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "webfonts": [
+          {
+            "defaultSize": 32,
+            "mapping": "iconfont/material/MaterialIcons-Regular.json",
+            "name": "MaterialIcons",
+            "resources": [
+              "iconfont/material/MaterialIcons-Regular.eot",
+              "iconfont/material/MaterialIcons-Regular.woff2",
+              "iconfont/material/MaterialIcons-Regular.woff",
+              "iconfont/material/MaterialIcons-Regular.ttf"
+            ]
+          }
+        ]
+      },
+      "qx_versions": "^6.0.0-beta-20190723-1841",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta.20190725-1034",
+        "@qooxdoo/framework": "^6.0.0-beta-20190723-1841"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application iconbrowser\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "iconbrowser.Application",
+          "theme": "qx.theme.Simple",
+          "name": "iconbrowser"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "ITISFoundation/qx-osparc-theme",
+    "namespace": "osparc.theme",
+    "name": "qx-osparc-theme",
+    "description": "theme for the osparc web ui",
+    "installedVersion": false,
+    "latestVersion": "v0.5.6",
+    "latestCompatible": "v0.5.6",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@itis.swiss",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "a material design inspired dark theme for osparc",
+        "homepage": "https://github.com/ITISFoundation/qx-osparc-theme",
+        "license": "MIT license",
+        "name": "qx-osparc-theme",
+        "summary": "theme for the osparc web ui",
+        "version": "0.5.6"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "osparc.theme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "ITISFoundation/qx-iconfont-fontawesome5": "^0.2.0",
+        "ITISFoundation/qx-iconfont-material": "^0.1.5"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\n2021-07-12 02:20:41.661 [warn ] resource-manager Cannot get image size of qx_packages/ITISFoundation_qx-iconfont-fontawesome5_v0_2_0/source/resource/iconfont/fontawesome5/fa-brands-400.svg: TypeError: Invalid SVG\n2021-07-12 02:20:41.662 [warn ] resource-manager Cannot get image size of qx_packages/ITISFoundation_qx-iconfont-fontawesome5_v0_2_0/source/resource/iconfont/fontawesome5/fa-regular-400.svg: TypeError: Invalid SVG\n2021-07-12 02:20:41.663 [warn ] resource-manager Cannot get image size of qx_packages/ITISFoundation_qx-iconfont-fontawesome5_v0_2_0/source/resource/iconfont/fontawesome5/fa-solid-900.svg: TypeError: Invalid SVG\n2021-07-12 02:20:41.792 [warn ] resource-manager Cannot get image size of source/resource/osparc/theme/font/Roboto/roboto-mono-v6-latin_latin-ext-700.svg: TypeError: unsupported file type: undefined (file: /home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/ITISFoundation_qx-osparc-theme_v0_5_6/source/resource/osparc/theme/font/Roboto/roboto-mono-v6-latin_latin-ext-700.svg)\n2021-07-12 02:20:41.793 [warn ] resource-manager Cannot get image size of source/resource/osparc/theme/font/Roboto/roboto-mono-v6-latin_latin-ext-700italic.svg: TypeError: Invalid SVG\n2021-07-12 02:20:41.793 [warn ] resource-manager Cannot get image size of source/resource/osparc/theme/font/Roboto/roboto-mono-v6-latin_latin-ext-italic.svg: TypeError: unsupported file type: undefined (file: /home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/ITISFoundation_qx-osparc-theme_v0_5_6/source/resource/osparc/theme/font/Roboto/roboto-mono-v6-latin_latin-ext-italic.svg)\n2021-07-12 02:20:41.793 [warn ] resource-manager Cannot get image size of source/resource/osparc/theme/font/Roboto/roboto-mono-v6-latin_latin-ext-regular.svg: TypeError: Invalid SVG\n2021-07-12 02:20:41.793 [warn ] resource-manager Cannot get image size of source/resource/osparc/theme/font/Roboto/roboto-v18-latin_latin-ext-700.svg: TypeError: Invalid SVG\n2021-07-12 02:20:41.794 [warn ] resource-manager Cannot get image size of source/resource/osparc/theme/font/Roboto/roboto-v18-latin_latin-ext-700italic.svg: TypeError: Invalid SVG\n2021-07-12 02:20:41.794 [warn ] resource-manager Cannot get image size of source/resource/osparc/theme/font/Roboto/roboto-v18-latin_latin-ext-italic.svg: TypeError: Invalid SVG\n2021-07-12 02:20:41.794 [warn ] resource-manager Cannot get image size of source/resource/osparc/theme/font/Roboto/roboto-v18-latin_latin-ext-regular.svg: TypeError: Invalid SVG\nWriting application widgetbrowser\nApplications are made\n\nqxc.ui.versionlabel.VersionLabel: [59,4] warning: Environment check 'versionLabel.name' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxc.ui.versionlabel.VersionLabel: [65,4] warning: Environment check 'versionLabel.version' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "widgetbrowser.Application",
+          "theme": "osparc.theme.OSparcDark",
+          "name": "widgetbrowser",
+          "include": [
+            "osparc.theme.OSparcLight",
+            "osparc.theme.OSparcPortal",
+            "osparc.theme.OSparcBlue",
+            "osparc.theme.LightBlue",
+            "osparc.theme.Purple"
+          ],
+          "parts": {
+            "boot": {
+              "include": [
+                "widgetbrowser.Application"
+              ]
+            },
+            "tree": {
+              "include": [
+                "widgetbrowser.pages.Tree"
+              ]
+            },
+            "list": {
+              "include": [
+                "widgetbrowser.pages.List"
+              ]
+            },
+            "table": {
+              "include": [
+                "widgetbrowser.pages.Table"
+              ]
+            },
+            "form": {
+              "include": [
+                "widgetbrowser.pages.Form"
+              ]
+            },
+            "toolbar": {
+              "include": [
+                "widgetbrowser.pages.ToolBar"
+              ]
+            },
+            "window": {
+              "include": [
+                "widgetbrowser.pages.Window"
+              ]
+            },
+            "tab": {
+              "include": [
+                "widgetbrowser.pages.Tab"
+              ]
+            },
+            "control": {
+              "include": [
+                "widgetbrowser.pages.Control"
+              ]
+            },
+            "embed": {
+              "include": [
+                "widgetbrowser.pages.Embed"
+              ]
+            },
+            "embedframe": {
+              "include": [
+                "widgetbrowser.pages.EmbedFrame"
+              ]
+            },
+            "basic": {
+              "include": [
+                "widgetbrowser.pages.Basic"
+              ]
+            },
+            "misc": {
+              "include": [
+                "widgetbrowser.pages.Misc"
+              ]
+            },
+            "osparc": {
+              "include": [
+                "widgetbrowser.pages.OSparc"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "johnspackman/UploadMgr",
+    "namespace": "com.zenesis.qx.upload",
+    "name": "UploadMgr",
+    "description": "Uploader widget",
+    "installedVersion": false,
+    "latestVersion": "v1.0.5",
+    "latestCompatible": "v1.0.5",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "Library for uploading files, with progress feedback and doesn't block UI",
+        "homepage": "http://www.zenesis.com/",
+        "license": "LGPL and EPL (see http://qooxdoo.org)",
+        "name": "UploadMgr",
+        "summary": "Uploader widget",
+        "version": "1.0.5"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "com.zenesis.qx.upload",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application uploadmgr.demo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "com.zenesis.qx.upload.demo.Application",
+          "name": "uploadmgr.demo",
+          "title": "uploadmgr.demo",
+          "theme": "com.zenesis.qx.upload.demo.theme.Theme",
+          "default": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "maettu/qx-showdown",
+    "namespace": "qxShowdown",
+    "name": "qxShowdown",
+    "description": "make the showdown html-md converter js library available as a qx class",
+    "installedVersion": "v1.8.7",
+    "latestVersion": "v1.8.7",
+    "latestCompatible": "v1.8.7",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "matthias.bloch@oetiker.ch",
+            "name": "Matthias Bloch"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "qxShowdown",
+        "qooxdoo-range": "6.0.0-alpha - 6.x",
+        "summary": "make the showdown html-md converter js library available as a qx class",
+        "version": "1.8.7"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxShowdown",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "type": "contribution"
+      },
+      "qx_versions": "6.0.0-alpha - 6.x"
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "Error validating data for packages/qx_packages/maettu_qx-showdown_v1_8_7/Manifest.json: 1) /info Property qooxdoo-range is not expected to be here 2) /provides Property type is not expected to be here"
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/CanvasCell",
+    "namespace": "canvascell",
+    "name": "CanvasCell",
+    "description": "canvas cell renderer for the qooxdoo table widget",
+    "installedVersion": false,
+    "latestVersion": "v1.0.4",
+    "latestCompatible": "v1.0.4",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker (oetiker)"
+          }
+        ],
+        "description": "a custom cellrenderer for ccreating tiny plots inside table cells.",
+        "homepage": "http://contrib.qooxdoo.org/project/CanvasCell",
+        "license": "LGPL/EPL",
+        "name": "CanvasCell",
+        "summary": "canvas cell renderer for the qooxdoo table widget",
+        "version": "1.0.4"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "canvascell",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application canvascell-demo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "canvascell.demo.Application",
+          "theme": "qx.theme.Simple",
+          "name": "canvascell-demo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/ComboTable",
+    "namespace": "combotable",
+    "name": "ComboTable",
+    "description": "A qooxdoo SelectBox with incremental search",
+    "installedVersion": false,
+    "latestVersion": "v1.0.4",
+    "latestCompatible": "v1.0.4",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker (oetiker)"
+          }
+        ],
+        "description": "A SelectBox using a qooxdoo table to show a list of options supporting incremental search.",
+        "homepage": "http://github.com/oetiker/ComboTable",
+        "license": "LGPL/EPL",
+        "name": "ComboTable",
+        "summary": "A qooxdoo SelectBox with incremental search",
+        "version": "1.0.4"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "combotable",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application combotable-demo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "combotable.demo.Application",
+          "theme": "qx.theme.Simple",
+          "name": "combotable-demo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/Cropper",
+    "namespace": "cropper",
+    "name": "Cropper",
+    "description": "Visually select portion of a Widget",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "A widget that can attach itself to another widget and actives on mouse click.",
+        "homepage": "http://contrib.qooxdoo.org/project/Cropper",
+        "license": "LGPL/EPL",
+        "name": "Cropper",
+        "summary": "Visually select portion of a Widget",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "cropper",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application cropper-demo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "cropper.demo.Application",
+          "theme": "qx.theme.Simple",
+          "name": "cropper-demo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/QxD3",
+    "namespace": "qxd3",
+    "name": "QxD3",
+    "description": "D3 Bindings for Qooxdoo",
+    "installedVersion": false,
+    "latestVersion": "v0.4.1",
+    "latestCompatible": "v0.4.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "homepage": "https://github.com/oetiker/QxD3",
+        "license": "LGPL/EPL",
+        "name": "QxD3",
+        "summary": "D3 Bindings for Qooxdoo",
+        "version": "0.4.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxd3",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application qxd3-demo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxd3.demo.Application",
+          "theme": "qx.theme.Simple",
+          "name": "qxd3-demo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/QxDyGraphs",
+    "namespace": "qxdygraphs",
+    "name": "QxDyGraphs",
+    "description": "QxDyGraphs Contribution",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker (oetiker)"
+          }
+        ],
+        "description": "Makes Dan Vanderkams Dygraph charting library available in Qooxdoo",
+        "homepage": "http://contrib.qooxdoo.org/project/QxDyGraphs",
+        "license": "LGPL/EPL",
+        "name": "QxDyGraphs",
+        "summary": "QxDyGraphs Contribution",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxdygraphs",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application qxdygraphs-demo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxdygraphs.demo.Application",
+          "theme": "qx.theme.Simple",
+          "name": "qxdygraphs-demo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/QxJqPlot",
+    "namespace": "qxjqplot",
+    "name": "QxJqPlot",
+    "description": "QxJqPlot Contribution",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker (oetiker)"
+          }
+        ],
+        "description": "Integrate jqPlot into qooxdoo.",
+        "homepage": "http://contrib.qooxdoo.org/project/QxJqPlot",
+        "license": "MIT",
+        "name": "QxJqPlot",
+        "summary": "QxJqPlot Contribution",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxjqplot",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application qxjqplot-demo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxjqplot.demo.Application",
+          "theme": "qx.theme.Simple",
+          "name": "qxjqplot-demo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/UploadWidget",
+    "namespace": "uploadwidget",
+    "name": "UploadWidget",
+    "description": "Widget for HTTP file uploads.",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "",
+            "name": "Dietrich Streifert"
+          },
+          {
+            "email": "",
+            "name": "Petr Kobalicek"
+          },
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker"
+          }
+        ],
+        "description": "",
+        "homepage": "https://github.com/oetiker/UploadWidget",
+        "keywords": [
+          "qooxdoo",
+          "widget",
+          "cross-browser",
+          "upload"
+        ],
+        "license": "MIT license",
+        "name": "UploadWidget",
+        "summary": "Widget for HTTP file uploads.",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "uploadwidget",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta-20190723-1841",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta.20190725-1034",
+        "@qooxdoo/framework": "^6.0.0-beta-20190723-1841"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application uploaddemo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "uploaddemo.Application",
+          "theme": "qx.theme.Simple",
+          "name": "uploaddemo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oposs/headerpuppet",
+    "namespace": "headerpuppet",
+    "name": "HeaderPuppet",
+    "description": "Extra header rows bound to a table",
+    "installedVersion": false,
+    "latestVersion": "v0.0.6",
+    "latestCompatible": "v0.0.6",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "For complex tables it may be desirable to not have a single field to describe the content of the column or a group of columns, but a number of extra header lines.",
+        "homepage": "https://github.com/oposs/headerpuppet",
+        "license": "MIT license",
+        "name": "HeaderPuppet",
+        "summary": "Extra header rows bound to a table",
+        "version": "0.0.6"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "headerpuppet",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-alpha",
+        "qooxdoo/qxl.apiviewer": "^1.0.0-beta",
+        "qooxdoo/qxl.testtapper": "^0.4.3"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nheaderpuppet: Needs qooxdoo/qxl.testtapper version ^0.4.3, found 0.4.0\nMaking applications...\nWriting application headerpuppet\nWriting application testtapper\nWriting application apiviewer\nApplications are made\n\nqxl.versionlabel.VersionLabel: [59,4] warning: Environment check 'versionLabel.name' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxl.versionlabel.VersionLabel: [65,4] warning: Environment check 'versionLabel.version' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "headerpuppet.demo.Application",
+          "theme": "qx.theme.Simple",
+          "name": "headerpuppet",
+          "environment": {}
+        },
+        {
+          "class": "qxl.testtapper.Application",
+          "name": "testtapper",
+          "theme": "qx.theme.Simple",
+          "title": "Qooxdoo TestTAPper",
+          "environment": {
+            "qx.icontheme": "Tango"
+          },
+          "include": [
+            "headerpuppet.test.*"
+          ]
+        },
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "Qooxdoo API Viewer",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "excludeFromAPIViewer": [
+              "qxl.*",
+              "qx.*",
+              "qxWeb",
+              "headerpuppet.demo.*",
+              "headerpuppet.test.*"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/incubator.qx.io.jsonrpc",
+    "namespace": "qx.io",
+    "name": "incubator.qx.io.jsonrpc",
+    "description": "Support for transport-agnostic I/O protocols",
+    "installedVersion": false,
+    "latestVersion": "v2.0.1",
+    "latestCompatible": "v2.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "Framework for transport-agnostic high-level i/o protocols such as the JSON-RPC v2 or GraphQL",
+        "homepage": "https://qooxdoo.org",
+        "license": "MIT license",
+        "name": "incubator.qx.io.jsonrpc",
+        "summary": "Support for transport-agnostic I/O protocols",
+        "version": "2.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qx.io",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "qooxdoo/qxl.apiviewer": "^1.0.0-beta.9",
+        "qooxdoo/qxl.testtapper": "^0.5.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "***********\n*********** API Viewer is out of date and must be upgraded - please run 'qx package update' and then 'qx package upgrade'\n***********\nOne or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\n***********\n*********** API Viewer is out of date and must be upgraded - please run 'qx package update' and then 'qx package upgrade'\n***********\nTarget type build, index 2 is unused\nMaking applications...\nWriting application testtapper\nWriting application apiviewer\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxl.versionlabel.VersionLabel: [59,4] warning: Environment check 'versionLabel.name' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxl.versionlabel.VersionLabel: [65,4] warning: Environment check 'versionLabel.version' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.testtapper.Application",
+          "name": "testtapper",
+          "theme": "qx.theme.Simple",
+          "title": "Qooxdoo TestTAPper",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "testtapper.testNameSpace": "qx.test.io",
+            "qx.io.graphql.debug": true,
+            "qx.io.jsonrpc.debug": true
+          },
+          "include": [
+            "qx.*",
+            "qx.io.jsonrpc.protocol.*"
+          ],
+          "exclude": [
+            "qx.test.io.ImageLoader",
+            "qx.test.io.part.*",
+            "qx.test.io.remote.*",
+            "qx.test.io.request.*",
+            "qx.test.io.rest.*"
+          ]
+        },
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "Qooxdoo API Viewer",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "excludeFromAPIViewer": [
+              "qxl.*",
+              "q",
+              "qxWeb"
+            ]
+          },
+          "include": [
+            "qx.*"
+          ],
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/incubator.qx.io.persistence",
+    "namespace": "qx.io.persistence",
+    "name": "qooxdoo/incubator.qx.io.persistence",
+    "description": "Qooxdoo Persistence (Incubator)",
+    "installedVersion": false,
+    "latestVersion": "v0.0.4",
+    "latestCompatible": "v0.0.4",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          }
+        ],
+        "description": "Qooxdoo Persistence (Incubator)",
+        "homepage": "https://qooxdoo.org",
+        "license": "MIT license",
+        "name": "qooxdoo/incubator.qx.io.persistence",
+        "summary": "Qooxdoo Persistence (Incubator)",
+        "version": "0.0.4"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qx.io.persistence",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "qooxdoo/incubator.qx.util": "^0.0.3"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "ENOENT: no such file or directory, rename 'packages/qx_packages/qooxdoo_incubator_qx_io_persistence_v0_0_3/compiled/build' -> 'compiled/build/qxl.packagebrowser/demos/qooxdoo/incubator.qx.io.persistence'\n\n\n\nOne or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application serverTests\nApplications are made"
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/incubator.qx.io.remote",
+    "namespace": "qx.io.remote",
+    "name": "qooxdoo/incubator.qx.io.remote",
+    "description": "Qooxdoo Remote (Incubator)",
+    "installedVersion": false,
+    "latestVersion": "v0.0.3",
+    "latestCompatible": "v0.0.3",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          }
+        ],
+        "description": "Qooxdoo Remote Objects",
+        "homepage": "https://qooxdoo.org",
+        "license": "MIT license",
+        "name": "qooxdoo/incubator.qx.io.remote",
+        "summary": "Qooxdoo Remote (Incubator)",
+        "version": "0.0.3"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qx.io.remote",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "qooxdoo/incubator.qx.io.persistence": "^0.0.3"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "ENOENT: no such file or directory, rename 'packages/qx_packages/qooxdoo_incubator_qx_io_remote_v0_0_3/compiled/build' -> 'compiled/build/qxl.packagebrowser/demos/qooxdoo/incubator.qx.io.remote'\n\nError: Error: Empty Manifest.json in library at /home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/incubator.qx.util\n    at /home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:53755:19\n    at async Function.qx.tool.compiler.app.Library.createLibrary() [as createLibrary] (/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:54106:9)\n    at async /home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:51574:25\nFrom previous event:\n    at Function.qx.Promise.__P_64_8() [as __P_64_8] (/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:26101:68)\n    at Function.qx.Promise.all() [as all] (/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:25686:27)\n    at wrapper.qx.tool.cli.commands.Compile.prototype.createMakersFromConfig() [as createMakersFromConfig] (/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:51573:26)\n    at wrapper.qx.tool.cli.commands.Compile.prototype._loadConfigAndStartMaking() [as _loadConfigAndStartMaking] (/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:51343:48)\n    at async wrapper.qx.tool.cli.commands.Compile.prototype.process() [as process] (/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:51312:9)\n    at async wrapper.qx.tool.cli.Cli.prototype.processCommand() [as processCommand] (/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/node_modules/@qooxdoo/compiler/lib/compiler/index.js:40530:18)\n\nOne or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nOne or more libraries not found - trying to install them from library repository..."
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/incubator.qx.util",
+    "namespace": "qx.util",
+    "name": "qooxdoo/incubator.qx.util",
+    "description": "Qooxdoo Tools for Server Development (Incubator)",
+    "installedVersion": false,
+    "latestVersion": "v0.0.4",
+    "latestCompatible": "v0.0.4",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          }
+        ],
+        "description": "Qooxdoo Tools for Server Development (Incubator)",
+        "homepage": "https://qooxdoo.org",
+        "license": "MIT license",
+        "name": "qooxdoo/incubator.qx.util",
+        "summary": "Qooxdoo Tools for Server Development (Incubator)",
+        "version": "0.0.4"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qx.util",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application serverTests\nWriting application browserTests\nApplications are made\n\nqx.test.util.TestRunnerServerApp: [29,6] warning: Unresolved use of symbol qx.log.appender.Node\nqx.test.jsx.TestJsx: [42,32] warning: Unexpected termination when testing for unresolved symbols, node type JSXExpressionContainer\nqx.test.jsx.TestJsx: [29,65] warning: Unresolved use of symbol qx.html.Text\nqx.test.jsx.TestJsx: [42,32] warning: Unexpected termination when testing for unresolved symbols, node type JSXExpressionContainer\nqx.test.jsx.TestJsx: [29,65] warning: Unresolved use of symbol qx.html.Text\nCannot find class file qx.html.Jsx\nCannot find class file qx.html.Jsx\nqx.test.jsx.TestWidget: [27,21] warning: Unresolved use of symbol qx.html.Text",
+      "applications": [
+        {
+          "class": "qx.test.util.TestRunnerBrowserApp",
+          "theme": "qx.theme.Simple",
+          "name": "browserTests"
+        },
+        {
+          "class": "qx.test.util.TestRunnerServerApp",
+          "name": "serverTests",
+          "exclude": [
+            "qx.ui.*",
+            "qx.bom.Selector",
+            "qx.bom.client.Html",
+            "qx.event.handler.Pointer",
+            "qx.event.handler.Gesture",
+            "qx.event.handler.PointerCore"
+          ],
+          "type": "node"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.apiviewer",
+    "namespace": "qxl.apiviewer",
+    "name": "Qooxdoo API Viewer",
+    "description": "A viewer application to browse generated API documentation of qooxdoo classes",
+    "installedVersion": false,
+    "latestVersion": "v1.0.18",
+    "latestCompatible": "v1.0.18",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          },
+          {
+            "email": "daniel DOT wagner AT 1und1 DOT de",
+            "name": "Daniel Wagner (dwagner)"
+          },
+          {
+            "email": "Adrian DOT Olaru AT 1and1 DOT ro",
+            "name": "Adrian Olaru (adrianolaru)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "The Api Viewer lets you browse API documentation generated from Javascript source comments. It supports many specifics of qooxdoo classes like inheritance, properties and private members.",
+        "homepage": "https://github.com/qooxdoo/apiviewer",
+        "keywords": [
+          "API",
+          "class browser"
+        ],
+        "license": "MIT",
+        "name": "Qooxdoo API Viewer",
+        "sourceViewUri": "https://github.com/qooxdoo/apiviewer/blob/%{qxGitBranch}/source/class/%{classFilePath}#L%{lineNumber}",
+        "summary": "A viewer application to browse generated API documentation of qooxdoo classes",
+        "version": "1.0.18"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.apiviewer.Application",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "qxl.apiviewer.applicationName": "",
+            "qxl.apiviewer.exclude": [
+              "qxl.apiviewer.*"
+            ],
+            "qxl.apiviewer.include": []
+          },
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ],
+          "include": [
+            "qx.*"
+          ],
+          "name": "apiviewer",
+          "theme": "qxl.apiviewer.Theme",
+          "title": "Qooxdoo API Viewer"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.apiviewer",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0 || ^7.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0 || ^7.0.0-beta",
+        "qooxdoo/qxl.versionlabel": "^1.0.4"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application apiviewer\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "Qooxdoo API Viewer",
+          "bootPath": "source/boot"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.datademo",
+    "namespace": "qxl.datademo",
+    "name": "datademo",
+    "description": "Common used data binding demo",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo containing a container showing a data bound list.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "datademo",
+        "summary": "Common used data binding demo",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.datademo",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application datademo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.datademo.Application",
+          "theme": "qx.theme.Modern",
+          "name": "datademo",
+          "title": "Qooxdoo Data Demo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.demobrowser",
+    "namespace": "qxl.demobrowser",
+    "name": "DemoBrowser",
+    "description": "A GUI framework application for qooxdoo demos",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "thron7 AT users DOT sourceforge DOT net",
+            "name": "Thomas Herchenroeder (thron7)"
+          },
+          {
+            "email": "daniel DOT wagner AT 1und1 DOT de",
+            "name": "Daniel Wagner (d_wagner)"
+          },
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "The DemoBrowser provides a run environment for qooxdoo samples and demo apps that features tree and forward/backward navigation, profiling and code inspection.",
+        "homepage": "http://demo.qooxdoo.org/current/demobrowser",
+        "keywords": [
+          "demos",
+          "run frame"
+        ],
+        "license": "MIT",
+        "name": "DemoBrowser",
+        "summary": "A GUI framework application for qooxdoo demos",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.demobrowser.Application",
+          "include": [
+            "qxl.demobrowser.*",
+            "qx.theme.Modern",
+            "qx.theme.Simple",
+            "qx.theme.Classic"
+          ],
+          "name": "demobrowser",
+          "theme": "qxl.demobrowser.Theme",
+          "title": "DemoBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.demobrowser",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "ENOENT: no such file or directory, rename 'packages/qx_packages/qooxdoo_qxl_demobrowser_v1_0_1/compiled/build' -> 'compiled/build/qxl.packagebrowser/demos/qooxdoo/qxl.demobrowser'\n\nError validating data for Manifest.json: 1) /$schema should be equal to one of the allowed values\nError validating data for Manifest.json: 1) /$schema should be equal to one of the allowed values\nError: Error validating data for compile.json: 1) /$schema should be equal to one of the allowed values\n\nOne or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary."
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.dialog",
+    "namespace": "qxl.dialog",
+    "name": "qxl.dialog",
+    "description": "Collection of dialog widgets",
+    "installedVersion": false,
+    "latestVersion": "v3.2.0",
+    "latestCompatible": "v3.2.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "githubUser": "cboulanger",
+            "name": "Christian Boulanger"
+          },
+          {
+            "email": "derrell.lipman@unwireduniverse.com",
+            "githubUser": "derrell",
+            "name": "Derrell Lipman"
+          }
+        ],
+        "description": "The dialog package provides many often-used widgets required in user interaction, such as alert, confirm, prompt, and others that simplify the web developer's daily work.",
+        "homepage": "https://github.com/qooxdoo/qxl.dialog",
+        "license": "LGPL/EPL",
+        "name": "qxl.dialog",
+        "summary": "Collection of dialog widgets",
+        "version": "3.2.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.dialog",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application dialog\nWriting application apiviewer\nApplications are made\n\n",
+      "applications": [
+        {
+          "title": "Dialog Package Demo",
+          "class": "qxl.dialog.demo.Application",
+          "theme": "qxl.dialog.theme.Theme",
+          "name": "dialog",
+          "default": true
+        },
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "Qooxdoo API Viewer",
+          "outputPath": "apiviewer",
+          "include": [
+            "qx.*"
+          ],
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ],
+          "environment": {
+            "qx.icontheme": "Tango",
+            "qxl.apiviewer.exclude": [
+              "qxl.apiviewer.*",
+              "qxl.versionlabel.*",
+              "qx.*",
+              "q",
+              "qxWeb"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.formdemo",
+    "namespace": "qxl.formdemo",
+    "name": "formdemo",
+    "description": "Common used from demo",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo containing a container showing all form items.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "formdemo",
+        "summary": "Common used from demo",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.formdemo",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application formdemo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.formdemo.Application",
+          "theme": "qx.theme.Modern",
+          "name": "formdemo",
+          "title": "Qooxdoo Form Demo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.iconfontviewer",
+    "namespace": "qxl.iconfontviewer",
+    "name": "iconfontviewer",
+    "description": "show all glyphs of registered iconfonts",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "",
+        "homepage": "https://github.com/qooxdoo/iconfontviewer",
+        "license": "MIT license",
+        "name": "iconfontviewer",
+        "summary": "show all glyphs of registered iconfonts",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.iconfontviewer.Application",
+          "include": [
+            "qx.theme.iconfont.LoadMaterialIcons",
+            "qx.theme.iconfont.LoadMaterialIconsOutlined",
+            "qx.theme.iconfont.LoadMaterialIconsRound",
+            "qx.theme.iconfont.LoadMaterialIconsSharp",
+            "qx.theme.iconfont.LoadMaterialIconsTwoTone"
+          ],
+          "name": "iconfontviewer",
+          "theme": "qxl.iconfontviewer.theme.Theme",
+          "title": "Qooxdoo Icon Font Viewer"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.iconfontviewer",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application iconfontviewer\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.iconfontviewer.Application",
+          "theme": "qxl.iconfontviewer.theme.Theme",
+          "name": "iconfontviewer",
+          "title": "Qooxdoo Icon Font Viewer",
+          "include": [
+            "qx.theme.iconfont.LoadMaterialIcons",
+            "qx.theme.iconfont.LoadMaterialIconsOutlined",
+            "qx.theme.iconfont.LoadMaterialIconsRound",
+            "qx.theme.iconfont.LoadMaterialIconsSharp",
+            "qx.theme.iconfont.LoadMaterialIconsTwoTone"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.logpane",
+    "namespace": "qxl.logpane",
+    "name": "logpane",
+    "description": "Common used log pannel.",
+    "installedVersion": "v1.0.2",
+    "latestVersion": "v1.0.3",
+    "latestCompatible": "v1.0.3",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a view for the qooxdoo log.",
+        "homepage": "https://github.com/qooxdoo/logpane",
+        "keywords": [
+          "API",
+          "class browser"
+        ],
+        "license": "MIT",
+        "name": "logpane",
+        "summary": "Common used log pannel.",
+        "version": "1.0.3"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.logpane",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0 || ^7.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0 || ^7.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application logview\nWriting application apiviewer\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.logpane.Application",
+          "theme": "qx.theme.Modern",
+          "name": "logview",
+          "title": "LogPane",
+          "default": true
+        },
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "LogPane API",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "qxl.apiviewer.exclude": [
+              "qxl.apiviewer.*",
+              "qxl.versionlabel.*",
+              "qx.*",
+              "qxWeb"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.mobileshowcase",
+    "namespace": "qxl.mobileshowcase",
+    "name": "mobileshowcase",
+    "description": "Mobile showcase",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tino DOT butz AT 1und1 DOT de",
+            "name": "Tino Butz (tbtz)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a showcase for some mobile features of qooxdoo.",
+        "homepage": "http://demo.qooxdoo.org/current/mobileshowcase",
+        "license": "MIT license",
+        "name": "mobileshowcase",
+        "summary": "Mobile showcase",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "bootPath": "source/boot",
+          "class": "qxl.mobileshowcase.Application",
+          "name": "mobileshowcase"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.mobileshowcase",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application mobileshowcase\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.mobileshowcase.Application",
+          "name": "mobileshowcase",
+          "title": "Qooxdoo Mobile showcase",
+          "bootPath": "source/boot"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.packagebrowser",
+    "namespace": "qxl.packagebrowser",
+    "name": "Qooxdoo Package Browser",
+    "description": "This qooxdoo application lets you browse the available packages",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": "v1.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "githubUser": "cboulanger",
+            "name": "Christian Boulanger"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "keywords": [
+          "packages",
+          "extension",
+          "development"
+        ],
+        "license": "MIT license",
+        "name": "Qooxdoo Package Browser",
+        "summary": "This qooxdoo application lets you browse the available packages",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.packagebrowser",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.playground",
+    "namespace": "qxl.playground",
+    "name": "Playground",
+    "description": "A playground for application coding",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This application features a code editor and a live preview of the application.",
+        "homepage": "http://demo.qooxdoo.org/current/playground",
+        "keywords": [],
+        "license": "MIT",
+        "name": "Playground",
+        "summary": "A playground for application coding",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "bootPath": "source/boot",
+          "class": "qxl.playground.Application",
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ],
+          "include": [
+            "qx.*"
+          ],
+          "name": "playground",
+          "theme": "qxl.playground.theme.Theme",
+          "title": "Playground"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.playground",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application playground\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.playground.Application",
+          "theme": "qxl.playground.theme.Theme",
+          "name": "playground",
+          "title": "Playground",
+          "bootPath": "source/boot",
+          "include": [
+            "qx.*"
+          ],
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.testnode",
+    "namespace": "qxl.testnode",
+    "name": "qxl.testnode",
+    "description": "Run qooxdoo tests with qx test in an node enviroment",
+    "installedVersion": false,
+    "latestVersion": "v1.0.16",
+    "latestCompatible": "v1.0.16",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "qxl.testnode",
+        "summary": "Run qooxdoo tests with qx test in an node enviroment",
+        "version": "1.0.16"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.testnode.Application",
+          "environment": {
+            "testnode.testNameSpace": "qxl.testnode.test"
+          },
+          "exclude": [
+            "qx.bom.Selector",
+            "qx.bom.client.Html",
+            "qx.bom.client.Plugin",
+            "qx.event.handler.Pointer",
+            "qx.event.handler.Gesture",
+            "qx.event.handler.PointerCore"
+          ],
+          "include": [
+            "qx.core.BaseInit",
+            "myapp.test.*"
+          ],
+          "name": "testnode",
+          "title": "Qooxdoo Testnode",
+          "type": "node"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.testnode",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0 || ^7.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0 || ^7.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application qxl.testnode\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.testnode.Application",
+          "theme": "",
+          "name": "qxl.testnode",
+          "type": "node",
+          "include": [
+            "qx.core.BaseInit",
+            "qxl.testnode.test.*"
+          ],
+          "exclude": [
+            "qx.bom.Selector",
+            "qx.bom.client.Html",
+            "qx.bom.client.Plugin",
+            "qx.event.handler.Pointer",
+            "qx.event.handler.Gesture",
+            "qx.event.handler.PointerCore"
+          ],
+          "environment": {
+            "testnode.testNameSpace": "qxl.testnode.test"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.testrunner",
+    "namespace": "qxl.testrunner",
+    "name": "testrunner",
+    "description": "Test Runner",
+    "installedVersion": false,
+    "latestVersion": "v6.0.1",
+    "latestCompatible": "v6.0.1",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "This app runs the GUI unit tests",
+        "homepage": "http://demo.qooxdoo.org/current/widgetbrowser",
+        "license": "MIT",
+        "name": "testrunner",
+        "summary": "Test Runner",
+        "version": "6.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.testrunner.Application",
+          "name": "testrunner",
+          "theme": "qx.theme.Simple",
+          "title": "TestRunner"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.testrunner",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application testrunner\nWriting application tests\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxl.testrunner.runner.TestRunnerBasic: [446,8] warning: Unresolved use of symbol java.lang.System.exit",
+      "applications": [
+        {
+          "class": "qxl.testrunner.GuiApplication",
+          "theme": "qx.theme.Simple",
+          "name": "testrunner",
+          "title": "TestRunner",
+          "include": [
+            "qxl.testrunner.view.widget.Widget"
+          ],
+          "environment": {
+            "qxl.testrunner.performance": true,
+            "qxl.testrunner.reportPerfResultUrl": false,
+            "qxl.testrunner.reportServer": false,
+            "qxl.testrunner.testOrigin": "iframe",
+            "qxl.testrunner.testParts": false,
+            "qxl.testrunner.title": "qx",
+            "qxl.testrunner.view": "qxl.testrunner.view.widget.Widget",
+            "qx.testPageUri": "tests/index.html",
+            "qx.testNameSpace": "qx.test"
+          }
+        },
+        {
+          "class": "qxl.testrunner.TestLoader",
+          "theme": "qx.theme.Simple",
+          "name": "tests",
+          "title": "Tests",
+          "include": [
+            "qx.test.*"
+          ],
+          "environment": {
+            "qx.standaloneAutorun": false,
+            "qx.test.bool_false": false,
+            "qx.test.bool_true": true,
+            "qx.test.delay.scale": 1,
+            "qx.test.travis": false,
+            "qx.testNameSpace": "qx.test",
+            "qxl.testrunner.testParts": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.testtapper",
+    "namespace": "qxl.testtapper",
+    "name": "Commandline Testrunner for Qooxdoo Apps",
+    "description": "A node based testrunner for qooxdoo unit tests. It uses a headles instance of chrome to execute tests. It uses the TAP protocol to communicate between the browserbased tests and the nodebased testruner.",
+    "installedVersion": false,
+    "latestVersion": "v1.0.11",
+    "latestCompatible": "v1.0.11",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "The Testrunner looks for *.test classes in your application and runns all the tests contained therin. It follows the standard qooxdoo testing framework. You can continue using all the tests you wrote for qooxdoo 5.x.",
+        "homepage": "https://github.com/qooxdoo/qxl.testtapper",
+        "keywords": [
+          "test runner",
+          "TAP"
+        ],
+        "license": "MIT",
+        "name": "Commandline Testrunner for Qooxdoo Apps",
+        "sourceViewUri": "https://github.com/qooxdoo/qxl.testtapper/blob/%{qxGitBranch}/source/class/%{classFilePath}#L%{lineNumber}",
+        "summary": "A node based testrunner for qooxdoo unit tests. It uses a headles instance of chrome to execute tests. It uses the TAP protocol to communicate between the browserbased tests and the nodebased testruner.",
+        "version": "1.0.11"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.testtapper.Application",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "testtapper.testNameSpace": "qx.test"
+          },
+          "exclude": [],
+          "include": [
+            "qx.test.*"
+          ],
+          "name": "testtapper",
+          "theme": "qx.theme.Simple",
+          "title": "Qooxdoo TestTAPper"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.testtapper",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0 || ^7.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0 || ^7.0.0-beta",
+        "qooxdoo/qxl.logpane": "^1.0.2"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application testtapper\nApplications are made\n\nqxl.testtapperdemo.test.Test09AsyncFunction: [26,10] warning: Unresolved use of symbol unknownFunctionCall",
+      "applications": [
+        {
+          "class": "qxl.testtapper.Application",
+          "name": "testtapper",
+          "title": "TestTAPper - The Qooxdoo Test Runner",
+          "theme": "qx.theme.Simple",
+          "include": [
+            "qxl.testtapperdemo.test.*"
+          ],
+          "environment": {
+            "qxl.testtapper.testNameSpace": "qxl.testtapperdemo.test",
+            "qxl.testtapper.coverage": false,
+            "qxl.testtapper.headless": true,
+            "qxl.testtapper.browsers": [
+              "chromium",
+              "firefox"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tutorial",
+    "namespace": "tutorial",
+    "name": "tutorial",
+    "description": "The tutorial moved to a seperate project ",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "",
+            "name": ""
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "tutorial",
+        "summary": "",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "tutorial",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nWriting application playground\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.tutorial.Application",
+          "theme": "qx.theme.Indigo",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ],
+          "exclude": [
+            "qx.test.*"
+          ]
+        },
+        {
+          "class": "qxl.playground.Application",
+          "theme": "qxl.playground.theme.Theme",
+          "name": "playground",
+          "title": "Playground",
+          "bootPath": "source/boot",
+          "include": [
+            "qx.*"
+          ],
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step1",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step1/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step2",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step2/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step3",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step3/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.1",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step4.1/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.2",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step4.2/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.2.1",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step4.2.1/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.3",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step4.3/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.4",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step4.4/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.5",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "tweets/step4.5/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application tutorial\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.tweets.Application",
+          "theme": "qxl.tweets.theme.Theme",
+          "name": "tutorial",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/mobiletweets/step1",
+    "namespace": "qxl.mobiletweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "1.0.1"
+      },
+      "path": "mobiletweets/step1/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.mobiletweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application mobiletweets\nApplications are made\n\nqx.test.core.Environment: [157,6 to 159,8] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Environment: [170,6] warning: Environment check 'affe' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.core.Validation: warning: The mangling of private variable '__validateCustom' has been blocked because it is referenced as a string before it is declared\nqx.test.dev.unit.Requirements: [65,6 to 67,8] warning: Environment check 'qx.test.requirement.syncTrue' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqx.test.dev.unit.Requirements: [81,6 to 83,8] warning: Environment check 'qx.test.requirement.syncFalse' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "qxl.mobiletweets.Application",
+          "name": "mobiletweets",
+          "include": [
+            "qx.*"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.versionlabel",
+    "namespace": "qxl.versionlabel",
+    "name": "versionlabel",
+    "description": "version label for qooxdoo demo apps",
+    "installedVersion": "v1.0.4",
+    "latestVersion": "v1.0.5",
+    "latestCompatible": "v1.0.5",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "",
+        "license": "MIT",
+        "name": "versionlabel",
+        "summary": "version label for qooxdoo demo apps",
+        "version": "1.0.5"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "environmentChecks": {
+          "qxl.versionlabel.*": "qxl.versionlabel.VersionLabel"
+        },
+        "namespace": "qxl.versionlabel",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0  || ^7.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0  || ^7.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application apiviewer\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.apiviewer.Application",
+          "theme": "qxl.apiviewer.Theme",
+          "name": "apiviewer",
+          "title": "VersionLabel API",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "qxl.apiviewer.exclude": [
+              "qxl.apiviewer.*",
+              "qx.*",
+              "qxWeb"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.widgetbrowser",
+    "namespace": "qxl.widgetbrowser",
+    "name": "widgetbrowser",
+    "description": "Widget browser",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": "v1.0.1",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "This app demonstrates many widgets of qooxdoo.",
+        "homepage": "http://demo.qooxdoo.org/current/widgetbrowser",
+        "license": "MIT",
+        "name": "widgetbrowser",
+        "summary": "Widget browser",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.widgetbrowser.Application",
+          "include": [
+            "qx.theme.Modern",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "qxl.widgetbrowser.pages.Tree",
+            "qxl.widgetbrowser.pages.List",
+            "qxl.widgetbrowser.pages.Table",
+            "qxl.widgetbrowser.pages.Form",
+            "qxl.widgetbrowser.pages.ToolBar",
+            "qxl.widgetbrowser.pages.Window",
+            "qxl.widgetbrowser.pages.Tab",
+            "qxl.widgetbrowser.pages.Control",
+            "qxl.widgetbrowser.pages.Embed",
+            "qxl.widgetbrowser.pages.EmbedFrame",
+            "qxl.widgetbrowser.pages.Basic",
+            "qxl.widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "qx.theme.Indigo",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.widgetbrowser",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application widgetbrowser\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxl.widgetbrowser.Application",
+          "theme": "qx.theme.Indigo",
+          "name": "widgetbrowser",
+          "title": "WidgetBrowser",
+          "include": [
+            "qx.theme.Indigo",
+            "qx.theme.Modern",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "qx.theme.TangibleLight",
+            "qx.theme.TangibleDark",
+            "qxl.widgetbrowser.pages.Tree",
+            "qxl.widgetbrowser.pages.List",
+            "qxl.widgetbrowser.pages.Table",
+            "qxl.widgetbrowser.pages.Form",
+            "qxl.widgetbrowser.pages.ToolBar",
+            "qxl.widgetbrowser.pages.Window",
+            "qxl.widgetbrowser.pages.Tab",
+            "qxl.widgetbrowser.pages.Control",
+            "qxl.widgetbrowser.pages.Embed",
+            "qxl.widgetbrowser.pages.EmbedFrame",
+            "qxl.widgetbrowser.pages.Basic",
+            "qxl.widgetbrowser.pages.Misc"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.Clean",
+    "namespace": "ville.theme.Clean",
+    "name": "ville.Clean",
+    "description": "a theme for qooxdoo desktop applications inspired by Semantic UI",
+    "installedVersion": false,
+    "latestVersion": "v1.0.3",
+    "latestCompatible": "v1.0.3",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "chris.eskew@sqville.com",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "A theme inspired by Semantic UI designed to include more space (whitespace) and to be out of the way as much as possible",
+        "homepage": "http://github.com/sqville/ville.Clean",
+        "license": "MIT",
+        "name": "ville.Clean",
+        "summary": "a theme for qooxdoo desktop applications inspired by Semantic UI",
+        "version": "1.0.3"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc",
+            "widgetbrowser.pages.Extras"
+          ],
+          "name": "widgetbrowser",
+          "theme": "ville.theme.Clean",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.theme.Clean",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "qooxdoo/qxl.formdemo": "^1.0.0-beta.0",
+        "qooxdoo/qxl.versionlabel": "^1.0.0-beta.0"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application widgetbrowser\nApplications are made\n\nqxl.versionlabel.VersionLabel: [59,4] warning: Environment check 'versionLabel.name' may be indeterminable, add to Manifest/provides/environment or use class name prefix\nqxl.versionlabel.VersionLabel: [65,4] warning: Environment check 'versionLabel.version' may be indeterminable, add to Manifest/provides/environment or use class name prefix",
+      "applications": [
+        {
+          "class": "widgetbrowser.Application",
+          "theme": "ville.theme.Clean",
+          "name": "widgetbrowser",
+          "title": "WidgetBrowser",
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc",
+            "widgetbrowser.pages.Extras"
+          ],
+          "exclude": [
+            "qx.theme.Modern"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.Embed",
+    "namespace": "ville.embed",
+    "name": "ville.Embed",
+    "description": "A new desktop ui control for the Qooxdoo JavaScript Framework",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": "v1.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "(sqville)",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "ville.Embed",
+        "summary": "A new desktop ui control for the Qooxdoo JavaScript Framework",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.embed",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application waxdemo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "wax.demo.Application",
+          "theme": "wax.demo.theme.Theme",
+          "name": "waxdemo",
+          "title": "WaxDemo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.GroupBox",
+    "namespace": "ville.groupbox.GroupBox",
+    "name": "ville.GroupBox",
+    "description": "A Qooxdoo desktop, collapsable GroupBox control",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "(sqville)",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "ville.GroupBox",
+        "summary": "A Qooxdoo desktop, collapsable GroupBox control",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.groupbox.GroupBox",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application waxdemo\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "wax.demo.Application",
+          "theme": "wax.demo.theme.Theme",
+          "name": "waxdemo",
+          "title": "WaxDemo"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.Wireframe",
+    "namespace": "ville.theme.Wireframe",
+    "name": "ville.Wireframe",
+    "description": "a theme for Qooxdoo desktop applications",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": "v1.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "chris.eskew@sqville.com",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "A theme designed to help direct focus to layout and interactions first",
+        "homepage": "http://github.com/sqville/ville.Wireframe",
+        "license": "MIT",
+        "name": "ville.Wireframe",
+        "summary": "a theme for Qooxdoo desktop applications",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "ville.theme.wireframe.MFrestyleCss",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc",
+            "widgetbrowser.pages.Extras"
+          ],
+          "name": "widgetbrowser",
+          "theme": "ville.theme.Wireframe",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.theme.Wireframe",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "One or more libraries not found - trying to install them from library repository...\nThe following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application widgetbrowser\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "widgetbrowser.Application",
+          "theme": "ville.theme.Wireframe",
+          "name": "widgetbrowser",
+          "title": "WidgetBrowser",
+          "include": [
+            "ville.theme.wireframe.MFreestyleCss",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc",
+            "widgetbrowser.pages.Extras"
+          ],
+          "exclude": [
+            "qx.theme.Modern"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "voger/qxDateSelect",
+    "namespace": "qxDateSelect",
+    "name": "qxDateSelect",
+    "description": " A simple select date widget.",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": "v1.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "voger",
+            "name": ""
+          }
+        ],
+        "description": " A widget that allows selecting a date based on select boxes.",
+        "homepage": " https://github.com/voger/qxDateSelect",
+        "license": "MIT license",
+        "name": "qxDateSelect",
+        "summary": " A simple select date widget.",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxDateSelect",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta-20200904-1332",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": false,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application qxDateSelect\nApplications are made\n\n",
+      "applications": [
+        {
+          "class": "qxDateSelect.demo.Application",
+          "theme": "qxDateSelect.theme.Theme",
+          "name": "qxDateSelect"
+        }
+      ]
+    }
+  },
+  {
+    "type": "library",
+    "uri": "voger/qxgraphql",
+    "namespace": "qxgraphql",
+    "name": "qxgraphql",
+    "description": "GraphQL implementation for Qooxdoo",
+    "installedVersion": false,
+    "latestVersion": "v0.0.2",
+    "latestCompatible": "v0.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "",
+            "name": "voger"
+          }
+        ],
+        "description": "Simple GraphQL implementation for Qooxdoo",
+        "homepage": "https://github.com/voger/qxgraphql",
+        "license": "MIT license",
+        "name": "qxgraphql",
+        "summary": "GraphQL implementation for Qooxdoo",
+        "version": "0.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxgraphql",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    },
+    "data": {
+      "problems": true,
+      "compilation_log": "The following files were changed: \nEverything is up-to-date. No migration necessary.\nMaking applications...\nWriting application qxgraphql\nThere is no reference to index.js script in the index.html copied from /home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/voger_qxgraphql_v0_0_2/source/boot/index.html (see https://git.io/fh7NI)\nApplications are made\n\nqxgraphql.GraphqlQueryCompress: [19,13] warning: Unresolved use of symbol graphQLCompress\n(node:7827) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 finish listeners added to [LineCountingTransform]. Use emitter.setMaxListeners() to increase limit\n(Use `node --trace-warnings ...` to show where the warning was created)\n(node:7827) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 unpipe listeners added to [LineCountingTransform]. Use emitter.setMaxListeners() to increase limit\n(node:7827) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 error listeners added to [LineCountingTransform]. Use emitter.setMaxListeners() to increase limit\n(node:7827) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 close listeners added to [LineCountingTransform]. Use emitter.setMaxListeners() to increase limit\n(node:7827) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 drain listeners added to [LineCountingTransform]. Use emitter.setMaxListeners() to increase limit",
+      "applications": [
+        {
+          "class": "qxgraphql.demo.Application",
+          "theme": "qxgraphql.theme.Theme",
+          "name": "qxgraphql",
+          "include": [
+            "qxgraphql.GraphqlQueryCompress"
+          ],
+          "bootPath": "source/boot"
+        }
+      ]
+    }
+  }
+]

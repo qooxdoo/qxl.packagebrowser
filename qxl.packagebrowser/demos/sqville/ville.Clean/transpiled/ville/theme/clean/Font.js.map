@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_Clean_v1_0_3/source/class/ville/theme/clean/Font.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "fonts",
+    "family",
+    "color",
+    "weight",
+    "size",
+    "sources",
+    "source",
+    "include",
+    "bold",
+    "ville",
+    "theme",
+    "clean",
+    "Font"
+  ],
+  "mappings": ";;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wBAAhB,EACA;AAEEC,IAAAA,KAAK,EACL;AACE,iBACA;AACEC,QAAAA,MAAM,EAAG,CAAC,YAAD,CADX;AAEEC,QAAAA,KAAK,EAAG,MAFV;AAGEC,QAAAA,MAAM,EAAG,KAHX;AAIEC,QAAAA,IAAI,EAAG,EAJT;AAKEC,QAAAA,OAAO,EAAE,CACP;AACEJ,UAAAA,MAAM,EAAE,MADV;AAEEK,UAAAA,MAAM,EAAE,CACN,8CADM;AAFV,SADO;AALX,OAFF;AAiBE,cACA;AACEC,QAAAA,OAAO,EAAG,SADZ;AAEEJ,QAAAA,MAAM,EAAG;AAFX,OAlBF;AAuBE,qBACA;AACEI,QAAAA,OAAO,EAAG,SADZ;AAEEH,QAAAA,IAAI,EAAG;AAFT,OAxBF;AA6BE,0BACA;AACEG,QAAAA,OAAO,EAAG,MADZ;AAEEH,QAAAA,IAAI,EAAG;AAFT,OA9BF;AAmCE,gBACA;AACEG,QAAAA,OAAO,EAAG,MADZ;AAEEH,QAAAA,IAAI,EAAG;AAFT,OApCF;AAyCE,yBACA;AACEG,QAAAA,OAAO,EAAG;AADZ,OA1CF;AA8CE,uBACA;AACEA,QAAAA,OAAO,EAAG,SADZ;AAEEH,QAAAA,IAAI,EAAG;AAFT,OA/CF;AAoDE,0BACA;AACCA,QAAAA,IAAI,EAAG,EADR;AAECH,QAAAA,MAAM,EAAG,CAAC,OAAD,EAAU,WAAV,EAAuB,iBAAvB;AAFV,OArDF;AA0DE,eACA;AACEM,QAAAA,OAAO,EAAG,SADZ;AAEEH,QAAAA,IAAI,EAAG;AAFT,OA3DF;AAiEE,kBACA;AACEG,QAAAA,OAAO,EAAG,SADZ;AAEEH,QAAAA,IAAI,EAAG;AAFT,OAlEF;AAuEE,eACA;AACEG,QAAAA,OAAO,EAAG,SADZ;AAEEH,QAAAA,IAAI,EAAG;AAFT,OAxEF;AA6EE,mBACA;AACEA,QAAAA,IAAI,EAAG,EADT;AAEEH,QAAAA,MAAM,EAAG,CAAE,kBAAF,EAAsB,aAAtB,EAAqC,WAArC;AAFX,OA9EF;AAmFE;AACA,wBACA;AACCM,QAAAA,OAAO,EAAG,SADX;AAECH,QAAAA,IAAI,EAAG,EAFR;AAGCI,QAAAA,IAAI,EAAG;AAHR,OArFF;AA2FE,yBACA;AACCD,QAAAA,OAAO,EAAG,SADX;AAECH,QAAAA,IAAI,EAAG;AAFR,OA5FF;AAiGE;AACA,qBACA;AACEG,QAAAA,OAAO,EAAG,SADZ;AAECH,QAAAA,IAAI,EAAG;AAFR;AAnGF;AAHF,GADA;AAtBAK,EAAAA,KAAK,CAACC,KAAN,CAAYC,KAAZ,CAAkBC,IAAlB,CAAuBf,aAAvB,GAAuCA,aAAvC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   SQville Software\n\n   http://sqville.com\n\n   Copyright:\n     None\n\n   License:\n     MIT\n\n   Authors:\n     * Chris Eskew (chris.eskew@sqville.com)\n\n************************************************************************ */\n\n/**\n * The ville.Clean font theme.\n * @asset(ville/theme/clean/font/Lato/*.ttf)\n * \n */\nqx.Theme.define(\"ville.theme.clean.Font\",\n{\n  \n  fonts :\n  {\n    \"default\" :\n    {\n      family : [\"sans-serif\"],\n      color : \"text\",\n      weight : \"400\",\n      size : 14,\n      sources: [\n        {\n          family: \"Lato\",\n          source: [\n            \"ville/theme/clean/font/Lato/Lato-Regular.ttf\"\n          ]\n        }\n      ]\n    },\n\n    \"bold\" :\n    {\n      include : \"default\",\n      weight : \"700\"\n    },\n\n    \"datechooser\" :\n    {\n      include : \"default\",\n      size : 13\n    },\n\n    \"datechooser-bold\" :\n    {\n      include : \"bold\",\n      size : 13\n    },\n\n    \"button\" : \n    {\n      include : \"bold\",\n      size : 14\n    },\n\n    \"groupbox-legend\" :\n    {\n      include : \"bold\"\n    },\n\n    \"window-header\" :\n    {\n      include : \"default\",\n      size : 20\n    },    \n    \n    \"unicode-icons-sm\" :\n    {\n    \tsize : 20,\n    \tfamily : [\"arial\", \"helvetica\", \"Segoe UI Symbol\"]\n    },\n    \n    \"input\" :\n    {\n      include : \"default\",\n      size : 14\n    },\n   \n\n    \"headline\" :\n    {\n      include : \"default\",\n      size : 24\n    },\n\n    \"small\" :\n    {\n      include : \"default\",\n      size : 11\n    },\n\n    \"monospace\" :\n    {\n      size : 11,\n      family : [ \"DejaVu Sans Mono\", \"Courier New\", \"monospace\" ]\n    },\n        \n    // Theme Browser Content Formatting\n    \"control-header\" :\n    {\n    \tinclude : \"default\",\n    \tsize : 24,\n    \tbold : true\n    },\n    \n    \"control-header2\" :\n    {\n    \tinclude : \"default\",\n    \tsize : 20\n    },\n\n    // TreeVirtual Legacy\n    \"treevirtual\" :\n    {\n      include : \"default\",\n    \tsize : 8\n    }\n  }\n});\n"
+  ]
+}

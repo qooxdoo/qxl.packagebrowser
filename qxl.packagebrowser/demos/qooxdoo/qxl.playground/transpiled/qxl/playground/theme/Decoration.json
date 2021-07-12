@@ -1,0 +1,39 @@
+{
+  "className": "qxl.playground.theme.Decoration",
+  "packageName": "qxl.playground.theme",
+  "name": "Decoration",
+  "superClass": "qx.theme.indigo.Decoration",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 20,
+        "column": 0
+      },
+      "end": {
+        "line": 40,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "aliases": {
+    "location": {
+      "start": {
+        "line": 24,
+        "column": 2
+      },
+      "end": {
+        "line": 26,
+        "column": 3
+      }
+    },
+    "aliasMap": {
+      "decoration": "qx/decoration/Simple"
+    }
+  },
+  "descendants": []
+}

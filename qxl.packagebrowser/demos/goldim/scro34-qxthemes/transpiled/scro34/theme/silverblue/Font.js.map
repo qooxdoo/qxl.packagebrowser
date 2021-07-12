@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/goldim_scro34-qxthemes_v1_0_0/source/class/scro34/theme/silverblue/Font.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "fonts",
+    "size",
+    "lineHeight",
+    "family",
+    "core",
+    "Environment",
+    "get",
+    "bold",
+    "scro34",
+    "theme",
+    "silverblue",
+    "Font"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,8BAAhB,EACA;AACEC,IAAAA,KAAK,EACL;AACE,iBACA;AACEC,QAAAA,IAAI,EAAE,EADR;AAEEC,QAAAA,UAAU,EAAE,GAFd;AAGEC,QAAAA,MAAM,EAAGT,EAAE,CAACU,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,SAAxB,MAAuC,KAAxC,GACN,CAAE,eAAF,CADM,GAEN,CAAE,UAAF,EAAc,eAAd,EAA+B,OAA/B,EAAwC,YAAxC;AALJ,OAFF;AAUE,cACA;AACEL,QAAAA,IAAI,EAAE,EADR;AAEEC,QAAAA,UAAU,EAAE,GAFd;AAGEC,QAAAA,MAAM,EAAGT,EAAE,CAACU,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,SAAxB,MAAuC,KAAxC,GACN,CAAE,eAAF,CADM,GAEN,CAAE,UAAF,EAAc,eAAd,EAA+B,OAA/B,EAAwC,YAAxC,CALJ;AAMEC,QAAAA,IAAI,EAAE;AANR,OAXF;AAoBE,eACA;AACEN,QAAAA,IAAI,EAAE,EADR;AAEEC,QAAAA,UAAU,EAAE,GAFd;AAGEC,QAAAA,MAAM,EAAGT,EAAE,CAACU,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,SAAxB,MAAuC,KAAxC,GACN,CAAE,eAAF,CADM,GAEN,CAAE,UAAF,EAAc,eAAd,EAA+B,OAA/B,EAAwC,YAAxC;AALJ,OArBF;AA6BE,mBACA;AACEL,QAAAA,IAAI,EAAE,EADR;AAEEC,QAAAA,UAAU,EAAE,GAFd;AAGEC,QAAAA,MAAM,EAAGT,EAAE,CAACU,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,SAAxB,MAAuC,KAAxC,GACN,CAAE,gBAAF,EAAoB,QAApB,CADM,GAEN,CAAE,UAAF,EAAc,kBAAd,EAAkC,aAAlC,EAAiD,WAAjD;AALJ,OA9BF;AAsCE,kBACA;AACEL,QAAAA,IAAI,EAAE,EADR;AAEEC,QAAAA,UAAU,EAAE,GAFd;AAGEC,QAAAA,MAAM,EAAGT,EAAE,CAACU,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,SAAxB,MAAuC,KAAxC,GACN,CAAE,eAAF,CADM,GAEN,CAAE,eAAF,EAAmB,OAAnB,EAA4B,YAA5B,CALJ;AAMEC,QAAAA,IAAI,EAAE;AANR;AAvCF;AAFF,GADA;AAbAC,EAAAA,MAAM,CAACC,KAAP,CAAaC,UAAb,CAAwBC,IAAxB,CAA6Bd,aAA7B,GAA6CA,aAA7C",
+  "sourcesContent": [
+    "/* ************************************************************************\r\n\r\n   Copyright:\r\n     2010-2021 Norbert Schröder\r\n\r\n   License:\r\n     MIT\r\n\r\n   Authors:\r\n     * Norbert Schröder (scro34)\r\n\r\n************************************************************************ */\r\n\r\nqx.Theme.define(\"scro34.theme.silverblue.Font\",\r\n{\r\n  fonts:\r\n  {\r\n    \"default\":\r\n    {\r\n      size: 13,\r\n      lineHeight: 1.4,\r\n      family: (qx.core.Environment.get(\"os.name\") === \"osx\") ? \r\n        [ \"Lucida Grande\" ] : \r\n        [ \"Segoe UI\", \"MS Sans Serif\", \"Arial\", \"sans-serif\" ]\r\n    },\r\n\r\n    \"bold\":\r\n    {\r\n      size: 13,\r\n      lineHeight: 1.4,\r\n      family: (qx.core.Environment.get(\"os.name\") === \"osx\") ? \r\n        [ \"Lucida Grande\" ] : \r\n        [ \"Segoe UI\", \"MS Sans Serif\", \"Arial\", \"sans-serif\" ],\r\n      bold: true\r\n    },\r\n\r\n    \"small\":\r\n    {\r\n      size: 11,\r\n      lineHeight: 1.4,\r\n      family: (qx.core.Environment.get(\"os.name\") === \"osx\") ? \r\n        [ \"Lucida Grande\" ] : \r\n        [ \"Segoe UI\", \"MS Sans Serif\", \"Arial\", \"sans-serif\" ]\r\n    },\r\n\r\n    \"monospace\":\r\n    {\r\n      size: 12,\r\n      lineHeight: 1.4,\r\n      family: (qx.core.Environment.get(\"os.name\") === \"osx\") ? \r\n        [ \"Lucida Console\", \"Monaco\" ] : \r\n        [ \"Consolas\", \"DejaVu Sans Mono\", \"Courier New\", \"monospace\" ]\r\n    },\r\n    \r\n    \"headline\":\r\n    {\r\n      size: 14,\r\n      lineHeight: 1.4,\r\n      family: (qx.core.Environment.get(\"os.name\") === \"osx\") ? \r\n        [ \"Lucida Grande\" ] : \r\n        [ \"MS Sans Serif\", \"Arial\", \"sans-serif\" ],\r\n      bold: true\r\n    }\r\n  }\r\n});\r\n"
+  ]
+}

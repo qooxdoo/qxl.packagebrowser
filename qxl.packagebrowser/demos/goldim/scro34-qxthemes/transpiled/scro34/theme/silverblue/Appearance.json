@@ -1,0 +1,88 @@
+{
+  "className": "scro34.theme.silverblue.Appearance",
+  "packageName": "scro34.theme.silverblue",
+  "name": "Appearance",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 31,
+        "column": 0
+      },
+      "end": {
+        "line": 3006,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The SilverBlue appearance theme.</p>"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "scro34/silverblue/*"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/places/folder-open.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/places/folder-open.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/places/folder-open.png"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "aliases": {
+    "location": {
+      "start": {
+        "line": 33,
+        "column": 2
+      },
+      "end": {
+        "line": 35,
+        "column": 3
+      }
+    },
+    "aliasMap": {
+      "decoration": "scro34/silverblue/decoration"
+    }
+  },
+  "descendants": []
+}

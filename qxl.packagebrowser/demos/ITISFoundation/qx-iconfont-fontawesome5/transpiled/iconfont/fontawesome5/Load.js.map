@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/ITISFoundation_qx-iconfont-fontawesome5_v0_2_2/source/class/iconfont/fontawesome5/Load.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "iconfont",
+    "fontawesome5",
+    "Load"
+  ],
+  "mappings": ";;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,4BAAhB,EAA8C,EAA9C;AANAC,EAAAA,QAAQ,CAACC,YAAT,CAAsBC,IAAtB,CAA2BL,aAA3B,GAA2CA,aAA3C",
+  "sourcesContent": [
+    "/**\n * A dummy class to trigger the compiler to copy the font files\n */\n/**\n * @asset(iconfont/fontawesome5/*)\n */\nqx.Class.define(\"iconfont.fontawesome5.Load\", {});\n"
+  ]
+}

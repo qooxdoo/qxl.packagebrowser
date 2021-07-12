@@ -1,0 +1,37 @@
+{
+  "className": "ville.theme.clean.Appearance",
+  "packageName": "ville.theme.clean",
+  "name": "Appearance",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 26,
+        "column": 0
+      },
+      "end": {
+        "line": 3671,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The Clean appearance theme.</p>"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "qx/icon/${qx.icontheme}/22/apps/office-calendar.png"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

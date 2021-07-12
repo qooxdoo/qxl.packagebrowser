@@ -1,0 +1,89 @@
+{
+  "className": "qookery.IAttributeSet",
+  "packageName": "qookery",
+  "name": "IAttributeSet",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 41,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Represents a supplier of attributes</p>"
+        }
+      ]
+    }
+  },
+  "type": "interface",
+  "members": {
+    "getAttribute": {
+      "location": {
+        "start": {
+          "line": 39,
+          "column": 2
+        },
+        "end": {
+          "line": 39,
+          "column": 48
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Return an attribute's value if defined, or a default value if missing\n </p>\n<p>You may supply the <code>Error</code> JS build-in object as the default value parameter\n in order to request that a range error is thrown when attribute is missing.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "name {String} the name of the wanted attribute",
+            "paramName": "name",
+            "description": " the name of the wanted attribute",
+            "type": "String"
+          },
+          {
+            "name": "@param",
+            "body": "defaultValue {any} optional default value, <code>undefined</code> will be used if not provided",
+            "paramName": "defaultValue",
+            "description": " optional default value, <code>undefined</code> will be used if not provided",
+            "type": "any"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{any} attribute's value or requested default value if attribute is not defined within the set",
+            "type": "any",
+            "description": " attribute's value or requested default value if attribute is not defined within the set"
+          }
+        ],
+        "@throws": [
+          {
+            "name": "@throws",
+            "body": "{RangeError} in case attribute is not part of the set and the default value was set to <code>Error</code>",
+            "type": "RangeError",
+            "description": " in case attribute is not part of the set and the default value was set to <code>Error</code>"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": [
+    "qookery.IComponent"
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "className": "qxl.testrunner.runner.ModelUtil",
+  "packageName": "qxl.testrunner.runner",
+  "name": "ModelUtil",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 20,
+        "column": 0
+      },
+      "end": {
+        "line": 248,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Utilities for creating and querying the test (suite) model.</p>"
+        }
+      ]
+    }
+  },
+  "type": "class",
+  "isAbstract": false,
+  "isStatic": true,
+  "isSingleton": false,
+  "statics": {
+    "createModelData": {
+      "location": {
+        "start": {
+          "line": 34,
+          "column": 4
+        },
+        "end": {
+          "line": 45,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Creates a nested map for the test namespace from the flat list of tests</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "testRep {Object} Test suite object obtained by parsing the JSON\n returned by {@link qx.dev.unit.TestLoader:getTestDescriptions}",
+            "paramName": "testRep",
+            "description": " Test suite object obtained by parsing the JSON\n returned by {@link qx.dev.unit.TestLoader:getTestDescriptions}",
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object} Test suite object",
+            "type": "Object",
+            "description": " Test suite object"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "getItemsByProperty": {
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4
+        },
+        "end": {
+          "line": 74,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Recursively searches a model for all items with a given property/value\n combination</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "model {Object} The test model to search",
+            "paramName": "model",
+            "description": " The test model to search",
+            "type": "Object"
+          },
+          {
+            "name": "@param",
+            "body": "property {String} Property name",
+            "paramName": "property",
+            "description": " Property name",
+            "type": "String"
+          },
+          {
+            "name": "@param",
+            "body": "value {var} Property value",
+            "paramName": "value",
+            "description": " Property value",
+            "type": "var"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object[]} Array of matching model items",
+            "type": "Object[]",
+            "description": " Array of matching model items"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "getItemByFullName": {
+      "location": {
+        "start": {
+          "line": 84,
+          "column": 4
+        },
+        "end": {
+          "line": 99,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Finds a model item by its full path name</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "model {Object} The test model to search",
+            "paramName": "model",
+            "description": " The test model to search",
+            "type": "Object"
+          },
+          {
+            "name": "@param",
+            "body": "fullName {String} The item's name",
+            "paramName": "fullName",
+            "description": " The item's name",
+            "type": "String"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object|null} The matching item or null if there is no match",
+            "type": "Object|null",
+            "description": " The matching item or null if there is no match"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "addDataFields": {
+      "location": {
+        "start": {
+          "line": 108,
+          "column": 4
+        },
+        "end": {
+          "line": 147,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Adds additional data fields to the model items:\n parent : reference to the parent item</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "model {Object} The model to process",
+            "paramName": "model",
+            "description": " The model to process",
+            "type": "Object"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "addChainToMap": {
+      "location": {
+        "start": {
+          "line": 166,
+          "column": 4
+        },
+        "end": {
+          "line": 194,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Adds nested keys to a map, e.g.: addChainToMap([\"foo\", \"bar\", \"baz\"], {})\n creates the following structure:\n {\n   \"foo\" :\n   {\n     \"bar\" :\n     {\n       \"baz\" : {}\n     }\n   }\n }</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "nsArr {String[]} Array of key names",
+            "paramName": "nsArr",
+            "description": " Array of key names",
+            "type": "String[]"
+          },
+          {
+            "name": "@param",
+            "body": "obj {Map} The initial map",
+            "paramName": "obj",
+            "description": " The initial map",
+            "type": "Map"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "getNextSiblingOf": {
+      "location": {
+        "start": {
+          "line": 204,
+          "column": 4
+        },
+        "end": {
+          "line": 217,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns the following sibling of a given model item or null if there isn't\n one.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "node {Object} Model node",
+            "paramName": "node",
+            "description": " Model node",
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Object|null} Following sibling",
+            "type": "Object|null",
+            "description": " Following sibling"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "hasTestClassWithMixin": {
+      "location": {
+        "start": {
+          "line": 230,
+          "column": 4
+        },
+        "end": {
+          "line": 246,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Recursively traverses a model tree and checks if one of\n the test classes includes the given mixin.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "node {qx.core.Object} test model (root) node",
+            "paramName": "node",
+            "description": " test model (root) node",
+            "type": "qx.core.Object"
+          },
+          {
+            "name": "@param",
+            "body": "mixin {qx.Mixin}  mixin to look for",
+            "paramName": "mixin",
+            "description": "  mixin to look for",
+            "type": "qx.Mixin"
+          },
+          {
+            "name": "@param",
+            "body": "win {Window?} AUT window. Default: Top-level (test runner)",
+            "paramName": "win",
+            "description": " AUT window. Default: Top-level (test runner)",
+            "optional": true,
+            "type": "Window"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Boolean} <code>true</code> if at least one test class\n in the model includes the mixin",
+            "type": "Boolean",
+            "description": " <code>true</code> if at least one test class\n in the model includes the mixin"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": []
+}

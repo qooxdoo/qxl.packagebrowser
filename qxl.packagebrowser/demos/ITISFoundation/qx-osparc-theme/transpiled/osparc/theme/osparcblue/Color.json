@@ -1,0 +1,33 @@
+{
+  "className": "osparc.theme.osparcblue.Color",
+  "packageName": "osparc.theme.osparcblue",
+  "name": "Color",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 0
+      },
+      "end": {
+        "line": 149,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Simple color theme</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": [
+    "osparc.theme.osparcportal.Color"
+  ]
+}

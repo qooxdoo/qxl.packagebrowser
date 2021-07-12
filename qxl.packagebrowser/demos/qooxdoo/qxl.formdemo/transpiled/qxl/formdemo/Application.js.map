@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_formdemo_v1_0_2/source/class/qxl/formdemo/Application.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "__items",
+    "main",
+    "qxl",
+    "formdemo",
+    "FormItems",
+    "getRoot",
+    "add",
+    "destruct",
+    "destroy",
+    "Application"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,0BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,WAAH,CAAeC,UAD1B;AAGEC,IAAAA,OAAO,EACP;AACEC,MAAAA,OAAO,EAAG,IADZ;AAGEC,MAAAA,IAAI,EAAG,gBAAW;AAChB;AAEA,aAAKD,OAAL,GAAe,IAAIE,GAAG,CAACC,QAAJ,CAAaC,SAAjB,EAAf;AACA,aAAKC,OAAL,GAAeC,GAAf,CAAmB,KAAKN,OAAxB;AACD;AARH,KAJF;AAeEO,IAAAA,QAAQ,EAAG,oBAAW;AACpB,WAAKP,OAAL,CAAaQ,OAAb;AACD;AAjBH,GADA;AAlBAN,EAAAA,GAAG,CAACC,QAAJ,CAAaM,WAAb,CAAyBhB,aAAzB,GAAyCA,aAAzC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2011 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Martin Wittemann (martinwittemann)\n\n************************************************************************ */\n\nqx.Class.define(\"qxl.formdemo.Application\",\n{\n  extend : qx.application.Standalone,\n\n  members :\n  {\n    __items : null,\n\n    main : function() {\n      this.base(arguments);\n\n      this.__items = new qxl.formdemo.FormItems();\n      this.getRoot().add(this.__items);\n    }\n  },\n\n  destruct : function() {\n    this.__items.destroy();\n  }\n});\n"
+  ]
+}

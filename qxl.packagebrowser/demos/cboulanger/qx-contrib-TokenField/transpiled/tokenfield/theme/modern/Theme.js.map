@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_qx-contrib-TokenField_v1_3_0/source/class/tokenfield/theme/modern/Theme.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "tokenfield",
+    "theme",
+    "modern",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "appearance",
+    "Appearance",
+    "icon",
+    "Tango"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,+BAAhB,EAAiD;AAC/CC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGC,UAAU,CAACC,KAAX,CAAiBC,MAAjB,CAAwBC,KADlC;AAEEC,MAAAA,UAAU,EAAGJ,UAAU,CAACC,KAAX,CAAiBC,MAAjB,CAAwBG,UAFvC;AAGEC,MAAAA,IAAI,EAAGN,UAAU,CAACC,KAAX,CAAiBC,MAAjB,CAAwBK,IAHjC;AAIEC,MAAAA,UAAU,EAAGR,UAAU,CAACC,KAAX,CAAiBC,MAAjB,CAAwBO,UAJvC;AAKEC,MAAAA,IAAI,EAAGlB,EAAE,CAACS,KAAH,CAASS,IAAT,CAAcC;AALvB;AAF+C,GAAjD;AATAX,EAAAA,UAAU,CAACC,KAAX,CAAiBC,MAAjB,CAAwBN,KAAxB,CAA8BD,aAA9B,GAA8CA,aAA9C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\nqx.Theme.define(\"tokenfield.theme.modern.Theme\", {\n  meta :\n  {\n    color : tokenfield.theme.modern.Color,\n    decoration : tokenfield.theme.modern.Decoration,\n    font : tokenfield.theme.modern.Font,\n    appearance : tokenfield.theme.modern.Appearance,\n    icon : qx.theme.icon.Tango\n  }\n});\n"
+  ]
+}

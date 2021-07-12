@@ -1,0 +1,37 @@
+{
+  "className": "ville.theme.wireframe.Appearance",
+  "packageName": "ville.theme.wireframe",
+  "name": "Appearance",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 3262,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The Wireframe appearance theme.</p>"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "ville/theme/wireframe/wireframe-calendar.png"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/goldim_scro34-qxthemes_v1_0_0/source/class/scro34/theme/Graydient.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "scro34",
+    "theme",
+    "graydient",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "icon",
+    "Oxygen",
+    "appearance",
+    "Appearance",
+    "Graydient"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGC,MAAM,CAACC,KAAP,CAAaC,SAAb,CAAuBC,KADjC;AAEEC,MAAAA,UAAU,EAAGJ,MAAM,CAACC,KAAP,CAAaC,SAAb,CAAuBG,UAFtC;AAGEC,MAAAA,IAAI,EAAGN,MAAM,CAACC,KAAP,CAAaC,SAAb,CAAuBK,IAHhC;AAIEC,MAAAA,IAAI,EAAGhB,EAAE,CAACS,KAAH,CAASO,IAAT,CAAcC,MAJvB;AAKEC,MAAAA,UAAU,EAAGV,MAAM,CAACC,KAAP,CAAaC,SAAb,CAAuBS;AALtC;AAFF,GADA;AAVAX,EAAAA,MAAM,CAACC,KAAP,CAAaW,SAAb,CAAuBjB,aAAvB,GAAuCA,aAAvC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2010-2021 Norbert Schröder\n\n   License: MIT license\n\n   Authors: Norbert Schröder (scro34) schroeder@scro34.de\n\n************************************************************************ */\n\nqx.Theme.define(\"scro34.theme.Graydient\",\n{\n  meta :\n  {\n    color : scro34.theme.graydient.Color,\n    decoration : scro34.theme.graydient.Decoration,\n    font : scro34.theme.graydient.Font,\n    icon : qx.theme.icon.Oxygen,\n    appearance : scro34.theme.graydient.Appearance\n  }\n});"
+  ]
+}

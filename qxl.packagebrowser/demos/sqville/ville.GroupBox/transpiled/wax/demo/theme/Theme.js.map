@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_GroupBox_v1_0_2/source/class/wax/demo/theme/Theme.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "wax",
+    "demo",
+    "theme",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "icon",
+    "Tango",
+    "appearance",
+    "Appearance"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,sBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGC,GAAG,CAACC,IAAJ,CAASC,KAAT,CAAeC,KADzB;AAEEC,MAAAA,UAAU,EAAGJ,GAAG,CAACC,IAAJ,CAASC,KAAT,CAAeG,UAF9B;AAGEC,MAAAA,IAAI,EAAGN,GAAG,CAACC,IAAJ,CAASC,KAAT,CAAeK,IAHxB;AAIEC,MAAAA,IAAI,EAAGhB,EAAE,CAACU,KAAH,CAASM,IAAT,CAAcC,KAJvB;AAKEC,MAAAA,UAAU,EAAGV,GAAG,CAACC,IAAJ,CAASC,KAAT,CAAeS;AAL9B;AAFF,GADA;AAVAX,EAAAA,GAAG,CAACC,IAAJ,CAASC,KAAT,CAAeN,KAAf,CAAqBD,aAArB,GAAqCA,aAArC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\nqx.Theme.define(\"wax.demo.theme.Theme\",\n{\n  meta :\n  {\n    color : wax.demo.theme.Color,\n    decoration : wax.demo.theme.Decoration,\n    font : wax.demo.theme.Font,\n    icon : qx.theme.icon.Tango,\n    appearance : wax.demo.theme.Appearance\n  }\n});"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_qx-contrib-TokenField_v1_3_0/source/class/tokenfield/SelectionManager.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "core",
+    "selection",
+    "Widget",
+    "members",
+    "handleKeyPress",
+    "event",
+    "key",
+    "getKeyIdentifier",
+    "Abstract",
+    "prototype",
+    "apply",
+    "tokenfield",
+    "SelectionManager"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,6BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,EAAH,CAAMC,IAAN,CAAWC,SAAX,CAAqBC,MADhC;AAEEC,IAAAA,OAAO,EAAG;AACRC,MAAAA,cAAc,EAAG,wBAASC,KAAT,EACjB;AACE,YAAIC,GAAG,GAAGD,KAAK,CAACE,gBAAN,EAAV;;AACA,YAAID,GAAG,IAAI,MAAP,IAAiBA,GAAG,IAAI,OAAxB,IAAmCA,GAAG,IAAI,IAA1C,IAAkDA,GAAG,IAAI,MAA7D,EACA;AACEd,UAAAA,EAAE,CAACO,EAAH,CAAMC,IAAN,CAAWC,SAAX,CAAqBO,QAArB,CAA8BC,SAA9B,CAAwCL,cAAxC,CAAuDM,KAAvD,CAA6D,IAA7D,EAAmE,CAACL,KAAD,CAAnE,EADF,CACgF;AAC/E;AACF;AARO;AAFZ,GADA;AAlBAM,EAAAA,UAAU,CAACC,gBAAX,CAA4BjB,aAA5B,GAA4CA,aAA5C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n     2010 Guilherme R. Aiolfi\n\n   License:\n     LGPL: http://www.gnu.org/licenses/lgpl.html\n     EPL: http://www.eclipse.org/org/documents/epl-v10.php\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Guilherme R. Aiolfi (guilhermeaiolfi)\n\n************************************************************************ */\n\n/**\n * A class to cache ...\n */\nqx.Class.define(\"tokenfield.SelectionManager\",\n{\n  extend : qx.ui.core.selection.Widget,\n  members : {\n    handleKeyPress : function(event)\n    {\n      var key = event.getKeyIdentifier();\n      if (key != \"Left\" && key != \"Right\" && key != \"Up\" && key != \"Down\")\n      {\n        qx.ui.core.selection.Abstract.prototype.handleKeyPress.apply(this, [event]);  // this.base(arguments);\n      }\n    }\n  }\n});\n"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "className": "qxl.tweets.theme.Appearance",
+  "packageName": "qxl.tweets.theme",
+  "name": "Appearance",
+  "superClass": "qx.theme.indigo.Appearance",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 11,
+        "column": 0
+      },
+      "end": {
+        "line": 18,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "descendants": []
+}

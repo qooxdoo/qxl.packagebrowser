@@ -1,0 +1,31 @@
+{
+  "className": "osparc.theme.osparcportal.Color",
+  "packageName": "osparc.theme.osparcportal",
+  "name": "Color",
+  "superClass": "osparc.theme.osparcblue.Color",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 76,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Based on osparcdark inverted colors</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

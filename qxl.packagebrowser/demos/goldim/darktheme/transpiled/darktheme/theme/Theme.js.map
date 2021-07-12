@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/goldim_darktheme_v1_0_0/source/class/darktheme/theme/Theme.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "appearance",
+    "darktheme",
+    "theme",
+    "Appearance",
+    "decoration",
+    "Decoration",
+    "color",
+    "Color",
+    "font",
+    "Font",
+    "icon",
+    "Oxygen"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,uBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,UAAU,EAAEC,SAAS,CAACC,KAAV,CAAgBC,UAD9B;AAEEC,MAAAA,UAAU,EAAEH,SAAS,CAACC,KAAV,CAAgBG,UAF9B;AAGEC,MAAAA,KAAK,EAAEL,SAAS,CAACC,KAAV,CAAgBK,KAHzB;AAIEC,MAAAA,IAAI,EAAEP,SAAS,CAACC,KAAV,CAAgBO,IAJxB;AAKEC,MAAAA,IAAI,EAAEjB,EAAE,CAACS,KAAH,CAASQ,IAAT,CAAcC;AALtB;AAFF,GADA;AAbAV,EAAAA,SAAS,CAACC,KAAV,CAAgBL,KAAhB,CAAsBD,aAAtB,GAAsCA,aAAtC",
+  "sourcesContent": [
+    "/* ************************************************************************\r\n\r\n   Copyright:\r\n      2021 Norbert Schröder\r\n\r\n   License:\r\n     MIT\r\n\r\n   Authors:\r\n     * Norbert Schröder (scro34)\r\n\r\n************************************************************************ */\r\n\r\nqx.Theme.define(\"darktheme.theme.Theme\",\r\n{\r\n  meta:\r\n  {\r\n    appearance: darktheme.theme.Appearance,\r\n    decoration: darktheme.theme.Decoration,\r\n    color: darktheme.theme.Color,\r\n    font: darktheme.theme.Font,\r\n    icon: qx.theme.icon.Oxygen\r\n  }\r\n});\r\n"
+  ]
+}

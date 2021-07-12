@@ -1,0 +1,51 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_eventrecorder_v0_18_0/source/class/qx/io/channel/transport/PostMessage.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "io",
+    "channel",
+    "transport",
+    "Abstract",
+    "implement",
+    "ITransport",
+    "construct",
+    "endpoint",
+    "endpointName",
+    "postMessage",
+    "onmessage",
+    "undefined",
+    "Error",
+    "endpointIsWindow",
+    "window",
+    "bom",
+    "Window",
+    "isClosed",
+    "set",
+    "self",
+    "addEventListener",
+    "message",
+    "source",
+    "fireDataEvent",
+    "bind",
+    "attachEventListener",
+    "close",
+    "members",
+    "sendMessage",
+    "messageObj",
+    "getEndpoint",
+    "PostMessage"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,qCAAhB,EAAuD;AACrDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,EAAH,CAAMC,OAAN,CAAcC,SAAd,CAAwBC,QADqB;AAErDC,IAAAA,SAAS,EAAEX,EAAE,CAACO,EAAH,CAAMC,OAAN,CAAcC,SAAd,CAAwBG,UAFkB;;AAIrD;AACF;AACA;AACA;AACA;AACA;AACA;AACA;AACEC,IAAAA,SAAS,EAAE,mBAASC,QAAT,EAAmBC,YAAnB,EAAiC;AAC1C;;AACA,UAAI,OAAOD,QAAQ,CAACE,WAAhB,KAAgC,UAAhC,IAA8CF,QAAQ,CAACG,SAAT,KAAuBC,SAAzE,EAAoF;AAClF,cAAM,IAAIC,KAAJ,CAAU,8DAAV,CAAN;AACD;;AACD,UAAIC,gBAAgB,GAAGN,QAAQ,CAACO,MAAT,KAAoBP,QAA3C;;AACA,UAAIM,gBAAgB,IAAIpB,EAAE,CAACsB,GAAH,CAAOC,MAAP,CAAcC,QAAd,CAAuB,KAAKV,QAA5B,CAAxB,EAA+D;AAC7D,cAAM,IAAIK,KAAJ,CAAU,uCAAV,CAAN;AACD;;AACD,WAAKM,GAAL,CAAS;AACPX,QAAAA,QAAQ,EAAEA,QADH;AAEPC,QAAAA,YAAY,EAAEA;AAFP,OAAT;AAIA,OAACM,MAAM,IAAIK,IAAX,EAAiBC,gBAAjB,CAAkC,SAAlC,EAA6C,UAASC,OAAT,EAAkB;AAC7D,YAAIA,OAAO,CAACC,MAAR,KAAmBf,QAAvB,EAAiC;AAC/B,eAAKgB,aAAL,CAAmB,SAAnB,EAA8BF,OAA9B;AACD;AACF,OAJ4C,CAI3CG,IAJ2C,CAItC,IAJsC,CAA7C;;AAKA,UAAIX,gBAAJ,EAAsB;AACpBN,QAAAA,QAAQ,CAACkB,mBAAT,CAA6B,OAA7B,EAAsC,YAAW;AAC/C,eAAKC,KAAL;AACD,SAFD;AAGD;AACF,KAnCoD;AAoCrDC,IAAAA,OAAO,EAAE;AAEP;AACJ;AACA;AACA;AACIC,MAAAA,WAAW,EAAE,qBAASC,UAAT,EAAqB;AAChC,aAAKC,WAAL,GAAmBrB,WAAnB,CAA+BoB,UAA/B,EAA2C,GAA3C;AACD;AARM;AApC4C,GAAvD;AALApC,EAAAA,EAAE,CAACO,EAAH,CAAMC,OAAN,CAAcC,SAAd,CAAwB6B,WAAxB,CAAoCnC,aAApC,GAAoDA,aAApD",
+  "sourcesContent": [
+    "/**\n * Transports based the postMessage API, for use in contexts such as\n *  - Window and Iframe objects (https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)\n *  - Workers (https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage)\n */\nqx.Class.define(\"qx.io.channel.transport.PostMessage\", {\n  extend: qx.io.channel.transport.Abstract,\n  implement: qx.io.channel.transport.ITransport,\n\n  /**\n   * Instantiate a new postMessage transport\n   * @param endpoint {Object}\n   *    An endpoint object that implements the postMessage API\n   * @param endpointName {String}\n   *    An optional human-readable name of the endpoint\n   * @ignore(self)\n   */\n  construct: function(endpoint, endpointName) {\n    this.base(arguments);\n    if (typeof endpoint.postMessage !== \"function\" || endpoint.onmessage === undefined) {\n      throw new Error(\"Endpoint must be an object implementing the postMessage API.\");\n    }\n    var endpointIsWindow = endpoint.window === endpoint;\n    if (endpointIsWindow && qx.bom.Window.isClosed(this.endpoint)) {\n      throw new Error(\"Cannot use closed window as endpoint.\");\n    }\n    this.set({\n      endpoint: endpoint,\n      endpointName: endpointName\n    });\n    (window || self).addEventListener(\"message\", function(message) {\n      if (message.source === endpoint) {\n        this.fireDataEvent(\"message\", message);\n      }\n    }.bind(this));\n    if (endpointIsWindow) {\n      endpoint.attachEventListener(\"close\", function() {\n        this.close();\n      });\n    }\n  },\n  members: {\n\n    /**\n     * Send a message into the channel\n     * @param messageObj {Object}\n     */\n    sendMessage: function(messageObj) {\n      this.getEndpoint().postMessage(messageObj, \"*\");\n    }\n  }\n});\n"
+  ]
+}

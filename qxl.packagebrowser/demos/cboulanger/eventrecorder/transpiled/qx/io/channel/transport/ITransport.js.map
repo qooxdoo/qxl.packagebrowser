@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_eventrecorder_v0_18_0/source/class/qx/io/channel/transport/ITransport.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Interface",
+    "define",
+    "events",
+    "properties",
+    "endpoint",
+    "endpointName",
+    "status",
+    "members",
+    "sendMessage",
+    "messageObj",
+    "io",
+    "channel",
+    "transport",
+    "ITransport"
+  ],
+  "mappings": ";;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,SAAH,CAAaC,MAAb,CAAoB,oCAApB,EAA0D;AACxDC,IAAAA,MAAM,EAAE;AACN;AACJ;AACA;AACA;AACI,iBAAW;AALL,KADgD;AASxDC,IAAAA,UAAU,EAAE;AAEV;AACJ;AACA;AACIC,MAAAA,QAAQ,EAAE,EALA;;AAOV;AACJ;AACA;AACIC,MAAAA,YAAY,EAAE,EAVJ;;AAYV;AACJ;AACA;AACA;AACIC,MAAAA,MAAM,EAAE;AAhBE,KAT4C;AA6BxDC,IAAAA,OAAO,EAAE;AAEP;AACJ;AACA;AACA;AACIC,MAAAA,WAAW,EAAE,qBAAUC,UAAV,EAAsB,CAAE;AAN9B;AA7B+C,GAA1D;AALAb,EAAAA,EAAE,CAACc,EAAH,CAAMC,OAAN,CAAcC,SAAd,CAAwBC,UAAxB,CAAmCd,aAAnC,GAAmDA,aAAnD",
+  "sourcesContent": [
+    "/**\n * A Transport is an object that can send and receive arbitrary JSON objects to\n * a remote target using an endpoint object that does the actual communication\n * with the target. It can be used by one or more channels.\n */\nqx.Interface.define(\"qx.io.channel.transport.ITransport\", {\n  events: {\n    /**\n     * Whenever a endpoint sends a message over this transport,\n     * this event is fired with the message object as data.\n     */\n    \"message\" :\"qx.event.type.Data\"\n  },\n\n  properties: {\n\n    /**\n     * The endpoint object\n     */\n    endpoint: {},\n\n    /**\n     * An optional human-readable name of the endpoint for use in logging, debugging etc.\n     */\n    endpointName: {},\n\n    /**\n     * The status of the endpoint, any of {@link qx.io.channel.Channel}'s\n     * CHANNEL_STATUS_* static constants\n     */\n    status: {}\n  },\n\n\n  members: {\n\n    /**\n     * Send a message into the channel\n     * @param messageObj {Object}\n     */\n    sendMessage: function (messageObj) {}\n  }\n});\n"
+  ]
+}

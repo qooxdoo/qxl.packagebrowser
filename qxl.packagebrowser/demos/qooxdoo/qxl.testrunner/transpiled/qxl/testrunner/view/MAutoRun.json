@@ -1,0 +1,163 @@
+{
+  "className": "qxl.testrunner.view.MAutoRun",
+  "packageName": "qxl.testrunner.view",
+  "name": "MAutoRun",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 20,
+        "column": 0
+      },
+      "end": {
+        "line": 38,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Checks for the presence of a parameter named \"autorun\" in the Testrunner URI\n and sets the autoRun property accordingly.</p>"
+        }
+      ]
+    }
+  },
+  "type": "mixin",
+  "construct": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 14
+      },
+      "end": {
+        "line": 27,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "properties": {
+    "autoRun": {
+      "location": {
+        "start": {
+          "line": 32,
+          "column": 4
+        },
+        "end": {
+          "line": 36,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Automatically run the selected tests after loading</p>"
+          }
+        ]
+      },
+      "name": "autoRun",
+      "propertyType": "new",
+      "init": false,
+      "check": "Boolean",
+      "defaultValue": false
+    }
+  },
+  "members": {
+    "getAutoRun": {
+      "type": "function",
+      "name": "getAutoRun",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "get",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>autoRun</code>.\n\nFor further details take a look at the property definition: {@link #autoRun}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "Boolean",
+            "desc": "Returns the value for autoRun"
+          }
+        ]
+      }
+    },
+    "isAutoRun": {
+      "type": "function",
+      "name": "isAutoRun",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "is",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>autoRun</code>.\n\nFor further details take a look at the property definition: {@link #autoRun}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "Boolean",
+            "desc": "Returns the value for autoRun"
+          }
+        ]
+      }
+    },
+    "setAutoRun": {
+      "type": "function",
+      "name": "setAutoRun",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "set",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Sets the user value of the property <code>autoRun</code>.\n\nFor further details take a look at the property definition: {@link #autoRun}."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "type": "Boolean",
+            "paramName": "value",
+            "desc": "Value for autoRun"
+          }
+        ]
+      }
+    },
+    "resetAutoRun": {
+      "type": "function",
+      "name": "resetAutoRun",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "reset",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Resets the user value of the property <code>autoRun</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #autoRun}."
+          }
+        ]
+      }
+    }
+  },
+  "descendants": []
+}

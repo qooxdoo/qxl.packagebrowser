@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testtapper_v1_0_11/source/class/qxl/testtapperdemo/test/Test01Simple.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "members",
+    "setUp",
+    "console",
+    "debug",
+    "tearDown",
+    "assertArray",
+    "assert",
+    "qxl",
+    "testtapperdemo",
+    "test",
+    "Test01Simple"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,sCAAhB,EAAwD;AACtDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADkC;AAEtDC,IAAAA,OAAO,EAAE;AACPC,MAAAA,KAAK,EAAE,iBAAY;AACjBC,QAAAA,OAAO,CAACC,KAAR,CAAc,sBAAd;AACD,OAHM;AAIPC,MAAAA,QAAQ,EAAE,oBAAY;AACpBF,QAAAA,OAAO,CAACC,KAAR,CAAc,yBAAd;AACD,OANM;AAOP,6BAAuB,0BAAY;AAC/B,aAAKE,WAAL,CAAiB,EAAjB,EAAqB,kBAArB;AACH,OATM;AAUP,6BAAuB,0BAAY;AACjC,aAAKC,MAAL,OAAkB,gBAAlB;AACD;AAZM;AAF6C,GAAxD;AAAAC,EAAAA,GAAG,CAACC,cAAJ,CAAmBC,IAAnB,CAAwBC,YAAxB,CAAqCjB,aAArC,GAAqDA,aAArD",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.testtapperdemo.test.Test01Simple\", {\n  extend: qx.dev.unit.TestCase,\n  members: {\n    setUp: function () {\n      console.debug(\"# Setup for TestCase\");\n    },\n    tearDown: function () {\n      console.debug(\"# Teardown for TestCase\");\n    },\n    \"test01: got array ?\": function () {\n        this.assertArray([], \"This is an array\");\n    },\n    \"test02: assert 1==1\": function () {\n      this.assert(1==1, \"One equals one\");\n    }\n  }\n});\n"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "className": "qookery.ace.Bootstrap",
+  "packageName": "qookery.ace",
+  "name": "Bootstrap",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 19,
+        "column": 0
+      },
+      "end": {
+        "line": 26,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "class",
+  "defer": {
+    "location": {
+      "start": {
+        "line": 21,
+        "column": 8
+      },
+      "end": {
+        "line": 25,
+        "column": 2
+      }
+    },
+    "jsdoc": {}
+  },
+  "descendants": []
+}

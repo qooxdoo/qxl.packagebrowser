@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_GroupBox_v1_0_2/source/class/wax/demo/theme/Color.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "indigo",
+    "Color",
+    "colors",
+    "core",
+    "Environment",
+    "get",
+    "wax",
+    "demo"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,sBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,KAD3B;AAGEC,IAAAA,MAAM,EACN;AACE;AACA,uCAAkC,SAFpC;AAGE,+CAA0C,SAH5C;AAKE;AACA,0BAAqBV,EAAE,CAACW,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,UAAxB,IAAsC,wBAAtC,GAAiE,SANxF;AAOE,0BAAqBb,EAAE,CAACW,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,UAAxB,IAAsC,wBAAtC,GAAiE,SAPxF;AAQE,8BAAyBb,EAAE,CAACW,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,UAAxB,IAAsC,sBAAtC,GAA+D,SAR1F;AASE,6BAAwBb,EAAE,CAACW,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,UAAxB,IAAsC,uBAAtC,GAAgE,SAT1F;AAUE,2BAAsBb,EAAE,CAACW,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,UAAxB,IAAsC,sBAAtC,GAA+D;AAVvF;AAJF,GADA;AAVAC,EAAAA,GAAG,CAACC,IAAJ,CAASR,KAAT,CAAeE,KAAf,CAAqBN,aAArB,GAAqCA,aAArC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\nqx.Theme.define(\"wax.demo.theme.Color\",\n{\n  extend : qx.theme.indigo.Color,\n\n  colors :\n  {\n    // overriden\n    \"table-row-background-selected\" : \"#A9A9A9\",\n    \"table-row-background-focused-selected\" : \"#A9A9A9\",\n\n    //SQ New\n    \"progressbar-base\" : qx.core.Environment.get(\"css.rgba\") ? \"rgba(229, 229, 229, 1)\" : \"#E5E5E5\",\n    \"progressbar-gray\" : qx.core.Environment.get(\"css.rgba\") ? \"rgba(136, 136, 136, 1)\" : \"#888888\",\n    \"progressbar-complete\" : qx.core.Environment.get(\"css.rgba\") ? \"rgba(33, 186, 69, 1)\" : \"#21BA45\",\n    \"progressbar-warning\" : qx.core.Environment.get(\"css.rgba\") ? \"rgba(242, 192, 55, 1)\" : \"#F2C037\",\n    \"progressbar-error\" : qx.core.Environment.get(\"css.rgba\") ? \"rgba(219, 40, 40, 1)\" : \"#DB2828\"\n  }\n});"
+  ]
+}

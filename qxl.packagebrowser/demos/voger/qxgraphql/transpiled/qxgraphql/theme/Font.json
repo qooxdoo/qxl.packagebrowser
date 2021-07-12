@@ -1,0 +1,24 @@
+{
+  "className": "qxgraphql.theme.Font",
+  "packageName": "qxgraphql.theme",
+  "name": "Font",
+  "superClass": "qx.theme.indigo.Font",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 11,
+        "column": 0
+      },
+      "end": {
+        "line": 18,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "descendants": []
+}

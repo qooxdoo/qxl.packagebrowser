@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/bidefi-irhs_qxfileio_v0_4_1/source/class/qxfileio/event/LoadError.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "event",
+    "type",
+    "Event",
+    "members",
+    "__name",
+    "__message",
+    "init",
+    "name",
+    "message",
+    "getName",
+    "getMessage",
+    "qxfileio",
+    "LoadError"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,0BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,IAAT,CAAcC,KADzB;AAGEC,IAAAA,OAAO,EAAG;AACRC,MAAAA,QAAM,EAAG,EADD;AAERC,MAAAA,QAAS,EAAG,EAFJ;;AAIR;AACJ;AACA;AACA;AACA;AACA;AACIC,MAAAA,IAAI,EAAG,cAASC,IAAT,EAAeC,OAAf,EAAwB;AAC7B,gEAAqB,KAArB,EAA4B,KAA5B;AACA,aAAKJ,QAAL,GAAcG,IAAd;AACA,aAAKF,QAAL,GAAiBG,OAAjB;AACD,OAdO;;AAgBR;AACJ;AACA;AACA;AACA;AACIC,MAAAA,OAAO,EAAG,mBAAW;AACnB,eAAO,KAAKL,QAAZ;AACD,OAvBO;;AAyBR;AACJ;AACA;AACA;AACA;AACIM,MAAAA,UAAU,EAAG,sBAAW;AACtB,eAAO,KAAKL,QAAZ;AACD;AAhCO;AAHZ,GADA;AALAM,EAAAA,QAAQ,CAACX,KAAT,CAAeY,SAAf,CAAyBhB,aAAzB,GAAyCA,aAAzC",
+  "sourcesContent": [
+    "/**\n * Event fired when loading file encounter an error.\n *\n * Map the HTML FileReader onerror event.\n */\nqx.Class.define(\"qxfileio.event.LoadError\",\n{\n  extend : qx.event.type.Event,\n\n  members : {\n    __name : '',\n    __message : '',\n\n    /**\n     * Initializes a LoadError event.\n     *\n     * @param name {String} The name of the error\n     * @param message {String} The messafe of the error\n     */\n    init : function(name, message) {\n      this.base(arguments, false, false);\n      this.__name = name;\n      this.__message = message;\n    },\n\n    /**\n     * Get the name of the error\n     *\n     * @return {String} The name of the error\n     */\n    getName : function() {\n      return this.__name;\n    },\n\n    /**\n     * Get the message of the error\n     *\n     * @return {String} The message of the error\n     */\n    getMessage : function() {\n      return this.__message;\n    }\n  }\n});\n"
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "className": "qxjqplot.MPlot",
+  "packageName": "qxjqplot",
+  "name": "MPlot",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 37,
+        "column": 0
+      },
+      "end": {
+        "line": 194,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": ""
+        },
+        {
+          "name": "@description",
+          "body": "<p>A wrapper around jqPlot. The wrapper assumes to find an unpacked copy of\n the jqPlot distribution in resource/jqPlot. See <a\n href='http://http://www.jqplot.com' target='_blank'>jqPlot website</a>\n for information on how to use jqPlot.\n </p>\n<pre class='javascript'>\n var data = [[['frogs',3], ['buzzards',7], ['deer',2.5], ['turkeys',6], ['moles',5], ['ground hogs',4]]],\n var options = function($jqplot){return{\n     title: 'Pie Chart with Legend and sliceMargin',\n     seriesDefaults:{renderer:$jqplot.PieRenderer, rendererOptions:{sliceMargin:8}},\n     legend:{show:true}\n  }};\n var plugins = ['pieRenderer'];\n var plot = new qxjqplot.Plot(data,options,plugins);\n </pre>"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "jqPlot/*"
+        }
+      ],
+      "@ignore": [
+        {
+          "name": "@ignore",
+          "body": "jQuery"
+        },
+        {
+          "name": "@ignore",
+          "body": "jQuery.jqplot.config"
+        }
+      ]
+    }
+  },
+  "type": "mixin",
+  "statics": {
+    "INSTANCE_COUNTER": {
+      "location": {
+        "start": {
+          "line": 40,
+          "column": 8
+        },
+        "end": {
+          "line": 40,
+          "column": 28
+        }
+      },
+      "type": "variable",
+      "access": "public"
+    },
+    "LOADED": {
+      "location": {
+        "start": {
+          "line": 44,
+          "column": 8
+        },
+        "end": {
+          "line": 44,
+          "column": 18
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>map of loaded scripts</p>"
+          }
+        ]
+      },
+      "type": "variable",
+      "access": "public"
+    },
+    "LOADING": {
+      "location": {
+        "start": {
+          "line": 48,
+          "column": 8
+        },
+        "end": {
+          "line": 48,
+          "column": 19
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>map of objects in the process of loading a particular script</p>"
+          }
+        ]
+      },
+      "type": "variable",
+      "access": "public"
+    },
+    "DEFAULT_OPTIONS": {
+      "location": {
+        "start": {
+          "line": 52,
+          "column": 8
+        },
+        "end": {
+          "line": 68,
+          "column": 9
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Default Options for graphs. They get merged (non overwriting to the graph object).</p>"
+          }
+        ]
+      },
+      "type": "variable",
+      "access": "public"
+    }
+  },
+  "events": {
+    "plotCreated": {
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 8
+        },
+        "end": {
+          "line": 75,
+          "column": 42
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>returns the plot object</p>"
+          }
+        ]
+      },
+      "name": "plotCreated",
+      "type": "qx.event.type.Event"
+    },
+    "scriptLoaded": {
+      "location": {
+        "start": {
+          "line": 79,
+          "column": 8
+        },
+        "end": {
+          "line": 79,
+          "column": 43
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>fires when a script is loaded</p>"
+          }
+        ]
+      },
+      "name": "scriptLoaded",
+      "type": "qx.event.type.Event"
+    }
+  },
+  "members": {
+    "_setup": {
+      "location": {
+        "start": {
+          "line": 92,
+          "column": 6
+        },
+        "end": {
+          "line": 120,
+          "column": 9
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "dataSeries {Array} data array to plot",
+            "paramName": "dataSeries",
+            "description": " data array to plot",
+            "type": "Array"
+          },
+          {
+            "name": "@param",
+            "body": "getOptions {Callback|Map} wither an option map or a function returning the option map after being called with jQuery.jqplot as an argument.",
+            "paramName": "getOptions",
+            "description": " wither an option map or a function returning the option map after being called with jQuery.jqplot as an argument.",
+            "type": [
+              "Callback",
+              "Map"
+            ]
+          },
+          {
+            "name": "@param",
+            "body": "pluginArr  {Array} array of plugin base names. (use \"cursor\" not \"jqplot.cursor.js\")",
+            "paramName": "pluginArr",
+            "description": " array of plugin base names. (use \"cursor\" not \"jqplot.cursor.js\")",
+            "type": "Array"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "protected"
+    },
+    "getPlotObject": {
+      "location": {
+        "start": {
+          "line": 128,
+          "column": 8
+        },
+        "end": {
+          "line": 130,
+          "column": 9
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Once the jqPlot object has been created, returns a handle to the plot object\n use the plotCreated to learn when the plot gets created.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{jqPlotObject}",
+            "type": "jqPlotObject",
+            "description": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "__addCss": {
+      "location": {
+        "start": {
+          "line": 135,
+          "column": 8
+        },
+        "end": {
+          "line": 147,
+          "column": 9
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Simple css loader without event support</p>"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__plotObject": {
+      "location": {
+        "start": {
+          "line": 151,
+          "column": 8
+        },
+        "end": {
+          "line": 151,
+          "column": 26
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>our copy of the plot object</p>"
+          }
+        ]
+      },
+      "type": "variable",
+      "access": "private"
+    },
+    "__addCanvas": {
+      "location": {
+        "start": {
+          "line": 156,
+          "column": 8
+        },
+        "end": {
+          "line": 172,
+          "column": 9
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Create the canvas once everything is rendered</p>"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "_redraw": {
+      "location": {
+        "start": {
+          "line": 173,
+          "column": 8
+        },
+        "end": {
+          "line": 192,
+          "column": 10
+        }
+      },
+      "type": "function",
+      "access": "protected"
+    }
+  },
+  "descendants": []
+}

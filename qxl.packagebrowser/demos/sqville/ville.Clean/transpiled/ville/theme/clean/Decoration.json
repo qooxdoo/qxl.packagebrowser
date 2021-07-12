@@ -1,0 +1,46 @@
+{
+  "className": "ville.theme.clean.Decoration",
+  "packageName": "ville.theme.clean",
+  "name": "Decoration",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 19,
+        "column": 0
+      },
+      "end": {
+        "line": 2177,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The simple qooxdoo decoration theme.</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "aliases": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 2
+      },
+      "end": {
+        "line": 24,
+        "column": 3
+      }
+    },
+    "aliasMap": {
+      "decoration": "ville/theme/clean/decoration"
+    }
+  },
+  "descendants": []
+}

@@ -1,0 +1,24 @@
+{
+  "className": "qxfileio.theme.Decoration",
+  "packageName": "qxfileio.theme",
+  "name": "Decoration",
+  "superClass": "qx.theme.indigo.Decoration",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 11,
+        "column": 0
+      },
+      "end": {
+        "line": 18,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "descendants": []
+}

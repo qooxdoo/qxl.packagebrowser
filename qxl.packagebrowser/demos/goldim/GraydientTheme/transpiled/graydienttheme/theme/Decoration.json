@@ -1,0 +1,39 @@
+{
+  "className": "graydienttheme.theme.Decoration",
+  "packageName": "graydienttheme.theme",
+  "name": "Decoration",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 14,
+        "column": 0
+      },
+      "end": {
+        "line": 1667,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "aliases": {
+    "location": {
+      "start": {
+        "line": 16,
+        "column": 2
+      },
+      "end": {
+        "line": 18,
+        "column": 3
+      }
+    },
+    "aliasMap": {
+      "decoration": "graydienttheme/decoration"
+    }
+  },
+  "descendants": []
+}

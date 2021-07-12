@@ -1,0 +1,43 @@
+{
+  "className": "ville.theme.Clean",
+  "packageName": "ville.theme",
+  "name": "Clean",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 18,
+        "column": 0
+      },
+      "end": {
+        "line": 28,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "themeMeta": {
+    "location": {
+      "start": {
+        "line": 20,
+        "column": 2
+      },
+      "end": {
+        "line": 27,
+        "column": 3
+      }
+    },
+    "themeMetaMap": {
+      "color": "ville.theme.clean.Color",
+      "decoration": "ville.theme.clean.Decoration",
+      "font": "ville.theme.clean.Font",
+      "icon": "qx.theme.icon.Tango",
+      "appearance": "ville.theme.clean.Appearance"
+    }
+  },
+  "descendants": []
+}

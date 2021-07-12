@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_tweet-tutorial_v1_0_1/tweets/step2/source/class/qxl/tweets/Application.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "main",
+    "qxl",
+    "tweets",
+    "MainWindow",
+    "moveTo",
+    "open",
+    "addListener",
+    "debug",
+    "e",
+    "getData",
+    "Application"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,WAAH,CAAeC,UAD1B;;AAKE;AACF;AACA;AACA;AACA;AAEEC,IAAAA,OAAO,EACP;AACE;AACJ;AACA;AACA;AACA;AACA;AACIC,MAAAA,IAAI,EAAG,gBAAW;AAChB;AACA,8DAFgB,CAIhB;;AAQA;AACN;AACA;AACA;AACA;AAGM,YAAIA,IAAI,GAAG,IAAIC,GAAG,CAACC,MAAJ,CAAWC,UAAf,EAAX;AACAH,QAAAA,IAAI,CAACI,MAAL,CAAY,EAAZ,EAAgB,EAAhB;AACAJ,QAAAA,IAAI,CAACK,IAAL;AAEAL,QAAAA,IAAI,CAACM,WAAL,CAAiB,QAAjB,EAA2B,YAAW;AACpC,eAAKC,KAAL,CAAW,QAAX;AACD,SAFD,EAEG,IAFH;AAIAP,QAAAA,IAAI,CAACM,WAAL,CAAiB,MAAjB,EAAyB,UAASE,CAAT,EAAY;AACnC,eAAKD,KAAL,CAAW,WAAWC,CAAC,CAACC,OAAF,EAAtB;AACD,SAFD,EAEG,IAFH;AAGD;AArCH;AAZF,GADA;AApBAR,EAAAA,GAAG,CAACC,MAAJ,CAAWQ,WAAX,CAAuBjB,aAAvB,GAAuCA,aAAvC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\n/* ************************************************************************\n\n\n************************************************************************ */\n\n/**\n * This is the main application class of your custom application \"tweets\"\n *\n * @asset(qxl/tweets/*)\n */\nqx.Class.define(\"qxl.tweets.Application\",\n{\n  extend : qx.application.Standalone,\n\n\n\n  /*\n  *****************************************************************************\n     MEMBERS\n  *****************************************************************************\n  */\n\n  members :\n  {\n    /**\n     * This method contains the initial application code and gets called\n     * during startup of the application\n     *\n     * @lint ignoreDeprecated(alert)\n     */\n    main : function() {\n      // Call super class\n      this.base(arguments);\n\n      // Enable logging in debug variant\n      if (qx.core.Environment.get(\"qx.debug\")) {\n        // support native logging capabilities, e.g. Firebug for Firefox\n        qx.log.appender.Native;\n        // support additional cross-browser console. Press F7 to toggle visibility\n        qx.log.appender.Console;\n      }\n\n      /*\n      -------------------------------------------------------------------------\n        Below is your actual application code...\n      -------------------------------------------------------------------------\n      */\n\n\n      var main = new qxl.tweets.MainWindow();\n      main.moveTo(50, 30);\n      main.open();\n\n      main.addListener(\"reload\", function() {\n        this.debug(\"reload\");\n      }, this);\n\n      main.addListener(\"post\", function(e) {\n        this.debug(\"post: \" + e.getData());\n      }, this);\n    }\n  }\n});\n"
+  ]
+}

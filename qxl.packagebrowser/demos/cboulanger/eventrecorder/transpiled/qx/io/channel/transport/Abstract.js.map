@@ -1,0 +1,46 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_eventrecorder_v0_18_0/source/class/qx/io/channel/transport/Abstract.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "core",
+    "Object",
+    "type",
+    "events",
+    "properties",
+    "endpoint",
+    "check",
+    "event",
+    "endpointName",
+    "status",
+    "io",
+    "channel",
+    "Channel",
+    "CHANNEL_STATUS_OPEN",
+    "CHANNEL_STATUS_CLOSED",
+    "CHANNEL_STATUS_WAITING",
+    "CHANNEL_STATUS_OFFLINE",
+    "init",
+    "apply",
+    "members",
+    "close",
+    "setStatus",
+    "sendMessage",
+    "messageObj",
+    "Error",
+    "transport",
+    "Abstract"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,kCAAhB,EAAoD;AAClDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,IAAH,CAAQC,MADkC;AAElDC,IAAAA,IAAI,EAAE,UAF4C;AAIlDC,IAAAA,MAAM,EAAE;AACN;AACJ;AACA;AACA;AACI,iBAAW;AALL,KAJ0C;AAYlDC,IAAAA,UAAU,EAAE;AAEV;AACJ;AACA;AACIC,MAAAA,QAAQ,EAAE;AACRC,QAAAA,KAAK,EAAE,QADC;AAERC,QAAAA,KAAK,EAAE;AAFC,OALA;;AAUV;AACJ;AACA;AACIC,MAAAA,YAAY,EAAE;AACZF,QAAAA,KAAK,EAAE,QADK;AAEZC,QAAAA,KAAK,EAAE;AAFK,OAbJ;AAkBVE,MAAAA,MAAM,EAAE;AACNH,QAAAA,KAAK,EAAE,CACLb,EAAE,CAACiB,EAAH,CAAMC,OAAN,CAAcC,OAAd,CAAsBC,mBADjB,EAELpB,EAAE,CAACiB,EAAH,CAAMC,OAAN,CAAcC,OAAd,CAAsBE,qBAFjB,EAGLrB,EAAE,CAACiB,EAAH,CAAMC,OAAN,CAAcC,OAAd,CAAsBG,sBAHjB,EAILtB,EAAE,CAACiB,EAAH,CAAMC,OAAN,CAAcC,OAAd,CAAsBI,sBAJjB,CADD;AAONC,QAAAA,IAAI,EAAExB,EAAE,CAACiB,EAAH,CAAMC,OAAN,CAAcC,OAAd,CAAsBG,sBAPtB;AAQNR,QAAAA,KAAK,EAAE,cARD;AASNW,QAAAA,KAAK,EAAE;AATD;AAlBE,KAZsC;AA4ClDC,IAAAA,OAAO,EAAE;AAEP;AACJ;AACA;AACIC,MAAAA,KAAK,EAAE,iBAAW;AAChB,aAAKC,SAAL,CAAe5B,EAAE,CAACiB,EAAH,CAAMC,OAAN,CAAcC,OAAd,CAAsBE,qBAArC;AACD,OAPM;;AASP;AACJ;AACA;AACA;AACIQ,MAAAA,WAAW,EAAE,qBAAUC,UAAV,EAAsB;AACjC,cAAM,IAAIC,KAAJ,CAAU,yCAAV,CAAN;AACD;AAfM;AA5CyC,GAApD;AALA/B,EAAAA,EAAE,CAACiB,EAAH,CAAMC,OAAN,CAAcc,SAAd,CAAwBC,QAAxB,CAAiC9B,aAAjC,GAAiDA,aAAjD",
+  "sourcesContent": [
+    "/**\n * A Transport is an object that can send and receive arbitrary JSON objects to\n * a remote target using an endpoint object that does the actual communication\n * with the target. It can be used by one or more channels.\n */\nqx.Class.define(\"qx.io.channel.transport.Abstract\", {\n  extend: qx.core.Object,\n  type: \"abstract\",\n\n  events: {\n    /**\n     * Whenever a endpoint sends a message over this transport,\n     * this event is fired with the message object as data.\n     */\n    \"message\" :\"qx.event.type.Data\"\n  },\n\n  properties: {\n\n    /**\n     * The endpoint object\n     */\n    endpoint: {\n      check: \"Object\",\n      event: \"changeEndpoint\"\n    },\n\n    /**\n     * A human-readable name of the endpoint for use in logging, debugging etc.\n     */\n    endpointName: {\n      check: \"String\",\n      event: \"changeEndpointName\"\n    },\n\n    status: {\n      check: [\n        qx.io.channel.Channel.CHANNEL_STATUS_OPEN,\n        qx.io.channel.Channel.CHANNEL_STATUS_CLOSED,\n        qx.io.channel.Channel.CHANNEL_STATUS_WAITING,\n        qx.io.channel.Channel.CHANNEL_STATUS_OFFLINE\n      ],\n      init: qx.io.channel.Channel.CHANNEL_STATUS_WAITING,\n      event: \"changeStatus\",\n      apply: \"_applyStatus\"\n    }\n  },\n\n\n  members: {\n\n    /**\n     * Close the connection\n     */\n    close: function() {\n      this.setStatus(qx.io.channel.Channel.CHANNEL_STATUS_CLOSED);\n    },\n\n    /**\n     * Send a message into the channel\n     * @param messageObj {Object}\n     */\n    sendMessage: function (messageObj) {\n      throw new Error(\"Method must be implemented by subclass!\");\n    }\n  }\n});\n"
+  ]
+}

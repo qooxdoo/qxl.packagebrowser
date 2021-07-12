@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_tweet-tutorial_v1_0_1/tweets/step4.2.1/source/class/qxl/tweets/theme/Color.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "simple",
+    "Color",
+    "colors",
+    "qxl",
+    "tweets"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,KAD3B;AAGEC,IAAAA,MAAM,EACN;AACE,oBAAe;AADjB;AAJF,GADA;AAVAC,EAAAA,GAAG,CAACC,MAAJ,CAAWL,KAAX,CAAiBE,KAAjB,CAAuBN,aAAvB,GAAuCA,aAAvC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\nqx.Theme.define(\"qxl.tweets.theme.Color\",\n{\n  extend : qx.theme.simple.Color,\n\n  colors :\n  {\n    \"tweet-time\" : \"#E0E0E0\"\n  }\n});\n"
+  ]
+}

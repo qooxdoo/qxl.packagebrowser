@@ -1,0 +1,26 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_eventrecorder_v0_18_0/source/class/qx/data/IProxy.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Interface",
+    "define",
+    "members",
+    "_syncProperties",
+    "channel",
+    "options",
+    "startPropertySync",
+    "stopPropertySync",
+    "data",
+    "IProxy"
+  ],
+  "mappings": ";;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,SAAH,CAAaC,MAAb,CAAoB,gBAApB,EAAsC;AACpCC,IAAAA,OAAO,EAAE;AACP;AACJ;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACIC,MAAAA,eAAe,EAAE,yBAASC,OAAT,EAAkBC,OAAlB,EAA2B,CAAE,CAnBvC;;AAqBP;AACJ;AACA;AACA;AACIC,MAAAA,iBAAiB,EAAE,6BAAY,CAAE,CAzB1B;;AA2BP;AACJ;AACA;AACIC,MAAAA,gBAAgB,EAAE,4BAAY,CAAE;AA9BzB;AAD2B,GAAtC;AAVAX,EAAAA,EAAE,CAACY,IAAH,CAAQC,MAAR,CAAeV,aAAf,GAA+BA,aAA/B",
+  "sourcesContent": [
+    "/**\n * A Proxy is an object that represents another object that lives in a different\n * execution context (such as in another browser window, a worker, an application\n * running on a different server. The proxy replicates the selected or all properties\n * of the remote objects, including deeply nested objects. It will also synchronize\n * property changes. By default, all qooxdoo classes will be transformed to\n * data models that you can bind other object properties to. If you are sure this\n * does not introduce side effects, you can also replicate the qooxdoo classes.\n * For this, you need to manually include those classes in your application.\n */\nqx.Interface.define(\"qx.data.IProxy\", {\n  members: {\n    /**\n     * Initializes property synchronization with the remote peer using the\n     * given channel. Usuallly implemented by {@link qx.data.MRemoteBinding} and\n     * called implicitly by {@link qx.data.IProxy#startPropertySync}.\n     *\n     * @param channel {qx.io.channel.Channel}\n     *    The channel over which to synchronize the object properties\n     * @param options {Object}\n     *    Optional map with synchronization options:\n     *      - {Array} properties The list of properties to synchronize, if not\n     *        using the default list\n     *      - {Boolean} useOriginalClasses If true, when recreating the objects,\n     *        use the qooxdoo classes that were serialized on the other end.\n     *        If false or undefined (default), create qx.data.model.* objects that\n     *        contain the property data only, using the JSON marshaler.\n     *        This is usually enough for remote databinding and prevents unintended\n     *        side effects.\n     */\n    _syncProperties: function(channel, options) {},\n\n    /**\n     * Starts the synchronization of object properties\n     * The method signature is dependent on the implementation\n     */\n    startPropertySync: function () {},\n\n    /**\n     * Starts the synchronization of object properties\n     */\n    stopPropertySync: function () {}\n  }\n});\n"
+  ]
+}

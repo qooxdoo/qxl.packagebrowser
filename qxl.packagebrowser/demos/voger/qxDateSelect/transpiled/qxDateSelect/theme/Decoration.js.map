@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/voger_qxDateSelect_v1_0_0/source/class/qxDateSelect/theme/Decoration.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "indigo",
+    "Decoration",
+    "decorations",
+    "style",
+    "width",
+    "include",
+    "color",
+    "qxDateSelect"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,+BAAhB,EAAiD;AAC/CC,IAAAA,MAAM,EAAEN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,UADuB;AAG/CC,IAAAA,WAAW,EAAE;AACX,wBAAkB;AAChBC,QAAAA,KAAK,EAAE;AACLC,UAAAA,KAAK,EAAE;AADF;AADS,OADP;AAMX,gCAA0B;AACxBC,QAAAA,OAAO,EAAE,gBADe;AAGxBF,QAAAA,KAAK,EAAE;AACLG,UAAAA,KAAK,EAAE;AADF;AAHiB;AANf;AAHkC,GAAjD;AAVAC,EAAAA,YAAY,CAACR,KAAb,CAAmBE,UAAnB,CAA8BN,aAA9B,GAA8CA,aAA9C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2020 voger\n\n   License: MIT license\n\n   Authors: voger\n\n************************************************************************ */\n\nqx.Theme.define(\"qxDateSelect.theme.Decoration\", {\n  extend: qx.theme.indigo.Decoration,\n\n  decorations: {\n    \"qx-date-select\" :{\n      style: {\n        width: 1\n      }\n    },\n    \"qx-date-select-invalid\": {\n      include: \"qx-date-select\",\n\n      style: {\n        color: \"invalid\"\n      }\n    }\n  }\n});\n"
+  ]
+}

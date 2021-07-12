@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/oetiker_ComboTable_v1_0_4/source/class/combotable/NoHeader.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "table",
+    "pane",
+    "Header",
+    "construct",
+    "paneScroller",
+    "__privateScroller",
+    "members",
+    "getContainerLocation",
+    "mode",
+    "domEl",
+    "getContainerElement",
+    "getDomElement",
+    "bom",
+    "element",
+    "Location",
+    "get",
+    "loc",
+    "bottom",
+    "top",
+    "left",
+    "right",
+    "combotable",
+    "NoHeader"
+  ],
+  "mappings": ";;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,qBAAhB,EAAuC;AACnCC,IAAAA,MAAM,EAAGN,EAAE,CAACO,EAAH,CAAMC,KAAN,CAAYC,IAAZ,CAAiBC,MADS;AAGnCC,IAAAA,SAAS,EAAG,mBAASC,YAAT,EAAuB;AAC/B,qDAAqBA,YAArB;AAEA,WAAKC,QAAL,GAAyBD,YAAzB;AACH,KAPkC;AASnCE,IAAAA,OAAO,EAAG;AACND,MAAAA,QAAiB,EAAG,IADd;;AAGN;AACR;AACA;AACA;AACQE,MAAAA,oBAAoB,EAAG,8BAASC,IAAT,EAAe;AAClC,YAAIC,KAAK,GAAG,KAAKC,mBAAL,GAA2BC,aAA3B,EAAZ;;AAEA,YAAIF,KAAJ,EAAW;AACP,iBAAOjB,EAAE,CAACoB,GAAH,CAAOC,OAAP,CAAeC,QAAf,CAAwBC,GAAxB,CAA4BN,KAA5B,EAAmCD,IAAnC,CAAP;AACH,SAFD,MAGK;AACDC,UAAAA,KAAK,GAAG,KAAKJ,QAAL,CAAuBK,mBAAvB,GAA6CC,aAA7C,EAAR;;AAEA,cAAIF,KAAJ,EAAW;AACP,gBAAIO,GAAG,GAAGxB,EAAE,CAACoB,GAAH,CAAOC,OAAP,CAAeC,QAAf,CAAwBC,GAAxB,CAA4BN,KAA5B,EAAmCD,IAAnC,CAAV;AACAQ,YAAAA,GAAG,CAACC,MAAJ,GAAaD,GAAG,CAACE,GAAjB;AACA,mBAAOF,GAAP;AACH,WAJD,MAKK;AACD,mBAAO;AACHG,cAAAA,IAAI,EAAK,CADN;AAEHC,cAAAA,KAAK,EAAI,CAFN;AAGHF,cAAAA,GAAG,EAAM,CAHN;AAIHD,cAAAA,MAAM,EAAG;AAJN,aAAP;AAMH;AACJ;AACJ;AA9BK;AATyB,GAAvC;AAlBAI,EAAAA,UAAU,CAACC,QAAX,CAAoB3B,aAApB,GAAoCA,aAApC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n     Tobias Oetiker, OETIKER+PARTNER AG, www.oetiker.ch\n     \n   License:\n     LGPL: http://www.gnu.org/licenses/lgpl.html\n     EPL: http://www.eclipse.org/org/documents/epl-v10.php\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:   \n     * Tobias Oetiker (oetiker)\n\n************************************************************************ */\n\n/**\n * A Non-Header-Header\n */\nqx.Class.define(\"combotable.NoHeader\", {\n    extend : qx.ui.table.pane.Header,\n\n    construct : function(paneScroller) {\n        this.base(arguments, paneScroller);\n\n        this.__privateScroller = paneScroller;\n    },\n\n    members : {\n        __privateScroller : null,\n\n        /**\n         * Overridden from {@link qx.ui.core.Widget.getContainerLocation} so that it\n         * works with the header disabled.\n         */\n        getContainerLocation : function(mode) {\n            var domEl = this.getContainerElement().getDomElement();\n\n            if (domEl) {\n                return qx.bom.element.Location.get(domEl, mode);\n            }\n            else {\n                domEl = this.__privateScroller.getContainerElement().getDomElement();\n\n                if (domEl) {\n                    var loc = qx.bom.element.Location.get(domEl, mode);\n                    loc.bottom = loc.top;\n                    return loc;\n                }\n                else {\n                    return {\n                        left   : 0,\n                        right  : 0,\n                        top    : 0,\n                        bottom : 0\n                    };\n                }\n            }\n        }\n    }\n});\n"
+  ]
+}

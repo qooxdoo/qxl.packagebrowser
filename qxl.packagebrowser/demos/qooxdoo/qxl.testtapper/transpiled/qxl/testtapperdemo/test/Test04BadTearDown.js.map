@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testtapper_v1_0_11/source/class/qxl/testtapperdemo/test/Test04BadTearDown.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "members",
+    "tearDown",
+    "CallingUnknownFunctionInTeardown",
+    "assert",
+    "qxl",
+    "testtapperdemo",
+    "test",
+    "Test04BadTearDown"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,2CAAhB,EAA6D;AAC3DC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADuC;AAE3DC,IAAAA,OAAO,EAAE;AACPC,MAAAA,QAAQ,EAAE,oBAAY;AAClB,aAAKC,gCAAL;AACH,OAHM;AAIP,6BAAuB,0BAAY;AAC/B,aAAKC,MAAL,OAAkB,gBAAlB;AACH;AANM;AAFkD,GAA7D;AAAAC,EAAAA,GAAG,CAACC,cAAJ,CAAmBC,IAAnB,CAAwBC,iBAAxB,CAA0Cd,aAA1C,GAA0DA,aAA1D",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.testtapperdemo.test.Test04BadTearDown\", {\n  extend: qx.dev.unit.TestCase,\n  members: {\n    tearDown: function () {\n        this.CallingUnknownFunctionInTeardown();\n    },\n    \"test01: assert 1==1\": function () {\n        this.assert(1==1, \"One equals one\");\n    }\n  }\n\n});\n"
+  ]
+}

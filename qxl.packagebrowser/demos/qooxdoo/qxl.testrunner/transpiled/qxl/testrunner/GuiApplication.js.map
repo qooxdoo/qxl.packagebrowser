@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testrunner_v6_0_1/source/class/qxl/testrunner/GuiApplication.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "main",
+    "runner",
+    "qxl",
+    "testrunner",
+    "TestRunner",
+    "destruct",
+    "_disposeObjects",
+    "GuiApplication"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,+BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,WAAH,CAAeC,UAD1B;;AAIE;AACF;AACA;AACA;AACA;AAEEC,IAAAA,OAAO,EACP;AAEEC,MAAAA,IAAI,EAAG,gBAAW;AAChB;AACA,qEAFgB,CAIhB;;AAQA,aAAKC,MAAL,GAAc,IAAIC,GAAG,CAACC,UAAJ,CAAeF,MAAf,CAAsBG,UAA1B,EAAd;AACD;AAfH,KAXF;;AA8BE;AACF;AACA;AACA;AACA;AAEEC,IAAAA,QAAQ,EAAG,oBAAW;AACpB,WAAKC,eAAL,CAAqB,QAArB;AACD;AAtCH,GADA;AArBAJ,EAAAA,GAAG,CAACC,UAAJ,CAAeI,cAAf,CAA8Bd,aAA9B,GAA8CA,aAA9C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Daniel Wagner (d_wagner)\n\n************************************************************************ */\n\n/**\n * TestRunner main application class.\n */\nqx.Class.define(\"qxl.testrunner.GuiApplication\",\n{\n  extend : qx.application.Standalone,\n\n\n  /*\n  *****************************************************************************\n     MEMBERS\n  *****************************************************************************\n  */\n\n  members :\n  {\n\n    main : function() {\n      // Call super class\n      this.base(arguments);\n\n      // Enable logging in debug variant\n      if (qx.core.Environment.get(\"qx.debug\")) {\n        // support native logging capabilities, e.g. Firebug for Firefox\n        qx.log.appender.Native;\n        // support additional cross-browser console. Press F7 to toggle visibility\n        qx.log.appender.Console;\n      }\n\n      this.runner = new qxl.testrunner.runner.TestRunner();\n    }\n  },\n\n\n  /*\n  *****************************************************************************\n     DESTRUCTOR\n  *****************************************************************************\n  */\n\n  destruct : function() {\n    this._disposeObjects(\"runner\");\n  }\n});\n"
+  ]
+}

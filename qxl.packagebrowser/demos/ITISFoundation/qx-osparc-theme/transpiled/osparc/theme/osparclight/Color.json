@@ -1,0 +1,31 @@
+{
+  "className": "osparc.theme.osparclight.Color",
+  "packageName": "osparc.theme.osparclight",
+  "name": "Color",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 146,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Based on osparcdark inverted colors</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

@@ -1,0 +1,31 @@
+{
+  "className": "qxl.playground.theme.Appearance",
+  "packageName": "qxl.playground.theme",
+  "name": "Appearance",
+  "superClass": "qx.theme.indigo.Appearance",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 21,
+        "column": 0
+      },
+      "end": {
+        "line": 80,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>A custom apperance theme for the qxl.playground.</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

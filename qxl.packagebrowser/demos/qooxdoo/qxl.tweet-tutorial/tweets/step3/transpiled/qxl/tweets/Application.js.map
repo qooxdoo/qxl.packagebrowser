@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_tweet-tutorial_v1_0_1/tweets/step3/source/class/qxl/tweets/Application.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "main",
+    "qxl",
+    "tweets",
+    "MainWindow",
+    "moveTo",
+    "open",
+    "service",
+    "IdenticaService",
+    "addListener",
+    "clearPostMessage",
+    "fetchTweets",
+    "e",
+    "post",
+    "getData",
+    "controller",
+    "data",
+    "List",
+    "getList",
+    "setLabelPath",
+    "setIconPath",
+    "setDelegate",
+    "configureItem",
+    "item",
+    "getChildControl",
+    "setWidth",
+    "setHeight",
+    "setScale",
+    "setRich",
+    "bind",
+    "Application"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,WAAH,CAAeC,UAD1B;;AAKE;AACF;AACA;AACA;AACA;AAEEC,IAAAA,OAAO,EACP;AACE;AACJ;AACA;AACA;AACA;AACA;AACIC,MAAAA,IAAI,EAAG,gBAAW;AAChB;AACA,8DAFgB,CAIhB;;AAQA;AACN;AACA;AACA;AACA;AAGM,YAAIA,IAAI,GAAG,IAAIC,GAAG,CAACC,MAAJ,CAAWC,UAAf,EAAX;AACAH,QAAAA,IAAI,CAACI,MAAL,CAAY,EAAZ,EAAgB,EAAhB;AACAJ,QAAAA,IAAI,CAACK,IAAL;AAEA,YAAIC,OAAO,GAAG,IAAIL,GAAG,CAACC,MAAJ,CAAWK,eAAf,EAAd,CAvBgB,CAyBhB;;AACAD,QAAAA,OAAO,CAACE,WAAR,CAAoB,QAApB,EAA8B,YAAW;AACvCR,UAAAA,IAAI,CAACS,gBAAL;AACAH,UAAAA,OAAO,CAACI,WAAR;AACD,SAHD,EAGG,IAHH,EA1BgB,CA+BhB;;AACAV,QAAAA,IAAI,CAACQ,WAAL,CAAiB,QAAjB,EAA2B,YAAW;AACpCF,UAAAA,OAAO,CAACI,WAAR;AACD,SAFD,EAEG,IAFH,EAhCgB,CAoChB;;AACAV,QAAAA,IAAI,CAACQ,WAAL,CAAiB,MAAjB,EAAyB,UAASG,CAAT,EAAY;AACnCL,UAAAA,OAAO,CAACM,IAAR,CAAaD,CAAC,CAACE,OAAF,EAAb;AACD,SAFD,EAEG,IAFH,EArCgB,CAyChB;;AACA,YAAIC,UAAU,GAAG,IAAIxB,EAAE,CAACyB,IAAH,CAAQD,UAAR,CAAmBE,IAAvB,CAA4B,IAA5B,EAAkChB,IAAI,CAACiB,OAAL,EAAlC,CAAjB;AACAH,QAAAA,UAAU,CAACI,YAAX,CAAwB,MAAxB;AACAJ,QAAAA,UAAU,CAACK,WAAX,CAAuB,wBAAvB;AACAL,QAAAA,UAAU,CAACM,WAAX,CAAuB;AACrBC,UAAAA,aAAa,EAAG,uBAASC,IAAT,EAAe;AAC7BA,YAAAA,IAAI,CAACC,eAAL,CAAqB,MAArB,EAA6BC,QAA7B,CAAsC,EAAtC;AACAF,YAAAA,IAAI,CAACC,eAAL,CAAqB,MAArB,EAA6BE,SAA7B,CAAuC,EAAvC;AACAH,YAAAA,IAAI,CAACC,eAAL,CAAqB,MAArB,EAA6BG,QAA7B,CAAsC,IAAtC;AACAJ,YAAAA,IAAI,CAACK,OAAL,CAAa,IAAb;AACD;AANoB,SAAvB;AAQArB,QAAAA,OAAO,CAACsB,IAAR,CAAa,QAAb,EAAuBd,UAAvB,EAAmC,OAAnC,EArDgB,CAuDhB;;AACAR,QAAAA,OAAO,CAACI,WAAR;AACD;AAhEH;AAZF,GADA;AApBAT,EAAAA,GAAG,CAACC,MAAJ,CAAW2B,WAAX,CAAuBpC,aAAvB,GAAuCA,aAAvC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\n/* ************************************************************************\n\n\n************************************************************************ */\n\n/**\n * This is the main application class of your custom application \"tweets\"\n *\n * @asset(qxl/tweets/*)\n */\nqx.Class.define(\"qxl.tweets.Application\",\n{\n  extend : qx.application.Standalone,\n\n\n\n  /*\n  *****************************************************************************\n     MEMBERS\n  *****************************************************************************\n  */\n\n  members :\n  {\n    /**\n     * This method contains the initial application code and gets called\n     * during startup of the application\n     *\n     * @lint ignoreDeprecated(alert)\n     */\n    main : function() {\n      // Call super class\n      this.base(arguments);\n\n      // Enable logging in debug variant\n      if (qx.core.Environment.get(\"qx.debug\")) {\n        // support native logging capabilities, e.g. Firebug for Firefox\n        qx.log.appender.Native;\n        // support additional cross-browser console. Press F7 to toggle visibility\n        qx.log.appender.Console;\n      }\n\n      /*\n      -------------------------------------------------------------------------\n        Below is your actual application code...\n      -------------------------------------------------------------------------\n      */\n\n\n      var main = new qxl.tweets.MainWindow();\n      main.moveTo(50, 30);\n      main.open();\n\n      var service = new qxl.tweets.IdenticaService();\n\n      // handler after posting a tweet\n      service.addListener(\"postOk\", function() {\n        main.clearPostMessage();\n        service.fetchTweets();\n      }, this);\n\n      // reload handling\n      main.addListener(\"reload\", function() {\n        service.fetchTweets();\n      }, this);\n\n      // post handling\n      main.addListener(\"post\", function(e) {\n        service.post(e.getData());\n      }, this);\n\n      // create the controller\n      var controller = new qx.data.controller.List(null, main.getList());\n      controller.setLabelPath(\"text\");\n      controller.setIconPath(\"user.profile_image_url\");\n      controller.setDelegate({\n        configureItem : function(item) {\n          item.getChildControl(\"icon\").setWidth(48);\n          item.getChildControl(\"icon\").setHeight(48);\n          item.getChildControl(\"icon\").setScale(true);\n          item.setRich(true);\n        }\n      });\n      service.bind(\"tweets\", controller, \"model\");\n\n      // start the loading on startup\n      service.fetchTweets();\n    }\n  }\n});\n"
+  ]
+}

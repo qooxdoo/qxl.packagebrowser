@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_Clean_v1_0_3/source/class/widgetbrowser/Application.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "construct",
+    "members",
+    "__header",
+    "__tabs",
+    "__scroll",
+    "main",
+    "doc",
+    "getRoot",
+    "dockLayout",
+    "ui",
+    "layout",
+    "Dock",
+    "dockLayoutComposite",
+    "container",
+    "Composite",
+    "add",
+    "edge",
+    "widgetbrowser",
+    "view",
+    "Header",
+    "scroll",
+    "Scroll",
+    "_createTabView",
+    "set",
+    "minWidth",
+    "padding",
+    "TabView",
+    "getScroll",
+    "Application"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,2BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,WAAH,CAAeC,UAD1B;AAIEC,IAAAA,SAAS,EAAE,qBACX;AACE;AAED,KARH;AAUEC,IAAAA,OAAO,EACP;AACEC,MAAAA,OAAQ,EAAE,IADZ;AAGEC,MAAAA,OAAM,EAAE,IAHV;AAKEC,MAAAA,OAAQ,EAAE,IALZ;AAOEC,MAAAA,IAAI,EAAE,gBACN;AACE,iEADF,CAGE;;AAQA,YAAIC,GAAG,GAAG,KAAKC,OAAL,EAAV;AACA,YAAIC,UAAU,GAAG,IAAIjB,EAAE,CAACkB,EAAH,CAAMC,MAAN,CAAaC,IAAjB,EAAjB;AACA,YAAIC,mBAAmB,GAAG,IAAIrB,EAAE,CAACkB,EAAH,CAAMI,SAAN,CAAgBC,SAApB,CAA8BN,UAA9B,CAA1B;AACAF,QAAAA,GAAG,CAACS,GAAJ,CAAQH,mBAAR,EAA6B;AAACI,UAAAA,IAAI,EAAC;AAAN,SAA7B;AAEA,aAAKd,OAAL,GAAgB,IAAIe,aAAa,CAACC,IAAd,CAAmBC,MAAvB,EAAhB;AACAP,QAAAA,mBAAmB,CAACG,GAApB,CAAwB,KAAKb,OAA7B,EAAuC;AAACc,UAAAA,IAAI,EAAE;AAAP,SAAvC;AAEA,YAAII,MAAM,GAAG,KAAKhB,OAAL,GAAgB,IAAIb,EAAE,CAACkB,EAAH,CAAMI,SAAN,CAAgBQ,MAApB,EAA7B;AACAT,QAAAA,mBAAmB,CAACG,GAApB,CAAwBK,MAAxB;AAEA,aAAKjB,OAAL,GAAc,KAAKmB,cAAL,EAAd;;AACA,aAAKnB,OAAL,CAAYoB,GAAZ,CAAgB;AACdC,UAAAA,QAAQ,EAAE,GADI;AAEdC,UAAAA,OAAO,EAAE;AAFK,SAAhB;;AAIAL,QAAAA,MAAM,CAACL,GAAP,CAAW,KAAKZ,OAAhB;AAED,OArCH;AAuCEmB,MAAAA,cAAc,EAAE,0BAChB;AACE,aAAKnB,OAAL,GAAc,IAAIc,aAAa,CAACC,IAAd,CAAmBQ,OAAvB,EAAd;AACA,eAAO,KAAKvB,OAAZ;AACD,OA3CH;AA6CEwB,MAAAA,SAAS,EAAE,qBACX;AACE,eAAO,KAAKvB,OAAZ;AACD;AAhDH;AAXF,GADA;AArBAa,EAAAA,aAAa,CAACW,WAAd,CAA0BlC,aAA1B,GAA0CA,aAA1C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Tristan Koch (tristankoch)\n\n************************************************************************ */\n\n/*\n * Main Application.\n */\nqx.Class.define(\"widgetbrowser.Application\",\n{\n  extend : qx.application.Standalone,\n\n\n  construct: function()\n  {\n    this.base(arguments);\n\n  },\n\n  members:\n  {\n    __header: null,\n\n    __tabs: null,\n\n    __scroll: null,\n\n    main: function()\n    {\n      this.base(arguments);\n\n      // Enable logging in debug variant. editing to see a change\n      if (qx.core.Environment.get(\"qx.debug\")) {\n        // support native logging capabilities, e.g. Firebug for Firefox\n        qx.log.appender.Native;\n        // support additional cross-browser console. Press F7 to toggle visibility\n        qx.log.appender.Console;\n      }\n\n      var doc = this.getRoot();\n      var dockLayout = new qx.ui.layout.Dock();\n      var dockLayoutComposite = new qx.ui.container.Composite(dockLayout);\n      doc.add(dockLayoutComposite, {edge:0});\n\n      this.__header = new widgetbrowser.view.Header();\n      dockLayoutComposite.add(this.__header, {edge: \"north\"});\n\n      var scroll = this.__scroll = new qx.ui.container.Scroll();\n      dockLayoutComposite.add(scroll);\n\n      this.__tabs = this._createTabView();\n      this.__tabs.set({\n        minWidth: 700,\n        padding: 15\n      });\n      scroll.add(this.__tabs);\n\n    },\n\n    _createTabView: function()\n    {\n      this.__tabs = new widgetbrowser.view.TabView();\n      return this.__tabs;\n    },\n\n    getScroll: function()\n    {\n      return this.__scroll;\n    }\n  }\n});\n"
+  ]
+}

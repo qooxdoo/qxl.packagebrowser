@@ -1,0 +1,40 @@
+{
+  "className": "qxl.widgetbrowser.MControls",
+  "packageName": "qxl.widgetbrowser",
+  "name": "MControls",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 19,
+        "column": 0
+      },
+      "end": {
+        "line": 133,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "mixin",
+  "members": {
+    "initControls": {
+      "location": {
+        "start": {
+          "line": 25,
+          "column": 4
+        },
+        "end": {
+          "line": 131,
+          "column": 5
+        }
+      },
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": []
+}

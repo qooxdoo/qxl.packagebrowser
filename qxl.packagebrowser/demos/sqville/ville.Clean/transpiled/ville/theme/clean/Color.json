@@ -1,0 +1,46 @@
+{
+  "className": "ville.theme.clean.Color",
+  "packageName": "ville.theme.clean",
+  "name": "Color",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 21,
+        "column": 0
+      },
+      "end": {
+        "line": 189,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Clean color theme, based off of Simple color theme (qooxdoo) and Semantic default</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "aliases": {
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 2
+      },
+      "end": {
+        "line": 25,
+        "column": 3
+      }
+    },
+    "aliasMap": {
+      "primarycolor": "#3b83c0"
+    }
+  },
+  "descendants": []
+}

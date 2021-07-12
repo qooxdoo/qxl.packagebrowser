@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_tweet-tutorial_v1_0_1/tweets/step4.2/source/class/qxl/tweets/theme/Theme.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "qxl",
+    "tweets",
+    "theme",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "icon",
+    "Tango",
+    "appearance",
+    "Appearance"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGC,GAAG,CAACC,MAAJ,CAAWC,KAAX,CAAiBC,KAD3B;AAEEC,MAAAA,UAAU,EAAGJ,GAAG,CAACC,MAAJ,CAAWC,KAAX,CAAiBG,UAFhC;AAGEC,MAAAA,IAAI,EAAGN,GAAG,CAACC,MAAJ,CAAWC,KAAX,CAAiBK,IAH1B;AAIEC,MAAAA,IAAI,EAAGhB,EAAE,CAACU,KAAH,CAASM,IAAT,CAAcC,KAJvB;AAKEC,MAAAA,UAAU,EAAGV,GAAG,CAACC,MAAJ,CAAWC,KAAX,CAAiBS;AALhC;AAFF,GADA;AAVAX,EAAAA,GAAG,CAACC,MAAJ,CAAWC,KAAX,CAAiBN,KAAjB,CAAuBD,aAAvB,GAAuCA,aAAvC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\nqx.Theme.define(\"qxl.tweets.theme.Theme\",\n{\n  meta :\n  {\n    color : qxl.tweets.theme.Color,\n    decoration : qxl.tweets.theme.Decoration,\n    font : qxl.tweets.theme.Font,\n    icon : qx.theme.icon.Tango,\n    appearance : qxl.tweets.theme.Appearance\n  }\n});\n"
+  ]
+}

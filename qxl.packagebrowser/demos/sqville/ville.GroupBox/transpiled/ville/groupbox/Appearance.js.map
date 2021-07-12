@@ -1,0 +1,39 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_GroupBox_v1_0_2/source/class/ville/groupbox/Appearance.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "appearances",
+    "alias",
+    "style",
+    "states",
+    "paddingRight",
+    "margin",
+    "backgroundColor",
+    "padding",
+    "decorator",
+    "include",
+    "height",
+    "opened",
+    "contentPadding",
+    "font",
+    "paddingTop",
+    "paddingBottom",
+    "paddingLeft",
+    "marginTop",
+    "ville",
+    "groupbox",
+    "Appearance"
+  ],
+  "mappings": ";;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,2BAAhB,EACA;AACEC,IAAAA,WAAW,EACX;AAEE;AACJ;AACA;AACA;AACA;AAEG,wBAAmB,EARpB;AAUC,+BACA;AACEC,QAAAA,KAAK,EAAG,MADV;AAGEC,QAAAA,KAAK,EAAG,eAASC,MAAT,EACP;AACE,iBAAO;AACLC,YAAAA,YAAY,EAAG,EADV;AAELC,YAAAA,MAAM,EAAG;AAFJ,WAAP;AAID;AATJ,OAXD;AAuBC,8BACA;AACEH,QAAAA,KAAK,EAAG,eAASC,MAAT,EACR;AACE,iBAAO;AACLG,YAAAA,eAAe,EAAG,YADb;AAELC,YAAAA,OAAO,EAAG,CAAC,CAAD,EAAI,CAAJ,CAFL;AAGLF,YAAAA,MAAM,EAAE,CAAC,EAAD,EAAK,CAAL,EAAQ,CAAR,EAAW,CAAX,CAHH;AAILG,YAAAA,SAAS,EAAI;AAJR,WAAP;AAMD;AATH,OAxBD;AAoCE,6BACA;AACEC,QAAAA,OAAO,EAAG,OADZ;AAEEP,QAAAA,KAAK,EAAG,eAASC,MAAT,EACR;AACE,iBAAO;AACLO,YAAAA,MAAM,EAAE,EADH;AAELF,YAAAA,SAAS,EAAGL,MAAM,CAACQ,MAAP,GAAgB,qBAAhB,GAAwC;AAF/C,WAAP;AAID;AARH,OArCF;AAgDE,kCAA6B;AAC3BV,QAAAA,KAAK,EAAG,UADmB;AAE3BC,QAAAA,KAAK,EAAG,eAASC,MAAT,EACR;AACE,iBAAO;AACLK,YAAAA,SAAS,EAAI,WADR;AAELI,YAAAA,cAAc,EAAE;AAFX,WAAP;AAID;AAR0B,OAhD/B;AA2DE,yCAAoC;AAClCH,QAAAA,OAAO,EAAG,iBADwB;AAElCP,QAAAA,KAAK,EAAG,eAASC,MAAT,EACR;AACE,iBAAO;AACLU,YAAAA,IAAI,EAAE,aADD;AAELC,YAAAA,UAAU,EAAE,CAFP;AAGLC,YAAAA,aAAa,EAAE,CAHV;AAILC,YAAAA,WAAW,EAAE;AAJR,WAAP;AAMD;AAViC,OA3DtC;AAwEE,wCACA;AACEP,QAAAA,OAAO,EAAG,gBADZ;AAGEP,QAAAA,KAAK,EAAG,eAASC,MAAT,EACR;AACE,iBAAO;AACLc,YAAAA,SAAS,EAAG,EADP;AAELT,YAAAA,SAAS,EAAI;AAFR,WAAP;AAID;AATH,OAzEF;AAqFE,uCACA;AACEC,QAAAA,OAAO,EAAG,qBADZ;AAGEP,QAAAA,KAAK,EAAG,eAASC,MAAT,EACR;AACE,iBAAO;AACLO,YAAAA,MAAM,EAAE;AADH,WAAP;AAGD;AARH;AAtFF;AAFF,GADA;AAVAQ,EAAAA,KAAK,CAACC,QAAN,CAAeC,UAAf,CAA0BvB,aAA1B,GAA0CA,aAA1C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2021 sqville\n\n   License: MIT\n\n   Authors: Chris Eskew (sqville)\n\n************************************************************************ */\n\nqx.Theme.define(\"ville.groupbox.Appearance\",\n{\n  appearances :\n  {    \n    \n    /*\n    ---------------------------------------------------------------------------\n      VILLE GROUP BOX\n    ---------------------------------------------------------------------------\n    */\n\n   \"ville-groupbox\" : {},\n\n   \"ville-groupbox/legend\" :\n   {\n     alias : \"atom\",\n\n     style : function(states)\n      {\n        return {\n          paddingRight : 35,\n          margin : 4\n        };\n      }\n   },\n\n   \"ville-groupbox/frame\" :\n   {\n     style : function(states)\n     {\n       return {\n         backgroundColor : \"background\",\n         padding : [6, 9],\n         margin: [18, 2, 2, 2],\n         decorator  : \"white-box\"\n       };\n     }\n   },\n\n    \"ville-groupbox/open\" :\n    {\n      include : \"image\",\n      style : function(states)\n      {\n        return {\n          height: 30,\n          decorator : states.opened ? \"ville-groupbox-open\" : \"ville-groupbox-closed\"\n        };\n      }\n    },\n\n    \"ville-groupbox-connected\" : {\n      alias : \"groupbox\",\n      style : function(states)\n      {\n        return {\n          decorator  : \"white-box\",\n          contentPadding: 10\n        };\n      }\n    },\n\n    \"ville-groupbox-connected/legend\" : {\n      include : \"groupbox/legend\",\n      style : function(states)\n      {\n        return {\n          font: \"area-header\",\n          paddingTop: 8,\n          paddingBottom: 8,\n          paddingLeft: 12\n        }\n      }\n    },\n\n    \"ville-groupbox-connected/frame\" :\n    {\n      include : \"groupbox/frame\",\n      \n      style : function(states)\n      {\n        return {\n          marginTop : 30,\n          decorator  : \"ville-connected-top-box\"\n        };\n      }\n    },\n\n    \"ville-groupbox-connected/open\" :\n    {\n      include : \"ville-groupbox/open\",\n      \n      style : function(states)\n      {\n        return {\n          height: 60\n        };\n      }\n    }\n\n  }\n});"
+  ]
+}

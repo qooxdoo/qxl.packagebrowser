@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/bidefi-irhs_qxfileio_v0_4_1/source/class/qxfileio/event/LoadProgress.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "event",
+    "type",
+    "Event",
+    "members",
+    "__lengthComputable",
+    "__loaded",
+    "__total",
+    "init",
+    "lengthComputable",
+    "loaded",
+    "total",
+    "getLengthComputable",
+    "getLoaded",
+    "getTotal",
+    "qxfileio",
+    "LoadProgress"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,6BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,IAAT,CAAcC,KADzB;AAGEC,IAAAA,OAAO,EAAG;AACRC,MAAAA,QAAkB,EAAG,KADb;AAERC,MAAAA,QAAQ,EAAG,CAFH;AAGRC,MAAAA,QAAO,EAAG,CAHF;;AAKR;AACJ;AACA;AACA;AACA;AACA;AACA;AACIC,MAAAA,IAAI,EAAG,cAASC,gBAAT,EAA2BC,MAA3B,EAAmCC,KAAnC,EAA0C;AAY/C,mEAAqB,KAArB,EAA4B,KAA5B;AACA,aAAKN,QAAL,GAA0B,CAAC,CAACI,gBAA5B;AACA,aAAKH,QAAL,GAAgBI,MAAhB;AACA,aAAKH,QAAL,GAAeI,KAAf;AACD,OA5BO;;AA8BR;AACJ;AACA;AACIC,MAAAA,mBAAmB,EAAG,+BAAW;AAC/B,eAAO,KAAKP,QAAZ;AACD,OAnCO;;AAoCR;AACJ;AACA;AACIQ,MAAAA,SAAS,EAAG,qBAAW;AACrB,eAAO,KAAKP,QAAZ;AACD,OAzCO;;AA0CR;AACJ;AACA;AACIQ,MAAAA,QAAQ,EAAG,oBAAW;AACpB,eAAO,KAAKP,QAAZ;AACD;AA/CO;AAHZ,GADA;AALAQ,EAAAA,QAAQ,CAACd,KAAT,CAAee,YAAf,CAA4BnB,aAA5B,GAA4CA,aAA5C",
+  "sourcesContent": [
+    "/**\n * Event fired when loading file is in progress.\n *\n * Map the HTML FileReader onprogress event.\n */\nqx.Class.define(\"qxfileio.event.LoadProgress\",\n{\n  extend : qx.event.type.Event,\n\n  members : {\n    __lengthComputable : false,\n    __loaded : 0,\n    __total : 0,\n\n    /**\n     * Initializes a LoadProgress event.\n     *\n     * @param lengthComputable {Boolean} Tell if the length of the file is computable.\n     * @param loaded {Integer} The currently loaded amount of data from the file.\n     * @param total {Integer} The total size of the file.\n     */\n    init : function(lengthComputable, loaded, total) {\n      if (qx.core.Environment.get(\"qx.debug\")) {\n        if (lengthComputable !== undefined) {\n          this.assertBoolean(lengthComputable, 'lengthComputable should be boolean');\n        }\n        if (loaded !== undefined) {\n          this.assertInteger(loaded, 'loaded should be an Integer');\n        }\n        if (total !== undefined) {\n          this.assertInteger(total, 'total should be an Integer');\n        }\n      }\n      this.base(arguments, false, false);\n      this.__lengthComputable = !!lengthComputable;\n      this.__loaded = loaded;\n      this.__total = total;\n    },\n\n    /**\n     * @return {Boolean} True if the total size of the file is computable.\n     */\n    getLengthComputable : function() {\n      return this.__lengthComputable;\n    },\n    /**\n     * @return {Integer} The currently loaded amount of data from the file.\n     */\n    getLoaded : function() {\n      return this.__loaded;\n    },\n    /**\n     * @return {Integer} The total size of the file.\n     */\n    getTotal : function() {\n      return this.__total;\n    }\n  }\n});\n"
+  ]
+}

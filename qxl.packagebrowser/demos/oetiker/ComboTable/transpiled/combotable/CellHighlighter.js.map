@@ -1,0 +1,48 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/oetiker_ComboTable_v1_0_4/source/class/combotable/CellHighlighter.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "table",
+    "cellrenderer",
+    "Default",
+    "properties",
+    "searchString",
+    "init",
+    "check",
+    "apply",
+    "nullable",
+    "members",
+    "__searchRx",
+    "__searchEsc",
+    "_applySearchString",
+    "value",
+    "old",
+    "RegExp",
+    "_preg_quote",
+    "bom",
+    "String",
+    "escape",
+    "_getCellClass",
+    "cellInfo",
+    "str",
+    "replace",
+    "_getContentHtml",
+    "_formatValue",
+    "combotable",
+    "CellHighlighter"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,4BAAhB,EAA8C;AAC1CC,IAAAA,MAAM,EAAGN,EAAE,CAACO,EAAH,CAAMC,KAAN,CAAYC,YAAZ,CAAyBC,OADQ;AAG1CC,IAAAA,UAAU,EAAG;AACT;AACR;AACA;AACQC,MAAAA,YAAY,EAAG;AACXC,QAAAA,IAAI,EAAI,IADG;AAEXC,QAAAA,KAAK,EAAG,QAFG;AAGXC,QAAAA,KAAK,EAAG,oBAHG;AAIXC,QAAAA,QAAQ,EAAE;AAJC;AAJN,KAH6B;AAe1CC,IAAAA,OAAO,EAAG;AACNC,MAAAA,QAAU,EAAG,IADP;AAENC,MAAAA,QAAW,EAAG,IAFR;;AAKN;AACR;AACA;AACA;AACA;AACA;AACA;AACQC,MAAAA,kBAAkB,EAAG,4BAASC,KAAT,EAAgBC,GAAhB,EAAqB;AACtC,YAAID,KAAK,IAAI,IAAb,EAAkB;AACd,eAAKH,QAAL,GAAkB,IAAlB;AACA,eAAKC,QAAL,GAAmB,IAAnB;AACH,SAHD,MAIK;AACD,eAAKD,QAAL,GAAkB,IAAIK,MAAJ,CAAW,KAAKC,WAAL,CAAiBH,KAAjB,CAAX,EAAoC,IAApC,CAAlB;AACA,eAAKF,QAAL,GAAmBnB,EAAE,CAACyB,GAAH,CAAOC,MAAP,CAAcC,MAAd,CAAqBN,KAArB,CAAnB;AACH;AACJ,OArBK;;AAuBN;AACR;AACA;AACA;AACA;AACA;AACQO,MAAAA,aAAa,EAAG,uBAASC,QAAT,EAAmB;AAC/B,eAAO,oBAAP;AACH,OA/BK;;AAiCN;AACR;AACA;AACA;AACA;AACA;AACA;AACA;AACQL,MAAAA,WAAW,EAAG,qBAASM,GAAT,EAAc;AACxB,eAAOJ,MAAM,CAACI,GAAD,CAAN,CAAYC,OAAZ,CAAoB,6CAApB,EAAmE,MAAnE,CAAP;AACH,OA3CK;;AA8CN;AACR;AACA;AACA;AACA;AACA;AACQC,MAAAA,eAAe,EAAG,yBAASH,QAAT,EAAmB;AACjC,YAAIC,GAAG,GAAG,KAAKG,YAAL,CAAkBJ,QAAlB,CAAV;;AAEA,YAAI,KAAKX,QAAT,EAAqB;AACjB,iBAAOY,GAAG,CAACC,OAAJ,CAAY,KAAKb,QAAjB,EAA6B,aAAa,KAAKC,QAAlB,GAAgC,WAA7D,CAAP;AACH,SAFD,MAEO;AACH,iBAAOW,GAAP;AACH;AACJ;AA5DK;AAfgC,GAA9C;AAlBAI,EAAAA,UAAU,CAACC,eAAX,CAA2BhC,aAA3B,GAA2CA,aAA3C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n     Tobias Oetiker, OETIKER+PARTNER AG, www.oetiker.ch\n     \n   License:\n     LGPL: http://www.gnu.org/licenses/lgpl.html\n     EPL: http://www.eclipse.org/org/documents/epl-v10.php\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:   \n     * Tobias Oetiker (oetiker)\n\n************************************************************************ */\n\n/**\n * Highlight part of the cell content.\n */\nqx.Class.define(\"combotable.CellHighlighter\", {\n    extend : qx.ui.table.cellrenderer.Default,\n\n    properties : {\n        /**\n         * Set the highlite string.\n         */\n        searchString : {\n            init  : null,\n            check : \"String\",\n            apply : \"_applySearchString\",\n            nullable: true\n        }\n    },\n\n    members : {\n        __searchRx : null,\n        __searchEsc : null,\n\n\n        /**\n         * populate private variables to accellerate highliting operation.\n         *\n         * @param value {var} new value\n         * @param old {var} old value\n         * @return {void} \n         */\n        _applySearchString : function(value, old) {\n            if (value == null){\n                this.__searchRx = null;\n                this.__searchEsc = null;\n            }\n            else {\n                this.__searchRx = new RegExp(this._preg_quote(value), 'ig');\n                this.__searchEsc = qx.bom.String.escape(value);\n            }\n        },\n\n        /**\n         * Just a simple qooxdoo table celll \n         *\n         * @param cellInfo {var} disregarded ...\n         * @return {string} the class of the cell\n         */\n        _getCellClass : function(cellInfo) {\n            return \"qooxdoo-table-cell\";\n        },\n\n        /**\n         * Quote a string.\n         *\n         * With inspiration from {@link http://stackoverflow.com/questions/280793/case-insensitive-string-replacement-in-javascript}\n         *\n         * @param str {String} input\n         * @return {String} regexp quoted \n         */\n        _preg_quote : function(str) {\n            return String(str).replace(/([\\\\\\.\\+\\*\\?\\[\\^\\]\\$\\(\\)\\{\\}\\=\\!\\<\\>\\|\\:])/g, \"\\\\$1\");\n        },\n\n\n        /**\n         * Do the actual highlighting\n         *\n         * @param cellInfo {var} the cell content\n         * @return {String} the html of the cell\n         */\n        _getContentHtml : function(cellInfo) {\n            var str = this._formatValue(cellInfo);\n\n            if (this.__searchRx) {\n                return str.replace(this.__searchRx, '<strong>' + this.__searchEsc + '</strong>');\n            } else {\n                return str;\n            }\n        }\n    }\n});\n"
+  ]
+}

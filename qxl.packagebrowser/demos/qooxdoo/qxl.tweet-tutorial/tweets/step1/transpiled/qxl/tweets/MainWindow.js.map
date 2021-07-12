@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_tweet-tutorial_v1_0_1/tweets/step1/source/class/qxl/tweets/MainWindow.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "window",
+    "Window",
+    "construct",
+    "setShowClose",
+    "setShowMaximize",
+    "setShowMinimize",
+    "setWidth",
+    "setHeight",
+    "qxl",
+    "tweets",
+    "MainWindow"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,uBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,EAAH,CAAMC,MAAN,CAAaC,MADxB;AAGEC,IAAAA,SAAS,EAAG,qBAAW;AACrB,iDAAqB,QAArB,EADqB,CAGrB;;AACA,WAAKC,YAAL,CAAkB,KAAlB;AACA,WAAKC,eAAL,CAAqB,KAArB;AACA,WAAKC,eAAL,CAAqB,KAArB,EANqB,CAQrB;;AACA,WAAKC,QAAL,CAAc,GAAd;AACA,WAAKC,SAAL,CAAe,GAAf;AACD;AAdH,GADA;AAAAC,EAAAA,GAAG,CAACC,MAAJ,CAAWC,UAAX,CAAsBf,aAAtB,GAAsCA,aAAtC",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.tweets.MainWindow\",\n{\n  extend : qx.ui.window.Window,\n\n  construct : function() {\n    this.base(arguments, \"tweets\");\n\n    // hide the window buttons\n    this.setShowClose(false);\n    this.setShowMaximize(false);\n    this.setShowMinimize(false);\n\n    // adjust size\n    this.setWidth(250);\n    this.setHeight(300);\n  }\n});\n"
+  ]
+}

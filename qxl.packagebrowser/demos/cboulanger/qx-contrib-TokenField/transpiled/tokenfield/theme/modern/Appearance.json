@@ -1,0 +1,24 @@
+{
+  "className": "tokenfield.theme.modern.Appearance",
+  "packageName": "tokenfield.theme.modern",
+  "name": "Appearance",
+  "superClass": "qx.theme.modern.Appearance",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 14,
+        "column": 0
+      },
+      "end": {
+        "line": 36,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "descendants": []
+}

@@ -1,0 +1,110 @@
+{
+  "className": "qookery.IVariableProvider",
+  "packageName": "qookery",
+  "name": "IVariableProvider",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 43,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Interface for classes that provide the value of variables when asked</p>"
+        }
+      ]
+    }
+  },
+  "type": "interface",
+  "members": {
+    "getVariable": {
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 2
+        },
+        "end": {
+          "line": 33,
+          "column": 41
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Get a variable's value</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "variableName {String} the name of the variable",
+            "paramName": "variableName",
+            "description": " the name of the variable",
+            "type": "String"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{any} variable value or <code>undefined</code>",
+            "type": "any",
+            "description": " variable value or <code>undefined</code>"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "setVariable": {
+      "location": {
+        "start": {
+          "line": 41,
+          "column": 2
+        },
+        "end": {
+          "line": 41,
+          "column": 48
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Set a variable's value</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "variableName {String} the name of the variable",
+            "paramName": "variableName",
+            "description": " the name of the variable",
+            "type": "String"
+          },
+          {
+            "name": "@param",
+            "body": "value {any} the new variable value",
+            "paramName": "value",
+            "description": " the new variable value",
+            "type": "any"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": []
+}

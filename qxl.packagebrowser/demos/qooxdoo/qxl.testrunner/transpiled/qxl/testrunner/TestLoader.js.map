@@ -1,0 +1,29 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testrunner_v6_0_1/source/class/qxl/testrunner/TestLoader.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestLoader",
+    "statics",
+    "getInstance",
+    "instance",
+    "members",
+    "main",
+    "qxl",
+    "testrunner"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,2BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,UADvB;;AAGE;AACF;AACA;AACA;AACA;AAEEC,IAAAA,OAAO,EACP;AACE;AACJ;AACA;AACA;AACA;AACIC,MAAAA,WAAW,EAAG,uBAAW;AACvB,eAAO,KAAKC,QAAZ;AACD;AARH,KAVF;;AAqBE;AACF;AACA;AACA;AACA;AAEEC,IAAAA,OAAO,EACP;AACEC,MAAAA,IAAI,EAAG,gBAAW;AAChBC,QAAAA,GAAG,CAACC,UAAJ,CAAeP,UAAf,CAA0BG,QAA1B,GAAqC,IAArC;AACA;AACD;AAJH;AA5BF,GADA;AAlBAG,EAAAA,GAAG,CAACC,UAAJ,CAAeP,UAAf,CAA0BN,aAA1B,GAA0CA,aAA1C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Fabian Jakobs (fjakobs)\n\n************************************************************************ */\n\nqx.Class.define(\"qxl.testrunner.TestLoader\",\n{\n  extend : qx.dev.unit.TestLoader,\n\n  /*\n  *****************************************************************************\n     STATICS\n  *****************************************************************************\n  */\n\n  statics :\n  {\n    /**\n     * Returns the TestLoader instance\n     *\n     * @return {qxl.testrunner.TestLoader} TestLoader instance\n     */\n    getInstance : function() {\n      return this.instance;\n    }\n  },\n\n  /*\n  *****************************************************************************\n     MEMBERS\n  *****************************************************************************\n  */\n\n  members :\n  {\n    main : function() {\n      qxl.testrunner.TestLoader.instance = this;\n      this.base(arguments);\n    }\n  }\n});\n"
+  ]
+}

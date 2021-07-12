@@ -1,0 +1,28 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testtapper_v1_0_11/source/class/qxl/testtapperdemo/test/Test08Exception.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "members",
+    "callUnknownFunction",
+    "qxl",
+    "testtapperdemo",
+    "test",
+    "Test08Exception"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,yCAAhB,EAA2D;AACzDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADqC;AAEzDC,IAAAA,OAAO,EAAE;AACP,8BAAwB,4BAAY;AAChC,aAAKC,mBAAL;AACH;AAHM;AAFgD,GAA3D;AAAAC,EAAAA,GAAG,CAACC,cAAJ,CAAmBC,IAAnB,CAAwBC,eAAxB,CAAwCZ,aAAxC,GAAwDA,aAAxD",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.testtapperdemo.test.Test08Exception\", {\n  extend: qx.dev.unit.TestCase,\n  members: {\n    \"test01: die baby die\": function () {\n        this.callUnknownFunction();\n    }\n  }\n});\n"
+  ]
+}

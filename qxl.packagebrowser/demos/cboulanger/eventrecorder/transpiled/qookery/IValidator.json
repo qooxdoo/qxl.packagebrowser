@@ -1,0 +1,80 @@
+{
+  "className": "qookery.IValidator",
+  "packageName": "qookery",
+  "name": "IValidator",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 35,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Validators are used by components to instanciate validation functions</p>"
+        }
+      ]
+    }
+  },
+  "type": "interface",
+  "members": {
+    "createValidation": {
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 2
+        },
+        "end": {
+          "line": 33,
+          "column": 68
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Create a validation function</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "component {qookery.IComponent} component that will receive the new validation",
+            "paramName": "component",
+            "description": " component that will receive the new validation",
+            "type": "qookery.IComponent"
+          },
+          {
+            "name": "@param",
+            "body": "invalidMessage {String?} message that will be displayed when validation fails",
+            "paramName": "invalidMessage",
+            "description": " message that will be displayed when validation fails",
+            "optional": true,
+            "type": "String"
+          },
+          {
+            "name": "@param",
+            "body": "options {Map?} optional map with validator-specific arguments",
+            "paramName": "options",
+            "description": " optional map with validator-specific arguments",
+            "optional": true,
+            "type": "Map"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": []
+}

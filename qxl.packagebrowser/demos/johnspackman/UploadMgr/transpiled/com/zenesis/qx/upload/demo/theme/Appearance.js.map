@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/johnspackman_UploadMgr_v1_0_5/source/class/com/zenesis/qx/upload/demo/theme/Appearance.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "modern",
+    "Appearance",
+    "appearances",
+    "com",
+    "zenesis",
+    "upload",
+    "demo"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,6CAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,UAD3B;AAGEC,IAAAA,WAAW,EACX;AAJF,GADA;AAVAC,EAAAA,GAAG,CAACC,OAAJ,CAAYZ,EAAZ,CAAea,MAAf,CAAsBC,IAAtB,CAA2BP,KAA3B,CAAiCE,UAAjC,CAA4CN,aAA5C,GAA4DA,aAA5D",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\nqx.Theme.define(\"com.zenesis.qx.upload.demo.theme.Appearance\",\n{\n  extend : qx.theme.modern.Appearance,\n\n  appearances :\n  {\n  }\n});"
+  ]
+}

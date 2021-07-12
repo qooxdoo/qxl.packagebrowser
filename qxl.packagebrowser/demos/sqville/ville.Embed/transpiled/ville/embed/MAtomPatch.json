@@ -1,0 +1,161 @@
+{
+  "className": "ville.embed.MAtomPatch",
+  "packageName": "ville.embed",
+  "name": "MAtomPatch",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 0
+      },
+      "end": {
+        "line": 96,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>A mixin that enables the font property, and thus, font handling abilities to the Image object\n This mixin is needed to enable font icons to show up using the Font object</p>"
+        }
+      ]
+    }
+  },
+  "type": "mixin",
+  "properties": {
+    "iconProps": {
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4
+        },
+        "end": {
+          "line": 42,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Control the text alignment</p>"
+          }
+        ]
+      },
+      "name": "iconProps",
+      "propertyType": "new",
+      "themeable": true,
+      "apply": "_applyIconProps",
+      "nullable": true,
+      "allowNull": true,
+      "check": "Map"
+    }
+  },
+  "members": {
+    "_applyIconProps": {
+      "location": {
+        "start": {
+          "line": 56,
+          "column": 4
+        },
+        "end": {
+          "line": 58,
+          "column": 5
+        }
+      },
+      "jsdoc": {},
+      "type": "function",
+      "access": "protected",
+      "applyFor": [
+        "iconProps"
+      ]
+    },
+    "_createChildControlImpl": {
+      "location": {
+        "start": {
+          "line": 61,
+          "column": 5
+        },
+        "end": {
+          "line": 94,
+          "column": 6
+        }
+      },
+      "jsdoc": {},
+      "type": "function",
+      "access": "protected"
+    },
+    "getIconProps": {
+      "type": "function",
+      "name": "getIconProps",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "get",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>iconProps</code>.\n\nFor further details take a look at the property definition: {@link #iconProps}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "Map",
+            "desc": "Returns the value for iconProps"
+          }
+        ]
+      }
+    },
+    "setIconProps": {
+      "type": "function",
+      "name": "setIconProps",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "set",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Sets the user value of the property <code>iconProps</code>.\n\nFor further details take a look at the property definition: {@link #iconProps}."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "type": "Map",
+            "paramName": "value",
+            "desc": "Value for iconProps"
+          }
+        ]
+      }
+    },
+    "resetIconProps": {
+      "type": "function",
+      "name": "resetIconProps",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "reset",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Resets the user value of the property <code>iconProps</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #iconProps}."
+          }
+        ]
+      }
+    }
+  },
+  "descendants": []
+}

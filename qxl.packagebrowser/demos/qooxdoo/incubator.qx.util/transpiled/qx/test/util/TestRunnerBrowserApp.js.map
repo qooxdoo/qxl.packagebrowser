@@ -1,0 +1,51 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_incubator_qx_util_v0_0_4/source/class/qx/test/util/TestRunnerBrowserApp.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "main",
+    "doc",
+    "getRoot",
+    "root",
+    "ui",
+    "container",
+    "Composite",
+    "layout",
+    "VBox",
+    "add",
+    "left",
+    "top",
+    "right",
+    "bottom",
+    "_tb",
+    "toolbar",
+    "ToolBar",
+    "_txt",
+    "form",
+    "TextArea",
+    "dev",
+    "TestRunner",
+    "runAll",
+    "test",
+    "jsx",
+    "TestJsx",
+    "TestJsxBrowser",
+    "util",
+    "TestRunnerBrowserApp"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,mCAAhB,EAAqD;AACnDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,WAAH,CAAeC,UAD4B;AAGnDC,IAAAA,OAAO,EAAE;AACPC,MAAAA,IAAI,GAAG;AACL;AAOA,YAAIC,GAAG,GAAG,KAAKC,OAAL,EAAV;AAEA,YAAIC,IAAI,GAAG,IAAIb,EAAE,CAACc,EAAH,CAAMC,SAAN,CAAgBC,SAApB,CAA8B,IAAIhB,EAAE,CAACc,EAAH,CAAMG,MAAN,CAAaC,IAAjB,EAA9B,CAAX;AACAP,QAAAA,GAAG,CAACQ,GAAJ,CAAQN,IAAR,EAAc;AAAEO,UAAAA,IAAI,EAAE,CAAR;AAAWC,UAAAA,GAAG,EAAE,CAAhB;AAAmBC,UAAAA,KAAK,EAAE,CAA1B;AAA6BC,UAAAA,MAAM,EAAE;AAArC,SAAd;AAEA,aAAKC,GAAL,GAAW,IAAIxB,EAAE,CAACc,EAAH,CAAMW,OAAN,CAAcC,OAAlB,EAAX;AACAb,QAAAA,IAAI,CAACM,GAAL,CAAS,KAAKK,GAAd;AAEA,aAAKG,IAAL,GAAY,IAAI3B,EAAE,CAACc,EAAH,CAAMc,IAAN,CAAWC,QAAf,EAAZ;AACAhB,QAAAA,IAAI,CAACM,GAAL,CAAS,KAAKQ,IAAd;AAEA3B,QAAAA,EAAE,CAAC8B,GAAH,CAAOC,UAAP,CAAkBC,MAAlB,CAAyBhC,EAAE,CAACiC,IAAH,CAAQC,GAAR,CAAYC,OAArC;AACAnC,QAAAA,EAAE,CAAC8B,GAAH,CAAOC,UAAP,CAAkBC,MAAlB,CAAyBhC,EAAE,CAACiC,IAAH,CAAQC,GAAR,CAAYE,cAArC;AAGD;;AAxBM;AAH0C,GAArD;AAAApC,EAAAA,EAAE,CAACiC,IAAH,CAAQI,IAAR,CAAaC,oBAAb,CAAkCnC,aAAlC,GAAkDA,aAAlD",
+  "sourcesContent": [
+    "qx.Class.define(\"qx.test.util.TestRunnerBrowserApp\", {\n  extend: qx.application.Standalone,\n\n  members: {\n    main() {\n      this.base(arguments);\n\n      if (qx.core.Environment.get(\"qx.debug\")) {\n        qx.log.appender.Native;\n        qx.log.appender.Console;\n      }\n\n      let doc = this.getRoot();\n      \n      let root = new qx.ui.container.Composite(new qx.ui.layout.VBox());\n      doc.add(root, { left: 0, top: 0, right: 0, bottom: 0 });\n      \n      this._tb = new qx.ui.toolbar.ToolBar();\n      root.add(this._tb);\n      \n      this._txt = new qx.ui.form.TextArea();\n      root.add(this._txt);\n      \n      qx.dev.TestRunner.runAll(qx.test.jsx.TestJsx);\n      qx.dev.TestRunner.runAll(qx.test.jsx.TestJsxBrowser);\n      \n      \n    }\n  }\n});"
+  ]
+}

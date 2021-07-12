@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_qx-contrib-Dialog_v2_1_1/source/class/dialog/theme/Theme.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "theme",
+    "modern",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "icon",
+    "dialog",
+    "IcoMoonFree",
+    "appearance",
+    "Appearance"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,oBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGP,EAAE,CAACQ,KAAH,CAASC,MAAT,CAAgBC,KAD1B;AAEEC,MAAAA,UAAU,EAAGX,EAAE,CAACQ,KAAH,CAASC,MAAT,CAAgBG,UAF/B;AAGEC,MAAAA,IAAI,EAAGb,EAAE,CAACQ,KAAH,CAASC,MAAT,CAAgBK,IAHzB;AAIEC,MAAAA,IAAI,EAAGC,MAAM,CAACR,KAAP,CAAaO,IAAb,CAAkBE,WAJ3B;AAKEC,MAAAA,UAAU,EAAGlB,EAAE,CAACQ,KAAH,CAASC,MAAT,CAAgBU;AAL/B;AAFF,GADA;AATAH,EAAAA,MAAM,CAACR,KAAP,CAAaJ,KAAb,CAAmBD,aAAnB,GAAmCA,aAAnC",
+  "sourcesContent": [
+    "/**\n * The theme(s) of the demo application\n * \n * @require(dialog.theme.icon.IcoMoonFree)\n * @require(dialog.theme.icon.Oxygen)\n * @require(dialog.theme.icon.Tango)\n * \n */\n\nqx.Theme.define(\"dialog.theme.Theme\",\n{\n  meta :\n  {\n    color : qx.theme.modern.Color,\n    decoration : qx.theme.modern.Decoration,\n    font : qx.theme.modern.Font,\n    icon : dialog.theme.icon.IcoMoonFree,\n    appearance : qx.theme.modern.Appearance\n  }\n});"
+  ]
+}

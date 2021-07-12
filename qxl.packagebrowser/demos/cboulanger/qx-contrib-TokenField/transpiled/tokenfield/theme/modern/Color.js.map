@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_qx-contrib-TokenField_v1_3_0/source/class/tokenfield/theme/modern/Color.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "modern",
+    "Color",
+    "colors",
+    "tokenfield"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,+BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,KAD3B;AAEEC,IAAAA,MAAM,EAAG;AAFX,GADA;AATAC,EAAAA,UAAU,CAACJ,KAAX,CAAiBC,MAAjB,CAAwBC,KAAxB,CAA8BN,aAA9B,GAA8CA,aAA9C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\nqx.Theme.define(\"tokenfield.theme.modern.Color\",\n{\n  extend : qx.theme.modern.Color,\n  colors : {\n\n  }\n});\n"
+  ]
+}

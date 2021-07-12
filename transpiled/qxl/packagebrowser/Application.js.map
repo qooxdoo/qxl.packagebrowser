@@ -1,0 +1,36 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/source/class/qxl/packagebrowser/Application.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "main",
+    "viewer",
+    "qxl",
+    "packagebrowser",
+    "PackageBrowser",
+    "getRoot",
+    "add",
+    "edge",
+    "finalize",
+    "dataLoader",
+    "$$appRoot",
+    "destruct",
+    "_disposeObjects",
+    "Application"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,gCAAhB,EAAkD;AAChDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,WAAH,CAAeC,UADyB;AAGhDC,IAAAA,OAAO,EAAE;AACP;AACAC,MAAAA,IAAI,EAAE,gBAAY;AAChB,sEADgB,CAGhB;;AAKA;AACA,aAAKC,MAAL,GAAc,IAAIC,GAAG,CAACC,cAAJ,CAAmBC,cAAvB,EAAd;AACA,aAAKC,OAAL,GAAeC,GAAf,CAAmB,KAAKL,MAAxB,EAAgC;AAACM,UAAAA,IAAI,EAAE;AAAP,SAAhC;AACD,OAbM;AAeP;AACAC,MAAAA,QAAQ,EAAE,oBAAY;AACpB;AACA,aAAKP,MAAL,CAAYQ,UAAZ,CAAuBnB,EAAE,CAACoB,SAAH,GAAe,mBAAtC;AACD;AAnBM,KAHuC;;AA0BhD;AACF;AACA;AACA;AACA;AAEEC,IAAAA,QAAQ,EAAE,oBAAY;AACpB,WAAKC,eAAL,CAAqB,QAArB;AACD;AAlC+C,GAAlD;AAhCAV,EAAAA,GAAG,CAACC,cAAJ,CAAmBU,WAAnB,CAA+BpB,aAA/B,GAA+CA,aAA/C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2007-2008 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Thomas Herchenroeder (thron7)\n     * Fabian Jakobs (fjakobs)\n     * Jonathan Weiß (jonathan_rass)\n     * Christian Boulanger (cboulanger)\n\n************************************************************************ */\n\n/* ************************************************************************\n\n\n************************************************************************ */\n\n/**\n * The main application class.\n *\n * @asset(qxl/packagebrowser/*)\n * @ignore(qx.$$appRoot)\n */\nqx.Class.define(\"qxl.packagebrowser.Application\", {\n  extend: qx.application.Standalone,\n\n  members: {\n    // overridden\n    main: function () {\n      this.base(arguments);\n\n      // Enable logging in source (or debug build)\n      if (qx.core.Environment.get(\"qx.debug\")) {\n        qx.log.appender.Native;\n      }\n\n      // Initialize the viewer\n      this.viewer = new qxl.packagebrowser.PackageBrowser();\n      this.getRoot().add(this.viewer, {edge: 0});\n    },\n\n    // overridden\n    finalize: function () {\n      this.base(arguments);\n      this.viewer.dataLoader(qx.$$appRoot + \"package-data.json\");\n    }\n  },\n\n\n  /*\n  *****************************************************************************\n     DESTRUCTOR\n  *****************************************************************************\n  */\n\n  destruct: function () {\n    this._disposeObjects(\"viewer\");\n  }\n});\n"
+  ]
+}

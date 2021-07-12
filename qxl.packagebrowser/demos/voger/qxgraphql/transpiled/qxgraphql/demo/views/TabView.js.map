@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/voger_qxgraphql_v0_0_2/source/class/qxgraphql/demo/views/TabView.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "tabview",
+    "TabView",
+    "construct",
+    "init",
+    "members",
+    "add",
+    "qxgraphql",
+    "demo",
+    "views",
+    "pages",
+    "FreeQueries"
+  ],
+  "mappings": ";;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,8BAAhB,EAAgD;AAC9CC,IAAAA,MAAM,EAAGN,EAAE,CAACO,EAAH,CAAMC,OAAN,CAAcC,OADuB;AAG9CC,IAAAA,SAAS,EAAE,qBAAW;AACpB;AACA,WAAKC,IAAL;AACD,KAN6C;AAQ9CC,IAAAA,OAAO,EAAE;AACPD,MAAAA,IAAI,EAAE,gBAAW;AACf,aAAKE,GAAL,CAAS,IAAIC,SAAS,CAACC,IAAV,CAAeC,KAAf,CAAqBC,KAArB,CAA2BC,WAA/B,CAA2C,cAA3C,CAAT;AACD;AAHM;AARqC,GAAhD;AAAAJ,EAAAA,SAAS,CAACC,IAAV,CAAeC,KAAf,CAAqBP,OAArB,CAA6BN,aAA7B,GAA6CA,aAA7C",
+  "sourcesContent": [
+    "qx.Class.define(\"qxgraphql.demo.views.TabView\", {\n  extend : qx.ui.tabview.TabView,\n\n  construct: function() {\n    this.base(arguments);\n    this.init();\n  },\n\n  members: {\n    init: function() {\n      this.add(new qxgraphql.demo.views.pages.FreeQueries(\"Free Queries\"));\n    }\n  }\n\n});\n"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_mobileshowcase_v1_0_1/source/class/qxl/mobileshowcase/page/Abstract.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "mobile",
+    "page",
+    "NavigationPage",
+    "construct",
+    "wrapContentByGroup",
+    "setShowBackButton",
+    "setBackButtonText",
+    "members",
+    "_back",
+    "core",
+    "Init",
+    "getApplication",
+    "getRouting",
+    "back",
+    "qxl",
+    "mobileshowcase",
+    "Abstract"
+  ],
+  "mappings": ";;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,kCAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,EAAH,CAAMC,MAAN,CAAaC,IAAb,CAAkBC,cAD7B;AAGEC,IAAAA,SAAS,EAAG,mBAASC,kBAAT,EAA6B;AACvC,8DAAqBA,kBAArB;AACA,WAAKC,iBAAL,CAAuB,IAAvB;AACA,WAAKC,iBAAL,CAAuB,MAAvB;AACD,KAPH;AAUEC,IAAAA,OAAO,EACP;AACG;AACDC,MAAAA,KAAK,EAAG,iBAAW;AACjBhB,QAAAA,EAAE,CAACiB,IAAH,CAAQC,IAAR,CAAaC,cAAb,GAA8BC,UAA9B,GAA2CC,IAA3C;AACD;AAJH;AAXF,GADA;AArBAC,EAAAA,GAAG,CAACC,cAAJ,CAAmBd,IAAnB,CAAwBe,QAAxB,CAAiCrB,aAAjC,GAAiDA,aAAjD",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2012 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Christopher Zuendorf (czuendorf)\n\n************************************************************************ */\n\n/**\n * Abstract page for Mobile Showcase.\n */\nqx.Class.define(\"qxl.mobileshowcase.page.Abstract\",\n{\n  extend : qx.ui.mobile.page.NavigationPage,\n\n  construct : function(wrapContentByGroup) {\n    this.base(arguments, wrapContentByGroup);\n    this.setShowBackButton(true);\n    this.setBackButtonText(\"Back\");\n  },\n\n\n  members :\n  {\n     // overridden\n    _back : function() {\n      qx.core.Init.getApplication().getRouting().back();\n    }\n  }\n});\n"
+  ]
+}

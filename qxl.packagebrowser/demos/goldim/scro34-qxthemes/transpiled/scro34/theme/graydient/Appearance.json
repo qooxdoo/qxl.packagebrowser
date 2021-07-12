@@ -1,0 +1,104 @@
+{
+  "className": "scro34.theme.graydient.Appearance",
+  "packageName": "scro34.theme.graydient",
+  "name": "Appearance",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 36,
+        "column": 0
+      },
+      "end": {
+        "line": 2855,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The Graydient appearance theme.</p>"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "scro34/graydient/*"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/actions/dialog-ok.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/actions/dialog-cancel.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/actions/view-refresh.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/places/folder-open.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/places/folder-open.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/places/folder-open.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/static/*"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "aliases": {
+    "location": {
+      "start": {
+        "line": 38,
+        "column": 2
+      },
+      "end": {
+        "line": 40,
+        "column": 3
+      }
+    },
+    "aliasMap": {
+      "decoration": "scro34/graydient/decoration"
+    }
+  },
+  "descendants": []
+}

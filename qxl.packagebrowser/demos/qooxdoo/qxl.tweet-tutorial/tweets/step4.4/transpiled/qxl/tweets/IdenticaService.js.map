@@ -1,0 +1,45 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_tweet-tutorial_v1_0_1/tweets/step4.4/source/class/qxl/tweets/IdenticaService.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "core",
+    "Object",
+    "properties",
+    "tweets",
+    "nullable",
+    "event",
+    "events",
+    "members",
+    "__store",
+    "fetchTweets",
+    "location",
+    "window",
+    "url",
+    "origin",
+    "data",
+    "store",
+    "Jsonp",
+    "setCallbackName",
+    "setUrl",
+    "bind",
+    "reload",
+    "post",
+    "message",
+    "alert",
+    "qxl",
+    "IdenticaService"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,4BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,IAAH,CAAQC,MADnB;AAGEC,IAAAA,UAAU,EAAG;AACXC,MAAAA,MAAM,EAAG;AACPC,QAAAA,QAAQ,EAAE,IADH;AAEPC,QAAAA,KAAK,EAAE;AAFA;AADE,KAHf;AAWEC,IAAAA,MAAM,EAAG;AACP,gBAAW;AADJ,KAXX;AAgBEC,IAAAA,OAAO,EACP;AACEC,MAAAA,SAAO,EAAG,IADZ;AAIEC,MAAAA,WAAW,EAAG,uBAAW;AACvB,YAAI,KAAKD,SAAL,KAAiB,IAArB,EAA2B;AACzB,cAAIE,QAAQ,GAAGC,MAAM,CAACD,QAAtB;AACA,cAAIE,GAAG,GAAGF,QAAQ,CAACG,MAAT,GAAkB,iCAA5B;AACA,eAAKL,SAAL,GAAe,IAAIf,EAAE,CAACqB,IAAH,CAAQC,KAAR,CAAcC,KAAlB,EAAf;;AACA,eAAKR,SAAL,CAAaS,eAAb,CAA6B,UAA7B;;AACA,eAAKT,SAAL,CAAaU,MAAb,CAAoBN,GAApB;;AACA,eAAKJ,SAAL,CAAaW,IAAb,CAAkB,OAAlB,EAA2B,IAA3B,EAAiC,QAAjC;AACD,SAPD,MAOO;AACL,eAAKX,SAAL,CAAaY,MAAb;AACD;AACF,OAfH;;AAiBE;AACJ;AACA;AACA;AACIC,MAAAA,IAAI,EAAG,cAASC,OAAT,EAAkB;AACvB;AACAC,QAAAA,KAAK,CAAC,wBAAwBD,OAAzB,CAAL;AACD;AAxBH;AAjBF,GADA;AAAAE,EAAAA,GAAG,CAACrB,MAAJ,CAAWsB,eAAX,CAA2B7B,aAA3B,GAA2CA,aAA3C",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.tweets.IdenticaService\",\n{\n  extend : qx.core.Object,\n\n  properties : {\n    tweets : {\n      nullable: true,\n      event: \"changeTweets\"\n    }\n  },\n\n\n  events : {\n    \"postOk\" : \"qx.event.type.Event\"\n  },\n\n\n  members :\n  {\n    __store : null,\n\n\n    fetchTweets : function() {\n      if (this.__store === null) {\n        var location = window.location;\n        var url = location.origin + \"/resource/qxl/tweets/service.js\";\n        this.__store = new qx.data.store.Jsonp();\n        this.__store.setCallbackName(\"callback\");\n        this.__store.setUrl(url);\n        this.__store.bind(\"model\", this, \"tweets\");\n      } else {\n        this.__store.reload();\n      }\n    },\n\n    /**\n     * @param message\n     * @lint ignoreDeprecated(alert)\n     */\n    post : function(message) {\n      /* eslint-disable-next-line no-alert */\n      alert(\"Post this message: \" + message);\n    }\n  }\n});\n"
+  ]
+}

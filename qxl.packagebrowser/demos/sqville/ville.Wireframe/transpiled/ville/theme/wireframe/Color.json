@@ -1,0 +1,46 @@
+{
+  "className": "ville.theme.wireframe.Color",
+  "packageName": "ville.theme.wireframe",
+  "name": "Color",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 16,
+        "column": 0
+      },
+      "end": {
+        "line": 176,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>wireframe color theme, based off of Simple color theme (qooxdoo) and Semantic default</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "aliases": {
+    "location": {
+      "start": {
+        "line": 18,
+        "column": 2
+      },
+      "end": {
+        "line": 20,
+        "column": 3
+      }
+    },
+    "aliasMap": {
+      "primarycolor": "#3b83c0"
+    }
+  },
+  "descendants": []
+}

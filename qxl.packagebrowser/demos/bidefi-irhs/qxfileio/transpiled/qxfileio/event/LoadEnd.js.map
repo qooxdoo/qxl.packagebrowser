@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/bidefi-irhs_qxfileio_v0_4_1/source/class/qxfileio/event/LoadEnd.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "event",
+    "type",
+    "Data",
+    "members",
+    "__result",
+    "__error",
+    "init",
+    "result",
+    "error",
+    "getResult",
+    "getError",
+    "qxfileio",
+    "LoadEnd"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,IAAT,CAAcC,IADzB;AAGEC,IAAAA,OAAO,EAAG;AACRC,MAAAA,QAAQ,EAAG,IADH;AAERC,MAAAA,QAAO,EAAG,IAFF;;AAIR;AACJ;AACA;AACA;AACA;AACA;AACIC,MAAAA,IAAI,EAAG,cAASC,MAAT,EAAiBC,KAAjB,EAAwB;AAC7B,8DAAqB,KAArB,EAA4B,KAA5B;AACA,aAAKJ,QAAL,GAAgBG,MAAhB;AACA,aAAKF,QAAL,GAAeG,KAAf;AACD,OAdO;;AAgBR;AACJ;AACA;AACA;AACA;AACIC,MAAAA,SAAS,EAAG,qBAAW;AACrB,eAAO,KAAKL,QAAZ;AACD,OAvBO;;AAyBR;AACJ;AACA;AACA;AACA;AACIM,MAAAA,QAAQ,EAAG,oBAAW;AACpB,eAAO,KAAKL,QAAZ;AACD;AAhCO;AAHZ,GADA;AALAM,EAAAA,QAAQ,CAACX,KAAT,CAAeY,OAAf,CAAuBhB,aAAvB,GAAuCA,aAAvC",
+  "sourcesContent": [
+    "/**\n * Event fired when loading file ends.\n *\n * Map the HTML FileReader onloadend event.\n */\nqx.Class.define(\"qxfileio.event.LoadEnd\",\n{\n  extend : qx.event.type.Data,\n\n  members : {\n    __result : null,\n    __error : null,\n\n    /**\n     * Initializes a LoadEnd event.\n     *\n     * @param result {Data?null} The content of the loaded file\n     * @param error {DOMerror?null} The DOMerror if an error occured\n     */\n    init : function(result, error) {\n      this.base(arguments, false, false);\n      this.__result = result;\n      this.__error = error;\n    },\n\n    /**\n     * Get the result\n     *\n     * @return {Data?null} the result\n     */\n    getResult : function() {\n      return this.__result;\n    },\n\n    /**\n     * Get the error\n     *\n     * @return {DOMerror?null} The error\n     */\n    getError : function() {\n      return this.__error;\n    }\n  }\n});\n"
+  ]
+}

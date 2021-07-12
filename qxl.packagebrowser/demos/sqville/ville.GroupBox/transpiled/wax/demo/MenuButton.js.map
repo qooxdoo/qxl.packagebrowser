@@ -1,0 +1,51 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_GroupBox_v1_0_2/source/class/wax/demo/MenuButton.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "form",
+    "RadioButton",
+    "implement",
+    "IRadioItem",
+    "construct",
+    "label",
+    "icon",
+    "scale",
+    "indicator",
+    "undefined",
+    "setIcon",
+    "getChildControl",
+    "set",
+    "control",
+    "basic",
+    "Label",
+    "alignX",
+    "appearance",
+    "_add",
+    "core",
+    "Spacer",
+    "properties",
+    "sqvtestprop",
+    "check",
+    "init",
+    "nullable",
+    "refine",
+    "allowGrowX",
+    "wax",
+    "demo",
+    "MenuButton"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,qBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,EAAH,CAAMC,IAAN,CAAWC,WADtB;AAEEC,IAAAA,SAAS,EAAGV,EAAE,CAACO,EAAH,CAAMC,IAAN,CAAWG,UAFzB;;AAKE;AACF;AACA;AACA;AACA;AAEEC,IAAAA,SAAS,EAAG,mBAASC,KAAT,EAAgBC,IAAhB,EAAsBC,KAAtB,EAA6BC,SAA7B,EACZ;AACE,oDAAqBH,KAArB;;AAEA,UAAIC,IAAI,KAAKG,SAAb,EAAwB;AACtB,aAAKC,OAAL,CAAaJ,IAAb;;AAEA,YAAIC,KAAK,KAAKE,SAAd,EAAyB;AACvB,eAAKE,eAAL,CAAqB,MAArB,EAA6BC,GAA7B,CAAiC;AAAEL,YAAAA,KAAK,EAAGA;AAAV,WAAjC;AACD;AACF;;AAED,UAAIC,SAAS,KAAKC,SAAlB,EAA6B;AAC3B,YAAII,OAAO,GAAG,IAAIrB,EAAE,CAACO,EAAH,CAAMe,KAAN,CAAYC,KAAhB,CAAsBP,SAAtB,EAAiCI,GAAjC,CAAqC;AAACI,UAAAA,MAAM,EAAE,OAAT;AAAkBC,UAAAA,UAAU,EAAG;AAA/B,SAArC,CAAd;;AACA,aAAKC,IAAL,CAAU,IAAI1B,EAAE,CAACO,EAAH,CAAMoB,IAAN,CAAWC,MAAf,CAAsB,EAAtB,EAA0B,CAA1B,CAAV;;AACA,aAAKF,IAAL,CAAUL,OAAV;AACD;AAEF,KA7BH;;AAgCE;AACF;AACA;AACA;AACA;AAEEQ,IAAAA,UAAU,EACV;AAEE;AACAC,MAAAA,WAAW,EACX;AACEC,QAAAA,KAAK,EAAG,QADV;AAEEC,QAAAA,IAAI,EAAG,YAFT;AAGEC,QAAAA,QAAQ,EAAG;AAHb,OAJF;AAUE;AACAR,MAAAA,UAAU,EACV;AACES,QAAAA,MAAM,EAAG,IADX;AAEEF,QAAAA,IAAI,EAAG;AAFT,OAZF;AAiBE;AACAG,MAAAA,UAAU,EACV;AACED,QAAAA,MAAM,EAAG,IADX;AAEEF,QAAAA,IAAI,EAAG;AAFT;AAnBF;AAvCF,GADA;AAdAI,EAAAA,GAAG,CAACC,IAAJ,CAASC,UAAT,CAAoBnC,aAApB,GAAoCA,aAApC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n     \n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\n/**\n *\n */\nqx.Class.define(\"wax.demo.MenuButton\",\n{\n  extend : qx.ui.form.RadioButton,\n  implement : qx.ui.form.IRadioItem,\n\n\n  /*\n  *****************************************************************************\n     CONSTRUCTOR\n  *****************************************************************************\n  */\n\n  construct : function(label, icon, scale, indicator)\n  {\n    this.base(arguments, label);\n\n    if (icon !== undefined) {\n      this.setIcon(icon);\n\n      if (scale !== undefined) {\n        this.getChildControl(\"icon\").set({ scale : scale });\n      }\n    }\n\n    if (indicator !== undefined) {\n      var control = new qx.ui.basic.Label(indicator).set({alignX: \"right\", appearance : \"mainmenuindicator\"});\n      this._add(new qx.ui.core.Spacer(30, 1));\n      this._add(control);\n    }\n    \n  },\n\n\n  /*\n  *****************************************************************************\n     PROPERTIES\n  *****************************************************************************\n  */\n\n  properties :\n  {\n\n    // sqv test prop\n    sqvtestprop :\n    {\n      check : \"String\",\n      init : \"sqvtestval\",\n      nullable : true\n    },\n    \n    // overridden\n    appearance :\n    {\n      refine : true,\n      init : \"mainmenubutton\"\n    },\n\n    // overridden\n    allowGrowX :\n    {\n      refine : true,\n      init : true\n    }\n\n  }\n});\n"
+  ]
+}

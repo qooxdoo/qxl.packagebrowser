@@ -1,0 +1,92 @@
+{
+  "className": "scro34.theme.dark.Appearance",
+  "packageName": "scro34.theme.dark",
+  "name": "Appearance",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 32,
+        "column": 0
+      },
+      "end": {
+        "line": 3124,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The Dark appearance theme.</p>"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "scro34/dark/*"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/apps/office-calendar.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/16/places/folder-open.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/22/places/folder-open.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/mimetypes/office-document.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/places/folder.png"
+        },
+        {
+          "name": "@asset",
+          "body": "qx/icon/Oxygen/32/places/folder-open.png"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "aliases": {
+    "location": {
+      "start": {
+        "line": 34,
+        "column": 2
+      },
+      "end": {
+        "line": 36,
+        "column": 3
+      }
+    },
+    "aliasMap": {
+      "decoration": "scro34/dark/decoration"
+    }
+  },
+  "descendants": []
+}

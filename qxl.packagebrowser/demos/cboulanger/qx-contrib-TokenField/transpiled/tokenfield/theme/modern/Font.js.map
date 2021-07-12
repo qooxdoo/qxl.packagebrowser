@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_qx-contrib-TokenField_v1_3_0/source/class/tokenfield/theme/modern/Font.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "modern",
+    "Font",
+    "fonts",
+    "tokenfield"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,8BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,IAD3B;AAEEC,IAAAA,KAAK,EAAG;AAFV,GADA;AATAC,EAAAA,UAAU,CAACJ,KAAX,CAAiBC,MAAjB,CAAwBC,IAAxB,CAA6BN,aAA7B,GAA6CA,aAA7C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\nqx.Theme.define(\"tokenfield.theme.modern.Font\",\n{\n  extend : qx.theme.modern.Font,\n  fonts : {\n\n  }\n});\n"
+  ]
+}

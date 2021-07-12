@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testtapper_v1_0_11/source/class/qxl/testtapperdemo/test/Test07AsyncTest.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "members",
+    "window",
+    "setTimeout",
+    "resume",
+    "wait",
+    "qxl",
+    "testtapperdemo",
+    "test",
+    "Test07AsyncTest"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,yCAAhB,EAA2D;AACzDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADqC;AAEzDC,IAAAA,OAAO,EAAE;AACP,yBAAmB,wBAAY;AAAA;;AAC3BC,QAAAA,MAAM,CAACC,UAAP,CAAkB,YAAM;AACpB,UAAA,KAAI,CAACC,MAAL;AACH,SAFD,EAEG,GAFH;AAGA,aAAKC,IAAL,CAAU,IAAV;AACH,OANM;AAOP,yBAAmB,yBAAY;AAC3B,aAAKA,IAAL,CAAU,GAAV;AACH;AATM;AAFgD,GAA3D;AAAAC,EAAAA,GAAG,CAACC,cAAJ,CAAmBC,IAAnB,CAAwBC,eAAxB,CAAwCf,aAAxC,GAAwDA,aAAxD",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.testtapperdemo.test.Test07AsyncTest\", {\n  extend: qx.dev.unit.TestCase,\n  members: {\n    \"test01: in-time\": function () {\n        window.setTimeout(() => {\n            this.resume();\n        }, 500);\n        this.wait(2000);\n    },\n    \"test02: timeout\": function () {\n        this.wait(500);\n    }\n  }\n});\n"
+  ]
+}

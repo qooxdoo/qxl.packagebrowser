@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/voger_qxgraphql_v0_0_2/source/class/qxgraphql/GraphqlQueryCompress.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "core",
+    "Object",
+    "members",
+    "compress",
+    "query",
+    "graphQLCompress",
+    "qxgraphql",
+    "GraphqlQueryCompress"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,gCAAhB,EAAkD;AAChDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,IAAH,CAAQC,MADgC;AAGhDC,IAAAA,OAAO,EAAE;AACP;AACJ;AACA;AACA;AACA;AACIC,MAAAA,QAAQ,EAAE,kBAASC,KAAT,EAAgB;AACxB;AACA,eAAOC,eAAe,CAACD,KAAD,CAAtB;AACD;AATM;AAHuC,GAAlD;AAPAE,EAAAA,SAAS,CAACC,oBAAV,CAA+BX,aAA/B,GAA+CA,aAA/C",
+  "sourcesContent": [
+    "/**\n * Wrapper class for the graphql-query-compress library\n * https://github.com/rse/graphql-query-compress\n * It is used to compress the query by removing extra \n * whitespace and newline characters\n * @asset(js/gqcpr.js/gqcpr.js)\n */\nqx.Class.define(\"qxgraphql.GraphqlQueryCompress\", {\n  extend: qx.core.Object,\n\n  members: {\n    /**\n     * Compresses the query\n     * @param query {String} The query to compress\n     * @return {String} The compressed string\n     */\n    compress: function(query) {\n      // eslint-disable-next-line no-undef\n      return graphQLCompress(query);\n    }\n  }\n});\n"
+  ]
+}

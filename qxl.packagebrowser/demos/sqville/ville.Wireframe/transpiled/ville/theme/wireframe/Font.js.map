@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_Wireframe_v1_0_0/source/class/ville/theme/wireframe/Font.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "fonts",
+    "size",
+    "family",
+    "core",
+    "Environment",
+    "get",
+    "color",
+    "weight",
+    "include",
+    "bold",
+    "ville",
+    "theme",
+    "wireframe",
+    "Font"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,4BAAhB,EACA;AAEEC,IAAAA,KAAK,EACL;AACE,iBACA;AACEC,QAAAA,IAAI,EAAG,EADT;AAEEC,QAAAA,MAAM,EAAGR,EAAE,CAACS,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,SAAxB,KAAsC,KAAtC,GACP,CAAE,gBAAF,EAAoB,SAApB,CADO,GAC2B,CAAE,eAAF,EAAmB,YAAnB,EAAiC,SAAjC,CAHtC;AAIEC,QAAAA,KAAK,EAAG;AAJV,OAFF;AASE,oBACA;AACEJ,QAAAA,MAAM,EAAG,CAAC,YAAD,CADX;AAEEI,QAAAA,KAAK,EAAG,MAFV;AAGEC,QAAAA,MAAM,EAAG,KAHX;AAIEN,QAAAA,IAAI,EAAG;AAJT,OAVF;AAiBE,cACA;AACEO,QAAAA,OAAO,EAAG,SADZ;AAEED,QAAAA,MAAM,EAAG;AAFX,OAlBF;AAuBE,qBACA;AACEC,QAAAA,OAAO,EAAG,SADZ;AAEEP,QAAAA,IAAI,EAAG;AAFT,OAxBF;AA6BE,0BACA;AACEO,QAAAA,OAAO,EAAG,MADZ;AAEEP,QAAAA,IAAI,EAAG;AAFT,OA9BF;AAmCE,gBACA;AACEO,QAAAA,OAAO,EAAG,MADZ;AAEEP,QAAAA,IAAI,EAAG;AAFT,OApCF;AAyCE,yBACA;AACEO,QAAAA,OAAO,EAAG;AADZ,OA1CF;AA8CE,uBACA;AACEA,QAAAA,OAAO,EAAG,SADZ;AAEEP,QAAAA,IAAI,EAAG;AAFT,OA/CF;AAoDE,0BACA;AACCA,QAAAA,IAAI,EAAG,EADR;AAECC,QAAAA,MAAM,EAAG,CAAC,OAAD,EAAU,WAAV,EAAuB,iBAAvB;AAFV,OArDF;AA0DE,eACA;AACEM,QAAAA,OAAO,EAAG,SADZ;AAEEP,QAAAA,IAAI,EAAG;AAFT,OA3DF;AAiEE,kBACA;AACEO,QAAAA,OAAO,EAAG,SADZ;AAEEP,QAAAA,IAAI,EAAG;AAFT,OAlEF;AAuEE,eACA;AACEO,QAAAA,OAAO,EAAG,SADZ;AAEEP,QAAAA,IAAI,EAAG;AAFT,OAxEF;AA6EE,mBACA;AACEA,QAAAA,IAAI,EAAG,EADT;AAEEC,QAAAA,MAAM,EAAG,CAAE,kBAAF,EAAsB,aAAtB,EAAqC,WAArC;AAFX,OA9EF;AAmFE;AACA,wBACA;AACCM,QAAAA,OAAO,EAAG,SADX;AAECP,QAAAA,IAAI,EAAG,EAFR;AAGCQ,QAAAA,IAAI,EAAG;AAHR,OArFF;AA2FE,yBACA;AACCD,QAAAA,OAAO,EAAG,SADX;AAECP,QAAAA,IAAI,EAAG;AAFR,OA5FF;AAiGE;AACA,qBACA;AACEO,QAAAA,OAAO,EAAG,SADZ;AAECP,QAAAA,IAAI,EAAG;AAFR;AAnGF;AAHF,GADA;AAjBAS,EAAAA,KAAK,CAACC,KAAN,CAAYC,SAAZ,CAAsBC,IAAtB,CAA2BhB,aAA3B,GAA2CA,aAA3C",
+  "sourcesContent": [
+    "/* *********************************************************************\n\n   Copyright: sqville 2021\n\n   License:\n     MIT\n\n   Authors:\n     * Chris Eskew (sqville) chris.eskew@sqville.com\n\n************************************************************************ */\n\n/**\n * The ville.wireframe font theme.\n * @asset(ville/theme/wireframe/font/Lato/*.ttf)\n * \n */\nqx.Theme.define(\"ville.theme.wireframe.Font\",\n{\n  \n  fonts :\n  {\n    \"default\" :\n    {\n      size : 14,\n      family : qx.core.Environment.get(\"os.name\") == \"osx\" ?\n        [ \"Apple Chancery\", \"cursive\" ] : [ \"Comic Sans MS\", \"Comic Sans\", \"cursive\"],\n      color : \"black\"\n    },\n    \n    \"defaultold\" :\n    {\n      family : [\"sans-serif\"],\n      color : \"text\",\n      weight : \"400\",\n      size : 14\n    },\n\n    \"bold\" :\n    {\n      include : \"default\",\n      weight : \"700\"\n    },\n\n    \"datechooser\" :\n    {\n      include : \"default\",\n      size : 13\n    },\n\n    \"datechooser-bold\" :\n    {\n      include : \"bold\",\n      size : 13\n    },\n\n    \"button\" : \n    {\n      include : \"bold\",\n      size : 14\n    },\n\n    \"groupbox-legend\" :\n    {\n      include : \"bold\"\n    },\n\n    \"window-header\" :\n    {\n      include : \"default\",\n      size : 20\n    },    \n    \n    \"unicode-icons-sm\" :\n    {\n    \tsize : 20,\n    \tfamily : [\"arial\", \"helvetica\", \"Segoe UI Symbol\"]\n    },\n    \n    \"input\" :\n    {\n      include : \"default\",\n      size : 14\n    },\n   \n\n    \"headline\" :\n    {\n      include : \"default\",\n      size : 24\n    },\n\n    \"small\" :\n    {\n      include : \"default\",\n      size : 11\n    },\n\n    \"monospace\" :\n    {\n      size : 11,\n      family : [ \"DejaVu Sans Mono\", \"Courier New\", \"monospace\" ]\n    },\n        \n    // Theme Browser Content Formatting\n    \"control-header\" :\n    {\n    \tinclude : \"default\",\n    \tsize : 24,\n    \tbold : true\n    },\n    \n    \"control-header2\" :\n    {\n    \tinclude : \"default\",\n    \tsize : 20\n    },\n\n    // TreeVirtual Legacy\n    \"treevirtual\" :\n    {\n      include : \"default\",\n    \tsize : 8\n    }\n  }\n});\n"
+  ]
+}

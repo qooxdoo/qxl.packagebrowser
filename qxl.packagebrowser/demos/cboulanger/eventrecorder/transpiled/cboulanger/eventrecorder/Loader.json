@@ -1,0 +1,44 @@
+{
+  "className": "cboulanger.eventrecorder.Loader",
+  "packageName": "cboulanger.eventrecorder",
+  "name": "Loader",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 0
+      },
+      "end": {
+        "line": 30,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>This class can be put into the \"include\" section of compile.json/applications[]\n to load the eventrecorder into an existing application. If you use parts, you must\n include it into the part of the main application and exclude it from the part containing\n the eventrecorder code.</p>"
+        }
+      ]
+    }
+  },
+  "type": "class",
+  "defer": {
+    "location": {
+      "start": {
+        "line": 24,
+        "column": 8
+      },
+      "end": {
+        "line": 29,
+        "column": 2
+      }
+    },
+    "jsdoc": {}
+  },
+  "descendants": []
+}

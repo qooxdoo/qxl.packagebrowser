@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/cboulanger_qx-contrib-TokenField_v1_3_0/source/class/tokenfield/theme/modern/Appearance.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "modern",
+    "Appearance",
+    "appearances",
+    "include",
+    "style",
+    "states",
+    "styles",
+    "decorator",
+    "textColor",
+    "hovered",
+    "backgroundColor",
+    "head",
+    "undefined",
+    "height",
+    "padding",
+    "margin",
+    "icon",
+    "tokenfield"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,oCAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,UAD3B;AAEEC,IAAAA,WAAW,EACX;AACE,eAAU,UADZ;AAEE,mBACA;AACEC,QAAAA,OAAO,EAAG,UADZ;AAEEC,QAAAA,KAAK,EAAG,eAASC,MAAT,EAAiBC,MAAjB,EAAyB;AAC/B,iBAAO;AACLC,YAAAA,SAAS,EAAG,OADP;AAELC,YAAAA,SAAS,EAAGH,MAAM,CAACI,OAAP,GAAiB,SAAjB,GAA6B,SAFpC;AAGLC,YAAAA,eAAe,EAAEL,MAAM,CAACM,IAAP,GAAc,SAAd,GAA0BC,SAHtC;AAILC,YAAAA,MAAM,EAAG,EAJJ;AAKLC,YAAAA,OAAO,EAAG,CAAC,CAAD,EAAI,CAAJ,EAAO,CAAP,EAAU,CAAV,CALL;AAMLC,YAAAA,MAAM,EAAG,CANJ;AAOLC,YAAAA,IAAI,EAAGX,MAAM,CAACI,OAAP,GAAiB,oCAAjB,GAAwD;AAP1D,WAAP;AASD;AAZH;AAHF;AAHF,GADA;AAbAQ,EAAAA,UAAU,CAAClB,KAAX,CAAiBC,MAAjB,CAAwBC,UAAxB,CAAmCN,aAAnC,GAAmDA,aAAnD",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n     2010 Guilherme R. Aiolfi\n\n   License:\n     LGPL: http://www.gnu.org/licenses/lgpl.html\n     EPL: http://www.eclipse.org/org/documents/epl-v10.php\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors: Guilherme R. Aiolfi (guilhermeaiolfi)\n\n************************************************************************ */\nqx.Theme.define(\"tokenfield.theme.modern.Appearance\",\n{\n  extend : qx.theme.modern.Appearance,\n  appearances :\n  {\n    'token' : 'combobox',\n    'tokenitem' :\n    {\n      include : 'listitem',\n      style : function(states, styles) {\n        return {\n          decorator : 'group',\n          textColor : states.hovered ? '#314a6e' : '#000000',\n          backgroundColor: states.head ? '#4d94ff' : undefined,\n          height : 18,\n          padding : [1, 6, 1, 6],\n          margin : 1,\n          icon : states.hovered ? \"decoration/window/close-active.png\" : \"decoration/window/close-inactive.png\"\n        };\n      }\n    }\n  }\n});\n"
+  ]
+}

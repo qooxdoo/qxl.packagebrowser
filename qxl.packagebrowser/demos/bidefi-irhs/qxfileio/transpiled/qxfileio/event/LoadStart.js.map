@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/bidefi-irhs_qxfileio_v0_4_1/source/class/qxfileio/event/LoadStart.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "event",
+    "type",
+    "Data",
+    "construct",
+    "qxfileio",
+    "LoadStart"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,0BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,IAAT,CAAcC,IADzB;AAGEC,IAAAA,SAAS,EAAG,qBAAW;AACrB;AACD;AALH,GADA;AALAC,EAAAA,QAAQ,CAACJ,KAAT,CAAeK,SAAf,CAAyBT,aAAzB,GAAyCA,aAAzC",
+  "sourcesContent": [
+    "/**\n * Event fired when loading file is about to start.\n *\n * Map the HTML FileReader onloadstart event.\n */\nqx.Class.define(\"qxfileio.event.LoadStart\",\n{\n  extend : qx.event.type.Data,\n\n  construct : function() {\n    this.base(arguments);\n  }\n});\n"
+  ]
+}

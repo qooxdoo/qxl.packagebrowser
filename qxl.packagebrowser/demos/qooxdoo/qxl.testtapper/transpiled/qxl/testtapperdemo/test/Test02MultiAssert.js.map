@@ -1,0 +1,34 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testtapper_v1_0_11/source/class/qxl/testtapperdemo/test/Test02MultiAssert.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "members",
+    "got",
+    "util",
+    "Base64",
+    "decode",
+    "encode",
+    "split",
+    "assertIdentical",
+    "qxl",
+    "testtapperdemo",
+    "test",
+    "Test02MultiAssert"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,2CAAhB,EAA6D;AAC3DC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADuC;AAE3DC,IAAAA,OAAO,EAAE;AACP,mCAA6B,kCAAW;AACtC,YAAIC,GAAG,GAAGX,EAAE,CAACY,IAAH,CAAQC,MAAR,CAAeC,MAAf,CAAsBd,EAAE,CAACY,IAAH,CAAQC,MAAR,CAAeE,MAAf,CAAsB,SAAtB,CAAtB,EAAwDC,KAAxD,CAA8D,GAA9D,CAAV;AACA,aAAKC,eAAL,CAAqB,KAArB,EAA4BN,GAAG,CAAC,CAAD,CAA/B;AACA,aAAKM,eAAL,CAAqB,KAArB,EAA4BN,GAAG,CAAC,CAAD,CAA/B;AAEAA,QAAAA,GAAG,GAAGX,EAAE,CAACY,IAAH,CAAQC,MAAR,CAAeC,MAAf,CAAsBd,EAAE,CAACY,IAAH,CAAQC,MAAR,CAAeE,MAAf,CAAsB,MAAtB,CAAtB,EAAqDC,KAArD,CAA2D,GAA3D,CAAN;AACA,aAAKC,eAAL,CAAqB,KAArB,EAA4BN,GAAG,CAAC,CAAD,CAA/B;AACA,aAAKM,eAAL,CAAqB,EAArB,EAAyBN,GAAG,CAAC,CAAD,CAA5B;AAEAA,QAAAA,GAAG,GAAGX,EAAE,CAACY,IAAH,CAAQC,MAAR,CAAeC,MAAf,CAAsBd,EAAE,CAACY,IAAH,CAAQC,MAAR,CAAeE,MAAf,CAAsB,SAAS,IAA/B,CAAtB,EAA4DC,KAA5D,CAAkE,GAAlE,CAAN;AACA,aAAKC,eAAL,CAAqB,KAArB,EAA4BN,GAAG,CAAC,CAAD,CAA/B;AACA,aAAKM,eAAL,CAAqB,MAArB,EAA6BN,GAAG,CAAC,CAAD,CAAhC;AACD;AAbM;AAFkD,GAA7D;AAAAO,EAAAA,GAAG,CAACC,cAAJ,CAAmBC,IAAnB,CAAwBC,iBAAxB,CAA0ClB,aAA1C,GAA0DA,aAA1D",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.testtapperdemo.test.Test02MultiAssert\", {\n  extend: qx.dev.unit.TestCase,\n  members: {\n    \"test01: Encoding/Decoding\": function() {\n      var got = qx.util.Base64.decode(qx.util.Base64.encode(\"foo:bar\")).split(\":\");\n      this.assertIdentical(\"foo\", got[0]);\n      this.assertIdentical(\"bar\", got[1]);\n\n      got = qx.util.Base64.decode(qx.util.Base64.encode(\"foo:\")).split(\":\");\n      this.assertIdentical(\"foo\", got[0]);\n      this.assertIdentical(\"\", got[1]);\n\n      got = qx.util.Base64.decode(qx.util.Base64.encode(\"foo:\" + null)).split(\":\");\n      this.assertIdentical(\"foo\", got[0]);\n      this.assertIdentical(\"null\", got[1]);\n    }\n  }\n\n});\n"
+  ]
+}

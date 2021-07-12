@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_Clean_v1_0_3/source/class/ville/theme/Clean.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "ville",
+    "theme",
+    "clean",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "icon",
+    "Tango",
+    "appearance",
+    "Appearance",
+    "Clean"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,mBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGC,KAAK,CAACC,KAAN,CAAYC,KAAZ,CAAkBC,KAD5B;AAEEC,MAAAA,UAAU,EAAGJ,KAAK,CAACC,KAAN,CAAYC,KAAZ,CAAkBG,UAFjC;AAGEC,MAAAA,IAAI,EAAGN,KAAK,CAACC,KAAN,CAAYC,KAAZ,CAAkBK,IAH3B;AAIEC,MAAAA,IAAI,EAAGhB,EAAE,CAACS,KAAH,CAASO,IAAT,CAAcC,KAJvB;AAKEC,MAAAA,UAAU,EAAGV,KAAK,CAACC,KAAN,CAAYC,KAAZ,CAAkBS;AALjC;AAFF,GADA;AAjBAX,EAAAA,KAAK,CAACC,KAAN,CAAYW,KAAZ,CAAkBjB,aAAlB,GAAkCA,aAAlC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   SQville Software\n\n   http://sqville.com\n\n   Copyright:\n     None\n\n   License:\n     MIT\n\n   Authors:\n     * Chris Eskew (chris.eskew@sqville.com)\n\n************************************************************************ */\n\nqx.Theme.define(\"ville.theme.Clean\",\n{\n  meta :\n  {\n    color : ville.theme.clean.Color,\n    decoration : ville.theme.clean.Decoration,\n    font : ville.theme.clean.Font,\n    icon : qx.theme.icon.Tango,\n    appearance : ville.theme.clean.Appearance\n  }\n});"
+  ]
+}

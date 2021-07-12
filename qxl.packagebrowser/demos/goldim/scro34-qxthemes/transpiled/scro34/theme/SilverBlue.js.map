@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/goldim_scro34-qxthemes_v1_0_0/source/class/scro34/theme/SilverBlue.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "scro34",
+    "theme",
+    "silverblue",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "icon",
+    "Oxygen",
+    "appearance",
+    "Appearance",
+    "SilverBlue"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,yBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGC,MAAM,CAACC,KAAP,CAAaC,UAAb,CAAwBC,KADlC;AAEEC,MAAAA,UAAU,EAAGJ,MAAM,CAACC,KAAP,CAAaC,UAAb,CAAwBG,UAFvC;AAGEC,MAAAA,IAAI,EAAGN,MAAM,CAACC,KAAP,CAAaC,UAAb,CAAwBK,IAHjC;AAIEC,MAAAA,IAAI,EAAGhB,EAAE,CAACS,KAAH,CAASO,IAAT,CAAcC,MAJvB;AAKEC,MAAAA,UAAU,EAAGV,MAAM,CAACC,KAAP,CAAaC,UAAb,CAAwBS;AALvC;AAFF,GADA;AAVAX,EAAAA,MAAM,CAACC,KAAP,CAAaW,UAAb,CAAwBjB,aAAxB,GAAwCA,aAAxC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2010-2021 Norbert Schröder\n\n   License: MIT license\n\n   Authors: Norbert Schröder (scro34) schroeder@scro34.de\n\n************************************************************************ */\n\nqx.Theme.define(\"scro34.theme.SilverBlue\",\n{\n  meta :\n  {\n    color : scro34.theme.silverblue.Color,\n    decoration : scro34.theme.silverblue.Decoration,\n    font : scro34.theme.silverblue.Font,\n    icon : qx.theme.icon.Oxygen,\n    appearance : scro34.theme.silverblue.Appearance\n  }\n});"
+  ]
+}

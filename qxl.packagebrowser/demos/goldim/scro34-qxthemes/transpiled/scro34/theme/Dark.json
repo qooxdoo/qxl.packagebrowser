@@ -1,0 +1,43 @@
+{
+  "className": "scro34.theme.Dark",
+  "packageName": "scro34.theme",
+  "name": "Dark",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 11,
+        "column": 0
+      },
+      "end": {
+        "line": 21,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "themeMeta": {
+    "location": {
+      "start": {
+        "line": 13,
+        "column": 2
+      },
+      "end": {
+        "line": 20,
+        "column": 3
+      }
+    },
+    "themeMetaMap": {
+      "color": "scro34.theme.dark.Color",
+      "decoration": "scro34.theme.dark.Decoration",
+      "font": "scro34.theme.dark.Font",
+      "icon": "qx.theme.icon.Oxygen",
+      "appearance": "scro34.theme.dark.Appearance"
+    }
+  },
+  "descendants": []
+}

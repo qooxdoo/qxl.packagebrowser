@@ -1,0 +1,72 @@
+{
+  "className": "qookery.ILayoutFactory",
+  "packageName": "qookery",
+  "name": "ILayoutFactory",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 38,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Implementations of this interface create layout managers according to input arguments</p>"
+        }
+      ]
+    }
+  },
+  "type": "interface",
+  "members": {
+    "createLayout": {
+      "location": {
+        "start": {
+          "line": 33,
+          "column": 2
+        },
+        "end": {
+          "line": 36,
+          "column": 3
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Create a new layout</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "attributes {qookery.IAttributeSet} set of attributes that may be of use for configuring new layout",
+            "paramName": "attributes",
+            "description": " set of attributes that may be of use for configuring new layout",
+            "type": "qookery.IAttributeSet"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.ui.layout.Abstract} created layout",
+            "type": "qx.ui.layout.Abstract",
+            "description": " created layout"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": []
+}

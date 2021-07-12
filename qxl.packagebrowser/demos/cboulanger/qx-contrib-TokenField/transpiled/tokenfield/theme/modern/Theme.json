@@ -1,0 +1,43 @@
+{
+  "className": "tokenfield.theme.modern.Theme",
+  "packageName": "tokenfield.theme.modern",
+  "name": "Theme",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 10,
+        "column": 0
+      },
+      "end": {
+        "line": 19,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "themeMeta": {
+    "location": {
+      "start": {
+        "line": 11,
+        "column": 2
+      },
+      "end": {
+        "line": 18,
+        "column": 3
+      }
+    },
+    "themeMetaMap": {
+      "color": "tokenfield.theme.modern.Color",
+      "decoration": "tokenfield.theme.modern.Decoration",
+      "font": "tokenfield.theme.modern.Font",
+      "appearance": "tokenfield.theme.modern.Appearance",
+      "icon": "qx.theme.icon.Tango"
+    }
+  },
+  "descendants": []
+}

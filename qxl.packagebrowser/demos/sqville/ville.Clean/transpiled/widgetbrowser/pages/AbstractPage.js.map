@@ -1,0 +1,34 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_Clean_v1_0_3/source/class/widgetbrowser/pages/AbstractPage.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "type",
+    "extend",
+    "ui",
+    "container",
+    "Composite",
+    "construct",
+    "setLayout",
+    "layout",
+    "Canvas",
+    "_widgets",
+    "Array",
+    "members",
+    "getWidgets",
+    "widgetbrowser",
+    "pages",
+    "AbstractPage"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,kCAAhB,EACA;AACEC,IAAAA,IAAI,EAAE,UADR;AAGEC,IAAAA,MAAM,EAAEP,EAAE,CAACQ,EAAH,CAAMC,SAAN,CAAgBC,SAH1B;AAKEC,IAAAA,SAAS,EAAG,qBACZ;AACE;AACA,WAAKC,SAAL,CAAe,IAAIZ,EAAE,CAACQ,EAAH,CAAMK,MAAN,CAAaC,MAAjB,EAAf;AAEA,WAAKC,QAAL,GAAgB,IAAIf,EAAE,CAACM,IAAH,CAAQU,KAAZ,EAAhB;AACD,KAXH;AAaEC,IAAAA,OAAO,EACP;AACEF,MAAAA,QAAQ,EAAE,IADZ;AAGEG,MAAAA,UAAU,EAAE,sBACZ;AACE,eAAO,KAAKH,QAAZ;AACD;AANH;AAdF,GADA;AAlBAI,EAAAA,aAAa,CAACC,KAAd,CAAoBC,YAApB,CAAiClB,aAAjC,GAAiDA,aAAjD",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Tristan Koch (tristankoch)\n\n************************************************************************ */\n\nqx.Class.define(\"widgetbrowser.pages.AbstractPage\",\n{\n  type: \"abstract\",\n\n  extend: qx.ui.container.Composite,\n\n  construct : function()\n  {\n    this.base(arguments);\n    this.setLayout(new qx.ui.layout.Canvas());\n\n    this._widgets = new qx.type.Array();\n  },\n\n  members :\n  {\n    _widgets: null,\n\n    getWidgets: function()\n    {\n      return this._widgets;\n    }\n  }\n});\n"
+  ]
+}

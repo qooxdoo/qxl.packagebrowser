@@ -1,0 +1,89 @@
+{
+  "className": "qookery.util.Debug",
+  "packageName": "qookery.util",
+  "name": "Debug",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 22,
+        "column": 0
+      },
+      "end": {
+        "line": 59,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Useful debug capabilities</p>"
+        }
+      ]
+    }
+  },
+  "type": "class",
+  "isAbstract": false,
+  "isStatic": true,
+  "isSingleton": false,
+  "statics": {
+    "logScriptError": {
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 2
+        },
+        "end": {
+          "line": 57,
+          "column": 3
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Attempt to log a warning about an error that occurred inside a script\n </p>\n<p>Implementation is browser-specific and can be improved to handle more browsers</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {any} an object that is the context of the log message",
+            "paramName": "object",
+            "description": " an object that is the context of the log message",
+            "type": "any"
+          },
+          {
+            "name": "@param",
+            "body": "sourceCode {String} the script's source code",
+            "paramName": "sourceCode",
+            "description": " the script's source code",
+            "type": "String"
+          },
+          {
+            "name": "@param",
+            "body": "error {Error} exception thrown while running script",
+            "paramName": "error",
+            "description": " exception thrown while running script",
+            "type": "Error"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{undefined}",
+            "type": "undefined",
+            "description": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    }
+  },
+  "descendants": []
+}

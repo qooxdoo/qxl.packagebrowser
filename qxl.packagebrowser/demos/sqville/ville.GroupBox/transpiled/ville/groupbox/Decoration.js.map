@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_GroupBox_v1_0_2/source/class/ville/groupbox/Decoration.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "decorations",
+    "style",
+    "backgroundImage",
+    "backgroundRepeat",
+    "backgroundPositionX",
+    "backgroundPositionY",
+    "width",
+    "color",
+    "radius",
+    "include",
+    "ville",
+    "groupbox",
+    "Decoration"
+  ],
+  "mappings": ";;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,2BAAhB,EACA;AACEC,IAAAA,WAAW,EACX;AACE,6BACA;AACEC,QAAAA,KAAK,EACL;AACEC,UAAAA,eAAe,EAAE,8CADnB;AAEEC,UAAAA,gBAAgB,EAAE,WAFpB;AAGEC,UAAAA,mBAAmB,EAAE,OAHvB;AAIEC,UAAAA,mBAAmB,EAAE;AAJvB;AAFF,OAFF;AAYE,+BACA;AACEJ,QAAAA,KAAK,EACL;AACEC,UAAAA,eAAe,EAAE,8CADnB;AAEEC,UAAAA,gBAAgB,EAAE,WAFpB;AAGEC,UAAAA,mBAAmB,EAAE,OAHvB;AAIEC,UAAAA,mBAAmB,EAAE;AAJvB;AAFF,OAbF;AAuBE,yBACA;AACEJ,QAAAA,KAAK,EACL;AACEK,UAAAA,KAAK,EAAE,CADT;AAEEC,UAAAA,KAAK,EAAE,kBAFT;AAGEC,UAAAA,MAAM,EAAE;AAHV;AAFF,OAxBF;AAiCE,iCACA;AACCC,QAAAA,OAAO,EAAG,iBADX;AAGCR,QAAAA,KAAK,EACL;AACEK,UAAAA,KAAK,EAAE,CAAC,CAAD,EAAG,CAAH,EAAK,CAAL,EAAO,CAAP,CADT;AAEEE,UAAAA,MAAM,EAAE,CAAE,CAAF,EAAK,CAAL,EAAQ,CAAR,EAAW,CAAX;AAFV;AAJD;AAlCF;AAFF,GADA;AAfAE,EAAAA,KAAK,CAACC,QAAN,CAAeC,UAAf,CAA0Bf,aAA1B,GAA0CA,aAA1C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2021 sqville\n\n   License: MIT\n\n   Authors: Chris Eskew (sqville)\n\n************************************************************************ */\n\n/**\n * @asset(ville/groupbox/baseline-expand_more-24px.svg)\n * @asset(ville/groupbox/baseline-expand_less-24px.svg)\n */\n\nqx.Theme.define(\"ville.groupbox.Decoration\",\n{\n  decorations :\n  {    \n    \"ville-groupbox-open\" :\n    {\n      style :\n      {\n        backgroundImage: \"ville/groupbox/baseline-expand_less-24px.svg\",\n        backgroundRepeat: \"no-repeat\",\n        backgroundPositionX: \"right\",\n        backgroundPositionY: \"center\"\n      }\n    },\n\n    \"ville-groupbox-closed\" :\n    {\n      style :\n      {\n        backgroundImage: \"ville/groupbox/baseline-expand_more-24px.svg\",\n        backgroundRepeat: \"no-repeat\",\n        backgroundPositionX: \"right\",\n        backgroundPositionY: \"center\"\n      }\n    },\n\n    \"ville-white-box\" :\n    {\n      style :\n      {\n        width: 1,\n        color: \"white-box-border\",\n        radius: 3\n      }\n    },\n\n    \"ville-connected-top-box\" :\n    {\n    \tinclude : \"ville-white-box\",\n    \t\n    \tstyle :\n\t    {\n\t      width: [1,0,0,0],\n\t      radius: [ 0, 0, 0, 0 ]\n\t    }\n    }\n   \n  }\n});"
+  ]
+}

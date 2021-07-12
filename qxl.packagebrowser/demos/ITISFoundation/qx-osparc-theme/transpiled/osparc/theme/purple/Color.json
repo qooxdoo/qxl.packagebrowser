@@ -1,0 +1,31 @@
+{
+  "className": "osparc.theme.purple.Color",
+  "packageName": "osparc.theme.purple",
+  "name": "Color",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 20,
+        "column": 0
+      },
+      "end": {
+        "line": 144,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Purple color theme based on the the dark theme</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

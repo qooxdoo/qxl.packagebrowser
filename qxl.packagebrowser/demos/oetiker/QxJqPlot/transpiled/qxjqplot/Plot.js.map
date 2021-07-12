@@ -1,0 +1,44 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/oetiker_QxJqPlot_v1_0_1/source/class/qxjqplot/Plot.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "ui",
+    "core",
+    "Widget",
+    "include",
+    "qxjqplot",
+    "MPlot",
+    "construct",
+    "dataSeries",
+    "getOptions",
+    "pluginArr",
+    "_setup",
+    "members",
+    "_getDomElement",
+    "getContentElement",
+    "getDomElement",
+    "_bindResizeEvent",
+    "plot",
+    "id",
+    "options",
+    "addListener",
+    "lang",
+    "Function",
+    "bind",
+    "_redraw",
+    "Plot"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,eAAhB,EAAiC;AAC7BC,IAAAA,MAAM,EAAGN,EAAE,CAACO,EAAH,CAAMC,IAAN,CAAWC,MADS;AAE7BC,IAAAA,OAAO,EAAE,CAACC,QAAQ,CAACC,KAAV,CAFoB;;AAI7B;AACJ;AACA;AACA;AACA;AACA;AACIC,IAAAA,SAAS,EAAE,mBAASC,UAAT,EAAoBC,UAApB,EAA+BC,SAA/B,EAAyC;AAChD;;AACA,WAAKC,MAAL,CAAYH,UAAZ,EAAwBC,UAAxB,EAAoCC,SAApC;AACH,KAb4B;AAe7BE,IAAAA,OAAO,EAAG;AACRC,MAAAA,cAAc,EAAE,0BAAY;AAC1B,eAAO,KAAKC,iBAAL,GAAyBC,aAAzB,EAAP;AACD,OAHO;AAKRC,MAAAA,gBAAgB,EAAE,0BAAUC,IAAV,EAAgBC,EAAhB,EAAoBV,UAApB,EAAgCW,OAAhC,EAAyC;AACzD,aAAKC,WAAL,CAAiB,QAAjB,EAA2B1B,EAAE,CAAC2B,IAAH,CAAQC,QAAR,CAAiBC,IAAjB,CAAsB,KAAKC,OAA3B,EAAoC,IAApC,EAA0CP,IAA1C,EAAgDC,EAAhD,EAAoDV,UAApD,EAAgEW,OAAhE,CAA3B,EAAqG,IAArG;AACD;AAPO;AAfmB,GAAjC;AAhCAd,EAAAA,QAAQ,CAACoB,IAAT,CAAc5B,aAAd,GAA8BA,aAA9B",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n     2010 OETIKER+PARTNER AG, Tobi Oetiker, http://www.oetiker.ch\n\n   License:\n     LGPL: http://www.gnu.org/licenses/lgpl.html\n     EPL: http://www.eclipse.org/org/documents/epl-v10.php\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Tobi Oetiker (oetiker)\n\n************************************************************************ */\n\n/**\n * A wrapper around jqPlot. The wrapper assumes to find an unpacked copy of\n * the jqPlot distribution in resource/jqPlot. See <a\n * href='http://http://www.jqplot.com' target='_blank'>jqPlot website</a>\n * for information on how to use jqPlot.\n *\n * <pre class='javascript'>\n * var data = [[['frogs',3], ['buzzards',7], ['deer',2.5], ['turkeys',6], ['moles',5], ['ground hogs',4]]],\n * var options = function($jqplot){return{\n *     title: 'Pie Chart with Legend and sliceMargin',\n *     seriesDefaults:{renderer:$jqplot.PieRenderer, rendererOptions:{sliceMargin:8}},\n *     legend:{show:true}\n *  }};\n * var plugins = ['pieRenderer'];\n * var plot = new qxjqplot.Plot(data,options,plugins);\n * </pre>\n */\nqx.Class.define(\"qxjqplot.Plot\", {\n    extend : qx.ui.core.Widget,\n    include: [qxjqplot.MPlot],\n\n    /**\n     * @param dataSeries {Array} data array to plot\n     * @param getOptions {Callback|Map} wither an option map or a function returning the option map after being called with jQuery.jqplot as an argument.\n     * @param pluginArr  {Array} array of plugin base names. (use \"cursor\" not \"jqplot.cursor.js\")\n     *\n     */\n    construct: function(dataSeries,getOptions,pluginArr){\n        this.base(arguments);\n        this._setup(dataSeries, getOptions, pluginArr);\n    },\n\n    members : {\n      _getDomElement: function () {\n        return this.getContentElement().getDomElement();\n      },\n\n      _bindResizeEvent: function (plot, id, dataSeries, options) {\n        this.addListener('resize', qx.lang.Function.bind(this._redraw, this, plot, id, dataSeries, options), this);\n      }\n    }\n});\n\n"
+  ]
+}

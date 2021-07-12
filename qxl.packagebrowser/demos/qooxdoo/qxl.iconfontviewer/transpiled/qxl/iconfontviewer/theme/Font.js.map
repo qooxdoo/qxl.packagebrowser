@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_iconfontviewer_v1_0_1/source/class/qxl/iconfontviewer/theme/Font.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "indigo",
+    "Font",
+    "fonts",
+    "qxl",
+    "iconfontviewer"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,+BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,IAD3B;AAGEC,IAAAA,KAAK,EACL;AAJF,GADA;AAVAC,EAAAA,GAAG,CAACC,cAAJ,CAAmBL,KAAnB,CAAyBE,IAAzB,CAA8BN,aAA9B,GAA8CA,aAA9C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2020 Henner Kollmann\n\n   License: MIT license\n\n   Authors: \n\n************************************************************************ */\n\nqx.Theme.define(\"qxl.iconfontviewer.theme.Font\",\n{\n  extend : qx.theme.indigo.Font,\n\n  fonts :\n  {\n  }\n});\n"
+  ]
+}

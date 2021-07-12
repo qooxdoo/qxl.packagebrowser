@@ -1,0 +1,37 @@
+{
+  "className": "ville.theme.wireframe.Font",
+  "packageName": "ville.theme.wireframe",
+  "name": "Font",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 18,
+        "column": 0
+      },
+      "end": {
+        "line": 126,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The ville.wireframe font theme.</p>"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "ville/theme/wireframe/font/Lato/*.ttf"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

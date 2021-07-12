@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_incubator_qx_util_v0_0_4/source/class/qx/test/jsx/TestWidget.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "html",
+    "Element",
+    "construct",
+    "add",
+    "getQxObject",
+    "members",
+    "_createQxObjectImpl",
+    "id",
+    "elem",
+    "addClass",
+    "Text",
+    "test",
+    "jsx",
+    "TestWidget"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wBAAhB,EAA0C;AACxCC,IAAAA,MAAM,EAAEN,EAAE,CAACO,IAAH,CAAQC,OADwB;;AAGxCC,IAAAA,SAAS,GAAG;AACV;AACA,WAAKC,GAAL,CAAS,KAAKC,WAAL,CAAiB,QAAjB,CAAT;AACA,WAAKD,GAAL,CAAS,KAAKC,WAAL,CAAiB,MAAjB,CAAT;AACD,KAPuC;;AASxCC,IAAAA,OAAO,EAAE;AACPC,MAAAA,mBAAmB,CAACC,EAAD,EAAK;AACtB,gBAAOA,EAAP;AACA,eAAK,QAAL;AACE,gBAAIC,IAAI,GAAG,IAAIf,EAAE,CAACO,IAAH,CAAQC,OAAZ,EAAX;AACAO,YAAAA,IAAI,CAACC,QAAL,CAAc,cAAd;AACA,mBAAOD,IAAP;;AAEF,eAAK,MAAL;AACE,gBAAIA,IAAI,GAAG,IAAIf,EAAE,CAACO,IAAH,CAAQC,OAAZ,EAAX;AACAO,YAAAA,IAAI,CAACC,QAAL,CAAc,YAAd;AACAD,YAAAA,IAAI,CAACL,GAAL,CAAS,KAAKC,WAAL,CAAiB,UAAjB,CAAT;AACAI,YAAAA,IAAI,CAACL,GAAL,CAAS,KAAKC,WAAL,CAAiB,UAAjB,CAAT;AACA,mBAAOI,IAAP;;AAEF,eAAK,UAAL;AACE,gBAAIA,IAAI,GAAG,IAAIf,EAAE,CAACO,IAAH,CAAQC,OAAZ,EAAX;AACAO,YAAAA,IAAI,CAACL,GAAL,CAAS,IAAIV,EAAE,CAACO,IAAH,CAAQU,IAAZ,CAAiB,WAAjB,CAAT;AACA,mBAAOF,IAAP;;AAEF,eAAK,UAAL;AACE,gBAAIA,IAAI,GAAG,IAAIf,EAAE,CAACO,IAAH,CAAQC,OAAZ,EAAX;AACAO,YAAAA,IAAI,CAACL,GAAL,CAAS,IAAIV,EAAE,CAACO,IAAH,CAAQU,IAAZ,CAAiB,WAAjB,CAAT;AACA,mBAAOF,IAAP;AArBF;AAuBD;;AAzBM;AAT+B,GAA1C;AAAAf,EAAAA,EAAE,CAACkB,IAAH,CAAQC,GAAR,CAAYC,UAAZ,CAAuBjB,aAAvB,GAAuCA,aAAvC",
+  "sourcesContent": [
+    "qx.Class.define(\"qx.test.jsx.TestWidget\", {\n  extend: qx.html.Element,\n  \n  construct() {\n    this.base(arguments);\n    this.add(this.getQxObject(\"header\"));\n    this.add(this.getQxObject(\"body\"));\n  },\n  \n  members: {\n    _createQxObjectImpl(id) {\n      switch(id) {\n      case \"header\":\n        var elem = new qx.html.Element();\n        elem.addClass(\"header-class\");\n        return elem;\n        \n      case \"body\":\n        var elem = new qx.html.Element();\n        elem.addClass(\"body-class\");\n        elem.add(this.getQxObject(\"labelOne\"));\n        elem.add(this.getQxObject(\"labelTwo\"));\n        return elem;\n        \n      case \"labelOne\":\n        var elem = new qx.html.Element();\n        elem.add(new qx.html.Text(\"Label One\"));\n        return elem;\n        \n      case \"labelTwo\":\n        var elem = new qx.html.Element();\n        elem.add(new qx.html.Text(\"Label Two\"));\n        return elem;\n      }\n    }\n  }\n});"
+  ]
+}

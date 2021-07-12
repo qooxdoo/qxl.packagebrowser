@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/voger_qxgraphql_v0_0_2/source/class/qxgraphql/theme/Theme.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "qxgraphql",
+    "theme",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "icon",
+    "Tango",
+    "appearance",
+    "Appearance"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,uBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGC,SAAS,CAACC,KAAV,CAAgBC,KAD1B;AAEEC,MAAAA,UAAU,EAAGH,SAAS,CAACC,KAAV,CAAgBG,UAF/B;AAGEC,MAAAA,IAAI,EAAGL,SAAS,CAACC,KAAV,CAAgBK,IAHzB;AAIEC,MAAAA,IAAI,EAAGf,EAAE,CAACS,KAAH,CAASM,IAAT,CAAcC,KAJvB;AAKEC,MAAAA,UAAU,EAAGT,SAAS,CAACC,KAAV,CAAgBS;AAL/B;AAFF,GADA;AAVAV,EAAAA,SAAS,CAACC,KAAV,CAAgBL,KAAhB,CAAsBD,aAAtB,GAAsCA,aAAtC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2019 \n\n   License: MIT license\n\n   Authors: \n\n************************************************************************ */\n\nqx.Theme.define(\"qxgraphql.theme.Theme\",\n{\n  meta :\n  {\n    color : qxgraphql.theme.Color,\n    decoration : qxgraphql.theme.Decoration,\n    font : qxgraphql.theme.Font,\n    icon : qx.theme.icon.Tango,\n    appearance : qxgraphql.theme.Appearance\n  }\n});\n"
+  ]
+}

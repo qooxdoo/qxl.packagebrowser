@@ -1,0 +1,32 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/voger_qxgraphql_v0_0_2/source/class/qxgraphql/demo/Application.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "main",
+    "doc",
+    "getRoot",
+    "add",
+    "qxgraphql",
+    "demo",
+    "views",
+    "TabView",
+    "edge",
+    "Application"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,4BAAhB,EAA8C;AAC5CC,IAAAA,MAAM,EAAGN,EAAE,CAACO,WAAH,CAAeC,UADoB;;AAG5C;AACF;AACA;AACA;AACA;AAEEC,IAAAA,OAAO,EAAE;AACP;AACJ;AACA;AACA;AACA;AACA;AAEIC,MAAAA,IAAI,EAAE,gBAAW;AACf;AACA,kEAFe,CAIf;;AAQA;AACA,YAAIC,GAAG,GAAG,KAAKC,OAAL,EAAV;AAIAD,QAAAA,GAAG,CAACE,GAAJ,CAAQ,IAAIC,SAAS,CAACC,IAAV,CAAeC,KAAf,CAAqBC,OAAzB,EAAR,EAA4C;AAACC,UAAAA,IAAI,EAAE;AAAP,SAA5C;AACD;AA1BM;AATmC,GAA9C;AAbAJ,EAAAA,SAAS,CAACC,IAAV,CAAeI,WAAf,CAA2BhB,aAA3B,GAA2CA,aAA3C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2019 \n\n   License: MIT license\n\n   Authors: voger\n\n************************************************************************ */\n\n/**\n * This is the main application class of \"qxgraphql\"\n */\nqx.Class.define(\"qxgraphql.demo.Application\", {\n  extend : qx.application.Standalone,\n\n  /*\n  *****************************************************************************\n     MEMBERS\n  *****************************************************************************\n  */\n\n  members: {\n    /**\n     * This method contains the initial application code and gets called \n     * during startup of the application\n     * \n     * @lint ignoreDeprecated(alert)\n     */\n\n    main: function() {\n      // Call super class\n      this.base(arguments);\n\n      // Enable logging in debug variant\n      if (qx.core.Environment.get(\"qx.debug\")) {\n        // support native logging capabilities, e.g. Firebug for Firefox\n        qx.log.appender.Native;\n        // support additional cross-browser console. Press F7 to toggle visibility\n        qx.log.appender.Console;\n      }\n\n      // Document is the application root\n      var doc = this.getRoot();\n\n\n       \n      doc.add(new qxgraphql.demo.views.TabView(), {edge: 0});\n    }\n  }\n});\n\n"
+  ]
+}

@@ -1,0 +1,830 @@
+{
+  "className": "qx.data.MRemoteBinding",
+  "packageName": "qx.data",
+  "name": "MRemoteBinding",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 0
+      },
+      "end": {
+        "line": 513,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>A mixin providing methods for binding properties between applications\n running in separate browser windows</p>"
+        }
+      ]
+    }
+  },
+  "type": "mixin",
+  "statics": {
+    "SERIALIZER_CLASS_PROP": {
+      "location": {
+        "start": {
+          "line": 26,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+          "column": 36
+        }
+      },
+      "type": "variable",
+      "access": "public"
+    },
+    "SERIALIZER_DATA_PROP": {
+      "location": {
+        "start": {
+          "line": 27,
+          "column": 4
+        },
+        "end": {
+          "line": 27,
+          "column": 34
+        }
+      },
+      "type": "variable",
+      "access": "public"
+    }
+  },
+  "construct": {
+    "location": {
+      "start": {
+        "line": 30,
+        "column": 13
+      },
+      "end": {
+        "line": 32,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "members": {
+    "__messageSource": {
+      "location": {
+        "start": {
+          "line": 36,
+          "column": 4
+        },
+        "end": {
+          "line": 36,
+          "column": 25
+        }
+      },
+      "type": "variable",
+      "access": "private"
+    },
+    "__channels": {
+      "location": {
+        "start": {
+          "line": 37,
+          "column": 4
+        },
+        "end": {
+          "line": 37,
+          "column": 20
+        }
+      },
+      "type": "variable",
+      "access": "private"
+    },
+    "__isInitialized": {
+      "location": {
+        "start": {
+          "line": 38,
+          "column": 4
+        },
+        "end": {
+          "line": 38,
+          "column": 26
+        }
+      },
+      "type": "variable",
+      "access": "private"
+    },
+    "_syncProperties": {
+      "location": {
+        "start": {
+          "line": 57,
+          "column": 4
+        },
+        "end": {
+          "line": 70,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Initializes property synchronization with the remote peer using the\n given channel. Must be called from the public syncProperty API method\n of the proxy object that includes this mixin</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "channel {qx.io.channel.IChannel}\n    The channel over which to synchronize the object properties",
+            "paramName": "channel",
+            "description": "\n    The channel over which to synchronize the object properties",
+            "type": "qx.io.channel.IChannel"
+          },
+          {
+            "name": "@param",
+            "body": "options {Object}\n    Optional map with synchronization options:\n      - {Array} properties The list of properties to synchronize, if not\n        using the default list\n      - {Boolean} useOriginalClasses If true, when recreating the objects,\n        use the qooxdoo classes that were serialized on the other end.\n        If false or undefined (default), create qx.data.model.* objects that\n        contain the property data only, using the JSON marshaler.\n        This is usually enough for remote databinding and prevents unintended\n        side effects.",
+            "paramName": "options",
+            "description": "\n    Optional map with synchronization options:\n      - {Array} properties The list of properties to synchronize, if not\n        using the default list\n      - {Boolean} useOriginalClasses If true, when recreating the objects,\n        use the qooxdoo classes that were serialized on the other end.\n        If false or undefined (default), create qx.data.model.* objects that\n        contain the property data only, using the JSON marshaler.\n        This is usually enough for remote databinding and prevents unintended\n        side effects.",
+            "type": "Object"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "protected"
+    },
+    "stopPropertySync": {
+      "location": {
+        "start": {
+          "line": 75,
+          "column": 4
+        },
+        "end": {
+          "line": 77,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Stop the synchronization of object properties</p>"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "_getDefaultPropertyNamesToSync": {
+      "location": {
+        "start": {
+          "line": 86,
+          "column": 4
+        },
+        "end": {
+          "line": 91,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Returns an array with the default property names to synchronize. This must\n include all the properties that  will be synchronized through any of the\n channels. By default, this will synchronize any existing property except\n those definend in {@link qx.core.MObjectId}.</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{Array}",
+            "type": "qx.data.Array",
+            "description": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "protected"
+    },
+    "_createUuid": {
+      "location": {
+        "start": {
+          "line": 97,
+          "column": 4
+        },
+        "end": {
+          "line": 105,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Create a pseudo-UUID to avoid name clashes</p>"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{string}",
+            "type": "string",
+            "description": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "protected"
+    },
+    "__initialize": {
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4
+        },
+        "end": {
+          "line": 138,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Initialize the object for remote databinding</p>"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__tearDown": {
+      "location": {
+        "start": {
+          "line": 144,
+          "column": 4
+        },
+        "end": {
+          "line": 158,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Tear down remote databinding</p>"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__handleLocalPropertyChangeEvent": {
+      "location": {
+        "start": {
+          "line": 166,
+          "column": 4
+        },
+        "end": {
+          "line": 173,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Handles the property change events of the instance</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "e {qx.event.type.Data}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__computePropertyNameFromEventType": {
+      "location": {
+        "start": {
+          "line": 182,
+          "column": 4
+        },
+        "end": {
+          "line": 187,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Given a event name, return the name of the property involved or\n null if the event is not a property change event</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "type {String}"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{String|null}",
+            "type": "String|null",
+            "description": ""
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__handleLocalChangeBubbleEvent": {
+      "location": {
+        "start": {
+          "line": 195,
+          "column": 4
+        },
+        "end": {
+          "line": 206,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Broadcasts the 'changeBubble' events of the instance properties</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "e {qx.event.type.Data}"
+          },
+          {
+            "name": "@param",
+            "body": "prop {String} the name of the property that fired the event",
+            "paramName": "prop",
+            "description": " the name of the property that fired the event",
+            "type": "String"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__broadcastEvent": {
+      "location": {
+        "start": {
+          "line": 215,
+          "column": 4
+        },
+        "end": {
+          "line": 230,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Broadcast a message with the given parameters</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "type {String}"
+          },
+          {
+            "name": "@param",
+            "body": "data {*|undefined}"
+          },
+          {
+            "name": "@param",
+            "body": "oldData {*|undefined}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__sendEventMessage": {
+      "location": {
+        "start": {
+          "line": 240,
+          "column": 4
+        },
+        "end": {
+          "line": 254,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Sends a event message to the given window.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "channel {qx.io.channel.IChannel}"
+          },
+          {
+            "name": "@param",
+            "body": "type {String} The name of the event",
+            "paramName": "type",
+            "description": " The name of the event",
+            "type": "String"
+          },
+          {
+            "name": "@param",
+            "body": "data {*|undefined}"
+          },
+          {
+            "name": "@param",
+            "body": "oldData {*|undefined}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__sendMessage": {
+      "location": {
+        "start": {
+          "line": 262,
+          "column": 4
+        },
+        "end": {
+          "line": 269,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Send a message to the peer using the postMessage API</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "channel {qx.io.channel.IChannel}"
+          },
+          {
+            "name": "@param",
+            "body": "message {String}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__handleIncomingMessage": {
+      "location": {
+        "start": {
+          "line": 277,
+          "column": 4
+        },
+        "end": {
+          "line": 300,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>If the incoming message is a property change event sent by the peer,\n apply the new value</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "message {Object}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__getChannelOptions": {
+      "location": {
+        "start": {
+          "line": 307,
+          "column": 4
+        },
+        "end": {
+          "line": 311,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Given a channel, return the remote binding options</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "channel {qx.io.channel.IChannel}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__handleRemoteReadyEvent": {
+      "location": {
+        "start": {
+          "line": 317,
+          "column": 4
+        },
+        "end": {
+          "line": 327,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>When receiving the \"ready\" event from a channel endpoint, send property state</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "message {Object}"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__sendReadyEvent": {
+      "location": {
+        "start": {
+          "line": 334,
+          "column": 4
+        },
+        "end": {
+          "line": 336,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Send the ready event to the channel</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "channel {qx.io.channel.IChannel}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__handleRemotePropertyChangeEvent": {
+      "location": {
+        "start": {
+          "line": 343,
+          "column": 4
+        },
+        "end": {
+          "line": 364,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Handle the change event for normal property values</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "message {Object}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__handleRemoteChangeBubbleEvent": {
+      "location": {
+        "start": {
+          "line": 371,
+          "column": 4
+        },
+        "end": {
+          "line": 405,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Handle the changeBubble event for qooxdoo data objects</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "message {Object}"
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__serialize": {
+      "location": {
+        "start": {
+          "line": 414,
+          "column": 4
+        },
+        "end": {
+          "line": 446,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Serialize an arbitrary value, including many qooxdoo objects,\n to a JSON value that can be sent to a remote target</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {qx.core.Object|*}"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{*|Array|String|Object}",
+            "type": "*|Array|String|Object",
+            "description": ""
+          }
+        ],
+        "@private": [
+          {
+            "name": "@private",
+            "body": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    },
+    "__unserialize": {
+      "location": {
+        "start": {
+          "line": 466,
+          "column": 4
+        },
+        "end": {
+          "line": 511,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Unserialize a JSON object, creating suitable qooxdoo objects from the\n metadata in the JSON</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "object {Object|Array|*}\n    The json object which will be unserialized into a qooxdoo object if\n    it has been serialized from a qooxdoo object. Normal object and\n    primitive values will be used as-is.",
+            "paramName": "object",
+            "description": "\n    The json object which will be unserialized into a qooxdoo object if\n    it has been serialized from a qooxdoo object. Normal object and\n    primitive values will be used as-is.",
+            "type": [
+              "Object",
+              "Array",
+              "*"
+            ]
+          },
+          {
+            "name": "@param",
+            "body": "config {Object}\n    A configuration map with the following keys:\n      - includeBubbleEvents {Boolean}\n          Enable event bubbling (Default: true)\n      - useOriginalClasses {Boolean}\n          If true, when recreating the objects, use the qooxdoo classes\n          that were serialized on the other end. If false or undefined\n          (default), create qx.data.model.* objects that contain the\n          property data only, using the JSON marshaler.",
+            "paramName": "config",
+            "description": "\n    A configuration map with the following keys:\n      - includeBubbleEvents {Boolean}\n          Enable event bubbling (Default: true)\n      - useOriginalClasses {Boolean}\n          If true, when recreating the objects, use the qooxdoo classes\n          that were serialized on the other end. If false or undefined\n          (default), create qx.data.model.* objects that contain the\n          property data only, using the JSON marshaler.",
+            "type": "Object"
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "body": "{qx.core.Object|*}",
+            "type": "qx.core.Object|*",
+            "description": ""
+          }
+        ]
+      },
+      "type": "function",
+      "access": "private"
+    }
+  },
+  "descendants": []
+}

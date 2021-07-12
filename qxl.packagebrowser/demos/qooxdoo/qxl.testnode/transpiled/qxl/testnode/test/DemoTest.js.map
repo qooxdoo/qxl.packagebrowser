@@ -1,0 +1,49 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testnode_v1_0_16/source/class/qxl/testnode/test/DemoTest.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "include",
+    "MRequirementsBasic",
+    "members",
+    "testSimple",
+    "assertEquals",
+    "assertFalse",
+    "testAdvanced",
+    "a",
+    "b",
+    "assertIdentical",
+    "assertInRange",
+    "hasNodeJs",
+    "core",
+    "Environment",
+    "get",
+    "testNodeJs",
+    "require",
+    "testAsync",
+    "Promise",
+    "resolve",
+    "setTimeout",
+    "Math",
+    "random",
+    "qxl",
+    "testnode",
+    "test",
+    "DemoTest"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,4BAAhB,EACE;AACEC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADtB;AAGEC,IAAAA,OAAO,EAAE,CAACV,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYG,kBAAb,CAHX;AAKEC,IAAAA,OAAO,EACP;AACE;AACN;AACA;AACA;AACA;;AAEM;AACN;AACA;AACMC,MAAAA,UAAU,EAAE,YAAY;AACtB,aAAKC,YAAL,CAAkB,CAAlB,KAA4B,yBAA5B;AACA,aAAKC,WAAL,CAAiB,KAAjB,EAAwB,qBAAxB;AACD,OAbH;;AAeE;AACN;AACA;AACMC,MAAAA,YAAY,EAAE,YAAY;AACxB,YAAIC,CAAC,GAAG,CAAR;AACA,YAAIC,CAAC,GAAGD,CAAR;AACA,aAAKE,eAAL,CAAqBF,CAArB,EAAwBC,CAAxB,EAA2B,0CAA3B;AACA,aAAKE,aAAL,CAAmB,CAAnB,EAAsB,CAAtB,EAAyB,EAAzB,EAA6B,qDAA7B;AACD,OAvBH;AAyBEC,MAAAA,SAAS,EAAE,YAAY;AACrB,eAAOrB,EAAE,CAACsB,IAAH,CAAQC,WAAR,CAAoBC,GAApB,CAAwB,cAAxB,KAA2C,SAAlD;AACD,OA3BH;AA6BEC,MAAAA,UAAU,EAAE,YAAY;AACtB,aAAKC,OAAL,CAAa,CAAC,QAAD,CAAb,EADsB,CAEtB;;AACD,OAhCH;AAkCEC,MAAAA,SAAS,EAAE,kBAAkB;AAC3B,eAAO,IAAIC,OAAJ,CACL,UAAUC,OAAV,EAAmB;AACjBC,UAAAA,UAAU,CACR,YAAY;AACV;AACAD,YAAAA,OAAO;AACR,WAJO,EAILE,IAAI,CAACC,MAAL,KAAgB,IAAhB,GAAuB,IAJlB,CAAV;AAKD,SAPI,CAAP;AAQD;AA3CH;AANF,GADF;AAxBAC,EAAAA,GAAG,CAACC,QAAJ,CAAaC,IAAb,CAAkBC,QAAlB,CAA2BjC,aAA3B,GAA2CA,aAA3C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: Henner Kollmann 2020\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n   * Henner Kollmann (hkollmann) Henner.Kollmann@gmx.de\n\n************************************************************************ */\n/**\n * This class demonstrates how to define unit tests for your application.\n *\n * Execute <code>qx test</code> to generate a testrunner application \n * and open it from <tt>test/index.html</tt>\n *\n * The methods that contain the tests are instance methods with a \n * <code>test</code> prefix. You can create an arbitrary number of test \n * classes like this one. They can be organized in a regular class hierarchy, \n * i.e. using deeper namespaces and a corresponding file structure within the \n * <tt>test</tt> folder.\n */\nqx.Class.define(\"qxl.testnode.test.DemoTest\",\n  {\n    extend: qx.dev.unit.TestCase,\n\n    include: [qx.dev.unit.MRequirementsBasic],\n\n    members:\n    {\n      /*\n      ---------------------------------------------------------------------------\n        TESTS\n      ---------------------------------------------------------------------------\n      */\n\n      /**\n       * Here are some simple tests\n       */\n      testSimple: function () {\n        this.assertEquals(4, 3 + 1, \"This should never fail!\");\n        this.assertFalse(false, \"Can false be true?!\");\n      },\n\n      /**\n       * Here are some more advanced tests\n       */\n      testAdvanced: function () {\n        var a = 3;\n        var b = a;\n        this.assertIdentical(a, b, \"A rose by any other name is still a rose\");\n        this.assertInRange(3, 1, 10, \"You must be kidding, 3 can never be outside [1,10]!\");\n      },\n\n      hasNodeJs: function () {\n        return qx.core.Environment.get(\"runtime.name\") == \"node.js\";\n      },\n\n      testNodeJs: function () {\n        this.require([\"nodeJs\"]);\n        // test node stuff\n      },\n\n      testAsync: async function () {\n        return new Promise(\n          function (resolve) {\n            setTimeout(\n              function () {\n                // We fulfill the promise !\n                resolve();\n              }, Math.random() * 2000 + 1000);\n          });\n      }\n    }\n  });\n"
+  ]
+}

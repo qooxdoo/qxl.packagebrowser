@@ -1,0 +1,41 @@
+{
+  "className": "iconfont.fontawesome5.Load",
+  "packageName": "iconfont.fontawesome5",
+  "name": "Load",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 7,
+        "column": 0
+      },
+      "end": {
+        "line": 7,
+        "column": 50
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>A dummy class to trigger the compiler to copy the font files</p>"
+        },
+        {
+          "name": "@description",
+          "body": ""
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "iconfont/fontawesome5/*"
+        }
+      ]
+    }
+  },
+  "type": "class",
+  "descendants": []
+}

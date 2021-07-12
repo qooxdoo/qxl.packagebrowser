@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testtapper_v1_0_11/source/class/qxl/testtapperdemo/test/Test09AsyncFunction.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "members",
+    "Promise",
+    "resolve",
+    "reject",
+    "setTimeout",
+    "value",
+    "assertEquals",
+    "unknownFunctionCall",
+    "e",
+    "message",
+    "Error",
+    "qxl",
+    "testtapperdemo",
+    "test",
+    "Test09AsyncFunction"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,6CAAhB,EAA+D;AAC7DC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADyC;AAE7DC,IAAAA,OAAO,EAAE;AACP;AAAA,2FAA0B;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,yBACN,IAAIC,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACjDC,oBAAAA,UAAU,CAAC,YAAM;AACfF,sBAAAA,OAAO,CAAC,UAAD,CAAP;AACD,qBAFS,EAEP,IAFO,CAAV;AAGD,mBAJiB,CADM;;AAAA;AACpBG,kBAAAA,KADoB;AAMxB,uBAAKC,YAAL,CAAkB,UAAlB,EAA8BD,KAA9B,EAAqC,kBAArC;;AANwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,SAA1B;;AAAA;AAAA;AAAA;;AAAA;AAAA,SADO;AASP;AAAA,+FAA+B;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,yBAET,IAAIJ,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACjDC,oBAAAA,UAAU,CAAC,YAAM;AACfD,sBAAAA,MAAM,CAAC,YAAD,CAAN;AACD,qBAFS,EAEP,IAFO,CAAV;AAGD,mBAJiB,CAFS;;AAAA;AAEvBE,kBAAAA,KAFuB;AAAA;AAAA;;AAAA;AAAA;AAAA;AAQ3B,uBAAKC,YAAL,CAAkB,YAAlB,gBAAmC,kBAAnC;;AAR2B;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,SAA/B;;AAAA;AAAA;AAAA;;AAAA;AAAA,SATO;AAoBP;AAAA,oGAAoC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,yBAEd,IAAIL,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACjDI,oBAAAA,mBAAmB;AACpB,mBAFiB,CAFc;;AAAA;AAE5BF,kBAAAA,KAF4B;AAAA;AAAA;;AAAA;AAAA;AAAA;AAM5BG,kBAAAA,CAN4B;AAOhC,uBAAKF,YAAL,CAAkB,oCAAlB,EAAwDE,CAAC,CAACC,OAA1D,EAAmE,qBAAnE;;AAPgC;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,SAApC;;AAAA;AAAA;AAAA;;AAAA;AAAA,SApBO;AA8BP;AAAA,4FAA2B;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,yBAEL,IAAIR,OAAJ,CAAY,UAACC,OAAD,EAAUC,MAAV,EAAqB;AACjD,0BAAM,IAAIO,KAAJ,CAAU,KAAV,CAAN;AACD,mBAFiB,CAFK;;AAAA;AAEnBL,kBAAAA,KAFmB;AAAA;AAAA;;AAAA;AAAA;AAAA;AAMnBG,kBAAAA,CANmB;AAOvB,uBAAKF,YAAL,CAAkB,KAAlB,EAAyBE,CAAC,CAACC,OAA3B,EAAoC,aAApC;;AAPuB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,SAA3B;;AAAA;AAAA;AAAA;;AAAA;AAAA;AA9BO;AAFoD,GAA/D;AAAAE,EAAAA,GAAG,CAACC,cAAJ,CAAmBC,IAAnB,CAAwBC,mBAAxB,CAA4CrB,aAA5C,GAA4DA,aAA5D",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.testtapperdemo.test.Test09AsyncFunction\", {\n  extend: qx.dev.unit.TestCase,\n  members: {\n    \"test01: async function\": async function () {\n      let value = await new Promise((resolve, reject) => {\n        setTimeout(() => {\n          resolve(\"resolved\");\n        }, 1000);\n      });\n      this.assertEquals(\"resolved\", value, \"Timeout Resolved\");\n    },\n    \"test02: async function fail\": async function () {\n      try {\n        let value = await new Promise((resolve, reject) => {\n          setTimeout(() => {\n            reject(\"unresolved\");\n          }, 1000);\n        });\n      } catch (e) {\n        this.assertEquals(\"unresolved\", e, \"Timeout Rejected\");\n      }\n    },\n    \"test03: async function exception\": async function () {\n      try {\n        let value = await new Promise((resolve, reject) => {\n          unknownFunctionCall();\n        });\n      } catch (exc) {\n        let e = exc;\n        this.assertEquals(\"unknownFunctionCall is not defined\", e.message, \"unknownFunctionCall\");\n      }\n    },\n    \"test04: async exception\": async function () {\n      try {\n        let value = await new Promise((resolve, reject) => {\n          throw new Error(\"exc\");\n        });\n      } catch (exc) {\n        let e = exc;\n        this.assertEquals(\"exc\", e.message, \"throw Error\");\n      }\n    }\n  }\n});\n"
+  ]
+}

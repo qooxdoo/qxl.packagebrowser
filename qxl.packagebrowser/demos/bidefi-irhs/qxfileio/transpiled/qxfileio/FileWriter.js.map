@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/bidefi-irhs_qxfileio_v0_4_1/source/class/qxfileio/FileWriter.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "core",
+    "Object",
+    "properties",
+    "type",
+    "nullable",
+    "init",
+    "members",
+    "saveTextAsFile",
+    "text",
+    "fileName",
+    "textFileAsBlob",
+    "Blob",
+    "getType",
+    "downloadLink",
+    "document",
+    "createElement",
+    "download",
+    "innerHTML",
+    "href",
+    "window",
+    "URL",
+    "createObjectURL",
+    "onclick",
+    "e",
+    "body",
+    "removeChild",
+    "target",
+    "style",
+    "display",
+    "appendChild",
+    "click",
+    "qxfileio",
+    "FileWriter"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,qBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,IAAH,CAAQC,MADnB;AAGEC,IAAAA,UAAU,EAAG;AACX;AACJ;AACA;AACIC,MAAAA,IAAI,EAAG;AACLC,QAAAA,QAAQ,EAAG,KADN;AAELC,QAAAA,IAAI,EAAG;AAFF;AAJI,KAHf;AAaEC,IAAAA,OAAO,EACP;AACE;AACJ;AACA;AACA;AACA;AACA;AACIC,MAAAA,cAAc,EAAG,wBAASC,IAAT,EAAeC,QAAf,EAAyB;AACxC,YAAIC,cAAc,GAAG,IAAIC,IAAJ,CAAS,CAACH,IAAD,CAAT,EAAiB;AAACL,UAAAA,IAAI,EAAE,KAAKS,OAAL;AAAP,SAAjB,CAArB;AAEA,YAAIC,YAAY,GAAGC,QAAQ,CAACC,aAAT,CAAuB,GAAvB,CAAnB;AACAF,QAAAA,YAAY,CAACG,QAAb,GAAwBP,QAAxB;AACAI,QAAAA,YAAY,CAACI,SAAb,GAAyB,eAAzB;AACAJ,QAAAA,YAAY,CAACK,IAAb,GAAoBC,MAAM,CAACC,GAAP,CAAWC,eAAX,CAA2BX,cAA3B,CAApB;;AACAG,QAAAA,YAAY,CAACS,OAAb,GAAuB,UAASC,CAAT,EAAY;AACjCT,UAAAA,QAAQ,CAACU,IAAT,CAAcC,WAAd,CAA0BF,CAAC,CAACG,MAA5B;AACD,SAFD;;AAGAb,QAAAA,YAAY,CAACc,KAAb,CAAmBC,OAAnB,GAA6B,MAA7B;AACAd,QAAAA,QAAQ,CAACU,IAAT,CAAcK,WAAd,CAA0BhB,YAA1B;AACAA,QAAAA,YAAY,CAACiB,KAAb;AACD;AApBH;AAdF,GADA;AAHAC,EAAAA,QAAQ,CAACC,UAAT,CAAoBpC,aAApB,GAAoCA,aAApC",
+  "sourcesContent": [
+    "/**\n * Write file to the client side file system.\n */\nqx.Class.define(\"qxfileio.FileWriter\",\n{\n  extend : qx.core.Object,\n\n  properties : {\n    /**\n     * MIME type for the file to be written.\n     */\n    type : {\n      nullable : false,\n      init : \"text/plain\"\n    }\n  },\n\n  members :\n  {\n    /**\n     * Effectively write the file to the client side file system.\n     *\n     * @param text {String} the content to be written to the file.\n     * @param fileName {String} the file name to be used.\n     */\n    saveTextAsFile : function(text, fileName) {\n      var textFileAsBlob = new Blob([text], {type: this.getType()});\n\n      var downloadLink = document.createElement(\"a\");\n      downloadLink.download = fileName;\n      downloadLink.innerHTML = \"Download File\";\n      downloadLink.href = window.URL.createObjectURL(textFileAsBlob);\n      downloadLink.onclick = function(e) {\n        document.body.removeChild(e.target);\n      };\n      downloadLink.style.display = \"none\";\n      document.body.appendChild(downloadLink);\n      downloadLink.click();\n    }\n  }\n});\n"
+  ]
+}

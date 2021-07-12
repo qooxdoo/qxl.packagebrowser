@@ -1,0 +1,219 @@
+{
+  "className": "ville.theme.wireframe.MFreestyleCss",
+  "packageName": "ville.theme.wireframe",
+  "name": "MFreestyleCss",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 17,
+        "column": 0
+      },
+      "end": {
+        "line": 171,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>Custom (Freestyle) CSS/CSS3 implementation\n This mixin is used by {@link qx.ui.decoration.Decorator}.</p>"
+        }
+      ]
+    }
+  },
+  "type": "mixin",
+  "properties": {
+    "freestyleCss": {
+      "location": {
+        "start": {
+          "line": 35,
+          "column": 4
+        },
+        "end": {
+          "line": 41,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>name of freesytle css block</p>"
+          }
+        ]
+      },
+      "name": "freestyleCss",
+      "propertyType": "new",
+      "apply": "_applyFreestyleCss",
+      "nullable": true,
+      "init": "",
+      "allowNull": true,
+      "check": "String",
+      "defaultValue": ""
+    }
+  },
+  "members": {
+    "_styleFreestyleCss": {
+      "location": {
+        "start": {
+          "line": 54,
+          "column": 4
+        },
+        "end": {
+          "line": 100,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Takes a styles map and adds CSS/CSS3 entries in place\n to the given map. This is the needed behavior for\n {@link qx.ui.decoration.Decorator}.</p>"
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "body": "styles {Map} A map to add the styles.",
+            "paramName": "styles",
+            "description": " A map to add the styles.",
+            "type": "Map"
+          }
+        ]
+      },
+      "type": "function",
+      "access": "protected"
+    },
+    "_buildIncludeChain": {
+      "location": {
+        "start": {
+          "line": 103,
+          "column": 4
+        },
+        "end": {
+          "line": 124,
+          "column": 5
+        }
+      },
+      "type": "function",
+      "access": "protected"
+    },
+    "_includeFreestyleStyles": {
+      "location": {
+        "start": {
+          "line": 127,
+          "column": 4
+        },
+        "end": {
+          "line": 142,
+          "column": 5
+        }
+      },
+      "type": "function",
+      "access": "protected"
+    },
+    "_mergeRecursive": {
+      "location": {
+        "start": {
+          "line": 145,
+          "column": 4
+        },
+        "end": {
+          "line": 159,
+          "column": 5
+        }
+      },
+      "type": "function",
+      "access": "protected"
+    },
+    "_applyFreestyleCss": {
+      "location": {
+        "start": {
+          "line": 161,
+          "column": 4
+        },
+        "end": {
+          "line": 169,
+          "column": 5
+        }
+      },
+      "type": "function",
+      "access": "protected",
+      "applyFor": [
+        "freestyleCss"
+      ]
+    },
+    "getFreestyleCss": {
+      "type": "function",
+      "name": "getFreestyleCss",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "get",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>freestyleCss</code>.\n\nFor further details take a look at the property definition: {@link #freestyleCss}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "String",
+            "desc": "Returns the value for freestyleCss"
+          }
+        ]
+      }
+    },
+    "setFreestyleCss": {
+      "type": "function",
+      "name": "setFreestyleCss",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "set",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Sets the user value of the property <code>freestyleCss</code>.\n\nFor further details take a look at the property definition: {@link #freestyleCss}."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "type": "String",
+            "paramName": "value",
+            "desc": "Value for freestyleCss"
+          }
+        ]
+      }
+    },
+    "resetFreestyleCss": {
+      "type": "function",
+      "name": "resetFreestyleCss",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "reset",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Resets the user value of the property <code>freestyleCss</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #freestyleCss}."
+          }
+        ]
+      }
+    }
+  },
+  "descendants": []
+}

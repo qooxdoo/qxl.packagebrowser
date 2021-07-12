@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_GroupBox_v1_0_2/source/class/wax/demo/theme/Font.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "indigo",
+    "Font",
+    "fonts",
+    "size",
+    "family",
+    "color",
+    "lineHeight",
+    "include",
+    "bold",
+    "wax",
+    "demo"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,qBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,IAD3B;AAGEC,IAAAA,KAAK,EACL;AACE,iBACA;AACEC,QAAAA,IAAI,EAAG,EADT;AAEEC,QAAAA,MAAM,EAAG,CAAC,MAAD,EAAS,gBAAT,EAA2B,OAA3B,EAAoC,WAApC,EAAiD,YAAjD,CAFX;AAGEC,QAAAA,KAAK,EAAG,MAHV;AAIEC,QAAAA,UAAU,EAAE;AAJd,OAFF;AASE,sBACA;AACEC,QAAAA,OAAO,EAAG,SADZ;AAEEC,QAAAA,IAAI,EAAG;AAFT,OAVF;AAeE,wBACA;AACED,QAAAA,OAAO,EAAG,SADZ;AAEEJ,QAAAA,IAAI,EAAG;AAFT,OAhBF;AAqBE,4BACA;AACEI,QAAAA,OAAO,EAAG,cADZ;AAEEJ,QAAAA,IAAI,EAAG,EAFT;AAGEG,QAAAA,UAAU,EAAE;AAHd,OAtBF;AA4BE,2BACA;AACEC,QAAAA,OAAO,EAAG,cADZ;AAEEJ,QAAAA,IAAI,EAAG;AAFT,OA7BF;AAkCE,oBACA;AACEI,QAAAA,OAAO,EAAG,cADZ;AAEEJ,QAAAA,IAAI,EAAG;AAFT,OAnCF;AAwCE,wBACA;AACCI,QAAAA,OAAO,EAAG,SADX;AAECJ,QAAAA,IAAI,EAAG;AAFR,OAzCF;AA8CE,qBACA;AACEI,QAAAA,OAAO,EAAG,SADZ;AAEEJ,QAAAA,IAAI,EAAG;AAFT,OA/CF;AAoDE,wBACA;AACEI,QAAAA,OAAO,EAAG,SADZ;AAEEH,QAAAA,MAAM,EAAG,CAAC,eAAD,EAAkB,oBAAlB,EAAwC,gBAAxC,EAA0D,OAA1D,EAAmE,WAAnE,EAAgF,YAAhF,CAFX;AAGEI,QAAAA,IAAI,EAAG,IAHT;AAIEL,QAAAA,IAAI,EAAG;AAJT;AArDF;AAJF,GADA;AAVAM,EAAAA,GAAG,CAACC,IAAJ,CAASX,KAAT,CAAeE,IAAf,CAAoBN,aAApB,GAAoCA,aAApC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n\n   License:\n\n   Authors:\n\n************************************************************************ */\n\nqx.Theme.define(\"wax.demo.theme.Font\",\n{\n  extend : qx.theme.indigo.Font,\n\n  fonts :\n  {\n    \"default\" :\n    {\n      size : 14,\n      family : [\"Lato\", \"Helvetica Neue\", \"arial\", \"Helvetica\", \"sans-serif\"],\n      color : \"text\",\n      lineHeight: 1.5\n    },\n\n    \"default-bold\" :\n    {\n      include : \"default\",\n      bold : true\n    },\n\n    \"mainmenubutton\" :\n    {\n      include : \"default\",\n      size : 16\n    },\n\n    \"mainmenubutton-hym\" :\n    {\n      include : \"default-bold\",\n      size : 10,\n      lineHeight: 1.2\n    },\n\n    \"mainmenuindicator\" :\n    {\n      include : \"default-bold\",\n      size : 14\n    },\n\n    \"headeratom\" :\n    {\n      include : \"default-bold\",\n      size : 16\n    },\n\n    \"control-header\" :\n    {\n    \tinclude : \"default\",\n    \tsize : 32\n    },\n\n    \"area-header\" :\n    {\n      include : \"default\",\n      size : 21\n    },\n\n    \"hym-app-header\" :\n    {\n      include : \"default\",\n      family : [\"-apple-system\", \"BlinkMacSystemFont\", \"Helvetica Neue\", \"arial\", \"Helvetica\", \"sans-serif\"],\n      bold : true,\n      size : 16\n    }\n  }\n});"
+  ]
+}

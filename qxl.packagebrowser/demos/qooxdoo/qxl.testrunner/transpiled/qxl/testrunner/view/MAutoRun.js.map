@@ -1,0 +1,36 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testrunner_v6_0_1/source/class/qxl/testrunner/view/MAutoRun.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Mixin",
+    "define",
+    "construct",
+    "parsedUri",
+    "util",
+    "Uri",
+    "parseUri",
+    "location",
+    "href",
+    "queryKey",
+    "autorun",
+    "setAutoRun",
+    "properties",
+    "autoRun",
+    "check",
+    "init",
+    "qxl",
+    "testrunner",
+    "view",
+    "MAutoRun"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,8BAAhB,EAAgD;AAE9CC,IAAAA,SAAS,EAAG,qBAAW;AACrB,UAAIC,SAAS,GAAGP,EAAE,CAACQ,IAAH,CAAQC,GAAR,CAAYC,QAAZ,CAAqBC,QAAQ,CAACC,IAA9B,EAAoC,IAApC,CAAhB;;AACA,UAAIL,SAAS,CAACM,QAAV,IAAsBN,SAAS,CAACM,QAAV,CAAmBC,OAA7C,EAAsD;AACpD,aAAKC,UAAL,CAAgB,IAAhB;AACD;AACF,KAP6C;AAS9CC,IAAAA,UAAU,EACV;AACE;AACAC,MAAAA,OAAO,EACP;AACEC,QAAAA,KAAK,EAAE,SADT;AAEEC,QAAAA,IAAI,EAAG;AAFT;AAHF;AAV8C,GAAhD;AAnBAC,EAAAA,GAAG,CAACC,UAAJ,CAAeC,IAAf,CAAoBC,QAApB,CAA6BpB,aAA7B,GAA6CA,aAA7C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2010 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n************************************************************************ */\n\n/**\n * Checks for the presence of a parameter named \"autorun\" in the Testrunner URI\n * and sets the autoRun property accordingly.\n */\nqx.Mixin.define(\"qxl.testrunner.view.MAutoRun\", {\n\n  construct : function() {\n    var parsedUri = qx.util.Uri.parseUri(location.href, true);\n    if (parsedUri.queryKey && parsedUri.queryKey.autorun) {\n      this.setAutoRun(true);\n    }\n  },\n\n  properties :\n  {\n    /** Automatically run the selected tests after loading */\n    autoRun :\n    {\n      check :\"Boolean\",\n      init : false\n    }\n  }\n});\n"
+  ]
+}

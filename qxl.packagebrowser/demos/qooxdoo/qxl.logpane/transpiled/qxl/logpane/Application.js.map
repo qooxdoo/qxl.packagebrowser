@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_logpane_v1_0_3/source/class/qxl/logpane/Application.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "application",
+    "Standalone",
+    "members",
+    "main",
+    "view",
+    "qxl",
+    "logpane",
+    "LogPane",
+    "getRoot",
+    "add",
+    "edge",
+    "fetch",
+    "window",
+    "setInterval",
+    "log",
+    "Logger",
+    "debug",
+    "Date",
+    "Application"
+  ],
+  "mappings": ";;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,yBAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,WAAH,CAAeC,UAD1B;AAGEC,IAAAA,OAAO,EACP;AACEC,MAAAA,IAAI,EAAG,gBAAW;AAChB;AAEA,YAAIC,IAAI,GAAG,IAAIC,GAAG,CAACC,OAAJ,CAAYC,OAAhB,EAAX;AACA,aAAKC,OAAL,GAAeC,GAAf,CAAmBL,IAAnB,EAAyB;AAACM,UAAAA,IAAI,EAAE;AAAP,SAAzB;AACAN,QAAAA,IAAI,CAACO,KAAL;AAEAC,QAAAA,MAAM,CAACC,WAAP,CAAmB,YAAW;AAC5BpB,UAAAA,EAAE,CAACqB,GAAH,CAAOC,MAAP,CAAcC,KAAd,CAAoB,IAAIC,IAAJ,KAAa,4BAAjC;AACAb,UAAAA,IAAI,CAACO,KAAL;AACD,SAHD,EAGG,IAHH;AAID;AAZH;AAJF,GADA;AAlBAN,EAAAA,GAAG,CAACC,OAAJ,CAAYY,WAAZ,CAAwBtB,aAAxB,GAAwCA,aAAxC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   qooxdoo - the new era of web development\n\n   http://qooxdoo.org\n\n   Copyright:\n     2004-2011 1&1 Internet AG, Germany, http://www.1und1.de\n\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Martin Wittemann (martinwittemann)\n\n************************************************************************ */\n\nqx.Class.define(\"qxl.logpane.Application\",\n{\n  extend : qx.application.Standalone,\n\n  members :\n  {\n    main : function() {\n      this.base(arguments);\n\n      var view = new qxl.logpane.LogPane();\n      this.getRoot().add(view, {edge: 0});\n      view.fetch();\n\n      window.setInterval(function() {\n        qx.log.Logger.debug(new Date() + \" printing new log message.\");\n        view.fetch();\n      }, 1000);\n    }\n  }\n});\n"
+  ]
+}

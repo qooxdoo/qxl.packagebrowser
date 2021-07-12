@@ -1,0 +1,43 @@
+{
+  "className": "silverbluetheme.theme.Theme",
+  "packageName": "silverbluetheme.theme",
+  "name": "Theme",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 14,
+        "column": 0
+      },
+      "end": {
+        "line": 24,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "themeMeta": {
+    "location": {
+      "start": {
+        "line": 16,
+        "column": 2
+      },
+      "end": {
+        "line": 23,
+        "column": 3
+      }
+    },
+    "themeMetaMap": {
+      "appearance": "silverbluetheme.theme.Appearance",
+      "decoration": "silverbluetheme.theme.Decoration",
+      "color": "silverbluetheme.theme.Color",
+      "font": "silverbluetheme.theme.Font",
+      "icon": "qx.theme.icon.Oxygen"
+    }
+  },
+  "descendants": []
+}

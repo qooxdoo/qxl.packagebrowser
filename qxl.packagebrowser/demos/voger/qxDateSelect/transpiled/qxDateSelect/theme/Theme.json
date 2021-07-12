@@ -1,0 +1,43 @@
+{
+  "className": "qxDateSelect.theme.Theme",
+  "packageName": "qxDateSelect.theme",
+  "name": "Theme",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 11,
+        "column": 0
+      },
+      "end": {
+        "line": 21,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "themeMeta": {
+    "location": {
+      "start": {
+        "line": 13,
+        "column": 2
+      },
+      "end": {
+        "line": 20,
+        "column": 3
+      }
+    },
+    "themeMetaMap": {
+      "color": "qxDateSelect.theme.Color",
+      "decoration": "qxDateSelect.theme.Decoration",
+      "font": "qxDateSelect.theme.Font",
+      "icon": "qx.theme.icon.Tango",
+      "appearance": "qxDateSelect.theme.Appearance"
+    }
+  },
+  "descendants": []
+}

@@ -1,0 +1,24 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/voger_qxgraphql_v0_0_2/source/class/qxgraphql/theme/Appearance.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "extend",
+    "theme",
+    "indigo",
+    "Appearance",
+    "appearances",
+    "qxgraphql"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,4BAAhB,EACA;AACEC,IAAAA,MAAM,EAAGN,EAAE,CAACO,KAAH,CAASC,MAAT,CAAgBC,UAD3B;AAGEC,IAAAA,WAAW,EACX;AAJF,GADA;AAVAC,EAAAA,SAAS,CAACJ,KAAV,CAAgBE,UAAhB,CAA2BN,aAA3B,GAA2CA,aAA3C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: 2019 \n\n   License: MIT license\n\n   Authors: \n\n************************************************************************ */\n\nqx.Theme.define(\"qxgraphql.theme.Appearance\",\n{\n  extend : qx.theme.indigo.Appearance,\n\n  appearances :\n  {\n  }\n});\n"
+  ]
+}

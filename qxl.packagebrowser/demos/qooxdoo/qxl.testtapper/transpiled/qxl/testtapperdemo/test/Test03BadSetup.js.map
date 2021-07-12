@@ -1,0 +1,30 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qxl_testtapper_v1_0_11/source/class/qxl/testtapperdemo/test/Test03BadSetup.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "dev",
+    "unit",
+    "TestCase",
+    "members",
+    "setUp",
+    "callUnknownFunctionInSetup",
+    "assert",
+    "qxl",
+    "testtapperdemo",
+    "test",
+    "Test03BadSetup"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,wCAAhB,EAA0D;AACxDC,IAAAA,MAAM,EAAEN,EAAE,CAACO,GAAH,CAAOC,IAAP,CAAYC,QADoC;AAExDC,IAAAA,OAAO,EAAE;AACPC,MAAAA,KAAK,EAAE,iBAAY;AACjB,aAAKC,0BAAL;AACD,OAHM;AAIP,6BAAuB,0BAAY;AAC/B,aAAKC,MAAL,OAAkB,gBAAlB;AACH;AANM;AAF+C,GAA1D;AAAAC,EAAAA,GAAG,CAACC,cAAJ,CAAmBC,IAAnB,CAAwBC,cAAxB,CAAuCd,aAAvC,GAAuDA,aAAvD",
+  "sourcesContent": [
+    "qx.Class.define(\"qxl.testtapperdemo.test.Test03BadSetup\", {\n  extend: qx.dev.unit.TestCase,\n  members: {\n    setUp: function () {\n      this.callUnknownFunctionInSetup();\n    },\n    \"test01: assert 1==1\": function () {\n        this.assert(1==1, \"One equals one\");\n    }\n  }\n});\n"
+  ]
+}

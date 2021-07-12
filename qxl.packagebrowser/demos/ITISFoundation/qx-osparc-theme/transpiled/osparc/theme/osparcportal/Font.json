@@ -1,0 +1,24 @@
+{
+  "className": "osparc.theme.osparcportal.Font",
+  "packageName": "osparc.theme.osparcportal",
+  "name": "Font",
+  "superClass": "osparc.theme.common.Font",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 20,
+        "column": 0
+      },
+      "end": {
+        "line": 206,
+        "column": 3
+      }
+    },
+    "jsdoc": {}
+  },
+  "type": "theme",
+  "descendants": []
+}

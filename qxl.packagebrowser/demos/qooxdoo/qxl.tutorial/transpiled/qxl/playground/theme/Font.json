@@ -1,0 +1,31 @@
+{
+  "className": "qxl.playground.theme.Font",
+  "packageName": "qxl.playground.theme",
+  "name": "Font",
+  "superClass": "qx.theme.indigo.Font",
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 0
+      },
+      "end": {
+        "line": 61,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The custom font theme for the qxl.playground.</p>"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

@@ -1,0 +1,37 @@
+{
+  "className": "ville.theme.clean.Font",
+  "packageName": "ville.theme.clean",
+  "name": "Font",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 23,
+        "column": 0
+      },
+      "end": {
+        "line": 131,
+        "column": 3
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": "<p>The ville.Clean font theme.</p>"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "ville/theme/clean/font/Lato/*.ttf"
+        }
+      ]
+    }
+  },
+  "type": "theme",
+  "descendants": []
+}

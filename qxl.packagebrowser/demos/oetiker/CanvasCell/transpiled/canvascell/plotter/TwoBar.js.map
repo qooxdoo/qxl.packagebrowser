@@ -1,0 +1,53 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/oetiker_CanvasCell_v1_0_4/source/class/canvascell/plotter/TwoBar.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Class",
+    "define",
+    "extend",
+    "core",
+    "Object",
+    "construct",
+    "cfg",
+    "__cfg",
+    "mainbarFill",
+    "mainbarBorder",
+    "stackbarFill",
+    "stackbarBorder",
+    "reset",
+    "members",
+    "__max",
+    "plot",
+    "c",
+    "cellInfo",
+    "w",
+    "h",
+    "d",
+    "value",
+    "isNaN",
+    "mainbar",
+    "sum",
+    "stackbar",
+    "redraw",
+    "Math",
+    "round",
+    "strokeWidth",
+    "fillStyle",
+    "strokeStyle",
+    "fillRect",
+    "strokeRect",
+    "canvascell",
+    "plotter",
+    "TwoBar"
+  ],
+  "mappings": ";;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,2BAAhB,EAA6C;AACzCC,IAAAA,MAAM,EAAGN,EAAE,CAACO,IAAH,CAAQC,MADwB;;AAGzC;AACJ;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACIC,IAAAA,SAAS,EAAG,mBAASC,GAAT,EAAc;AACtB;AAEA,WAAKC,QAAL,GAAa;AACTC,QAAAA,WAAW,EAAMF,GAAG,CAACE,WAAJ,IAAmB,MAD3B;AAETC,QAAAA,aAAa,EAAIH,GAAG,CAACG,aAAJ,IAAqB,MAF7B;AAGTC,QAAAA,YAAY,EAAKJ,GAAG,CAACI,YAAJ,IAAoB,MAH5B;AAITC,QAAAA,cAAc,EAAGL,GAAG,CAACK,cAAJ,IAAsB;AAJ9B,OAAb;AAOA,WAAKC,KAAL;AACH,KA5BwC;AA8BzCC,IAAAA,OAAO,EAAG;AACNN,MAAAA,QAAK,EAAG,IADF;AAENO,MAAAA,QAAK,EAAG,IAFF;;AAKN;AACR;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACQC,MAAAA,IAAI,EAAG,cAASC,CAAT,EAAYC,QAAZ,EAAsBC,CAAtB,EAAyBC,CAAzB,EAA4B;AAC/B,YAAIC,CAAC,GAAGH,QAAQ,CAACI,KAAjB;;AAEA,YAAIC,KAAK,CAACF,CAAC,CAACG,OAAH,CAAT,EAAsB;AAClB,iBAAO,KAAP;AACH;;AAED,YAAIjB,GAAG,GAAG,KAAKC,QAAf;AACA,YAAIiB,GAAG,GAAGJ,CAAC,CAACG,OAAZ;;AAEA,YAAI,CAACD,KAAK,CAACF,CAAC,CAACK,QAAH,CAAV,EAAwB;AACpBD,UAAAA,GAAG,IAAIJ,CAAC,CAACK,QAAT;AACH;;AAED,YAAIC,MAAJ;;AAEA,YAAIF,GAAG,GAAG,KAAKV,QAAf,EAAsB;AAClB,eAAKA,QAAL,GAAaU,GAAb;AACAE,UAAAA,MAAM,GAAG,IAAT;AACH;;AAED,YAAIH,OAAO,GAAGI,IAAI,CAACC,KAAL,CAAWR,CAAC,CAACG,OAAF,IAAaL,CAAC,GAAG,CAAjB,IAAsB,KAAKJ,QAAtC,CAAd;AACAE,QAAAA,CAAC,CAACa,WAAF,GAAgB,GAAhB;AACAb,QAAAA,CAAC,CAACc,SAAF,GAAcxB,GAAG,CAACE,WAAlB;AACAQ,QAAAA,CAAC,CAACe,WAAF,GAAgBzB,GAAG,CAACG,aAApB;AACAO,QAAAA,CAAC,CAACgB,QAAF,CAAW,GAAX,EAAgB,GAAhB,EAAqBT,OAArB,EAA8BJ,CAAC,GAAG,CAAlC;AACAH,QAAAA,CAAC,CAACiB,UAAF,CAAa,GAAb,EAAkB,GAAlB,EAAuBV,OAAvB,EAAgCJ,CAAC,GAAG,CAApC;;AAEA,YAAI,CAACG,KAAK,CAACF,CAAC,CAACK,QAAH,CAAV,EAAwB;AACpB,cAAIA,QAAQ,GAAGE,IAAI,CAACC,KAAL,CAAWR,CAAC,CAACK,QAAF,GAAaP,CAAb,GAAiB,KAAKJ,QAAjC,CAAf;AACAE,UAAAA,CAAC,CAACc,SAAF,GAAcxB,GAAG,CAACI,YAAlB;AACAM,UAAAA,CAAC,CAACe,WAAF,GAAgBzB,GAAG,CAACK,cAApB;AACAK,UAAAA,CAAC,CAACgB,QAAF,CAAWT,OAAO,GAAGE,QAAV,GAAqB,GAAhC,EAAqC,GAArC,EAA0C,IAAIA,QAA9C,EAAwDN,CAAC,GAAG,EAA5D;AACAH,UAAAA,CAAC,CAACiB,UAAF,CAAaV,OAAO,GAAGE,QAAV,GAAqB,GAAlC,EAAuC,GAAvC,EAA4C,IAAIA,QAAhD,EAA0DN,CAAC,GAAG,EAA9D;AACH;;AAED,eAAOO,MAAP;AACH,OAnDK;;AAsDN;AACR;AACA;AACA;AACA;AACQd,MAAAA,KAAK,EAAG,iBAAW;AACf,aAAKE,QAAL,GAAa,CAAb;AACH;AA7DK;AA9B+B,GAA7C;AAvBAoB,EAAAA,UAAU,CAACC,OAAX,CAAmBC,MAAnB,CAA0BrC,aAA1B,GAA0CA,aAA1C",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright:\n     2010 OETIKER+PARTNER AG, http://www.oetiker.ch\n     \n   License:\n     LGPL: http://www.gnu.org/licenses/lgpl.html\n     EPL: http://www.eclipse.org/org/documents/epl-v10.php\n     See the LICENSE file in the project's top-level directory for details.\n\n   Authors:\n     * Tobias Oetiker (oetiker)\n\n************************************************************************ */\n// Utf8Check: äöü\n\n/**\n * Plotter Plugin for the Canvas cellrenderer.\n * Draw two bars where the second sits on the first\n * and extends in both directions ... Ideal for average and standarddeviation.\n * The plotter expects a object in the respective table column with the properties\n * mainbar and stackbar.\n */\nqx.Class.define(\"canvascell.plotter.TwoBar\", {\n    extend : qx.core.Object,\n\n    /**\n     * Instanciate the plotter\n     *\n     * @param cfg {Map} configuration map\n     * \n     * <pre class='javascript'>\n     * cfg = {\n     *    mainbarFill:   '#color',\n     *    mainbarBorder: '#color',\n     *    stackbarFill:  '#color',\n     *    stackbarBorder:'#color'\n     * }; \n     * </pre>\n     */\n    construct : function(cfg) {\n        this.base(arguments);\n\n        this.__cfg = {\n            mainbarFill    : cfg.mainbarFill || '#f88',\n            mainbarBorder  : cfg.mainbarBorder || '#b44',\n            stackbarFill   : cfg.stackbarFill || '#88f',\n            stackbarBorder : cfg.stackbarBorder || '#44b'\n        };\n\n        this.reset();\n    },\n\n    members : {\n        __cfg : null,\n        __max : null,\n\n\n        /**\n         * Do the actual plotting.\n         *\n         * @param c {var} context\n         * @param cellInfo {var} cellinfo\n         * @param w {var} width\n         * @param h {Map} height\n         * @return {boolean} should the row be re-drawn?\n         */\n        plot : function(c, cellInfo, w, h) {\n            var d = cellInfo.value;\n\n            if (isNaN(d.mainbar)) {\n                return false;\n            }\n\n            var cfg = this.__cfg;\n            var sum = d.mainbar;\n\n            if (!isNaN(d.stackbar)) {\n                sum += d.stackbar;\n            }\n\n            var redraw;\n\n            if (sum > this.__max) {\n                this.__max = sum;\n                redraw = true;\n            }\n\n            var mainbar = Math.round(d.mainbar * (w - 4) / this.__max);\n            c.strokeWidth = 0.5;\n            c.fillStyle = cfg.mainbarFill;\n            c.strokeStyle = cfg.mainbarBorder;\n            c.fillRect(0.5, 2.5, mainbar, h - 6);\n            c.strokeRect(0.5, 2.5, mainbar, h - 6);\n\n            if (!isNaN(d.stackbar)) {\n                var stackbar = Math.round(d.stackbar * w / this.__max);\n                c.fillStyle = cfg.stackbarFill;\n                c.strokeStyle = cfg.stackbarBorder;\n                c.fillRect(mainbar - stackbar + 0.5, 6.5, 2 * stackbar, h - 13);\n                c.strokeRect(mainbar - stackbar + 0.5, 6.5, 2 * stackbar, h - 13);\n            }\n\n            return redraw;\n        },\n\n\n        /**\n         * clear the scaling information.\n         *\n         * @return {void} \n         */\n        reset : function() {\n            this.__max = 0;\n        }\n    }\n});\n"
+  ]
+}

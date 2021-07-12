@@ -1,0 +1,31 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/voger_qxgraphql_v0_0_2/source/class/qxgraphql/demo/views/widgets/MHeadersListModel.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Mixin",
+    "define",
+    "members",
+    "isEmpty",
+    "falseys",
+    "key",
+    "getKey",
+    "value",
+    "getValue",
+    "includes",
+    "qxgraphql",
+    "demo",
+    "views",
+    "widgets",
+    "MHeadersListModel"
+  ],
+  "mappings": ";;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;AAAAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,gDAAhB,EAAkE;AAChEC,IAAAA,OAAO,EAAE;AAEP;AACA;AACAC,MAAAA,OAAO,EAAE,mBAAW;AAClB,YAAMC,OAAO,GAAG,CAAC,IAAD,EAAO,EAAP,CAAhB;AACA,YAAMC,GAAG,GAAG,KAAKC,MAAL,EAAZ;AACA,YAAMC,KAAK,GAAG,KAAKC,QAAL,EAAd;AACA,eAAQJ,OAAO,CAACK,QAAR,CAAiBJ,GAAjB,KAAyBD,OAAO,CAACK,QAAR,CAAiBF,KAAjB,CAAjC;AACD;AATM;AADuD,GAAlE;AAAAG,EAAAA,SAAS,CAACC,IAAV,CAAeC,KAAf,CAAqBC,OAArB,CAA6BC,iBAA7B,CAA+Cf,aAA/C,GAA+DA,aAA/D",
+  "sourcesContent": [
+    "qx.Mixin.define(\"qxgraphql.demo.views.widgets.MHeadersListModel\", {\n  members: {\n\n    // returns true if the `key` property is null or \n    // empty string\n    isEmpty: function() {\n      const falseys = [null, \"\"];\n      const key = this.getKey();\n      const value = this.getValue();\n      return (falseys.includes(key) && falseys.includes(value));\n    }\n  }\n});\n"
+  ]
+}

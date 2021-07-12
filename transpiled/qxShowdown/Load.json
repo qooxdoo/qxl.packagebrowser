@@ -1,0 +1,43 @@
+{
+  "className": "qxShowdown.Load",
+  "packageName": "qxShowdown",
+  "name": "Load",
+  "superClass": null,
+  "interfaces": [],
+  "mixins": [],
+  "functionName": null,
+  "clazz": {
+    "location": {
+      "start": {
+        "line": 17,
+        "column": 0
+      },
+      "end": {
+        "line": 17,
+        "column": 39
+      }
+    },
+    "jsdoc": {
+      "@description": [
+        {
+          "name": "@description",
+          "body": ""
+        }
+      ],
+      "@ignore": [
+        {
+          "name": "@ignore",
+          "body": "showdown.Converter"
+        }
+      ],
+      "@asset": [
+        {
+          "name": "@asset",
+          "body": "qx-showdown/*"
+        }
+      ]
+    }
+  },
+  "type": "class",
+  "descendants": []
+}

@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "sources": [
+    "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/sqville_ville_Wireframe_v1_0_0/source/class/ville/theme/Wireframe.js"
+  ],
+  "names": [
+    "qx",
+    "Bootstrap",
+    "executePendingDefers",
+    "$$dbClassInfo",
+    "Theme",
+    "define",
+    "meta",
+    "color",
+    "ville",
+    "theme",
+    "wireframe",
+    "Color",
+    "decoration",
+    "Decoration",
+    "font",
+    "Font",
+    "icon",
+    "Tango",
+    "appearance",
+    "Appearance",
+    "Wireframe"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;AAAAA,EAAAA,EAAE,CAACC,SAAH,CAAaC,oBAAb,CAAkCC,aAAlC;;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEAH,EAAAA,EAAE,CAACI,KAAH,CAASC,MAAT,CAAgB,uBAAhB,EACA;AACEC,IAAAA,IAAI,EACJ;AACEC,MAAAA,KAAK,EAAGC,KAAK,CAACC,KAAN,CAAYC,SAAZ,CAAsBC,KADhC;AAEEC,MAAAA,UAAU,EAAGJ,KAAK,CAACC,KAAN,CAAYC,SAAZ,CAAsBG,UAFrC;AAGEC,MAAAA,IAAI,EAAGN,KAAK,CAACC,KAAN,CAAYC,SAAZ,CAAsBK,IAH/B;AAIEC,MAAAA,IAAI,EAAGhB,EAAE,CAACS,KAAH,CAASO,IAAT,CAAcC,KAJvB;AAKEC,MAAAA,UAAU,EAAGV,KAAK,CAACC,KAAN,CAAYC,SAAZ,CAAsBS;AALrC;AAFF,GADA;AAZAX,EAAAA,KAAK,CAACC,KAAN,CAAYW,SAAZ,CAAsBjB,aAAtB,GAAsCA,aAAtC",
+  "sourcesContent": [
+    "/* ************************************************************************\n\n   Copyright: sqville 2021\n\n   License:\n     MIT\n\n   Authors:\n     * Chris Eskew (sqville) chris.eskew@sqville.com\n\n************************************************************************ */\n\nqx.Theme.define(\"ville.theme.Wireframe\",\n{\n  meta :\n  {\n    color : ville.theme.wireframe.Color,\n    decoration : ville.theme.wireframe.Decoration,\n    font : ville.theme.wireframe.Font,\n    icon : qx.theme.icon.Tango,\n    appearance : ville.theme.wireframe.Appearance\n  }\n});"
+  ]
+}
