@@ -7,6 +7,7 @@ on:
   # run every day at 01:00
   schedule:
     - cron: "0 1 * * *"
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
