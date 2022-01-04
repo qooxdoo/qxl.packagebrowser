@@ -20,14 +20,14 @@ jobs:
           persist-credentials: false
 
       - name: Install
-        run: npm install @qooxdoo/compiler --no-save --no-package-lock
+        run: npm install @qooxdoo/compiler -g
 
       - name: Build
-        run:  npx qx compile --target=build -v
+        run:  qx deploy --target=build -v
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./compiled/build
+          publish_dir: ./html
           force_orphan: true
