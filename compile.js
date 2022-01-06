@@ -51,9 +51,9 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       console.log(header);
       console.log("=".repeat(header.length));
 
-      const targetType = this.self(arguments).TARGET_TYPE;
-      const containerPath = this.self(arguments).CONTAINER_PATH;
-      const additionalParams = this.self(arguments).QX_LIST_ADDITIONAL_PARAMS;
+      const targetType = qxl.packagebrowser.compile.LibraryApi.TARGET_TYPE;
+      const containerPath = qxl.packagebrowser.compile.LibraryApi.CONTAINER_PATH;
+      const additionalParams = qxl.packagebrowser.compile.LibraryApi.QX_LIST_ADDITIONAL_PARAMS;
       const targetDir = path.relative(process.cwd(), path.join(outputDir, app, "demos"));
 
       // update and generate list data
