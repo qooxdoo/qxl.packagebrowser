@@ -1,5 +1,5 @@
 {
-  "$schema": "https://qooxdoo.org/schema/Manifest-1-0-0.json",
+  "$schema": "https://qooxdoo.org/schema/Manifest-2-0-0.json",
   "info": {
     "name": "Qooxdoo Package Browser",
     "summary": "This qooxdoo application lets you browse the available packages",
@@ -28,7 +28,6 @@
     "translation": "source/translation"
   },
   "requires": {
-    "@qooxdoo/framework": "^6.0.0",
-    "@qooxdoo/compiler": "^1.0.0"
+    "@qooxdoo/framework": "^7.0.0"
   }
 }

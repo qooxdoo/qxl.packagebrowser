@@ -5,32 +5,34 @@
 qx.Class.define("qxl.packagebrowser.Popup", {
   type: "singleton",
   extend: qx.ui.popup.Popup,
-  statics:{
-    icon:{
-      "waiting":  "qxl/packagebrowser/icon/ajax-loader.gif",
-      "info":     "icon/32/status/dialog-information.png"
-    }
+  statics: {
+    icon: {
+      waiting: "qxl/packagebrowser/icon/ajax-loader.gif",
+      info: "icon/32/status/dialog-information.png",
+    },
   },
-  construct: function() {
-    this.base(arguments, new qx.ui.layout.Canvas());
+
+  construct() {
+    super(new qx.ui.layout.Canvas());
     this.set({
       decorator: "window",
       minWidth: 100,
       minHeight: 30,
       padding: 10,
       backgroundColor: "#f0f0f0",
-      autoHide: false
+      autoHide: false,
     });
+
     this.__atom = new qx.ui.basic.Atom();
     this.__atom.getChildControl("label").set({
       rich: true,
-      wrap: true
+      wrap: true,
     });
+
     this.add(this.__atom);
     this.addListenerOnce("appear", this.center, this);
   },
   members: {
-
     __atom: null,
 
     /**
@@ -50,10 +52,10 @@ qx.Class.define("qxl.packagebrowser.Popup", {
         marginTop: Math.round(
           (qx.bom.Document.getHeight() - bounds.height) / 2
         ),
-        marginLeft: Math.round(
-          (qx.bom.Document.getWidth() - bounds.width) / 2
-        )
+
+        marginLeft: Math.round((qx.bom.Document.getWidth() - bounds.width) / 2),
       });
+
       return this;
     },
 
@@ -65,7 +67,7 @@ qx.Class.define("qxl.packagebrowser.Popup", {
      * @return {qxl.packagebrowser.Popup}
      * @ignore(widgetToPlaceTo)
      */
-    display(text, widgetToPlaceTo=false) {
+    display(text, widgetToPlaceTo = false) {
       if (!text) {
         this.hide();
       }
@@ -73,9 +75,10 @@ qx.Class.define("qxl.packagebrowser.Popup", {
       this.show();
       if (widgetToPlaceTo) {
         this.set({
-          marginTop:0,
-          marginLeft: 0
+          marginTop: 0,
+          marginLeft: 0,
         });
+
         if (widgetToPlaceTo.isVisible()) {
           this.placeToWidget(widgetToPlaceTo, true);
         } else {
@@ -116,15 +119,15 @@ qx.Class.define("qxl.packagebrowser.Popup", {
      * @return {qxl.packagebrowser.Popup}
      */
     show() {
-      this.base(arguments);
+      super.show();
       return this;
-    }
+    },
   },
 
   /**
-    * Destructor
-    */
-  destruct: function() {
+   * Destructor
+   */
+  destruct() {
     this._disposeObjects("__atom");
-  }
+  },
 });

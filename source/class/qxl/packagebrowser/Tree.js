@@ -20,15 +20,14 @@
 qx.Class.define("qxl.packagebrowser.Tree", {
   extend: qx.core.Object,
 
-
   /*
   *****************************************************************************
      CONSTRUCTOR
   *****************************************************************************
   */
 
-  construct: function () {
-    this.base(arguments);
+  construct() {
+    super();
 
     this.label = arguments[0] || "";
     this.children = [];
@@ -36,7 +35,6 @@ qx.Class.define("qxl.packagebrowser.Tree", {
     this.manifest = null;
     this.url = null;
   },
-
 
   /*
   *****************************************************************************
@@ -50,33 +48,30 @@ qx.Class.define("qxl.packagebrowser.Tree", {
      *
      * @return {Array | var} TODOC
      */
-    pwd: function () {
+    pwd() {
       if (this.parent === null) {
         return [];
       }
       return this.parent.pwd().concat(this.parent.label);
     },
 
-
     /**
      * TODOC
      *
      * @return {var} TODOC
      */
-    hasChildren: function () {
+    hasChildren() {
       return this.children.length;
     },
 
-
     /**
      * TODOC
      *
      * @return {var} TODOC
      */
-    getChildren: function () {
+    getChildren() {
       return this.children;
     },
-
 
     /**
      * TODOC
@@ -85,7 +80,7 @@ qx.Class.define("qxl.packagebrowser.Tree", {
      * @param args {var} TODOC
      * @return {void}
      */
-    map: function (fun, args) {
+    map(fun, args) {
       var style = "depth";
       var curr = this;
 
@@ -93,7 +88,8 @@ qx.Class.define("qxl.packagebrowser.Tree", {
       var iter = this.getIterator(style);
 
       // noinspection JSAssignmentUsedAsCondition
-      while (curr = iter()) { // eslint-disable-line no-cond-assign
+      while ((curr = iter())) {
+        // eslint-disable-line no-cond-assign
         fun.apply(curr, args);
       }
     },
@@ -105,7 +101,7 @@ qx.Class.define("qxl.packagebrowser.Tree", {
      * @param style {String} "depth"|"breadth" - traversal style
      * @return {Function} iterator {Function}
      */
-    getIterator: function (style) {
+    getIterator(style) {
       var agenda = [this];
       var depthfirst = style === "depth" ? 1 : 0;
 
@@ -137,26 +133,23 @@ qx.Class.define("qxl.packagebrowser.Tree", {
       return f;
     },
 
-
     /**
      * TODOC
      *
      * @return {var} TODOC
      */
-    getPrevSibling: function () {
+    getPrevSibling() {
       return this.getSibling(-1);
     },
 
-
     /**
      * TODOC
      *
      * @return {var} TODOC
      */
-    getNextSibling: function () {
+    getNextSibling() {
       return this.getSibling(1);
     },
-
 
     /**
      * TODOC
@@ -164,7 +157,7 @@ qx.Class.define("qxl.packagebrowser.Tree", {
      * @param offset {var} TODOC
      * @return {var} TODOC
      */
-    getSibling: function (offset) {
+    getSibling(offset) {
       var sibs = this.parent.getChildren();
       var myIndex = this.self(arguments).indexOf(sibs, this);
       var sibIndex = myIndex + offset;
@@ -174,17 +167,16 @@ qx.Class.define("qxl.packagebrowser.Tree", {
       return null;
     },
 
-
     /**
      * TODOC
      *
      * @param node {Node} TODOC
      * @return {void}
      */
-    add: function (node) {
+    add(node) {
       this.children.push(node);
       node.parent = this;
-    }
+    },
   },
 
   statics: {
@@ -196,18 +188,15 @@ qx.Class.define("qxl.packagebrowser.Tree", {
      * @param obj {Object} TODOC
      * @return {var} TODOC
      */
-    indexOf: function (arr, obj) {
+    indexOf(arr, obj) {
       for (var i = 0; i < arr.length; i++) {
         if (arr[i] === obj) {
           return i;
         }
       }
       return -1;
-    }
-
-
+    },
   },
-
 
   /*
   *****************************************************************************
@@ -215,9 +204,9 @@ qx.Class.define("qxl.packagebrowser.Tree", {
   *****************************************************************************
   */
 
-  destruct: function () {
+  destruct() {
     this._disposeObjects("widgetLinkFull", "widgetLinkFlat", "parent");
     this._disposeArray("children");
     this._disposeArray("data");
-  }
+  },
 });

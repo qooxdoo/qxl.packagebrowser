@@ -18,26 +18,30 @@
 
 ************************************************************************ */
 
-
 /**
  * @ignore(qx.$$appRoot)
  */
 qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
   extend: qx.core.Object,
 
-  construct: function (pkgData) {
-    this.base(arguments);
+  construct(pkgData) {
+    super();
 
     this.tmap = pkgData;
     this.ttree = this.__readPkgData(pkgData);
   },
 
   members: {
-
-    tmap: null, ttree: null,
+    tmap: null,
+    ttree: null,
 
     __makeSorter(prop) {
-      return (a, b) => (a[prop].toLocaleLowerCase() < b[prop].toLocaleLowerCase()) ? -1 : (a[prop].toLocaleLowerCase() > b[prop].toLocaleLowerCase()) ? 1 : 0;
+      return (a, b) =>
+        a[prop].toLocaleLowerCase() < b[prop].toLocaleLowerCase()
+          ? -1
+          : a[prop].toLocaleLowerCase() > b[prop].toLocaleLowerCase()
+          ? 1
+          : 0;
     },
 
     /**
@@ -74,10 +78,14 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
 
       // recurse with the new root and the rest of path. If no next type, use current
       let nextType = types.slice(1);
-      return this.__createPath(nextRoot, path.slice(1), nextType.length ? nextType : types[0]);
+      return this.__createPath(
+        nextRoot,
+        path.slice(1),
+        nextType.length ? nextType : types[0]
+      );
     },
 
-    __readPkgData: function (pkgData) {
+    __readPkgData(pkgData) {
       var root = new qxl.packagebrowser.Tree("All");
       pkgData.sort(this.__makeSorter("uri"));
       const types = ["owner", "repository", "folder"];
@@ -103,9 +111,11 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
               let demosNode = new qxl.packagebrowser.Tree("Demos");
               demosNode.type = "demo";
               parent.add(demosNode);
-              applications.forEach(app => {
+              applications.forEach((app) => {
                 if (app.publish !== false) {
-                  let appNode = new qxl.packagebrowser.Tree(`${app.title || app.name}`);
+                  let appNode = new qxl.packagebrowser.Tree(
+                    `${app.title || app.name}`
+                  );
                   appNode.data = app;
                   appNode.type = "demo";
                   appNode.url = `${qx.$$appRoot}/demos/${elem.uri}/${app.name}`;
@@ -139,7 +149,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
       return root;
     },
 
-    getPath: function (node) {
+    getPath(node) {
       if (!node) {
         return "";
       }
@@ -156,7 +166,7 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
      * @param node {Tree} a model node
      * @return {var} fullName {String} like "qxl.packagebrowser.test.Class.testEmptyClass"
      */
-    getFullName: function (node) {
+    getFullName(node) {
       if (!node) {
         return "";
       }
@@ -168,13 +178,12 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
       }
 
       return path.join(".");
-    }
+    },
   },
 
   environment: {
-    "qxl.packagebrowser.withTests": false
+    "qxl.packagebrowser.withTests": false,
   },
-
 
   /*
   *****************************************************************************
@@ -182,8 +191,8 @@ qx.Class.define("qxl.packagebrowser.TreeDataHandler", {
   *****************************************************************************
   */
 
-  destruct: function () {
+  destruct() {
     this.tmap = null;
     this._disposeObjects("ttree");
-  }
+  },
 });

@@ -20,7 +20,6 @@
 
 ************************************************************************ */
 
-
 /**
  * The GUI + business logic of the package browser.
  *
@@ -74,17 +73,21 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       sourcecode: "qx/icon/Tango/16/actions/document-properties.png",
       demo: "qx/icon/Tango/16/apps/internet-web-browser.png",
       problems: "qx/icon/Tango/16/emblems/emblem-important.png",
-      releases: "qx/icon/Tango/16/apps/preferences-clock.png"
-    }
+      releases: "qx/icon/Tango/16/apps/preferences-clock.png",
+    },
   },
 
-  construct: function () {
+  construct() {
     qxShowdown.Load;
-    this.base(arguments);
+    super();
 
     this.__menuItemStore = {};
-    this.welcomeUrl = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/welcome.html");
-    this.defaultUrl = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/default.html");
+    this.welcomeUrl = qx.util.ResourceManager.getInstance().toUri(
+      "qxl/packagebrowser/welcome.html"
+    );
+    this.defaultUrl = qx.util.ResourceManager.getInstance().toUri(
+      "qxl/packagebrowser/default.html"
+    );
 
     // Configure layout
     var layout = new qx.ui.layout.VBox();
@@ -111,10 +114,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     infosplit.setDecorator(null);
     this._infosplit = infosplit;
 
-    this.add(mainsplit, {flex: 1});
+    this.add(mainsplit, { flex: 1 });
 
     // tree side
-    var leftComposite = this._leftComposite = new qx.ui.container.Composite();
+    var leftComposite = (this._leftComposite = new qx.ui.container.Composite());
     leftComposite.setLayout(new qx.ui.layout.VBox(3));
     mainsplit.add(leftComposite, 0);
 
@@ -127,28 +130,38 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     var searchIcon = new qx.ui.basic.Image("icon/16/actions/edit-find.png");
     searchComposite.add(searchIcon);
 
-    let stf = this._searchTextField = new qx.ui.form.TextField();
+    let stf = (this._searchTextField = new qx.ui.form.TextField());
     stf.setLiveUpdate(true);
     stf.setAppearance("widget");
     stf.setPlaceholder("Filter...");
 
     var filterTimer = new qx.event.Timer(500);
-    filterTimer.addListener("interval", function (ev) {
-      let searchTxt = this._searchTextField.getValue();
-      this.filter(searchTxt);
-      this._history.setState("filter~" + searchTxt);
-      filterTimer.stop();
-    }, this);
+    filterTimer.addListener(
+      "interval",
+      function (ev) {
+        let searchTxt = this._searchTextField.getValue();
+        this.filter(searchTxt);
+        this._history.setState("filter~" + searchTxt);
+        filterTimer.stop();
+      },
+      this
+    );
 
-    this._searchTextField.addListener("changeValue", function (e) {
-      this._clearIcon.setEnabled(Boolean(e.getData()));
-      filterTimer.restart();
-    }, this);
+    this._searchTextField.addListener(
+      "changeValue",
+      function (e) {
+        this._clearIcon.setEnabled(Boolean(e.getData()));
+        filterTimer.restart();
+      },
+      this
+    );
 
-    searchComposite.add(this._searchTextField, {flex: 1});
+    searchComposite.add(this._searchTextField, { flex: 1 });
 
     // clear
-    let clearIcon = this._clearIcon = new qx.ui.basic.Image("qx/icon/Tango/16/actions/edit-delete.png");
+    let clearIcon = (this._clearIcon = new qx.ui.basic.Image(
+      "qx/icon/Tango/16/actions/edit-delete.png"
+    ));
     clearIcon.setMarginTop(3);
     clearIcon.setEnabled(false);
     clearIcon.addListener("tap", () => this._searchTextField.setValue(""));
@@ -156,7 +169,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
     mainsplit.add(infosplit, 1);
     this._tree = this.__makeTree();
-    leftComposite.add(this._tree, {flex: 1});
+    leftComposite.add(this._tree, { flex: 1 });
     this.__makeUrlMenu();
 
     this._demoView = this.__makeDemoView();
@@ -164,16 +177,20 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
     // Back button and bookmark support
     this._history = qx.bom.History.getInstance();
-    this._history.addListener("changeState", function (e) {
-      var state = e.getData().replace(/~/g, "/");
-      if (state.startsWith("filter/")) {
-        this._searchTextField.setValue(state.slice(7));
-        return;
-      }
-      if (this._currentSample !== state) {
-        this.updateIframe(state);
-      }
-    }, this);
+    this._history.addListener(
+      "changeState",
+      function (e) {
+        var state = e.getData().replace(/~/g, "/");
+        if (state.startsWith("filter/")) {
+          this._searchTextField.setValue(state.slice(7));
+          return;
+        }
+        if (this._currentSample !== state) {
+          this.updateIframe(state);
+        }
+      },
+      this
+    );
 
     this.__menuElements = [this.__ownWindowButton, this.__viewPart];
     this.__infoWindow = new qxl.packagebrowser.InfoWindow(this.tr("Info"));
@@ -208,7 +225,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     defaultUrl: null,
     welcomeUrl: null,
 
-    __makeCommands: function () {
+    __makeCommands() {
       this._cmdRunSample = new qx.ui.command.Command("F5");
       this._cmdRunSample.addListener("execute", this.runSample, this);
 
@@ -219,45 +236,67 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       this._cmdNextSample.addListener("execute", this.playNext, this);
 
       this._cmdSampleInOwnWindow = new qx.ui.command.Command("Ctrl+N");
-      this._cmdSampleInOwnWindow.addListener("execute", this.__openWindow, this);
+      this._cmdSampleInOwnWindow.addListener(
+        "execute",
+        this.__openWindow,
+        this
+      );
     },
 
-    __openWindow: function () {
+    __openWindow() {
       var sampUrl = this._iframe.getSource();
       window.open(sampUrl, "_blank");
     },
 
-    __makeToolBar: function () {
+    __makeToolBar() {
       var bar = new qx.ui.toolbar.ToolBar();
 
       var prevNextPart = new qx.ui.toolbar.Part();
       bar.add(prevNextPart);
       // -- previous navigation
-      var prevbutt = new qx.ui.toolbar.Button(this.tr("Previous"), "icon/22/actions/go-previous.png");
+      var prevbutt = new qx.ui.toolbar.Button(
+        this.tr("Previous"),
+        "icon/22/actions/go-previous.png"
+      );
       prevbutt.addListener("execute", this.playPrev, this);
       prevbutt.setToolTipText("Run previous demo");
       prevNextPart.add(prevbutt);
       this._prevButton = prevbutt;
 
       // -- next navigation
-      var nextbutt = new qx.ui.toolbar.Button(this.tr("Next"), "icon/22/actions/go-next.png");
+      var nextbutt = new qx.ui.toolbar.Button(
+        this.tr("Next"),
+        "icon/22/actions/go-next.png"
+      );
       nextbutt.addListener("execute", this.playNext, this);
       nextbutt.setToolTipText("Run next demo");
       prevNextPart.add(nextbutt);
       this._nextButton = nextbutt;
 
       // -- spin-out demo
-      var ownWinBtn = new qx.ui.toolbar.Button(this.tr("Own Window"), "icon/22/actions/edit-redo.png");
+      var ownWinBtn = new qx.ui.toolbar.Button(
+        this.tr("Own Window"),
+        "icon/22/actions/edit-redo.png"
+      );
       ownWinBtn.addListener("execute", this.__openWindow, this);
       ownWinBtn.setToolTipText("Open demo in new window");
       this.__ownWindowButton = ownWinBtn;
       bar.add(ownWinBtn);
 
       // -- documentaton
-      var docButton = new qx.ui.toolbar.Button(this.tr("Documentation"), "icon/22/apps/internet-web-browser.png");
-      docButton.addListener("execute", () => {
-        window.open("https://www.qooxdoo.org/docs/#/development/cli/packages");
-      }, this);
+      var docButton = new qx.ui.toolbar.Button(
+        this.tr("Documentation"),
+        "icon/22/apps/internet-web-browser.png"
+      );
+      docButton.addListener(
+        "execute",
+        () => {
+          window.open(
+            "https://www.qooxdoo.org/docs/#/development/cli/packages"
+          );
+        },
+        this
+      );
       docButton.setToolTipText("Open package system documentation");
       bar.add(docButton);
 
@@ -272,7 +311,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       bar.setOverflowHandling(true);
 
       // add a button for overflow handling
-      var chevron = new qx.ui.toolbar.MenuButton(null, "icon/22/actions/media-seek-forward.png");
+      var chevron = new qx.ui.toolbar.MenuButton(
+        null,
+        "icon/22/actions/media-seek-forward.png"
+      );
       chevron.setAppearance("toolbar-button"); // hide the down arrow icon
       bar.add(chevron);
       bar.setOverflowIndicator(chevron);
@@ -297,7 +339,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * Handler for the overflow handling which will be called on hide.
      * @param e {qx.event.type.Data} The event.
      */
-    _onHideItem: function (e) {
+    _onHideItem(e) {
       var partItem = e.getData();
       var menuItems = this._getMenuItems(partItem);
       for (var i = 0, l = menuItems.length; i < l; i++) {
@@ -305,19 +347,17 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       }
     },
 
-
     /**
      * Handler for the overflow handling which will be called on show.
      * @param e {qx.event.type.Data} The event.
      */
-    _onShowItem: function (e) {
+    _onShowItem(e) {
       var partItem = e.getData();
       var menuItems = this._getMenuItems(partItem);
       for (var i = 0, l = menuItems.length; i < l; i++) {
         menuItems[i].setVisibility("excluded");
       }
     },
-
 
     /**
      * Helper for the overflow handling. It is responsible for returning a
@@ -326,7 +366,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @param partItem {qx.ui.core.Widget} The toolbar item to look for.
      * @return {qx.ui.core.Widget} The coresponding menu items.
      */
-    _getMenuItems: function (partItem) {
+    _getMenuItems(partItem) {
       var cachedItems = [];
       if (partItem instanceof qx.ui.toolbar.Part) {
         var partButtons = partItem.getChildren();
@@ -352,10 +392,15 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
           if (!cachedItem) {
             if (partButtons[i] instanceof qx.ui.toolbar.RadioButton) {
-              cachedItem = new qx.ui.menu.RadioButton(partButtons[i].getLabel());
+              cachedItem = new qx.ui.menu.RadioButton(
+                partButtons[i].getLabel()
+              );
               cachedItem.setToolTipText(partButtons[i].getToolTipText());
               cachedItem.setEnabled(partButtons[i].getEnabled());
-              cachedItem.setUserData("value", partButtons[i].getUserData("value"));
+              cachedItem.setUserData(
+                "value",
+                partButtons[i].getUserData("value")
+              );
               cachedItem.setModel(partButtons[i].getModel());
               partButtons[i].bind("enabled", cachedItem, "enabled");
 
@@ -369,21 +414,37 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
               }
               this.__menuViewRadioGroup.add(cachedItem);
             } else if (partButtons[i] instanceof qx.ui.toolbar.MenuButton) {
-              cachedItem = new qx.ui.menu.Button(partButtons[i].getLabel().translate(), partButtons[i].getIcon(), partButtons[i].getCommand(), partButtons[i].getMenu());
+              cachedItem = new qx.ui.menu.Button(
+                partButtons[i].getLabel().translate(),
+                partButtons[i].getIcon(),
+                partButtons[i].getCommand(),
+                partButtons[i].getMenu()
+              );
               cachedItem.setToolTipText(partButtons[i].getToolTipText());
               cachedItem.setEnabled(partButtons[i].getEnabled());
               partButtons[i].bind("enabled", cachedItem, "enabled");
             } else if (partButtons[i] instanceof qx.ui.toolbar.Button) {
-              cachedItem = new qx.ui.menu.Button(partButtons[i].getLabel().translate(), partButtons[i].getIcon());
+              cachedItem = new qx.ui.menu.Button(
+                partButtons[i].getLabel().translate(),
+                partButtons[i].getIcon()
+              );
               cachedItem.getChildControl("label", false).setRich(true);
               cachedItem.setTextColor(partButtons[i].getTextColor());
               cachedItem.setToolTipText(partButtons[i].getToolTipText());
               cachedItem.setEnabled(partButtons[i].getEnabled());
               partButtons[i].bind("enabled", cachedItem, "enabled");
-              var listeners = qx.event.Registration.getManager(partButtons[i]).getListeners(partButtons[i], "execute");
+              var listeners = qx.event.Registration.getManager(
+                partButtons[i]
+              ).getListeners(partButtons[i], "execute");
               if (listeners && listeners.length > 0) {
                 for (var j = 0, k = listeners.length; j < k; j++) {
-                  cachedItem.addListener("execute", qx.lang.Function.bind(listeners[j].handler, listeners[j].context));
+                  cachedItem.addListener(
+                    "execute",
+                    qx.lang.Function.bind(
+                      listeners[j].handler,
+                      listeners[j].context
+                    )
+                  );
                 }
               }
             } else if (partButtons[i] instanceof qx.ui.toolbar.CheckBox) {
@@ -408,10 +469,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       return cachedItems;
     },
 
-    __makeDemoView: function () {
+    __makeDemoView() {
       var iframe = new qx.ui.embed.Iframe().set({
-        nativeContextMenu: true
+        nativeContextMenu: true,
       });
+
       iframe.addListener("load", this.__onIframeLoaded, this);
       this._iframe = iframe;
 
@@ -425,7 +487,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      *
      * @return {var} TODOC
      */
-    __makeTree: function () {
+    __makeTree() {
       var tree1 = new qx.ui.tree.Tree();
       var root = new qx.ui.tree.TreeFolder("Packages");
       tree1.setAppearance("demo-tree");
@@ -435,16 +497,22 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       this.tree = this.widgets["treeview.flat"] = tree1;
 
       tree1.addListener("changeSelection", this.__onTreeChangeSelection, this);
-      tree1.addListener("tap", function (e) {
-        qx.event.Timer.once(this.runSample, this, 50);
-      }, this);
+      tree1.addListener(
+        "tap",
+        function (e) {
+          qx.event.Timer.once(this.runSample, this, 50);
+        },
+        this
+      );
 
       return tree1;
     },
 
-
-    __makeUrlMenu: function () {
-      var urlWindow = new qx.ui.window.Window(this.tr("Package Link"), "icon/22/mimetypes/text-html.png");
+    __makeUrlMenu() {
+      var urlWindow = new qx.ui.window.Window(
+        this.tr("Package Link"),
+        "icon/22/mimetypes/text-html.png"
+      );
       urlWindow.setLayout(new qx.ui.layout.VBox(10));
       urlWindow.setAllowMaximize(false);
       urlWindow.setAllowMinimize(false);
@@ -453,11 +521,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       urlLabel.setNativeContextMenu(true);
       urlWindow.add(urlLabel);
       this._urlWindow = urlWindow;
-      var left = Math.ceil((qx.bom.Viewport.getWidth() / 2) - 250);
+      var left = Math.ceil(qx.bom.Viewport.getWidth() / 2 - 250);
       if (left < 0) {
         left = 0;
       }
-      var top = Math.ceil((qx.bom.Viewport.getHeight() / 2) - 25);
+      var top = Math.ceil(qx.bom.Viewport.getHeight() / 2 - 25);
       if (top < 0) {
         top = 0;
       }
@@ -465,41 +533,52 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       this.getApplicationRoot().add(urlWindow);
 
       var menu = new qx.ui.menu.Menu();
-      var copyButton = new qx.ui.menu.Button(this.tr("Get Demo Link"), "icon/22/mimetypes/text-html.png");
-      copyButton.addListener("execute", function (e) {
-        var treeNode = this.tree.getSelection()[0];
-        var modelNode = treeNode.getUserData("modelLink");
-        var demoName = this.tests.handler.getFullName(modelNode);
-        if (qx.core.Environment.get("qx.contrib")) {
-          demoName = demoName.replace(/\|/g, "/");
-        } else {
-          demoName = demoName.replace(".", "~");
-        }
-        var fullUrl = location.protocol + "//" + location.host + location.pathname + "#" + encodeURIComponent(demoName);
-        this._urlWindow.getChildren()[0].setValue(fullUrl);
-        this._urlWindow.open();
-      }, this);
+      var copyButton = new qx.ui.menu.Button(
+        this.tr("Get Demo Link"),
+        "icon/22/mimetypes/text-html.png"
+      );
+      copyButton.addListener(
+        "execute",
+        function (e) {
+          var treeNode = this.tree.getSelection()[0];
+          var modelNode = treeNode.getUserData("modelLink");
+          var demoName = this.tests.handler.getFullName(modelNode);
+          if (qx.core.Environment.get("qx.contrib")) {
+            demoName = demoName.replace(/\|/g, "/");
+          } else {
+            demoName = demoName.replace(".", "~");
+          }
+          var fullUrl =
+            location.protocol +
+            "//" +
+            location.host +
+            location.pathname +
+            "#" +
+            encodeURIComponent(demoName);
+          this._urlWindow.getChildren()[0].setValue(fullUrl);
+          this._urlWindow.open();
+        },
+        this
+      );
       menu.add(copyButton);
       this._tree.setContextMenu(menu);
     },
-
 
     // ------------------------------------------------------------------------
     //   EVENT HANDLER
     // ------------------------------------------------------------------------
 
-    __onTreeChangeSelection: function (e) {
+    __onTreeChangeSelection(e) {
       const treeNode = this.tree.getSelection()[0];
       const modelNode = treeNode.getUserData("modelLink");
       this.__selectedModelNode = modelNode;
     },
 
-
     /**
      * @param e {Event}
      * @return {void}
      */
-    leftReloadTree: function (e) {
+    leftReloadTree(e) {
       this._sampleToTreeNodeMap = {};
       var _sampleToTreeNodeMap = this._sampleToTreeNodeMap;
       var _initialNode = null;
@@ -557,10 +636,16 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           } else {
             t = new qx.ui.tree.TreeFile(currNode.label);
             if (currNode.type !== "demo") {
-              fullPath = currNode.pwd().slice(1).concat([currNode.type]).join("/");
+              fullPath = currNode
+                .pwd()
+                .slice(1)
+                .concat([currNode.type])
+                .join("/");
             }
           }
-          fullPath = fullPath || currNode.pwd().slice(1).concat([currNode.label]).join("/");
+          fullPath =
+            fullPath ||
+            currNode.pwd().slice(1).concat([currNode.label]).join("/");
           _sampleToTreeNodeMap[fullPath] = t;
           if (fullPath === state) {
             _initialNode = t;
@@ -570,7 +655,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           }
 
           // set icon
-          let type = currNode.data && currNode.data.problems ? "problems" : currNode.type;
+          let type =
+            currNode.data && currNode.data.problems
+              ? "problems"
+              : currNode.type;
           if (type && icons[type]) {
             t.setIcon(icons[type]);
           }
@@ -598,11 +686,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       }
     },
 
-    runSample: function() {
+    runSample() {
       //if (this.__selectedModelNode) {
-        this.updateIframe(this.__selectedModelNode);
+      this.updateIframe(this.__selectedModelNode);
       //} else {
-        //this.playNext();
+      //this.playNext();
       //}
     },
 
@@ -641,14 +729,17 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       if (treeNode) {
         modelNode = treeNode.getUserData("modelLink");
         if (!modelNode) {
-          this.error("Could not find model node for " + value + " from tree node");
+          this.error(
+            "Could not find model node for " + value + " from tree node"
+          );
           return;
         }
       }
 
       if (modelNode) {
         url = this.defaultUrl;
-        state = state || modelNode.pwd().slice(1).concat([modelNode.type]).join("/");
+        state =
+          state || modelNode.pwd().slice(1).concat([modelNode.type]).join("/");
         switch (modelNode.type) {
           case "demo":
             if (modelNode.hasChildren()) {
@@ -657,7 +748,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             } else {
               // demo child (with url)
               url = modelNode.url;
-              state = modelNode.pwd().slice(1).concat([modelNode.label]).join("/");
+              state = modelNode
+                .pwd()
+                .slice(1)
+                .concat([modelNode.label])
+                .join("/");
             }
             break;
           case "library":
@@ -674,11 +769,19 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             break;
           default: {
             let children = modelNode.getChildren();
-            if (Array.isArray(children) && children.length && children[0].type === "library") {
+            if (
+              Array.isArray(children) &&
+              children.length &&
+              children[0].type === "library"
+            ) {
               /* eslint-disable-next-line consistent-return */
               return this.updateIframe(children[0]);
             }
-            state = modelNode.pwd().slice(1).concat([modelNode.label]).join("/");
+            state = modelNode
+              .pwd()
+              .slice(1)
+              .concat([modelNode.label])
+              .join("/");
             url = this.welcomeUrl;
           }
         }
@@ -693,7 +796,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
 
       // if we have a cross-domain url, we cannot open it in the iFrame.
       // create some html with a link instead.
-      if (url && !(url.startsWith(location.origin) || url.startsWith(qx.$$appRoot))) {
+      if (
+        url &&
+        !(url.startsWith(location.origin) || url.startsWith(qx.$$appRoot))
+      ) {
         html = this.__getOpenLinkHtml(url);
       }
 
@@ -732,13 +838,19 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     async __loadIframe(url) {
       return new Promise((resolve, reject) => {
         if (url !== this.defaultUrl) {
-          qxl.packagebrowser.Popup.getInstance().useIcon("waiting").display(`Loading, please wait... `);
+          qxl.packagebrowser.Popup.getInstance()
+            .useIcon("waiting")
+            .display(`Loading, please wait... `);
         }
         this._iframe.addListener("load", () => {
-          qx.event.Timer.once(() => {
-            qxl.packagebrowser.Popup.getInstance().hide();
-            resolve(this._iframe.getWindow());
-          }, this, 500);
+          qx.event.Timer.once(
+            () => {
+              qxl.packagebrowser.Popup.getInstance().hide();
+              resolve(this._iframe.getWindow());
+            },
+            this,
+            500
+          );
         });
         this._iframe.setSource(url);
       });
@@ -747,14 +859,15 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     __getLibraryInfoHtml(modelNode) {
       const lib = modelNode.manifest;
       const req = lib.requires || {};
-      const repo_url = "https://github.com/" + modelNode.uri.split(/\//).slice(0, 2).join("/");
-      const display = v => v ? "" : "display:none";
+      const repo_url =
+        "https://github.com/" + modelNode.uri.split(/\//).slice(0, 2).join("/");
+      const display = (v) => (v ? "" : "display:none");
 
       /**
        * @param {...any} args
        */
       function createTableRow(...args) {
-        return "<tr>" + args.map(arg => `<td>${arg}</td>`).join("") + "</tr>";
+        return "<tr>" + args.map((arg) => `<td>${arg}</td>`).join("") + "</tr>";
       }
 
       /**
@@ -762,27 +875,56 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
        * @param linktext
        * @param target
        */
-      function createAnchor(href, linktext, target="_blank") {
-        return `<a href="${href}" ${target ? "target=\"" + target + "\"" : ""}>${linktext || href}</a>`;
+      function createAnchor(href, linktext, target = "_blank") {
+        return `<a href="${href}" ${target ? 'target="' + target + '"' : ""}>${
+          linktext || href
+        }</a>`;
       }
 
-      const dependencies = Object.entries(req).map(([pkg_uri, range]) => {
-        if (!pkg_uri.startsWith("@") && !pkg_uri.startsWith("qooxdoo-")) {
-          return createTableRow(createAnchor(`javascript:void(top.location.hash='${pkg_uri.replace("/", "~")}~library')`, pkg_uri), range);
-        }
-        return null;
-      }).filter(v => Boolean(v));
+      const dependencies = Object.entries(req)
+        .map(([pkg_uri, range]) => {
+          if (!pkg_uri.startsWith("@") && !pkg_uri.startsWith("qooxdoo-")) {
+            return createTableRow(
+              createAnchor(
+                `javascript:void(top.location.hash='${pkg_uri.replace(
+                  "/",
+                  "~"
+                )}~library')`,
+                pkg_uri
+              ),
+              range
+            );
+          }
+          return null;
+        })
+        .filter((v) => Boolean(v));
       let html = `
         <h1>${lib.info.name}</h1>
-        <h2 style="font-weight:bold;${display(lib.info.summary)}">${lib.info.summary}</h2>
+        <h2 style="font-weight:bold;${display(lib.info.summary)}">${
+        lib.info.summary
+      }</h2>
         <table>
           ${createTableRow("Version:", lib.info.version)}
           ${createTableRow("Namespace:", lib.provides.namespace)}
           ${createTableRow("Authors:", this.__getAuthorsHtml(lib.info.authors))}
           ${createTableRow("Homepage:", createAnchor(lib.info.homepage))}
           ${createTableRow("Repository:", createAnchor(repo_url))}
-          ${createTableRow("Issues:", createAnchor(this.__getNewIssueUrl(modelNode.uri), "List of issues") + " | " + createAnchor(this.__getNewIssueUrl(modelNode.uri, true), "Create new issue"))}
-          ${createTableRow("Keywords:", this.__getKeywordssHtml(lib.info.keywords || []))}
+          ${createTableRow(
+            "Issues:",
+            createAnchor(
+              this.__getNewIssueUrl(modelNode.uri),
+              "List of issues"
+            ) +
+              " | " +
+              createAnchor(
+                this.__getNewIssueUrl(modelNode.uri, true),
+                "Create new issue"
+              )
+          )}
+          ${createTableRow(
+            "Keywords:",
+            this.__getKeywordssHtml(lib.info.keywords || [])
+          )}
         </table>
         <h2 style="${display(lib.info.description)}">Description</h2>
         <p style="${display(lib.info.description)}">${lib.info.description}</p>
@@ -790,8 +932,14 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         <p><code>qx package install ${modelNode.uri}</code></p>
         <h2>Dependencies</h2>
         <table>
-          ${createTableRow("qooxdoo version:", req["@qooxdoo/framework"] || req["qooxdoo-sdk"])}
-          ${createTableRow("Compiler version:", req["@qooxdoo/compiler"] || req["qooxdoo-compiler"])}
+          ${createTableRow(
+            "qooxdoo version:",
+            req["@qooxdoo/framework"] || req["qooxdoo-sdk"]
+          )}
+          ${createTableRow(
+            "Compiler version:",
+            req["@qooxdoo/compiler"] || req["qooxdoo-compiler"]
+          )}
           ${dependencies.join("\n")}
         </table>  
        `;
@@ -803,21 +951,25 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     },
 
     __getAuthorsHtml(authors) {
-      return authors.map(author => {
-        let html = `${author.name}`;
-        if (author.githubUser) {
-          let img_src = qx.util.ResourceManager.getInstance().toUri("qxl/packagebrowser/icon/github-16x16.png");
-          html += ` <img src="${img_src}" /><a href="https://github.com/${author.githubUser}">@${author.githubUser}</a>`;
-        }
-        return html;
-      }).join(", ");
+      return authors
+        .map((author) => {
+          let html = `${author.name}`;
+          if (author.githubUser) {
+            let img_src = qx.util.ResourceManager.getInstance().toUri(
+              "qxl/packagebrowser/icon/github-16x16.png"
+            );
+            html += ` <img src="${img_src}" /><a href="https://github.com/${author.githubUser}">@${author.githubUser}</a>`;
+          }
+          return html;
+        })
+        .join(", ");
     },
 
     __getKeywordssHtml(keywords) {
       return keywords.join(", ");
     },
 
-    __getNewIssueUrl(uri, newIssue=false) {
+    __getNewIssueUrl(uri, newIssue = false) {
       uri = uri.split("/").slice(0, 2).join("/");
       return `https://github.com/${uri}/issues${newIssue ? "/new" : ""}`;
     },
@@ -829,19 +981,24 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @ignore(top)
      */
     __getProblemsHtml(modelNode) {
-      let {data:{compilation_log}, manifest:{info, requires={}}} = modelNode;
+      let {
+        data: { compilation_log },
+        manifest: { info, requires = {} },
+      } = modelNode;
       const lineStartsWith = [
         "One or more libraries",
         "Writing",
         "Minifying",
-        "Everything is up-to-date"
+        "Everything is up-to-date",
       ];
-      let log =
-        compilation_log
-          .split("\n")
-          .filter(line => Boolean(line.trim()))
-          .filter(line => !lineStartsWith.some(string => line.startsWith(string)))
-          .join("\n");
+
+      let log = compilation_log
+        .split("\n")
+        .filter((line) => Boolean(line.trim()))
+        .filter(
+          (line) => !lineStartsWith.some((string) => line.startsWith(string))
+        )
+        .join("\n");
       let migrateMsg = "";
       const migrateSignal = "Migration completed.\n";
       if (log.includes(migrateSignal)) {
@@ -852,20 +1009,29 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         log = log.replace(migrateSignal, "");
       }
       const newIssueBody = [
-        `Compiling package '${info.name}' with the following environment:`, "",
+        `Compiling package '${info.name}' with the following environment:`,
+        "",
         ` - qooxdoo version: ${requires["@qooxdoo/framework"]}`,
-        ` - compiler: ${requires["@qooxdoo/compiler"]}`, "",
-        `results in the following warnings/errors:`, "```", log, "```",
-        `Please visit https://www.qooxdoo.org/qxl.packagebrowser/${top.location.hash} for more information how to fix the problems.`
+        ` - compiler: ${requires["@qooxdoo/compiler"]}`,
+        "",
+        `results in the following warnings/errors:`,
+        "```",
+        log,
+        "```",
+        `Please visit https://www.qooxdoo.org/qxl.packagebrowser/${top.location.hash} for more information how to fix the problems.`,
       ].join("\n");
       const newPackageIssueUrl =
         this.__getNewIssueUrl(modelNode.uri, true) +
-        "?title=" + encodeURIComponent("Compilation problems") +
-        "&body=" + encodeURIComponent(newIssueBody);
+        "?title=" +
+        encodeURIComponent("Compilation problems") +
+        "&body=" +
+        encodeURIComponent(newIssueBody);
       const newCompilerIssueUrl =
         `https://github.com/qooxdoo/qooxdoo-compiler/issues/new` +
-        "?title=" + encodeURIComponent("Compilation problems") +
-        "&body=" + encodeURIComponent(newIssueBody);
+        "?title=" +
+        encodeURIComponent("Compilation problems") +
+        "&body=" +
+        encodeURIComponent(newIssueBody);
       let html = `<h1>Compilation problems</h1>
         ${migrateMsg}
         <p>During the compilation of this package, the following warnings or errors have been logged.
@@ -877,39 +1043,40 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       const explanations = [
         {
           regex: /^([^:]+): (.+) Unresolved use of symbol (.+)$/,
-          description:
-            `The compiler cannot find a reference for the given symbol <span class="code">$3</span>. 
+          description: `The compiler cannot find a reference for the given symbol <span class="code">$3</span>. 
             If this does not indicate a bug, it can usually fixed with adding <span class="code">@ignore($3)</span> 
-            in class <span class="code">$1</span>.`
+            in class <span class="code">$1</span>.`,
         },
+
         {
           regex: /^Cannot find path (.+) required by library (.+)$/,
-          description:
-            `The <span class="code">Manifest.json</span> file of the class 
+          description: `The <span class="code">Manifest.json</span> file of the class 
             <span class="code">$2</span> declares to provide a path 
             <span class="code">$1</span>, which does not exist. 
-            If no such path is needed, consider removing the entry in Manifest.json.`
+            If no such path is needed, consider removing the entry in Manifest.json.`,
         },
+
         {
           regex: /^(.*)Error validating data for ([^:]+): (.+)$/,
-          description:
-            `The file <span class="code">$2</span> is not valid according to 
+          description: `The file <span class="code">$2</span> is not valid according to 
              <a target="_blank" href="https://github.com/qooxdoo/qooxdoo-compiler/tree/master/source/resource/qx/tool/schema">
              the current JSON Schema</a> 
              (see documentation <a href="http://www.qooxdoo.org/docs/#/configuration/overview?id=configuration-files" target="_blank">
-             here</a>). Validation errors are: <span class="code">$3</span>.`
-        }
+             here</a>). Validation errors are: <span class="code">$3</span>.`,
+        },
       ];
-      const explainMessages =
-        compilation_log
-          .split("\n")
-          .reduce((result, line) => {
-            let explanation = explanations.find(expl => line.match(expl.regex));
-            if (explanation) {
-              result.push(line.replace(explanation.regex, explanation.description));
-            }
-            return result;
-          }, []);
+
+      const explainMessages = compilation_log
+        .split("\n")
+        .reduce((result, line) => {
+          let explanation = explanations.find((expl) => line.match(expl.regex));
+          if (explanation) {
+            result.push(
+              line.replace(explanation.regex, explanation.description)
+            );
+          }
+          return result;
+        }, []);
       if (explainMessages.length) {
         html += `<h2>Explanation</h2>
         <ul><li>${explainMessages.join("</li><li>")}</li></ul>`;
@@ -925,12 +1092,19 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     },
 
     __getApplicationsHtml(children) {
-      const appsHtml = children.map(childNode => {
-          const hash = childNode.pwd().slice(1).concat([childNode.label]).join("~");
-          return `<a href="javascript:void(top.location.hash='${hash}')"><h2>${childNode.label}</h2></a>` +
-            (childNode.description ? `<p>${childNode.description}</p>` : "");
-        }
-      ).join("\n");
+      const appsHtml = children
+        .map((childNode) => {
+          const hash = childNode
+            .pwd()
+            .slice(1)
+            .concat([childNode.label])
+            .join("~");
+          return (
+            `<a href="javascript:void(top.location.hash='${hash}')"><h2>${childNode.label}</h2></a>` +
+            (childNode.description ? `<p>${childNode.description}</p>` : "")
+          );
+        })
+        .join("\n");
       return `<h1>Demo Applications</h1>
       <p>This package contains the following executable applications:</p>
       ${appsHtml}`;
@@ -944,9 +1118,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @ignore(fetch)
      * @ignore(showdown)
      */
-    __getReadmeHtml: async function (uri) {
+    async __getReadmeHtml(uri) {
       let apiUrl = `https://api.github.com/repos/${uri}/readme`;
-      qxl.packagebrowser.Popup.getInstance().useIcon("waiting").display(`Loading, please wait... `);
+      qxl.packagebrowser.Popup.getInstance()
+        .useIcon("waiting")
+        .display(`Loading, please wait... `);
       try {
         let result = await (await fetch(apiUrl)).json();
         if (result.content) {
@@ -954,10 +1130,16 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           let converter = new showdown.Converter();
           return converter
             .makeHtml(markdown)
-            .replace(/(href|src)="([^h][^t][^t][^p])/g, (match, attr, urlFragment) => {
-              let urlPrefix = attr === "href" ? `https://github.com/${uri}/tree/master` : `https://raw.githubusercontent.com/${uri}/master`;
-              return `target="_blank" ${attr}="${urlPrefix}/${urlFragment}`;
-            });
+            .replace(
+              /(href|src)="([^h][^t][^t][^p])/g,
+              (match, attr, urlFragment) => {
+                let urlPrefix =
+                  attr === "href"
+                    ? `https://github.com/${uri}/tree/master`
+                    : `https://raw.githubusercontent.com/${uri}/master`;
+                return `target="_blank" ${attr}="${urlPrefix}/${urlFragment}`;
+              }
+            );
         }
         return `<p>The repository does not have a README file.`;
       } catch (e) {
@@ -970,44 +1152,58 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
     async __getReleasesHtml(modelNode, treeNode) {
       let uri = modelNode.uri.split("/").slice(0, 2).join("/");
       let apiUrl = `https://api.github.com/repos/${uri}/releases`;
-      qxl.packagebrowser.Popup.getInstance().useIcon("waiting").display(`Loading, please wait... `);
+      qxl.packagebrowser.Popup.getInstance()
+        .useIcon("waiting")
+        .display(`Loading, please wait... `);
       try {
-        const oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
         const today = new Date();
-        let html="";
+        let html = "";
         let result = await (await fetch(apiUrl)).json();
         if (result.length) {
           html = `<h1>Releases</h1>`;
-          html += result.map(release => {
-            if (release.draft) {
-              return null;
-            }
-            const datePublished = new Date(release.published_at);
-            const daysSincePublished = Math.round(Math.abs((today.getTime() - datePublished.getTime())/(oneDay)));
-            if (treeNode && daysSincePublished < 7) {
-              treeNode.setIcon("qx/icon/Tango/16/status/mail-unread.png");
-              treeNode.setLabel("New release available");
-            }
-            const tagHtml = release.tag_name !== release.name ? `Tag name: ${release.tag_name}. ` : "";
-            const titleSuffixes = [];
-            if (release.prerelease) {
-              titleSuffixes.push("prerelease");
-            }
-            if (release.tag_name === modelNode.latestCompatible) {
-              titleSuffixes.push("latest compatible release");
-            }
-            if (release.tag_name === modelNode.latestVersion) {
-              titleSuffixes.push("current version");
-            }
-            let div = document.createElement("div");
-            div.innerText = release.body;
-            let description = div.innerHTML;
-            return `
-              <h2><a href="${release.html_url}" target="_blank">${release.name} ${titleSuffixes.length ? ("(" + titleSuffixes.join(", ") + ")") : ""}</a></h2>
+          html += result
+            .map((release) => {
+              if (release.draft) {
+                return null;
+              }
+              const datePublished = new Date(release.published_at);
+              const daysSincePublished = Math.round(
+                Math.abs((today.getTime() - datePublished.getTime()) / oneDay)
+              );
+              if (treeNode && daysSincePublished < 7) {
+                treeNode.setIcon("qx/icon/Tango/16/status/mail-unread.png");
+                treeNode.setLabel("New release available");
+              }
+              const tagHtml =
+                release.tag_name !== release.name
+                  ? `Tag name: ${release.tag_name}. `
+                  : "";
+              const titleSuffixes = [];
+              if (release.prerelease) {
+                titleSuffixes.push("prerelease");
+              }
+              if (release.tag_name === modelNode.latestCompatible) {
+                titleSuffixes.push("latest compatible release");
+              }
+              if (release.tag_name === modelNode.latestVersion) {
+                titleSuffixes.push("current version");
+              }
+              let div = document.createElement("div");
+              div.innerText = release.body;
+              let description = div.innerHTML;
+              return `
+              <h2><a href="${release.html_url}" target="_blank">${
+                release.name
+              } ${
+                titleSuffixes.length ? "(" + titleSuffixes.join(", ") + ")" : ""
+              }</a></h2>
               <p style="font-weight: bold">${tagHtml}Published at ${datePublished.toLocaleDateString()}, ${datePublished.toLocaleTimeString()} (${daysSincePublished} days ago)</p>
               <p>${description}</p>
             `;
-          }).filter(release => Boolean(release)).join("\n");
+            })
+            .filter((release) => Boolean(release))
+            .join("\n");
         }
         return html;
       } catch (e) {
@@ -1017,14 +1213,13 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       }
     },
 
-    __onIframeLoaded: function () {
+    __onIframeLoaded() {
       // var fwindow = this._iframe.getWindow();
       // var furl = this._iframe.getSource();
       // if (furl != null && furl !== this.defaultUrl) {
       //
       // }
     },
-
 
     // ------------------------------------------------------------------------
     //   MISC HELPERS
@@ -1034,7 +1229,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * This method filters the folders in the tree.
      * @param term {String} The search term.
      */
-    filter: function (term) {
+    filter(term) {
       var searchRegExp = new RegExp("^.*" + term + ".*", "ig");
       var items = this._tree.getRoot().getItems(true, true);
 
@@ -1054,7 +1249,11 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           }
         }
 
-        if ((inTags || (folder.getLabel().search(searchRegExp) !== -1) || (parent.getLabel().search(searchRegExp) !== -1))) {
+        if (
+          inTags ||
+          folder.getLabel().search(searchRegExp) !== -1 ||
+          parent.getLabel().search(searchRegExp) !== -1
+        ) {
           folder.setOpen(false);
           folder.setUserData("show", true);
           folder.show();
@@ -1079,7 +1278,10 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
         // close all folders
         for (let i = 0; i < folders.length; i++) {
           // don't close the current selected
-          if (folders[i] === selection[0] || folders[i] === selection[0].getParent()) {
+          if (
+            folders[i] === selection[0] ||
+            folders[i] === selection[0].getParent()
+          ) {
             continue;
           }
           folders[i].setOpen(false);
@@ -1093,7 +1295,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @param url {var} TODOC
      * @return {void}
      */
-    dataLoader: function (url) {
+    dataLoader(url) {
       var req = new qx.io.request.Xhr(url);
       req.setTimeout(180000);
 
@@ -1103,44 +1305,61 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
        * @param evt {var} TODOC
        * @lint ignoreDeprecated(alert, eval)
        */
-      req.addListener("success", function (evt) {
-        var content = evt.getTarget().getResponse();
-        if (!content) {
-        /* eslint-disable-next-line no-alert */
-        alert("Failed to load package data");
-          return;
-        }
-        /* eslint-disable-next-line no-eval */
-        let treeData = eval(content);
-
-        // give the browser a chance to update its UI before doing more
-        qx.event.Timer.once(function () {
-          this.tests.handler = new qxl.packagebrowser.TreeDataHandler(treeData);
-          this.leftReloadTree();
-
-          // read initial state
-          var state = this._history.getState().replace(/\~/g, "/");
-          if (state) {
-            if (state.startsWith("filter/")) {
-              qx.event.Timer.once(() => {
-                this._searchTextField.setValue(state.slice(7));
-              }, null, 1000);
-            } else {
-              this.updateIframe(state);
-            }
-          } else {
-            this.updateIframe(this.welcomeUrl);
+      req.addListener(
+        "success",
+        function (evt) {
+          var content = evt.getTarget().getResponse();
+          if (!content) {
+            /* eslint-disable-next-line no-alert */
+            alert("Failed to load package data");
+            return;
           }
-        }, this, 0);
-      }, this);
+          /* eslint-disable-next-line no-eval */
+          let treeData = eval(content);
 
-      req.addListener("fail", function (evt) {
-        this.error("Couldn't load file: " + url);
-      }, this);
+          // give the browser a chance to update its UI before doing more
+          qx.event.Timer.once(
+            function () {
+              this.tests.handler = new qxl.packagebrowser.TreeDataHandler(
+                treeData
+              );
+              this.leftReloadTree();
+
+              // read initial state
+              var state = this._history.getState().replace(/\~/g, "/");
+              if (state) {
+                if (state.startsWith("filter/")) {
+                  qx.event.Timer.once(
+                    () => {
+                      this._searchTextField.setValue(state.slice(7));
+                    },
+                    null,
+                    1000
+                  );
+                } else {
+                  this.updateIframe(state);
+                }
+              } else {
+                this.updateIframe(this.welcomeUrl);
+              }
+            },
+            this,
+            0
+          );
+        },
+        this
+      );
+
+      req.addListener(
+        "fail",
+        function (evt) {
+          this.error("Couldn't load file: " + url);
+        },
+        this
+      );
 
       req.send();
     },
-
 
     /**
      * Plays the sample preceding the currently selected tree node
@@ -1148,7 +1367,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * @param e {Event} TODOC
      * @return {void}
      */
-    playPrev: function (e) {
+    playPrev(e) {
       var currSamp = this.tree.getSelection()[0]; // widget
 
       if (currSamp) {
@@ -1188,7 +1407,6 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       }
     },
 
-
     /**
      * Plays the sample following the currently selected tree node
      *
@@ -1197,7 +1415,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      *
      * @ignore(getChildren)
      */
-    playNext: function (e) {
+    playNext(e) {
       this._nextButton.setEnabled(true);
       this._prevButton.setEnabled(true);
       var currSamp = this.tree.getSelection()[0]; // widget
@@ -1241,7 +1459,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * Diables all menu buttons which functionality only works with a selected
      * demo.
      */
-    disableMenuButtons: function () {
+    disableMenuButtons() {
       var elements = this.__menuElements;
       for (var i = 0; i < elements.length; i++) {
         elements[i].setEnabled(false);
@@ -1252,18 +1470,17 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
      * Enables all menu buttons which functionality only works with a selected
      * demo.
      */
-    enableMenuButtons: function () {
+    enableMenuButtons() {
       var elements = this.__menuElements;
       for (var i = 0; i < elements.length; i++) {
         elements[i].setEnabled(true);
       }
     },
 
-
     /**
      * Creates the application header.
      */
-    _createHeader: function () {
+    _createHeader() {
       var layout = new qx.ui.layout.HBox();
       var header = new qx.ui.container.Composite(layout);
       header.setAppearance("app-header");
@@ -1273,14 +1490,12 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
       version.setFont("default");
 
       header.add(title);
-      header.add(new qx.ui.core.Spacer(), {flex: 1});
+      header.add(new qx.ui.core.Spacer(), { flex: 1 });
       header.add(version);
 
       return header;
-    }
-
+    },
   },
-
 
   /*
   *****************************************************************************
@@ -1288,8 +1503,44 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
   *****************************************************************************
   */
 
-  destruct: function () {
-    this.widgets = this.tests = this._sampleToTreeNodeMap = this.tree = this.logelem = null;
-    this._disposeObjects("mainsplit", "tree1", "left", "toolbar", "f1", "f2", "_history", "logappender", "_cmdRunSample", "_cmdPrevSample", "_cmdNextSample", "_cmdSampleInOwnWindow", "_navPart", "__ownWindowButton", "__viewPart", "__viewGroup", "__menuBar", "_infosplit", "_searchTextField", "_tree", "_iframe", "_demoView", "__menuElements", "__logSync", "_leftComposite", "_urlWindow", "_nextButton", "_prevButton", "__menuItemStore", "__overflowMenu");
-  }
+  destruct() {
+    this.widgets =
+      this.tests =
+      this._sampleToTreeNodeMap =
+      this.tree =
+      this.logelem =
+        null;
+    this._disposeObjects(
+      "mainsplit",
+      "tree1",
+      "left",
+      "toolbar",
+      "f1",
+      "f2",
+      "_history",
+      "logappender",
+      "_cmdRunSample",
+      "_cmdPrevSample",
+      "_cmdNextSample",
+      "_cmdSampleInOwnWindow",
+      "_navPart",
+      "__ownWindowButton",
+      "__viewPart",
+      "__viewGroup",
+      "__menuBar",
+      "_infosplit",
+      "_searchTextField",
+      "_tree",
+      "_iframe",
+      "_demoView",
+      "__menuElements",
+      "__logSync",
+      "_leftComposite",
+      "_urlWindow",
+      "_nextButton",
+      "_prevButton",
+      "__menuItemStore",
+      "__overflowMenu"
+    );
+  },
 });

@@ -35,8 +35,8 @@ qx.Class.define("qxl.packagebrowser.Application", {
 
   members: {
     // overridden
-    main: function () {
-      this.base(arguments);
+    main() {
+      super.main();
 
       // Enable logging in source (or debug build)
       if (qx.core.Environment.get("qx.debug")) {
@@ -45,16 +45,15 @@ qx.Class.define("qxl.packagebrowser.Application", {
 
       // Initialize the viewer
       this.viewer = new qxl.packagebrowser.PackageBrowser();
-      this.getRoot().add(this.viewer, {edge: 0});
+      this.getRoot().add(this.viewer, { edge: 0 });
     },
 
     // overridden
-    finalize: function () {
-      this.base(arguments);
+    finalize() {
+      super.finalize();
       this.viewer.dataLoader(qx.$$appRoot + "package-data.json");
-    }
+    },
   },
-
 
   /*
   *****************************************************************************
@@ -62,7 +61,7 @@ qx.Class.define("qxl.packagebrowser.Application", {
   *****************************************************************************
   */
 
-  destruct: function () {
+  destruct() {
     this._disposeObjects("viewer");
-  }
+  },
 });

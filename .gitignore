@@ -6,3 +6,4 @@
 /html
 .idea
 .DS_Store
+/package.json

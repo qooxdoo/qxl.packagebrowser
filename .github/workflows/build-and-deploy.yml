@@ -20,7 +20,7 @@ jobs:
           persist-credentials: false
 
       - name: Install
-        run: npm install @qooxdoo/compiler -g
+        run: npm install @qooxdoo/framework -g
 
       - name: Build
         run:  qx deploy --target=build -v
