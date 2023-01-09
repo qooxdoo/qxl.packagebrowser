@@ -898,6 +898,16 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
           return null;
         })
         .filter((v) => Boolean(v));
+
+      const compilerVersion = req["@qooxdoo/compiler"] || req["qooxdoo-compiler"];
+      let compilerRow = "";
+      if (compilerVersion) {
+        compilerRow = createTableRow(
+          "Compiler version:",
+          compilerVersion
+        );
+      }
+
       let html = `
         <h1>${lib.info.name}</h1>
         <h2 style="font-weight:bold;${display(lib.info.summary)}">${
@@ -936,10 +946,7 @@ qx.Class.define("qxl.packagebrowser.PackageBrowser", {
             "qooxdoo version:",
             req["@qooxdoo/framework"] || req["qooxdoo-sdk"]
           )}
-          ${createTableRow(
-            "Compiler version:",
-            req["@qooxdoo/compiler"] || req["qooxdoo-compiler"]
-          )}
+          ${compilerRow}
           ${dependencies.join("\n")}
         </table>  
        `;
