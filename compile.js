@@ -1,7 +1,7 @@
 const { execSync, spawnSync } = require("child_process");
-const path = require("path");
 const process = require("process");
 const fs = require("fs");
+const path = require("path");
 
 qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
   extend: qx.tool.cli.api.LibraryApi,
@@ -33,6 +33,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       if (this.__pkgDataGenerated) {
         return;
       }
+      const mkdirp = this.require("mkdirp");
 
       const maker = this.getCompilerApi().getCommand().getMaker();
       const app = "qxl.packagebrowser";
@@ -43,7 +44,6 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         return;
       }
 
-      const mkdirp = this.require("mkdirp");
 
       const header =
         "   Creating metadata for package browser. This will take a while.   ";
@@ -80,6 +80,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         .split("\n")
         .map((pkg) => pkg.trim())
         .filter((pkg) => Boolean(pkg))
+        .filter((pkg, pos, self) => self.indexOf(pkg) == pos)
         .sort();
       this.__deleteFolderRecursiveSync(containerPath);
       this.__addCmd(
@@ -127,10 +128,11 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         let compileData;
         const compileDataPath = path.join(pkg_dir, "compile.json");
         try {
-          const manifestInstance = new qx.tool.config.Manifest();
+          const manifestInstance = qx.tool.config.Manifest.getInstance();
           manifestInstance.set({
             baseDir: pkg_dir,
             validate: false,
+            loaded: false
           });
 
           await manifestInstance.load();
@@ -139,13 +141,6 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
             console.log(
               `>>> ${manifest.info.name} does not contain a compilable application.`
             );
-            // reload & check manifest
-            manifestInstance.set({
-              loaded: false,
-              validate: true,
-            });
-
-            await manifestInstance.load();
             continue;
           }
           compileData = await this.__loadJson(compileDataPath);
@@ -160,7 +155,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
         }
         // compile the application
         this.__addCmd(
-          `qx pkg migrate && qx compile --target=${targetType} --warnAsError=false --feedback=0 --force `,
+          `qx migrate && qx compile --target=${targetType} --warnAsError=false --feedback=0 --force `,
           `Compiling ${manifest.info.name} v${manifest.info.version}...`,
           pkg_dir,
           (stdout, stderr) => {
