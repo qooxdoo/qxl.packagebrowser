@@ -1,0 +1,4174 @@
+[
+  {
+    "type": "library",
+    "uri": "adrelino/qxex",
+    "namespace": "qxex",
+    "name": "qxex",
+    "description": "Additional GUI widgets and utilities for qooxdoo apps.",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "mail@adrian-haarbach.de",
+            "name": "Adrian Haarbach (adrelino)"
+          }
+        ],
+        "description": "Additional GUI widgets (in ui/*) and utilities (static/singleton Manager's in util/) for qooxdoo apps. These are extensions of core qooxdoo widgets, especially from the qx.ui.form and qx.ui.table packages.",
+        "homepage": "adrelino.github.io/qxex",
+        "license": "MIT license",
+        "name": "qxex",
+        "summary": "Additional GUI widgets and utilities for qooxdoo apps.",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxex",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0",
+        "qooxdoo/qxl.apiviewer": "^1.0.18"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "bidefi-irhs/qxfileio",
+    "namespace": "qxfileio",
+    "name": "qxfileio",
+    "description": "Utilitary class to read and write file client side",
+    "installedVersion": false,
+    "latestVersion": "v0.4.2",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "sylvain.gaillard@inra.fr",
+            "name": "Sylvain Gaillard (sgaillard)"
+          }
+        ],
+        "description": "This application contains classes that allow reading and writing files to user file system using the W3C File API.",
+        "homepage": "https://github.com/sgaillard/qxfileio",
+        "license": "CeCILL",
+        "name": "qxfileio",
+        "summary": "Utilitary class to read and write file client side",
+        "version": "0.4.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxfileio",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.1",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.1"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/eventrecorder",
+    "namespace": "cboulanger.eventrecorder",
+    "name": "UI Event Recorder",
+    "description": "A qooxdoo package that allows to record user interaction for replay in testing or presentations",
+    "installedVersion": false,
+    "latestVersion": "v0.18.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "UI Event Recorder",
+        "summary": "",
+        "version": "0.18.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "cboulanger.eventrecorder.editor.Application",
+          "description": "The script editor in a separate browser window (doesn't work standalone)",
+          "environment": {
+            "qx.icontheme": [
+              "Tango"
+            ]
+          },
+          "include": [
+            "qx.theme.Modern",
+            "cboulanger.eventrecorder.player.*"
+          ],
+          "name": "eventrecorder_scripteditor",
+          "publish": false,
+          "theme": "qx.theme.Indigo",
+          "title": "Script Editor"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "cboulanger.eventrecorder",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "ergobyte/qookery/qookery": "892f44d1d1ae5d65c7dd99b18da6876de2f2a920",
+        "ergobyte/qookery/qookeryace": "892f44d1d1ae5d65c7dd99b18da6876de2f2a920",
+        "qooxdoo/qxl.dialog": "^3.0.1"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/qx-contrib-Dialog",
+    "namespace": "dialog",
+    "name": "Dialog",
+    "description": "Dialog Contribution",
+    "installedVersion": false,
+    "latestVersion": "v2.1.1",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "The dialog package provides many often-used widgets required in user interaction, such as alert, confirm, prompt, and others that simplify the web developer's daily work.",
+        "homepage": "https://github.com/cboulanger/qx-contrib-Dialog",
+        "license": "LGPL/EPL",
+        "name": "Dialog",
+        "summary": "Dialog Contribution",
+        "version": "2.1.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "dialog",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-alpha"
+      }
+    }
+  },
+  {
+    "type": "repository",
+    "uri": "cboulanger/qx-contrib-test",
+    "name": "",
+    "description": "This is a test contribution for the qooxdoo contrib system (unlisted)",
+    "installedVersion": "",
+    "latestVersion": "v1.1.4",
+    "latestCompatible": false
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/qx-contrib-test/lib2",
+    "namespace": "lib2",
+    "name": "A second library",
+    "description": "The description of the second library",
+    "installedVersion": false,
+    "latestVersion": "v1.1.4",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": "",
+        "description": "undefined",
+        "homepage": "undefined",
+        "license": "MIT license",
+        "name": "A second library",
+        "summary": "The description of the second library",
+        "version": "1.1.4"
+      },
+      "path": "lib2/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "lib2",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "type": "application"
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "qooxdoo-compiler": "^0.3.0-alpha.20190327-0809",
+        "qooxdoo-sdk": "^6.0.0-alpha"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/qx-contrib-test",
+    "namespace": "test",
+    "name": "test",
+    "description": "This is a qooxdoo test app",
+    "installedVersion": false,
+    "latestVersion": "v1.1.4",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "test",
+        "summary": "This is a qooxdoo test app",
+        "version": "1.1.4"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "test",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "type": "application"
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "qooxdoo-sdk": "^6.0.0-alpha"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/qx-contrib-TokenField",
+    "namespace": "tokenfield",
+    "name": "TokenField",
+    "description": "TokenField Contribution",
+    "installedVersion": false,
+    "latestVersion": "v1.3.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "A widget implementing the token field concept",
+        "homepage": "https://github.com/cboulanger/qx-contrib-TokenField",
+        "keywords": [
+          "form",
+          "autocomplete"
+        ],
+        "license": "LGPL/EPL",
+        "name": "TokenField",
+        "summary": "TokenField Contribution",
+        "version": "1.3.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "tokenfield",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "cboulanger/qxl.taskmanager",
+    "namespace": "qxl.taskmanager",
+    "name": "qxl.taskmanager",
+    "description": "A manager for objects that represent background tasks",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "This package provides a manager for objects representing real tasks which are running in the background of the application. The manager offers bindable properties and events that allow you to visualize the progress of the task(s) or to determine the busy/idle state of the application.",
+        "homepage": "https://github.com/cboulanger/qxl.taskmanager",
+        "license": "MIT license",
+        "name": "qxl.taskmanager",
+        "summary": "A manager for objects that represent background tasks",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.taskmanager",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta.20200613-2032",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/Bamboo",
+    "namespace": "bamboo",
+    "name": "BambooTheme",
+    "description": "Bamboo Theme Contribution",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "n.schroeder@scro34.de",
+            "name": "Norbert Schröder (scro34)"
+          },
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov (goldim)"
+          }
+        ],
+        "description": "A bamboo theme for qx 7.0",
+        "homepage": "https://github.com/goldim/Bamboo",
+        "license": "MIT license",
+        "name": "BambooTheme",
+        "summary": "Bamboo Theme Contribution",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "bamboo",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.3",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.3",
+        "qooxdoo/qxl.formdemo": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/Bernstein",
+    "namespace": "bernstein",
+    "name": "BernsteinTheme",
+    "description": "Bernstein Theme Contribution",
+    "installedVersion": false,
+    "latestVersion": "v2.1.4",
+    "latestCompatible": "v2.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "n.schroeder@scro34.de",
+            "name": "Norbert Schröder (scro34)"
+          },
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov (goldim)"
+          }
+        ],
+        "description": "A bernstein theme for qx 7.0",
+        "homepage": "https://github.com/goldim/Bernstein",
+        "license": "MIT license",
+        "name": "BernsteinTheme",
+        "summary": "Bernstein Theme Contribution",
+        "version": "2.1.4"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "bernstein",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.3",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.3",
+        "qooxdoo/qxl.formdemo": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/DarkTheme",
+    "namespace": "darktheme",
+    "name": "DarkTheme",
+    "description": "Dark Theme Contribution",
+    "installedVersion": false,
+    "latestVersion": "v2.1.1",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "schroeder@scro34.de",
+            "name": "scro34"
+          }
+        ],
+        "description": "A dark theme for qx 6.0 and greater.",
+        "homepage": "https://github.com/goldim/DarkTheme",
+        "license": "MIT",
+        "name": "DarkTheme",
+        "summary": "Dark Theme Contribution",
+        "version": "2.1.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "darktheme.theme.Theme",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "darktheme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.3",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.3",
+        "qooxdoo/qxl.formdemo": "^2.0.0",
+        "qooxdoo/qxl.versionlabel": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/GraydientTheme",
+    "namespace": "graydienttheme",
+    "name": "GraydientTheme",
+    "description": "Graydient Theme Contribution",
+    "installedVersion": false,
+    "latestVersion": "v2.1.1",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "n.schroeder@scro34.de",
+            "name": "Norbert Schröder (scro34)"
+          },
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov"
+          }
+        ],
+        "description": "A graydient theme for qx 7.0",
+        "homepage": "https://github.com/goldim/GraydientTheme",
+        "license": "MIT license",
+        "name": "GraydientTheme",
+        "summary": "Graydient Theme Contribution",
+        "version": "2.1.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "graydienttheme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.3",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.3",
+        "qooxdoo/qxl.formdemo": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/minesweeper",
+    "namespace": "minesweeper",
+    "name": "minesweeper",
+    "description": "Qooxdoo Minesweeper",
+    "installedVersion": false,
+    "latestVersion": "v0.1.1",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov (goldim)"
+          }
+        ],
+        "description": "Qooxdoo Minesweeper Game",
+        "homepage": "https://github.com/goldim/minesweeper",
+        "license": "MIT license",
+        "name": "minesweeper",
+        "summary": "Qooxdoo Minesweeper",
+        "version": "0.1.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "minesweeper",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "~7.3.3",
+      "requires": {
+        "@qooxdoo/framework": "~7.3.3"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/scro34.themedemo",
+    "namespace": "scro34.themedemo",
+    "name": "themedemo",
+    "description": "Common used from demo",
+    "installedVersion": false,
+    "latestVersion": "v1.0.3",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "schroeder@scro34.de",
+            "name": "Norbert Schröder (scro34)"
+          },
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov (goldim)"
+          }
+        ],
+        "description": "This is a demo containing a different widgets to show theme features.",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "themedemo",
+        "summary": "Common used from demo",
+        "version": "1.0.3"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "fonts": {
+          "JosefinSlabBold": {
+            "fontFaces": [
+              {
+                "fontFamily": "JosefinSlab Bold",
+                "fontStyle": "normal",
+                "fontWeight": "bold",
+                "paths": [
+                  "scro34/themedemo/font/JosefinSlab-Bold.ttf"
+                ]
+              }
+            ]
+          },
+          "JosefinSlabRegular": {
+            "fontFaces": [
+              {
+                "fontFamily": "JosefinSlab Regular",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "paths": [
+                  "scro34/themedemo/font/JosefinSlab-Regular.ttf"
+                ]
+              }
+            ]
+          }
+        },
+        "namespace": "scro34.themedemo",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.3",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.3",
+        "qooxdoo/qxl.formdemo": "^2.0.0",
+        "qooxdoo/qxl.versionlabel": "^2.0.0",
+        "qooxdoo/qxl.widgetbrowser": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/SilverBlueTheme",
+    "namespace": "silverbluetheme",
+    "name": "SilverBlueTheme",
+    "description": "SilverBlue Theme Contribution",
+    "installedVersion": false,
+    "latestVersion": "v2.1.1",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "n.schroeder@scro34.de",
+            "name": "Norbert Schröder (scro34)"
+          },
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov (goldim)"
+          }
+        ],
+        "description": "A silverblue theme for qx 7.0",
+        "homepage": "https://github.com/goldim/SilverBlueTheme",
+        "license": "MIT license",
+        "name": "SilverBlueTheme",
+        "summary": "SilverBlue Theme Contribution",
+        "version": "2.1.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "silverbluetheme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.3",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.3",
+        "qooxdoo/qxl.formdemo": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/ugpa.completer",
+    "namespace": "ugpa.completer",
+    "name": "ugpa.completer",
+    "description": "Field Autocompletion",
+    "installedVersion": false,
+    "latestVersion": "v0.1.0",
+    "latestCompatible": "v0.1.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov (goldim)"
+          }
+        ],
+        "description": "",
+        "homepage": "https://github.com/goldim/ugpa.completer",
+        "license": "MIT license",
+        "name": "ugpa.completer",
+        "summary": "Field Autocompletion",
+        "version": "0.1.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ugpa.completer",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/ugpa.periodpicker",
+    "namespace": "ugpa.periodpicker",
+    "name": "ugpa.periodpicker",
+    "description": "period picker widget",
+    "installedVersion": false,
+    "latestVersion": "v0.1.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov (goldim)"
+          }
+        ],
+        "description": " widget to select range between two date-times",
+        "homepage": "https://github.com/goldim/ugpa.periodpicker",
+        "license": "MIT license",
+        "name": "ugpa.periodpicker",
+        "summary": "period picker widget",
+        "version": "0.1.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ugpa.periodpicker",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.3.3",
+      "requires": {
+        "@qooxdoo/framework": "^7.3.3",
+        "goldim/ugpa.timepicker": "0.1.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "goldim/ugpa.timefield",
+    "namespace": "ugpa.timefield",
+    "name": "ugpa.timefield",
+    "description": "timefield widget",
+    "installedVersion": false,
+    "latestVersion": "v0.1.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "zolotovdy@yandex.ru",
+            "name": "Dmitrii Zolotov (goldim)"
+          }
+        ],
+        "description": "select time with scroller",
+        "homepage": "https://github.com/goldim/ugpa.timefield",
+        "license": "MIT license",
+        "name": "ugpa.timefield",
+        "summary": "timefield widget",
+        "version": "0.1.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ugpa.timefield",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.3.3",
+      "requires": {
+        "@qooxdoo/framework": "^7.3.3"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "hkollmann/hkollmann.mobilegrid",
+    "namespace": "hkollmann.mobilegrid",
+    "name": "mobilegrid",
+    "description": "adds a grid  widget to qx mobile",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "With this you have a grid layout in qx.mobile",
+        "homepage": "https://github.com/hkollmann/hkollmann.mobilegrid",
+        "license": "MIT license",
+        "name": "mobilegrid",
+        "summary": "adds a grid  widget to qx mobile",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "hkollmann.mobilegrid",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "ITISFoundation/qx-iconfont-fontawesome5",
+    "namespace": "iconfont.fontawesome5",
+    "name": "qx-iconfont-fontawesome5",
+    "description": "font awesome 5 iconfont",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "qooxdoo integration of the font awesome iconfonts",
+        "homepage": "https://github.com/ITISFoundation/qx-iconfont-fontawesome5",
+        "license": "MIT license",
+        "name": "qx-iconfont-fontawesome5",
+        "summary": "font awesome 5 iconfont",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "iconfont.fontawesome5",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "webfonts": [
+          {
+            "comparisonString": "\\uf26e\\uf368",
+            "defaultSize": 32,
+            "mapping": "iconfont/fontawesome5/fa-brands.json",
+            "name": "FontAwesome5Brands",
+            "resources": [
+              "iconfont/fontawesome5/fa-brands-400.eot",
+              "iconfont/fontawesome5/fa-brands-400.woff2",
+              "iconfont/fontawesome5/fa-brands-400.woff",
+              "iconfont/fontawesome5/fa-brands-400.ttf"
+            ]
+          },
+          {
+            "comparisonString": "\\uf2b9\\uf2bb",
+            "defaultSize": 32,
+            "mapping": "iconfont/fontawesome5/fa-regular.json",
+            "name": "FontAwesome5Regular",
+            "resources": [
+              "iconfont/fontawesome5/fa-regular-400.eot",
+              "iconfont/fontawesome5/fa-regular-400.woff2",
+              "iconfont/fontawesome5/fa-regular-400.woff",
+              "iconfont/fontawesome5/fa-regular-400.ttf"
+            ]
+          },
+          {
+            "comparisonString": "\\uf2b9\\uf2bb",
+            "defaultSize": 32,
+            "mapping": "iconfont/fontawesome5/fa-solid.json",
+            "name": "FontAwesome5Solid",
+            "resources": [
+              "iconfont/fontawesome5/fa-solid-900.eot",
+              "iconfont/fontawesome5/fa-solid-900.woff2",
+              "iconfont/fontawesome5/fa-solid-900.woff",
+              "iconfont/fontawesome5/fa-solid-900.ttf"
+            ]
+          }
+        ]
+      },
+      "qx_versions": "^7.3.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.3.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "ITISFoundation/qx-iconfont-material",
+    "namespace": "iconfont.material",
+    "name": "qx-iconfont-material",
+    "description": "theme for the osparc web ui",
+    "installedVersion": false,
+    "latestVersion": "v0.1.7",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@itis.ethz.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "a material design ispired dark theme for osparc",
+        "homepage": "https://github.com/ITISFoundation/qx-osparc-theme",
+        "license": "MIT license",
+        "name": "qx-iconfont-material",
+        "summary": "theme for the osparc web ui",
+        "version": "0.1.7"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "iconfont.material",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "webfonts": [
+          {
+            "defaultSize": 32,
+            "mapping": "iconfont/material/MaterialIcons-Regular.json",
+            "name": "MaterialIcons",
+            "resources": [
+              "iconfont/material/MaterialIcons-Regular.eot",
+              "iconfont/material/MaterialIcons-Regular.woff2",
+              "iconfont/material/MaterialIcons-Regular.woff",
+              "iconfont/material/MaterialIcons-Regular.ttf"
+            ]
+          }
+        ]
+      },
+      "qx_versions": "^6.0.0-beta-20190723-1841",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta.20190725-1034",
+        "@qooxdoo/framework": "^6.0.0-beta-20190723-1841"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "ITISFoundation/qx-osparc-theme",
+    "namespace": "osparc.theme",
+    "name": "qx-osparc-theme",
+    "description": "theme for the osparc web ui",
+    "installedVersion": false,
+    "latestVersion": "v0.6.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@itis.swiss",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "a material design inspired dark theme for osparc",
+        "homepage": "https://github.com/ITISFoundation/qx-osparc-theme",
+        "license": "MIT license",
+        "name": "qx-osparc-theme",
+        "summary": "theme for the osparc web ui",
+        "version": "0.6.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "osparc.theme",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "ITISFoundation/qx-iconfont-fontawesome5": "^0.2.0",
+        "ITISFoundation/qx-iconfont-material": "^0.1.5"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "johnspackman/UploadMgr",
+    "namespace": "com.zenesis.qx.upload",
+    "name": "UploadMgr",
+    "description": "Uploader widget",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "Library for uploading files, with progress feedback and doesn't block UI",
+        "homepage": "http://www.zenesis.com/",
+        "license": "LGPL and EPL (see http://qooxdoo.org)",
+        "name": "UploadMgr",
+        "summary": "Uploader widget",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "com.zenesis.qx.upload",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "maettu/qx-showdown",
+    "namespace": "qxShowdown",
+    "name": "qxShowdown",
+    "description": "make the showdown html-md converter js library available as a qx class",
+    "installedVersion": "v1.8.7",
+    "latestVersion": "v1.8.7",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "matthias.bloch@oetiker.ch",
+            "name": "Matthias Bloch"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "qxShowdown",
+        "qooxdoo-range": "6.0.0-alpha - 6.x",
+        "summary": "make the showdown html-md converter js library available as a qx class",
+        "version": "1.8.7"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxShowdown",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "type": "contribution"
+      },
+      "qx_versions": "6.0.0-alpha - 6.x"
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/CanvasCell",
+    "namespace": "canvascell",
+    "name": "CanvasCell",
+    "description": "canvas cell renderer for the qooxdoo table widget",
+    "installedVersion": false,
+    "latestVersion": "v1.0.6",
+    "latestCompatible": "v1.0.6",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker (oetiker)"
+          }
+        ],
+        "description": "a custom cellrenderer for ccreating tiny plots inside table cells.",
+        "homepage": "http://contrib.qooxdoo.org/project/CanvasCell",
+        "license": "LGPL/EPL",
+        "name": "CanvasCell",
+        "summary": "canvas cell renderer for the qooxdoo table widget",
+        "version": "1.0.6"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "canvascell",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/ComboTable",
+    "namespace": "combotable",
+    "name": "ComboTable",
+    "description": "A qooxdoo SelectBox with incremental search",
+    "installedVersion": false,
+    "latestVersion": "v1.0.5",
+    "latestCompatible": "v1.0.5",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker (oetiker)"
+          }
+        ],
+        "description": "A SelectBox using a qooxdoo table to show a list of options supporting incremental search.",
+        "homepage": "http://github.com/oetiker/ComboTable",
+        "license": "LGPL/EPL",
+        "name": "ComboTable",
+        "summary": "A qooxdoo SelectBox with incremental search",
+        "version": "1.0.5"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "combotable",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/Cropper",
+    "namespace": "cropper",
+    "name": "Cropper",
+    "description": "Visually select portion of a Widget",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "A widget that can attach itself to another widget and actives on mouse click.",
+        "homepage": "http://contrib.qooxdoo.org/project/Cropper",
+        "license": "LGPL/EPL",
+        "name": "Cropper",
+        "summary": "Visually select portion of a Widget",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "cropper",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/QxD3",
+    "namespace": "qxd3",
+    "name": "QxD3",
+    "description": "D3 Bindings for Qooxdoo",
+    "installedVersion": false,
+    "latestVersion": "v0.4.2",
+    "latestCompatible": "v0.4.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "homepage": "https://github.com/oetiker/QxD3",
+        "license": "LGPL/EPL",
+        "name": "QxD3",
+        "summary": "D3 Bindings for Qooxdoo",
+        "version": "0.4.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxd3",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/QxDyGraphs",
+    "namespace": "qxdygraphs",
+    "name": "QxDyGraphs",
+    "description": "QxDyGraphs Contribution",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker (oetiker)"
+          }
+        ],
+        "description": "Makes Dan Vanderkams Dygraph charting library available in Qooxdoo",
+        "homepage": "http://contrib.qooxdoo.org/project/QxDyGraphs",
+        "license": "LGPL/EPL",
+        "name": "QxDyGraphs",
+        "summary": "QxDyGraphs Contribution",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxdygraphs",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/QxJqPlot",
+    "namespace": "qxjqplot",
+    "name": "QxJqPlot",
+    "description": "QxJqPlot Contribution",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker (oetiker)"
+          }
+        ],
+        "description": "Integrate jqPlot into qooxdoo.",
+        "homepage": "http://contrib.qooxdoo.org/project/QxJqPlot",
+        "license": "MIT",
+        "name": "QxJqPlot",
+        "summary": "QxJqPlot Contribution",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxjqplot",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oetiker/UploadWidget",
+    "namespace": "uploadwidget",
+    "name": "UploadWidget",
+    "description": "Widget for HTTP file uploads.",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "",
+            "name": "Dietrich Streifert"
+          },
+          {
+            "email": "",
+            "name": "Petr Kobalicek"
+          },
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobi Oetiker"
+          }
+        ],
+        "description": "",
+        "homepage": "https://github.com/oetiker/UploadWidget",
+        "keywords": [
+          "qooxdoo",
+          "widget",
+          "cross-browser",
+          "upload"
+        ],
+        "license": "MIT license",
+        "name": "UploadWidget",
+        "summary": "Widget for HTTP file uploads.",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "uploadwidget",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta-20190723-1841",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta.20190725-1034",
+        "@qooxdoo/framework": "^6.0.0-beta-20190723-1841"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oposs/headerpuppet",
+    "namespace": "headerpuppet",
+    "name": "HeaderPuppet",
+    "description": "Extra header rows bound to a table",
+    "installedVersion": false,
+    "latestVersion": "v0.0.6",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "For complex tables it may be desirable to not have a single field to describe the content of the column or a group of columns, but a number of extra header lines.",
+        "homepage": "https://github.com/oposs/headerpuppet",
+        "license": "MIT license",
+        "name": "HeaderPuppet",
+        "summary": "Extra header rows bound to a table",
+        "version": "0.0.6"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "headerpuppet",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-alpha",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-alpha",
+        "qooxdoo/qxl.apiviewer": "^1.0.0-beta",
+        "qooxdoo/qxl.testtapper": "^0.4.3"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "oposs/qx-iconfont-tabler",
+    "namespace": "iconfont.tabler",
+    "name": "qx-iconfont-tabler",
+    "description": "Tabler Icons for Qooxdoo",
+    "installedVersion": false,
+    "latestVersion": "0.1.0",
+    "latestCompatible": "0.1.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@itis.ethz.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          }
+        ],
+        "description": "A set of over 1950 free MIT-licensed high-quality icons.",
+        "homepage": "https://github.com/oposs/qx-iconfont-tabler",
+        "license": "MIT license",
+        "name": "qx-iconfont-tabler",
+        "summary": "Tabler Icons for Qooxdoo",
+        "version": "0.1.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "iconfont.tabler",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "webfonts": [
+          {
+            "comparisonString": "f104ecee",
+            "defaultSize": 32,
+            "name": "TablerIcons",
+            "resources": [
+              "iconfont/tabler/tabler-icons.woff2",
+              "iconfont/tabler/tabler-icons.woff"
+            ]
+          }
+        ]
+      },
+      "qx_versions": ">6.0.0",
+      "requires": {
+        "@qooxdoo/framework": ">6.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/deprecated.qx.io.remote",
+    "namespace": "qx.io.remote",
+    "name": "deprecated.qx.io.remote",
+    "description": "The qx.io.remote namespace (<v7.0)",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": "v1.0.2",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "",
+        "homepage": "http://www.qooxdoo.org",
+        "license": "MIT license",
+        "name": "deprecated.qx.io.remote",
+        "summary": "The qx.io.remote namespace (<v7.0)",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qx.io.remote",
+        "resource": "source/resource"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/incubator.qx.io.persistence",
+    "namespace": "qx.io.persistence",
+    "name": "qooxdoo/incubator.qx.io.persistence",
+    "description": "Qooxdoo Persistence (Incubator)",
+    "installedVersion": false,
+    "latestVersion": "v0.0.4",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          }
+        ],
+        "description": "Qooxdoo Persistence (Incubator)",
+        "homepage": "https://qooxdoo.org",
+        "license": "MIT license",
+        "name": "qooxdoo/incubator.qx.io.persistence",
+        "summary": "Qooxdoo Persistence (Incubator)",
+        "version": "0.0.4"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qx.io.persistence",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "qooxdoo/incubator.qx.util": "^0.0.3"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/incubator.qx.io.remote",
+    "namespace": "qx.io.remote",
+    "name": "qooxdoo/incubator.qx.io.remote",
+    "description": "Qooxdoo Remote (Incubator)",
+    "installedVersion": false,
+    "latestVersion": "v0.0.3",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          }
+        ],
+        "description": "Qooxdoo Remote Objects",
+        "homepage": "https://qooxdoo.org",
+        "license": "MIT license",
+        "name": "qooxdoo/incubator.qx.io.remote",
+        "summary": "Qooxdoo Remote (Incubator)",
+        "version": "0.0.3"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qx.io.remote",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta",
+        "qooxdoo/incubator.qx.io.persistence": "^0.0.3"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/incubator.qx.util",
+    "namespace": "qx.util",
+    "name": "qooxdoo/incubator.qx.util",
+    "description": "Qooxdoo Tools for Server Development (Incubator)",
+    "installedVersion": false,
+    "latestVersion": "v0.0.4",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          }
+        ],
+        "description": "Qooxdoo Tools for Server Development (Incubator)",
+        "homepage": "https://qooxdoo.org",
+        "license": "MIT license",
+        "name": "qooxdoo/incubator.qx.util",
+        "summary": "Qooxdoo Tools for Server Development (Incubator)",
+        "version": "0.0.4"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qx.util",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qooxdoo",
+    "namespace": "qx",
+    "name": "qooxdoo framework",
+    "description": "The qooxdoo framework library",
+    "installedVersion": false,
+    "latestVersion": "v7.6.3",
+    "latestCompatible": "v7.6.3",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "alexander DOT steitz AT 1und1 DOT de",
+            "name": "Alexander Steitz (asteitz)"
+          },
+          {
+            "email": "christopher DOT zuendorf AT 1und1 DOT de",
+            "name": "Christopher Zündorf (czuendorf)"
+          },
+          {
+            "email": "daniel DOT wagner AT 1und1 DOT de",
+            "name": "Daniel Wagner (danielwagner)"
+          },
+          {
+            "email": "derrell DOT lipman AT unwireduniverse DOT com",
+            "name": "Derrell Lipman (derrell)"
+          },
+          {
+            "email": "andreas DOT ecker AT 1und1 DOT de",
+            "name": "Andreas Ecker (ecker)"
+          },
+          {
+            "email": "christian DOT hagendorn AT 1und1 DOT de",
+            "name": "Christian Hagendorn (Hagendorn)"
+          },
+          {
+            "email": "Mustafa DOT Sak AT 1und1 DOT de",
+            "name": "Mustafa Sak (msak)"
+          },
+          {
+            "email": "thron7 AT users DOT sourceforge DOT net",
+            "name": "Thomas Herchenröder (thron7)"
+          },
+          {
+            "email": "tino DOT butz AT 1und1 DOT de",
+            "name": "Tino Butz (tjbutz)"
+          },
+          {
+            "email": "tristan DOT koch AT 1und1 DOT de",
+            "name": "Tristan Koch (trkoch)"
+          },
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (wittemann)"
+          },
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          },
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          },
+          {
+            "email": "Henner.Kollmann.gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          },
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          },
+          {
+            "email": "dietrich.streifert@visionet.de",
+            "name": "Dietrich Streifert (level420)"
+          }
+        ],
+        "description": "This library contains the qooxdoo Javascript framework classes for website, mobile, desktop and server.",
+        "homepage": "http://qooxdoo.org",
+        "keywords": [
+          "qooxdoo",
+          "framework",
+          "widget",
+          "cross-browser",
+          "ajax"
+        ],
+        "license": "MIT",
+        "name": "qooxdoo framework",
+        "sourceViewUri": "https://github.com/qooxdoo/qooxdoo/blob/%{qxGitBranch}/framework/source/class/%{classFilePath}#L%{lineNumber}",
+        "summary": "The qooxdoo framework library",
+        "version": "7.6.3"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "environmentChecks": {
+          "browser.*": "qx.bom.client.Browser",
+          "client.idle": "qx.bom.client.Idle",
+          "css.*": "qx.bom.client.Css",
+          "css.animation": "qx.bom.client.CssAnimation",
+          "css.animation.requestframe": "qx.bom.client.CssAnimation",
+          "css.transform": "qx.bom.client.CssTransform",
+          "css.transform.3d": "qx.bom.client.CssTransform",
+          "css.transition": "qx.bom.client.CssTransition",
+          "device.*": "qx.bom.client.Device",
+          "ecmascript.*": "qx.bom.client.EcmaScript",
+          "engine.*": "qx.bom.client.Engine",
+          "event.*": "qx.bom.client.Event",
+          "html.*": "qx.bom.client.Html",
+          "html.stylesheet.*": "qx.bom.client.Stylesheet",
+          "io.*": "qx.bom.client.Transport",
+          "locale": "qx.bom.client.Locale",
+          "locale.*": "qx.bom.client.Locale",
+          "os.*": "qx.bom.client.OperatingSystem",
+          "os.scrollBarOverlayed": "qx.bom.client.Scroll",
+          "phonegap*": "qx.bom.client.PhoneGap",
+          "plugin.*": "qx.bom.client.Plugin",
+          "plugin.pdfjs": "qx.bom.client.Pdfjs",
+          "qx.debug.io": "qx.bom.request.Script",
+          "qx.globalErrorHandling": "qx.event.GlobalError",
+          "qx.mobile.nativescroll": "qx.bom.client.Scroll",
+          "qx.promise.*": "qx.Promise",
+          "runtime.name": "qx.bom.client.Runtime",
+          "xml.*": "qx.bom.client.Xml"
+        },
+        "fonts": {
+          "JosefinSlab": {
+            "fontFaces": [
+              {
+                "paths": [
+                  "qx/decoration/Indigo/font/JosefinSlab-SemiBold.woff",
+                  "qx/decoration/Indigo/font/JosefinSlab-SemiBold.ttf"
+                ]
+              }
+            ]
+          },
+          "MaterialIcons": {
+            "comparisonString": "e1feef39",
+            "css": [
+              "https://fonts.googleapis.com/icon?family=Material+Icons"
+            ],
+            "defaultSize": 32,
+            "family": [
+              "Material Icons"
+            ],
+            "fontFaces": [
+              {
+                "fontFamily": "Material Icons",
+                "paths": [
+                  "qx/iconfont/MaterialIcons/materialicons-v126.eot",
+                  "qx/iconfont/MaterialIcons/materialicons-v126.woff2",
+                  "qx/iconfont/MaterialIcons/materialicons-v126.woff",
+                  "qx/iconfont/MaterialIcons/materialicons-v126.ttf"
+                ]
+              }
+            ],
+            "glyphs": "qx/iconfont/MaterialIcons/materialicons.json"
+          },
+          "MaterialIconsOutlined": {
+            "comparisonString": "e1feef39",
+            "css": [
+              "https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            ],
+            "defaultSize": 32,
+            "family": [
+              "Material Icons Outlined"
+            ],
+            "fontFaces": [
+              {
+                "fontFamily": "Material Icons Outlined",
+                "paths": [
+                  "qx/iconfont/MaterialIcons/materialiconsoutlined-v101.eot",
+                  "qx/iconfont/MaterialIcons/materialiconsoutlined-v101.woff2",
+                  "qx/iconfont/MaterialIcons/materialiconsoutlined-v101.woff",
+                  "qx/iconfont/MaterialIcons/materialiconsoutlined-v101.otf"
+                ]
+              }
+            ],
+            "glyphs": "qx/iconfont/MaterialIcons/materialiconsoutlined.json"
+          },
+          "MaterialIconsRound": {
+            "comparisonString": "e1feef39",
+            "css": [
+              "https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+            ],
+            "defaultSize": 32,
+            "family": [
+              "Material Icons Round"
+            ],
+            "fontFaces": [
+              {
+                "fontFamily": "Material Icons Round",
+                "paths": [
+                  "qx/iconfont/MaterialIcons/materialiconsround-v100.eot",
+                  "qx/iconfont/MaterialIcons/materialiconsround-v100.woff2",
+                  "qx/iconfont/MaterialIcons/materialiconsround-v100.woff",
+                  "qx/iconfont/MaterialIcons/materialiconsround-v100.otf"
+                ]
+              }
+            ],
+            "glyphs": "qx/iconfont/MaterialIcons/materialiconsround.json"
+          },
+          "MaterialIconsSharp": {
+            "comparisonString": "e1feef39",
+            "css": [
+              "https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+            ],
+            "defaultSize": 32,
+            "family": [
+              "Material Icons Sharp"
+            ],
+            "fontFaces": [
+              {
+                "fontFamily": "Material Icons Sharp",
+                "paths": [
+                  "qx/iconfont/MaterialIcons/materialiconssharp-v101.eot",
+                  "qx/iconfont/MaterialIcons/materialiconssharp-v101.woff2",
+                  "qx/iconfont/MaterialIcons/materialiconssharp-v101.woff",
+                  "qx/iconfont/MaterialIcons/materialiconssharp-v101.otf"
+                ]
+              }
+            ],
+            "glyphs": "qx/iconfont/MaterialIcons/materialiconssharp.json"
+          },
+          "MaterialIconsTwoTone": {
+            "comparisonString": "e1feef39",
+            "css": [
+              "https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone"
+            ],
+            "defaultSize": 32,
+            "family": [
+              "Material Icons Two Tone"
+            ],
+            "fontFaces": [
+              {
+                "fontFamily": "Material Icons Two Tone",
+                "paths": [
+                  "qx/iconfont/MaterialIcons/materialiconstwotone-v104.eot",
+                  "qx/iconfont/MaterialIcons/materialiconstwotone-v104.woff2",
+                  "qx/iconfont/MaterialIcons/materialiconstwotone-v104.woff",
+                  "qx/iconfont/MaterialIcons/materialiconstwotone-v104.otf"
+                ]
+              }
+            ],
+            "glyphs": "qx/iconfont/MaterialIcons/materialiconstwotone.json"
+          },
+          "Roboto": {
+            "css": [
+              "https://fonts.cdnfonts.com/css/roboto"
+            ],
+            "fontFaces": [
+              {
+                "fontFamily": "Roboto",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "paths": [
+                  "qx/font/Roboto/roboto-v18-latin_latin-ext-regular.eot",
+                  "qx/font/Roboto/roboto-v18-latin_latin-ext-regular.woff2",
+                  "qx/font/Roboto/roboto-v18-latin_latin-ext-regular.woff",
+                  "qx/font/Roboto/roboto-v18-latin_latin-ext-regular.ttf"
+                ]
+              }
+            ]
+          },
+          "Roboto Mono": {
+            "css": [
+              "https://fonts.cdnfonts.com/css/roboto-mono"
+            ],
+            "fontFaces": [
+              {
+                "fontFamily": "Roboto Mono",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "paths": [
+                  "qx/font/Roboto/roboto-mono-v6-latin_latin-ext-regular.eot",
+                  "qx/font/Roboto/roboto-mono-v6-latin_latin-ext-regular.woff2",
+                  "qx/font/Roboto/roboto-mono-v6-latin_latin-ext-regular.woff",
+                  "qx/font/Roboto/roboto-mono-v6-latin_latin-ext-regular.ttf"
+                ]
+              }
+            ]
+          },
+          "qx.theme.classic.defaultFont": {
+            "family": [
+              "Lucida Grande",
+              "Tahoma",
+              "Verdana",
+              "Bitstream Vera Sans",
+              "Liberation Sans"
+            ]
+          },
+          "qx.theme.indigo.defaultFont": {
+            "family": [
+              "Lucida Grande",
+              "DejaVu Sans",
+              "Verdana",
+              "sans-serif"
+            ]
+          },
+          "qx.theme.monospace": {
+            "family": [
+              "DejaVu Sans Mono",
+              "Courier New",
+              "monospace"
+            ]
+          }
+        },
+        "namespace": "qx",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "repository",
+    "uri": "qooxdoo/qxl.apiviewer",
+    "name": "",
+    "description": "qooxdoo apiviewer app",
+    "installedVersion": "",
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0"
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.apiviewer",
+    "namespace": "qxl.apiviewer",
+    "name": "Qooxdoo API Viewer",
+    "description": "A viewer application to browse generated API documentation of qooxdoo classes",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          },
+          {
+            "email": "daniel DOT wagner AT 1und1 DOT de",
+            "name": "Daniel Wagner (dwagner)"
+          },
+          {
+            "email": "Adrian DOT Olaru AT 1and1 DOT ro",
+            "name": "Adrian Olaru (adrianolaru)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "The Api Viewer lets you browse API documentation generated from Javascript source comments. It supports many specifics of qooxdoo classes like inheritance, properties and private members.",
+        "homepage": "https://github.com/qooxdoo/apiviewer",
+        "keywords": [
+          "API",
+          "class browser"
+        ],
+        "license": "MIT",
+        "name": "Qooxdoo API Viewer",
+        "sourceViewUri": "https://github.com/qooxdoo/apiviewer/blob/%{qxGitBranch}/source/class/%{classFilePath}#L%{lineNumber}",
+        "summary": "A viewer application to browse generated API documentation of qooxdoo classes",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.apiviewer.Application",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "qxl.apiviewer.applicationName": "",
+            "qxl.apiviewer.exclude": [
+              "qxl.apiviewer.*"
+            ],
+            "qxl.apiviewer.include": []
+          },
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ],
+          "include": [
+            "qx.*"
+          ],
+          "name": "apiviewer",
+          "theme": "qxl.apiviewer.Theme",
+          "title": "Qooxdoo API Viewer"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.apiviewer",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0",
+        "qooxdoo/deprecated.qx.io.remote": "^1.0.2",
+        "qooxdoo/qxl.versionlabel": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.apiviewer",
+    "namespace": "qxl.apiviewer",
+    "name": "Qooxdoo API Viewer",
+    "description": "A viewer application to browse generated API documentation of qooxdoo classes",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          },
+          {
+            "email": "daniel DOT wagner AT 1und1 DOT de",
+            "name": "Daniel Wagner (dwagner)"
+          },
+          {
+            "email": "Adrian DOT Olaru AT 1and1 DOT ro",
+            "name": "Adrian Olaru (adrianolaru)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "The Api Viewer lets you browse API documentation generated from Javascript source comments. It supports many specifics of qooxdoo classes like inheritance, properties and private members.",
+        "homepage": "https://github.com/qooxdoo/apiviewer",
+        "keywords": [
+          "API",
+          "class browser"
+        ],
+        "license": "MIT",
+        "name": "Qooxdoo API Viewer",
+        "sourceViewUri": "https://github.com/qooxdoo/apiviewer/blob/%{qxGitBranch}/source/class/%{classFilePath}#L%{lineNumber}",
+        "summary": "A viewer application to browse generated API documentation of qooxdoo classes",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.apiviewer.Application",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "qxl.apiviewer.applicationName": "",
+            "qxl.apiviewer.exclude": [
+              "qxl.apiviewer.*"
+            ],
+            "qxl.apiviewer.include": []
+          },
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ],
+          "include": [
+            "qx.*"
+          ],
+          "name": "apiviewer",
+          "theme": "qxl.apiviewer.Theme",
+          "title": "Qooxdoo API Viewer"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.apiviewer",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0",
+        "qooxdoo/deprecated.qx.io.remote": "^1.0.2",
+        "qooxdoo/qxl.versionlabel": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.apiviewer",
+    "namespace": "qxl.apiviewer",
+    "name": "Qooxdoo API Viewer",
+    "description": "A viewer application to browse generated API documentation of qooxdoo classes",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "john.spackman@zenesis.com",
+            "name": "John Spackman (johnspackman)"
+          },
+          {
+            "email": "daniel DOT wagner AT 1und1 DOT de",
+            "name": "Daniel Wagner (dwagner)"
+          },
+          {
+            "email": "Adrian DOT Olaru AT 1and1 DOT ro",
+            "name": "Adrian Olaru (adrianolaru)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "The Api Viewer lets you browse API documentation generated from Javascript source comments. It supports many specifics of qooxdoo classes like inheritance, properties and private members.",
+        "homepage": "https://github.com/qooxdoo/apiviewer",
+        "keywords": [
+          "API",
+          "class browser"
+        ],
+        "license": "MIT",
+        "name": "Qooxdoo API Viewer",
+        "sourceViewUri": "https://github.com/qooxdoo/apiviewer/blob/%{qxGitBranch}/source/class/%{classFilePath}#L%{lineNumber}",
+        "summary": "A viewer application to browse generated API documentation of qooxdoo classes",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.apiviewer.Application",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "qxl.apiviewer.applicationName": "",
+            "qxl.apiviewer.exclude": [
+              "qxl.apiviewer.*"
+            ],
+            "qxl.apiviewer.include": []
+          },
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ],
+          "include": [
+            "qx.*"
+          ],
+          "name": "apiviewer",
+          "theme": "qxl.apiviewer.Theme",
+          "title": "Qooxdoo API Viewer"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.apiviewer",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0",
+        "qooxdoo/deprecated.qx.io.remote": "^1.0.2",
+        "qooxdoo/qxl.versionlabel": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.datademo",
+    "namespace": "qxl.datademo",
+    "name": "datademo",
+    "description": "Common used data binding demo",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo containing a container showing a data bound list.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "datademo",
+        "summary": "Common used data binding demo",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.datademo",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.demobrowser",
+    "namespace": "qxl.demobrowser",
+    "name": "DemoBrowser",
+    "description": "A GUI framework application for qooxdoo demos",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "thron7 AT users DOT sourceforge DOT net",
+            "name": "Thomas Herchenroeder (thron7)"
+          },
+          {
+            "email": "daniel DOT wagner AT 1und1 DOT de",
+            "name": "Daniel Wagner (d_wagner)"
+          },
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "The DemoBrowser provides a run environment for qooxdoo samples and demo apps that features tree and forward/backward navigation, profiling and code inspection.",
+        "homepage": "http://demo.qooxdoo.org/current/demobrowser",
+        "keywords": [
+          "demos",
+          "run frame"
+        ],
+        "license": "MIT",
+        "name": "DemoBrowser",
+        "summary": "A GUI framework application for qooxdoo demos",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.demobrowser.Application",
+          "include": [
+            "qxl.demobrowser.*",
+            "qx.theme.Modern",
+            "qx.theme.Simple",
+            "qx.theme.Classic"
+          ],
+          "name": "demobrowser",
+          "theme": "qxl.demobrowser.Theme",
+          "title": "DemoBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.demobrowser",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.dialog",
+    "namespace": "qxl.dialog",
+    "name": "qxl.dialog",
+    "description": "Collection of dialog widgets",
+    "installedVersion": false,
+    "latestVersion": "v5.0.0",
+    "latestCompatible": "v5.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "githubUser": "cboulanger",
+            "name": "Christian Boulanger"
+          },
+          {
+            "email": "derrell.lipman@unwireduniverse.com",
+            "githubUser": "derrell",
+            "name": "Derrell Lipman"
+          }
+        ],
+        "description": "The dialog package provides many often-used widgets required in user interaction, such as alert, confirm, prompt, and others that simplify the web developer's daily work.",
+        "homepage": "https://github.com/qooxdoo/qxl.dialog",
+        "license": "LGPL/EPL",
+        "name": "qxl.dialog",
+        "summary": "Collection of dialog widgets",
+        "version": "5.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.dialog",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.formdemo",
+    "namespace": "qxl.formdemo",
+    "name": "formdemo",
+    "description": "Common used from demo",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo containing a container showing all form items.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "formdemo",
+        "summary": "Common used from demo",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.formdemo",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.iconfontviewer",
+    "namespace": "qxl.iconfontviewer",
+    "name": "iconfontviewer",
+    "description": "show all glyphs of registered iconfonts",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "",
+        "homepage": "https://github.com/qooxdoo/iconfontviewer",
+        "license": "MIT license",
+        "name": "iconfontviewer",
+        "summary": "show all glyphs of registered iconfonts",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.iconfontviewer.Application",
+          "include": [
+            "qx.theme.iconfont.LoadMaterialIcons",
+            "qx.theme.iconfont.LoadMaterialIconsOutlined",
+            "qx.theme.iconfont.LoadMaterialIconsRound",
+            "qx.theme.iconfont.LoadMaterialIconsSharp",
+            "qx.theme.iconfont.LoadMaterialIconsTwoTone"
+          ],
+          "name": "iconfontviewer",
+          "theme": "qxl.iconfontviewer.theme.Theme",
+          "title": "Qooxdoo Icon Font Viewer"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.iconfontviewer",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.logpane",
+    "namespace": "qxl.logpane",
+    "name": "logpane",
+    "description": "Common used log pannel.",
+    "installedVersion": "v2.0.0",
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a view for the qooxdoo log.",
+        "homepage": "https://github.com/qooxdoo/logpane",
+        "keywords": [
+          "API",
+          "class browser"
+        ],
+        "license": "MIT",
+        "name": "logpane",
+        "summary": "Common used log pannel.",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.logpane",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.mobileshowcase",
+    "namespace": "qxl.mobileshowcase",
+    "name": "mobileshowcase",
+    "description": "Mobile showcase",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tino DOT butz AT 1und1 DOT de",
+            "name": "Tino Butz (tbtz)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a showcase for some mobile features of qooxdoo.",
+        "homepage": "http://demo.qooxdoo.org/current/mobileshowcase",
+        "license": "MIT license",
+        "name": "mobileshowcase",
+        "summary": "Mobile showcase",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "bootPath": "source/boot",
+          "class": "qxl.mobileshowcase.Application",
+          "name": "mobileshowcase"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.mobileshowcase",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.packagebrowser",
+    "namespace": "qxl.packagebrowser",
+    "name": "Qooxdoo Package Browser",
+    "description": "This qooxdoo application lets you browse the available packages",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "githubUser": "cboulanger",
+            "name": "Christian Boulanger"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "keywords": [
+          "packages",
+          "extension",
+          "development"
+        ],
+        "license": "MIT license",
+        "name": "Qooxdoo Package Browser",
+        "summary": "This qooxdoo application lets you browse the available packages",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.packagebrowser",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.playground",
+    "namespace": "qxl.playground",
+    "name": "Playground",
+    "description": "A playground for application coding",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner DOT Kollmann AT gmx DOT de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This application features a code editor and a live preview of the application.",
+        "homepage": "http://demo.qooxdoo.org/current/playground",
+        "keywords": [],
+        "license": "MIT",
+        "name": "Playground",
+        "summary": "A playground for application coding",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "bootPath": "source/boot",
+          "class": "qxl.playground.Application",
+          "exclude": [
+            "qx.test.*",
+            "qx.module.Blocker",
+            "qx.module.Placement"
+          ],
+          "include": [
+            "qx.*"
+          ],
+          "name": "playground",
+          "theme": "qxl.playground.theme.Theme",
+          "title": "Playground"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.playground",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.test1",
+    "namespace": "qxl.test1",
+    "name": "qxl.test1",
+    "description": "Test library 1",
+    "installedVersion": false,
+    "latestVersion": "v2.0.9",
+    "latestCompatible": "v2.0.9",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "",
+        "homepage": "http://www.qooxdoo.org",
+        "license": "MIT license",
+        "name": "qxl.test1",
+        "summary": "Test library 1",
+        "version": "2.0.9"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.test1",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0 || ^7.0.0-beta || ^7.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0 || ^7.0.0-beta || ^7.0.0",
+        "qooxdoo/qxl.test2/qxl.test2C": "^1.1.0"
+      }
+    }
+  },
+  {
+    "type": "repository",
+    "uri": "qooxdoo/qxl.test2",
+    "name": "",
+    "description": "Test contrib repository with multiple library and a qooxdoo.json file (unlisted)",
+    "installedVersion": "",
+    "latestVersion": "v2.0.2",
+    "latestCompatible": "v2.0.2"
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.test2/qxl.test2A",
+    "namespace": "qxl.test2A",
+    "name": "qxl.test2A",
+    "description": "Test library 2A",
+    "installedVersion": false,
+    "latestVersion": "v2.0.2",
+    "latestCompatible": "v2.0.2",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "undefined",
+        "homepage": "undefined",
+        "license": "MIT license",
+        "name": "qxl.test2A",
+        "summary": "Test library 2A",
+        "version": "2.0.2"
+      },
+      "path": "qxl.test2A/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.test2A",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0",
+        "qooxdoo/qxl.test2/qxl.test2B": "^1.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.test2/qxl.test2B",
+    "namespace": "qxl.test2B",
+    "name": "qxl.test2B",
+    "description": "Test library 2B",
+    "installedVersion": false,
+    "latestVersion": "v2.0.2",
+    "latestCompatible": "v2.0.2",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "info@bibliograph.org",
+            "name": "Christian Boulanger (cboulanger)"
+          }
+        ],
+        "description": "undefined",
+        "homepage": "undefined",
+        "license": "MIT license",
+        "name": "qxl.test2B",
+        "summary": "Test library 2B",
+        "version": "2.0.2"
+      },
+      "path": "qxl.test2B/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.test2B",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0",
+        "qooxdoo/qxl.test2/qxl.test2C": "^1.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.test2/qxl.test2C",
+    "namespace": "qxl.test2C",
+    "name": "qxl.test2C",
+    "description": "Test library 2C",
+    "installedVersion": false,
+    "latestVersion": "v2.0.2",
+    "latestCompatible": "v2.0.2",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "undefined",
+        "homepage": "undefined",
+        "license": "MIT license",
+        "name": "qxl.test2C",
+        "summary": "Test library 2C",
+        "version": "2.0.2"
+      },
+      "path": "qxl.test2C/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.test2C",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0",
+        "qooxdoo/qxl.test2/qxl.test2D": "^1.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.test2/qxl.test2D",
+    "namespace": "qxl.test2D",
+    "name": "qxl.test2D",
+    "description": "Test library 2D",
+    "installedVersion": false,
+    "latestVersion": "v2.0.2",
+    "latestCompatible": "v2.0.2",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "undefined",
+        "homepage": "undefined",
+        "license": "MIT license",
+        "name": "qxl.test2D",
+        "summary": "Test library 2D",
+        "version": "2.0.2"
+      },
+      "path": "qxl.test2D/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.test2D",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.testnode",
+    "namespace": "qxl.testnode",
+    "name": "qxl.testnode",
+    "description": "Run qooxdoo tests with qx test in an node enviroment",
+    "installedVersion": false,
+    "latestVersion": "v1.0.16",
+    "latestCompatible": "v1.0.16",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "qxl.testnode",
+        "summary": "Run qooxdoo tests with qx test in an node enviroment",
+        "version": "1.0.16"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.testnode.Application",
+          "environment": {
+            "testnode.testNameSpace": "qxl.testnode.test"
+          },
+          "exclude": [
+            "qx.bom.Selector",
+            "qx.bom.client.Html",
+            "qx.bom.client.Plugin",
+            "qx.event.handler.Pointer",
+            "qx.event.handler.Gesture",
+            "qx.event.handler.PointerCore"
+          ],
+          "include": [
+            "qx.core.BaseInit",
+            "myapp.test.*"
+          ],
+          "name": "testnode",
+          "title": "Qooxdoo Testnode",
+          "type": "node"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.testnode",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0 || ^7.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0 || ^7.0.0-beta"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.testrunner",
+    "namespace": "qxl.testrunner",
+    "name": "testrunner",
+    "description": "Test Runner",
+    "installedVersion": false,
+    "latestVersion": "v7.0.0",
+    "latestCompatible": "v7.0.0",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "This app runs the GUI unit tests",
+        "homepage": "http://demo.qooxdoo.org/current/widgetbrowser",
+        "license": "MIT",
+        "name": "testrunner",
+        "summary": "Test Runner",
+        "version": "7.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.testrunner.Application",
+          "name": "testrunner",
+          "theme": "qx.theme.Simple",
+          "title": "TestRunner"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.testrunner",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0",
+        "qooxdoo/qxl.logpane": "^2.0.0",
+        "qooxdoo/qxl.versionlabel": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.testtapper",
+    "namespace": "qxl.testtapper",
+    "name": "Commandline Testrunner for Qooxdoo Apps",
+    "description": "A node based testrunner for qooxdoo unit tests. It uses a headles instance of chrome to execute tests. It uses the TAP protocol to communicate between the browserbased tests and the nodebased testruner.",
+    "installedVersion": false,
+    "latestVersion": "v2.0.3",
+    "latestCompatible": "v2.0.3",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "tobi@oetiker.ch",
+            "name": "Tobias Oetiker (oetiker)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "The Testrunner looks for *.test classes in your application and runns all the tests contained therin. It follows the standard qooxdoo testing framework. You can continue using all the tests you wrote for qooxdoo 5.x.",
+        "homepage": "https://github.com/qooxdoo/qxl.testtapper",
+        "keywords": [
+          "test runner",
+          "TAP"
+        ],
+        "license": "MIT",
+        "name": "Commandline Testrunner for Qooxdoo Apps",
+        "sourceViewUri": "https://github.com/qooxdoo/qxl.testtapper/blob/%{qxGitBranch}/source/class/%{classFilePath}#L%{lineNumber}",
+        "summary": "A node based testrunner for qooxdoo unit tests. It uses a headles instance of chrome to execute tests. It uses the TAP protocol to communicate between the browserbased tests and the nodebased testruner.",
+        "version": "2.0.3"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.testtapper.Application",
+          "environment": {
+            "qx.icontheme": "Tango",
+            "testtapper.testNameSpace": "qx.test"
+          },
+          "exclude": [],
+          "include": [
+            "qx.test.*"
+          ],
+          "name": "testtapper",
+          "theme": "qx.theme.Simple",
+          "title": "Qooxdoo TestTAPper"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.testtapper",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0",
+        "qooxdoo/qxl.logpane": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tutorial",
+    "namespace": "tutorial",
+    "name": "tutorial",
+    "description": "The tutorial moved to a seperate project ",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "",
+            "name": ""
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "tutorial",
+        "summary": "",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "tutorial",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "repository",
+    "uri": "qooxdoo/qxl.tweet-tutorial",
+    "name": "",
+    "description": "The tweet tutorial moved to a seperate project",
+    "installedVersion": "",
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0"
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step1",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step1/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step2",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step2/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step3",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step3/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.1",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step4.1/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.2",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step4.2/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.2.1",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step4.2.1/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.3",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step4.3/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.4",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step4.4/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/tweets/step4.5",
+    "namespace": "qxl.tweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "tweets/step4.5/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.tweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.tweet-tutorial/mobiletweets/step1",
+    "namespace": "qxl.mobiletweets",
+    "name": "tweets",
+    "description": "tweets tutorial app",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "martin DOT wittemann AT 1und1 DOT de",
+            "name": "Martin Wittemann (martinwittemann)"
+          },
+          {
+            "email": "Henner.Kollmann@gmx.de",
+            "name": "Henner Kollmann (hkollmann)"
+          }
+        ],
+        "description": "This is a demo app for tweets using a twitter-like service.",
+        "homepage": "http://qooxdoo.org/",
+        "license": "MIT",
+        "name": "tweets",
+        "summary": "tweets tutorial app",
+        "version": "2.0.0"
+      },
+      "path": "mobiletweets/step1/Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.mobiletweets",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.versionlabel",
+    "namespace": "qxl.versionlabel",
+    "name": "versionlabel",
+    "description": "version label for qooxdoo demo apps",
+    "installedVersion": "v2.0.0",
+    "latestVersion": "v2.0.0",
+    "latestCompatible": "v2.0.0",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "",
+        "license": "MIT",
+        "name": "versionlabel",
+        "summary": "version label for qooxdoo demo apps",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "environmentChecks": {
+          "qxl.versionlabel.*": "qxl.versionlabel.VersionLabel"
+        },
+        "namespace": "qxl.versionlabel",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.0.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "qooxdoo/qxl.widgetbrowser",
+    "namespace": "qxl.widgetbrowser",
+    "name": "widgetbrowser",
+    "description": "Widget browser",
+    "installedVersion": false,
+    "latestVersion": "v2.0.2",
+    "latestCompatible": "v2.0.1",
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "This app demonstrates many widgets of qooxdoo.",
+        "homepage": "http://demo.qooxdoo.org/current/widgetbrowser",
+        "license": "MIT",
+        "name": "widgetbrowser",
+        "summary": "Widget browser",
+        "version": "2.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.widgetbrowser.Application",
+          "include": [
+            "qx.theme.IndigoDark",
+            "qx.theme.Modern",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "qx.theme.TangibleLight",
+            "qx.theme.TangibleDark",
+            "qxl.widgetbrowser.pages.Tree",
+            "qxl.widgetbrowser.pages.List",
+            "qxl.widgetbrowser.pages.Table",
+            "qxl.widgetbrowser.pages.Form",
+            "qxl.widgetbrowser.pages.ToolBar",
+            "qxl.widgetbrowser.pages.Window",
+            "qxl.widgetbrowser.pages.Tab",
+            "qxl.widgetbrowser.pages.Control",
+            "qxl.widgetbrowser.pages.Embed",
+            "qxl.widgetbrowser.pages.EmbedFrame",
+            "qxl.widgetbrowser.pages.Basic",
+            "qxl.widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "qx.theme.Indigo",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxl.widgetbrowser",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.5.0",
+      "requires": {
+        "@qooxdoo/framework": "^7.5.0",
+        "qooxdoo/qxl.formdemo": "^2.0.0",
+        "qooxdoo/qxl.versionlabel": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/sqv-qxthemes",
+    "namespace": "sqv",
+    "name": "sqv-qxthemes",
+    "description": "Advanced themes for the qooxdoo javascript framework",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "sqville",
+            "name": ""
+          },
+          {
+            "email": "chris.eskew@sqville.com",
+            "name": ""
+          }
+        ],
+        "description": "",
+        "homepage": "http://sqville.com",
+        "license": "MIT license",
+        "name": "sqv-qxthemes",
+        "qooxdoo-range": "^6.0.0-alpha-20181116-263f2cc9",
+        "summary": "Advanced themes for the qooxdoo javascript framework",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "sqv",
+        "resource": "source/resource",
+        "translation": "source/translation",
+        "type": "contribution"
+      },
+      "qx_versions": "^6.0.0-alpha-20181116-263f2cc9"
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.Clean",
+    "namespace": "ville.theme.Clean",
+    "name": "ville.Clean",
+    "description": "a theme for qooxdoo desktop applications inspired by Semantic UI",
+    "installedVersion": false,
+    "latestVersion": "v2.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "sqville@gmail.com",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "A theme inspired by Semantic UI designed to include more space (whitespace) and to be out of the way as much as possible",
+        "homepage": "http://github.com/sqville/ville.Clean",
+        "license": "MIT",
+        "name": "ville.Clean",
+        "summary": "a theme for qooxdoo desktop applications inspired by Semantic UI",
+        "version": "2.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "ville.theme.CleanDark",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "ville.theme.Clean",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "fonts": {
+          "LatoWeb": {
+            "fontFaces": [
+              {
+                "fontFamily": "LatoWeb",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "paths": [
+                  "ville/theme/clean/font/Lato/Lato-Regular.ttf",
+                  "ville/theme/clean/font/Lato/Lato-Regular.woff2",
+                  "ville/theme/clean/font/Lato/Lato-Regular.woff"
+                ]
+              }
+            ]
+          },
+          "LatoWebBlack": {
+            "fontFaces": [
+              {
+                "fontFamily": "LatoWebBlack",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "paths": [
+                  "ville/theme/clean/font/Lato/Lato-Black.ttf",
+                  "ville/theme/clean/font/Lato/Lato-Black.woff2",
+                  "ville/theme/clean/font/Lato/Lato-Black.woff"
+                ]
+              }
+            ]
+          },
+          "LatoWebBold": {
+            "fontFaces": [
+              {
+                "fontFamily": "LatoWebBold",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "paths": [
+                  "ville/theme/clean/font/Lato/Lato-Bold.ttf",
+                  "ville/theme/clean/font/Lato/Lato-Bold.woff2",
+                  "ville/theme/clean/font/Lato/Lato-Bold.woff"
+                ]
+              }
+            ]
+          },
+          "LatoWebSemibold": {
+            "fontFaces": [
+              {
+                "fontFamily": "LatoWebSemibold",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "paths": [
+                  "ville/theme/clean/font/Lato/Lato-Semibold.ttf",
+                  "ville/theme/clean/font/Lato/Lato-Semibold.woff2",
+                  "ville/theme/clean/font/Lato/Lato-Semibold.woff"
+                ]
+              }
+            ]
+          }
+        },
+        "namespace": "ville.theme.Clean",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.1",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.1",
+        "qooxdoo/qxl.formdemo": "^2.0.0",
+        "qooxdoo/qxl.versionlabel": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.Embed",
+    "namespace": "ville.embed",
+    "name": "ville.Embed",
+    "description": "A new desktop ui control for the Qooxdoo JavaScript Framework",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "(sqville)",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "ville.Embed",
+        "summary": "A new desktop ui control for the Qooxdoo JavaScript Framework",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.embed",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.Fluent",
+    "namespace": "ville.theme.Fluent",
+    "name": "ville.Fluent",
+    "description": "a theme for Qooxdoo desktop applications inspired by Microsofts Fluent UI",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "sqville@gmail.com",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "A theme inspired by Microsofts Fluent UI",
+        "homepage": "http://github.com/sqville/ville.Fluent",
+        "license": "MIT",
+        "name": "ville.Fluent",
+        "summary": "a theme for Qooxdoo desktop applications inspired by Microsofts Fluent UI",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "qxl.widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "ville.theme.FluentDark",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "qxl.widgetbrowser.pages.Tree",
+            "qxl.widgetbrowser.pages.List",
+            "qxl.widgetbrowser.pages.Table",
+            "qxl.widgetbrowser.pages.Form",
+            "qxl.widgetbrowser.pages.ToolBar",
+            "qxl.widgetbrowser.pages.Window",
+            "qxl.widgetbrowser.pages.Tab",
+            "qxl.widgetbrowser.pages.Control",
+            "qxl.widgetbrowser.pages.Embed",
+            "qxl.widgetbrowser.pages.EmbedFrame",
+            "qxl.widgetbrowser.pages.Basic",
+            "qxl.widgetbrowser.pages.Misc"
+          ],
+          "name": "widgetbrowser",
+          "theme": "ville.theme.Fluent",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.theme.Fluent",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.1",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.1",
+        "qooxdoo/qxl.formdemo": "^2.0.0",
+        "qooxdoo/qxl.versionlabel": "^2.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.GroupBox",
+    "namespace": "ville.groupbox.GroupBox",
+    "name": "ville.GroupBox",
+    "description": "A Qooxdoo desktop, collapsable GroupBox control",
+    "installedVersion": false,
+    "latestVersion": "v1.0.2",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "(sqville)",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "ville.GroupBox",
+        "summary": "A Qooxdoo desktop, collapsable GroupBox control",
+        "version": "1.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.groupbox.GroupBox",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.Wax",
+    "namespace": "ville.wax",
+    "name": "ville.Wax",
+    "description": "one code base all platforms for the Qooxdoo Javascript Framework",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "chris.eskew@sqville.com",
+            "name": "Chris Eskew (sqville)"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "ville.Wax",
+        "summary": "one code base all platforms for the Qooxdoo Javascript Framework",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.wax",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "sqville/ville.Wireframe",
+    "namespace": "ville.theme.Wireframe",
+    "name": "ville.Wireframe",
+    "description": "a theme for Qooxdoo desktop applications",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "chris.eskew@sqville.com",
+            "name": "Chris Eskew"
+          }
+        ],
+        "description": "A theme designed to help direct focus to layout and interactions first",
+        "homepage": "http://github.com/sqville/ville.Wireframe",
+        "license": "MIT",
+        "name": "ville.Wireframe",
+        "summary": "a theme for Qooxdoo desktop applications",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "application": {
+          "class": "widgetbrowser.Application",
+          "exclude": [
+            "qx.theme.Modern"
+          ],
+          "include": [
+            "ville.theme.wireframe.MFrestyleCss",
+            "qx.theme.Simple",
+            "qx.theme.Classic",
+            "widgetbrowser.pages.Tree",
+            "widgetbrowser.pages.List",
+            "widgetbrowser.pages.Table",
+            "widgetbrowser.pages.Form",
+            "widgetbrowser.pages.ToolBar",
+            "widgetbrowser.pages.Window",
+            "widgetbrowser.pages.Tab",
+            "widgetbrowser.pages.Control",
+            "widgetbrowser.pages.Embed",
+            "widgetbrowser.pages.EmbedFrame",
+            "widgetbrowser.pages.Basic",
+            "widgetbrowser.pages.Misc",
+            "widgetbrowser.pages.Extras"
+          ],
+          "name": "widgetbrowser",
+          "theme": "ville.theme.Wireframe",
+          "title": "WidgetBrowser"
+        },
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "ville.theme.Wireframe",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0",
+        "@qooxdoo/framework": "^6.0.0"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "voger/qxDateSelect",
+    "namespace": "qxDateSelect",
+    "name": "qxDateSelect",
+    "description": " A simple select date widget.",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "voger",
+            "name": ""
+          }
+        ],
+        "description": " A widget that allows selecting a date based on select boxes.",
+        "homepage": " https://github.com/voger/qxDateSelect",
+        "license": "MIT license",
+        "name": "qxDateSelect",
+        "summary": " A simple select date widget.",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxDateSelect",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta-20200904-1332",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "voger/qxgraphql",
+    "namespace": "qxgraphql",
+    "name": "qxgraphql",
+    "description": "GraphQL implementation for Qooxdoo",
+    "installedVersion": false,
+    "latestVersion": "v0.0.2",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "",
+            "name": "voger"
+          }
+        ],
+        "description": "Simple GraphQL implementation for Qooxdoo",
+        "homepage": "https://github.com/voger/qxgraphql",
+        "license": "MIT license",
+        "name": "qxgraphql",
+        "summary": "GraphQL implementation for Qooxdoo",
+        "version": "0.0.2"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "qxgraphql",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^6.0.0-beta",
+      "requires": {
+        "@qooxdoo/compiler": "^1.0.0-beta",
+        "@qooxdoo/framework": "^6.0.0-beta"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "ZenesisUK/zx.ui.accordion",
+    "namespace": "zx",
+    "name": "zx",
+    "description": "Accordion component set for Qooxdoo",
+    "installedVersion": false,
+    "latestVersion": "v1.0.0",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [
+          {
+            "email": "(WillsterJohnson)",
+            "name": "Will Johnson"
+          }
+        ],
+        "description": "",
+        "homepage": "",
+        "license": "MIT license",
+        "name": "zx",
+        "summary": "",
+        "version": "1.0.0"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "namespace": "zx",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.6.1",
+      "requires": {
+        "@qooxdoo/framework": "^7.6.1"
+      }
+    }
+  },
+  {
+    "type": "library",
+    "uri": "ZenesisUK/zx.ui.theme.Avocado",
+    "namespace": "zx.ui.theme.avocado",
+    "name": "zx.ui.theme.avocado",
+    "description": "undefined",
+    "installedVersion": false,
+    "latestVersion": "v1.0.1",
+    "latestCompatible": false,
+    "manifest": {
+      "info": {
+        "authors": [],
+        "description": "undefined",
+        "homepage": "undefined",
+        "license": "MIT license",
+        "name": "zx.ui.theme.avocado",
+        "summary": "undefined",
+        "version": "1.0.1"
+      },
+      "path": "Manifest.json",
+      "provides": {
+        "class": "source/class",
+        "encoding": "utf-8",
+        "fonts": {
+          "Avenir": {
+            "fontFaces": [
+              {
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_roman.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_roman.woff"
+                ]
+              },
+              {
+                "fontStyle": "italic",
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_oblique.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_oblique.woff"
+                ]
+              }
+            ]
+          },
+          "AvenirBlack": {
+            "fontFaces": [
+              {
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_black.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_black.woff"
+                ]
+              },
+              {
+                "fontStyle": "italic",
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_blackoblique.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_blackoblique.woff"
+                ]
+              }
+            ]
+          },
+          "AvenirBook": {
+            "fontFaces": [
+              {
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_book.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_book.woff"
+                ]
+              },
+              {
+                "fontStyle": "italic",
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_bookoblique.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_bookoblique.woff"
+                ]
+              }
+            ]
+          },
+          "AvenirHeavy": {
+            "fontFaces": [
+              {
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_heavy.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_heavy.woff"
+                ]
+              },
+              {
+                "fontStyle": "italic",
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_heavyoblique.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_heavyoblique.woff"
+                ]
+              }
+            ]
+          },
+          "AvenirLight": {
+            "fontFaces": [
+              {
+                "fontFamily": "AvenirLight",
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_light.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_light.woff"
+                ]
+              },
+              {
+                "fontFamily": "AvenirLight",
+                "fontStyle": "italic",
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_lightoblique.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_lightoblique.woff"
+                ]
+              }
+            ]
+          },
+          "AvenirMedium": {
+            "fontFaces": [
+              {
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_medium.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_medium.woff"
+                ]
+              },
+              {
+                "fontStyle": "italic",
+                "paths": [
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_mediumoblique.woff",
+                  "zx/ui/theme/avocado/fonts/avenir/avenir_mediumoblique.woff"
+                ]
+              }
+            ]
+          }
+        },
+        "namespace": "zx.ui.theme.avocado",
+        "resource": "source/resource",
+        "translation": "source/translation"
+      },
+      "qx_versions": "^7.5.1",
+      "requires": {
+        "@qooxdoo/framework": "^7.5.1"
+      }
+    }
+  }
+]
