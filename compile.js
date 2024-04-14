@@ -65,7 +65,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       // update and generate list data
       this.__addCmd(`qx pkg update`, "Updating package data...");
       this.__addCmd(
-        `qx pkg list --json ${additionalParams} > ${datafilePath}`,
+        `qx pkg list --all --json ${additionalParams} > ${datafilePath}`,
         "Generating local metadata file..."
       );
 
@@ -74,7 +74,7 @@ qx.Class.define("qxl.packagebrowser.compile.LibraryApi", {
       }
       fs.mkdirSync(targetDir);
       console.log(`>>> Installing all compatible packages...`);
-      let stdout = execSync(`qx pkg list --uris-only`);
+      let stdout = execSync(`qx pkg list --uris-only --all`);
       let packages = stdout
         .toString()
         .split("\n")
