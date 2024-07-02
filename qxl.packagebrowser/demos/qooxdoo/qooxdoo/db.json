@@ -1,0 +1,6181 @@
+{
+  "libraries": {
+    "qx": "7.7.1"
+  },
+  "environmentHash": "8b0544c29e0336b8ad43b190b0b03748db1d8295",
+  "compilerVersion": "7.7.1",
+  "classInfo": {
+    "q": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/q.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "load": true
+        },
+        "qx.bom.Selector": {
+          "load": true
+        }
+      },
+      "extends": "qxWeb",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.module.Animation": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Animation.js",
+      "dependsOn": {
+        "qx.module.Css": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Environment": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.element.Animation": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Attribute": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Attribute.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.element.Attribute": {},
+        "qx.bom.Html": {},
+        "qx.bom.Input": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Blocker": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Blocker.js",
+      "dependsOn": {
+        "qx.module.Environment": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Manipulating": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Traversing": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Css": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Attribute": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Cookie": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Cookie.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Cookie": {
+          "load": true
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Core": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Core.js",
+      "dependsOn": {
+        "qx.module.Attribute": {
+          "require": true
+        },
+        "qx.module.Css": {
+          "require": true
+        },
+        "qx.module.Environment": {
+          "require": true
+        },
+        "qx.module.Event": {
+          "require": true
+        },
+        "qx.module.Manipulating": {
+          "require": true
+        },
+        "qx.module.Polyfill": {
+          "require": true
+        },
+        "qx.module.Traversing": {
+          "require": true
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.module.Css": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Css.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.dom.Node": {},
+        "qx.bom.element.Dimension": {},
+        "qx.bom.Document": {},
+        "qx.bom.Viewport": {},
+        "qx.bom.Stylesheet": {},
+        "qxWeb": {
+          "defer": "runtime"
+        },
+        "qx.bom.element.Location": {},
+        "qx.lang.String": {},
+        "qx.bom.element.Style": {},
+        "qx.bom.element.Class": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Dataset": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Dataset.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.element.Dataset": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Environment": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Environment.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Browser": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.bom.client.Engine": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.bom.client.Device": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.bom.client.Event": {
+          "load": true,
+          "defer": "load"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "browser.name": {
+            "defer": true,
+            "className": "qx.bom.client.Browser"
+          },
+          "browser.version": {
+            "defer": true,
+            "className": "qx.bom.client.Browser"
+          },
+          "browser.quirksmode": {
+            "defer": true,
+            "className": "qx.bom.client.Browser"
+          },
+          "browser.documentmode": {
+            "defer": true,
+            "className": "qx.bom.client.Browser"
+          },
+          "engine.name": {
+            "defer": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "engine.version": {
+            "defer": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "device.name": {
+            "defer": true,
+            "className": "qx.bom.client.Device"
+          },
+          "device.type": {
+            "defer": true,
+            "className": "qx.bom.client.Device"
+          },
+          "event.touch": {
+            "defer": true,
+            "className": "qx.bom.client.Event"
+          },
+          "event.mspointer": {
+            "defer": true,
+            "className": "qx.bom.client.Event"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.module.Event": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Event.js",
+      "dependsOn": {
+        "qx.module.event.PointerHandler": {
+          "defer": "runtime"
+        },
+        "qx.module.Polyfill": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Environment": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        },
+        "qx.bom.Event": {},
+        "qx.lang.Type": {},
+        "qx.lang.Array": {},
+        "qx.event.Emitter": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Io": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Io.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.request.Xhr": {},
+        "qx.bom.request.Script": {},
+        "qx.bom.request.Jsonp": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Manipulating": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Manipulating.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Object": {},
+        "qx.lang.Type": {},
+        "qx.bom.Html": {},
+        "qx.dom.Node": {},
+        "qxWeb": {
+          "defer": "runtime"
+        },
+        "qx.dom.Element": {},
+        "qx.lang.Array": {},
+        "qx.bom.Viewport": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.MatchMedia": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/MatchMedia.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.MediaQuery": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Messaging": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Messaging.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        },
+        "qx.event.Messaging": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Placeholder": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Placeholder.js",
+      "dependsOn": {
+        "qx.module.Manipulating": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Css": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Attribute": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Environment": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Polyfill": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Traversing": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Placement": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Placement.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.placement.KeepAlignAxis": {},
+        "qx.util.placement.BestFitAxis": {},
+        "qx.util.placement.DirectAxis": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Polyfill": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Polyfill.js",
+      "dependsOn": {
+        "qx.lang.normalize.Function": {
+          "require": true
+        },
+        "qx.lang.normalize.String": {
+          "require": true
+        },
+        "qx.lang.normalize.Date": {
+          "require": true
+        },
+        "qx.lang.normalize.Array": {
+          "require": true
+        },
+        "qx.lang.normalize.Error": {
+          "require": true
+        },
+        "qx.lang.normalize.Object": {
+          "require": true
+        },
+        "qx.lang.normalize.Number": {
+          "require": true
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.module.Rest": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Rest.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.rest.Resource": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Storage": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Storage.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Storage": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Template": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Template.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Template": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.TextSelection": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/TextSelection.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Selection": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Transform": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Transform.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.element.Transform": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.Traversing": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/Traversing.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.dom.Element": {},
+        "qx.bom.Selector": {},
+        "qxWeb": {
+          "defer": "runtime"
+        },
+        "qx.dom.Hierarchy": {},
+        "qx.lang.Array": {},
+        "qx.dom.Node": {},
+        "qx.bom.client.Html": {
+          "load": true
+        },
+        "qx.lang.Type": {},
+        "qx.bom.element.Location": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "html.node.isequalnode": {
+            "className": "qx.bom.client.Html"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.module.dev.FakeServer": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/dev/FakeServer.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.dev.FakeServer": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.GestureHandler": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/GestureHandler.js",
+      "dependsOn": {
+        "qx.module.event.PointerHandler": {
+          "defer": "runtime"
+        },
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Event": {
+          "load": true
+        },
+        "qx.event.Emitter": {},
+        "qx.event.handler.GestureCore": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "event.dispatchevent": {
+            "className": "qx.bom.client.Event"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.module.event.Keyboard": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Keyboard.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Environment": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        },
+        "qx.event.util.Keyboard": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Mouse": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Mouse.js",
+      "dependsOn": {
+        "qx.module.Environment": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        },
+        "qx.dom.Node": {},
+        "qx.bom.Viewport": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Native": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Native.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Event": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Orientation": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Orientation.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.OrientationHandler": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/OrientationHandler.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.dom.Node": {},
+        "qx.event.Emitter": {},
+        "qx.event.handler.OrientationCore": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Pinch": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Pinch.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Pointer": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Pointer.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.type.dom.Pointer": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.PointerHandler": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/PointerHandler.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Event": {
+          "load": true
+        },
+        "qx.event.Emitter": {},
+        "qx.event.handler.PointerCore": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "event.dispatchevent": {
+            "className": "qx.bom.client.Event"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.module.event.Rotate": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Rotate.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Swipe": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Swipe.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Tap": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Tap.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Touch": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Touch.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.TouchHandler": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/TouchHandler.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.Emitter": {},
+        "qx.event.handler.TouchCore": {},
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.event.Track": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/event/Track.js",
+      "dependsOn": {
+        "qx.module.Event": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.util.Array": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/util/Array.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Array": {
+          "load": true
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.util.Function": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/util/Function.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.Function": {
+          "load": true
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.util.Object": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/util/Object.js",
+      "dependsOn": {
+        "qx.module.util.Array": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Object": {
+          "load": true
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.util.String": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/util/String.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.String": {
+          "load": true
+        },
+        "qx.bom.String": {
+          "load": true
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.module.util.Type": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/module/util/Type.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Accordion": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Accordion.js",
+      "dependsOn": {
+        "qx.module.util.Object": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Tabs": {
+          "load": true,
+          "construct": true
+        },
+        "qxWeb": {
+          "defer": "runtime"
+        },
+        "qx.ui.website.Widget": {
+          "load": true
+        }
+      },
+      "extends": "qx.ui.website.Tabs",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Button": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Button.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Widget": {
+          "load": true,
+          "construct": true
+        },
+        "qxWeb": {
+          "defer": "runtime",
+          "load": true
+        }
+      },
+      "extends": "qx.ui.website.Widget",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Calendar": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Calendar.js",
+      "dependsOn": {
+        "qx.module.Template": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Widget": {
+          "load": true,
+          "construct": true
+        },
+        "qxWeb": {
+          "defer": "runtime",
+          "load": true
+        }
+      },
+      "extends": "qx.ui.website.Widget",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Carousel": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Carousel.js",
+      "dependsOn": {
+        "qx.module.Transform": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.event.Swipe": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.event.GestureHandler": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.event.Track": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Widget": {
+          "load": true,
+          "construct": true
+        },
+        "qx.bom.client.Browser": {
+          "load": true
+        },
+        "qxWeb": {
+          "defer": "runtime",
+          "load": true
+        }
+      },
+      "extends": "qx.ui.website.Widget",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "browser.documentmode": {
+            "className": "qx.bom.client.Browser"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.ui.website.DatePicker": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/DatePicker.js",
+      "dependsOn": {
+        "qx.module.Template": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Widget": {
+          "load": true,
+          "construct": true
+        },
+        "qxWeb": {
+          "defer": "runtime",
+          "load": true
+        }
+      },
+      "extends": "qx.ui.website.Widget",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Rating": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Rating.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Widget": {
+          "load": true,
+          "construct": true
+        },
+        "qxWeb": {
+          "defer": "runtime",
+          "load": true
+        }
+      },
+      "extends": "qx.ui.website.Widget",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Slider": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Slider.js",
+      "dependsOn": {
+        "qx.module.event.Pointer": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Transform": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.Template": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.util.Type": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Widget": {
+          "load": true,
+          "construct": true
+        },
+        "qxWeb": {
+          "defer": "runtime",
+          "load": true
+        }
+      },
+      "extends": "qx.ui.website.Widget",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Table": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Table.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Widget": {
+          "load": true,
+          "construct": true
+        },
+        "qxWeb": {
+          "defer": "runtime",
+          "load": true
+        },
+        "qx.lang.Type": {}
+      },
+      "extends": "qx.ui.website.Widget",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Tabs": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Tabs.js",
+      "dependsOn": {
+        "qx.module.Template": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.ui.website.Widget": {
+          "load": true,
+          "construct": true
+        },
+        "qxWeb": {
+          "defer": "runtime",
+          "load": true
+        },
+        "q": {}
+      },
+      "extends": "qx.ui.website.Widget",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.ui.website.Widget": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/ui/website/Widget.js",
+      "dependsOn": {
+        "qx.module.Dataset": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.util.String": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.module.event.Native": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qxWeb": {
+          "load": true,
+          "construct": true,
+          "defer": "runtime"
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.core.Wrapper": {},
+        "qx.bom.Selector": {
+          "load": true
+        }
+      },
+      "extends": "qxWeb",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "hasDefer": true
+    },
+    "qxWeb": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qxWeb.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic",
+          "construct": true
+        },
+        "qx.type.BaseArray": {
+          "load": true
+        },
+        "qx.lang.Array": {},
+        "qx.bom.Selector": {
+          "construct": true
+        },
+        "qx.lang.Type": {}
+      },
+      "extends": "qx.type.BaseArray",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.theme.Simple": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/theme/Simple.js",
+      "dependsOn": {
+        "qx.Theme": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.theme.simple.Color": {
+          "load": true
+        },
+        "qx.theme.simple.Decoration": {
+          "load": true
+        },
+        "qx.theme.simple.Font": {
+          "load": true
+        },
+        "qx.theme.simple.Appearance": {
+          "load": true
+        },
+        "qx.theme.icon.Tango": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null,
+      "themeMeta": {
+        "color": "qx.theme.simple.Color",
+        "decoration": "qx.theme.simple.Decoration",
+        "font": "qx.theme.simple.Font",
+        "appearance": "qx.theme.simple.Appearance",
+        "icon": "qx.theme.icon.Tango"
+      }
+    },
+    "qx.Bootstrap": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/Bootstrap.js",
+      "dependsOn": {
+        "qx.data.IListData": {},
+        "qx.util.OOUtil": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.element.Animation": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Animation.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.CssAnimation": {
+          "load": true
+        },
+        "qx.bom.element.AnimationCss": {},
+        "qx.bom.element.AnimationJs": {},
+        "qx.lang.String": {},
+        "qx.bom.Style": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "css.animation": {
+            "className": "qx.bom.client.CssAnimation"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.element.Attribute": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Attribute.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Html": {
+          "load": true
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.client.Browser": {
+          "load": true
+        },
+        "qx.lang.Type": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "html.element.textcontent": {
+            "load": true,
+            "className": "qx.bom.client.Html"
+          },
+          "engine.name": {
+            "load": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "browser.documentmode": {
+            "className": "qx.bom.client.Browser"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.Html": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Html.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.lang.Array": {},
+        "qx.type.BaseArray": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "load": true,
+            "className": "qx.bom.client.Engine"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.Input": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Input.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Object": {},
+        "qx.dom.Element": {},
+        "qx.lang.Type": {},
+        "qx.bom.client.Engine": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "className": "qx.bom.client.Engine",
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.Cookie": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Cookie.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.log.Logger": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.dom.Node": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/dom/Node.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.element.Dimension": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Dimension.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.element.Style": {},
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.dom.Node": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.Document": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Document.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.Viewport": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "load": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "engine.version": {
+            "className": "qx.bom.client.Engine"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.Viewport": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Viewport.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Document": {},
+        "qx.bom.client.OperatingSystem": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "os.name": {
+            "className": "qx.bom.client.OperatingSystem"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.Stylesheet": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Stylesheet.js",
+      "dependsOn": {
+        "qx.bom.client.Stylesheet": {
+          "require": true,
+          "load": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.dom.Element": {},
+        "qx.util.Uri": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "html.stylesheet.createstylesheet": {
+            "className": "qx.bom.client.Stylesheet"
+          },
+          "html.stylesheet.insertrule": {
+            "className": "qx.bom.client.Stylesheet"
+          },
+          "html.stylesheet.deleterule": {
+            "className": "qx.bom.client.Stylesheet"
+          },
+          "html.stylesheet.addimport": {
+            "className": "qx.bom.client.Stylesheet"
+          },
+          "html.stylesheet.removeimport": {
+            "className": "qx.bom.client.Stylesheet"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.element.Location": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Location.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.element.Style": {},
+        "qx.dom.Node": {},
+        "qx.bom.Viewport": {},
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.client.Browser": {
+          "load": true
+        },
+        "qx.bom.element.BoxSizing": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "load": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "browser.quirksmode": {
+            "className": "qx.bom.client.Browser"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.lang.String": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/String.js",
+      "dependsOn": {
+        "qx.lang.normalize.String": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Function": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.bom.element.Style": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Style.js",
+      "dependsOn": {
+        "qx.lang.String": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.bom.client.Css": {
+          "require": true,
+          "load": true,
+          "defer": "runtime"
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Object": {},
+        "qx.bom.Style": {},
+        "qx.bom.element.Clip": {
+          "load": true
+        },
+        "qx.bom.element.Cursor": {
+          "load": true
+        },
+        "qx.bom.element.Opacity": {
+          "load": true
+        },
+        "qx.bom.element.BoxSizing": {
+          "load": true
+        },
+        "qx.dom.Node": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "css.appearance": {
+            "className": "qx.bom.client.Css"
+          },
+          "css.userselect": {
+            "className": "qx.bom.client.Css"
+          },
+          "css.textoverflow": {
+            "className": "qx.bom.client.Css"
+          },
+          "css.borderimage": {
+            "className": "qx.bom.client.Css"
+          },
+          "css.float": {
+            "className": "qx.bom.client.Css"
+          },
+          "css.usermodify": {
+            "className": "qx.bom.client.Css"
+          },
+          "css.boxsizing": {
+            "className": "qx.bom.client.Css"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.bom.element.Class": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Class.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Html": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "html.classlist": {
+            "load": true,
+            "className": "qx.bom.client.Html"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.element.Dataset": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Dataset.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.String": {},
+        "qx.bom.element.Attribute": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.Environment": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/Environment.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.bom.client.Browser": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Browser.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.OperatingSystem": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "browser.name",
+          "browser.version",
+          "browser.documentmode",
+          "browser.quirksmode"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.client.Engine": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Engine.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "engine.version",
+          "engine.name"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.client.Device": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Device.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "device.name",
+          "device.touch",
+          "device.type",
+          "device.pixelRatio"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.client.Event": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Event.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {},
+        "qx.bom.Event": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "event.touch",
+          "event.mouseevent",
+          "event.mousecreateevent",
+          "event.dispatchevent",
+          "event.customevent",
+          "event.mspointer",
+          "event.help",
+          "event.hashchange",
+          "event.mousewheel",
+          "event.auxclick",
+          "event.passive"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.Event": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Event.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Event": {
+          "load": true
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.client.Browser": {
+          "load": true
+        },
+        "qx.bom.client.CssTransition": {
+          "load": true
+        },
+        "qx.bom.Style": {},
+        "qx.lang.String": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "event.passive": {
+            "className": "qx.bom.client.Event"
+          },
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          },
+          "browser.name": {
+            "className": "qx.bom.client.Browser"
+          },
+          "browser.documentmode": {
+            "className": "qx.bom.client.Browser"
+          },
+          "css.transition": {
+            "className": "qx.bom.client.CssTransition"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.lang.Type": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/Type.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.lang.Array": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/Array.js",
+      "dependsOn": {
+        "qx.lang.normalize.Date": {
+          "require": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.data.Array": {},
+        "qx.lang.Type": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.event.Emitter": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/Emitter.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.request.Xhr": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/request/Xhr.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic",
+          "construct": true
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.event.Emitter": {
+          "construct": true,
+          "load": true
+        },
+        "qx.bom.request.Script": {
+          "load": true
+        },
+        "qx.util.Request": {},
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.client.Browser": {
+          "load": true
+        },
+        "qx.bom.client.Transport": {
+          "load": true
+        }
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "environment": {
+        "provided": [
+          "qx.debug.io"
+        ],
+        "required": {
+          "qx.debug.io": {
+            "className": "qx.bom.request.Script"
+          },
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          },
+          "browser.documentmode": {
+            "className": "qx.bom.client.Browser"
+          },
+          "engine.version": {
+            "className": "qx.bom.client.Engine"
+          },
+          "io.xhr": {
+            "className": "qx.bom.client.Transport"
+          },
+          "browser.version": {
+            "className": "qx.bom.client.Browser"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.bom.request.Script": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/request/Script.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic",
+          "construct": true
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.event.Emitter": {
+          "construct": true
+        },
+        "qx.util.Uri": {},
+        "qx.bom.client.Engine": {},
+        "qx.bom.client.Browser": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "environment": {
+        "provided": [
+          "qx.debug.io"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.request.Jsonp": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/request/Jsonp.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.request.Script": {
+          "load": true,
+          "construct": true
+        },
+        "qx.util.Uri": {},
+        "qx.event.Emitter": {
+          "load": true
+        }
+      },
+      "extends": "qx.bom.request.Script",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.debug.io": {
+            "className": "qx.bom.request.Script"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.lang.Object": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/Object.js",
+      "dependsOn": {
+        "qx.lang.normalize.Object": {
+          "require": true
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Type": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.dom.Element": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/dom/Element.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.element.Attribute": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.MediaQuery": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/MediaQuery.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.Emitter": {
+          "load": true
+        }
+      },
+      "extends": "qx.event.Emitter",
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.event.Messaging": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/Messaging.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Type": {},
+        "qx.lang.Object": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.util.placement.KeepAlignAxis": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/placement/KeepAlignAxis.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.placement.AbstractAxis": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.util.placement.BestFitAxis": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/placement/BestFitAxis.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.placement.AbstractAxis": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.util.placement.DirectAxis": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/placement/DirectAxis.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.placement.AbstractAxis": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.lang.normalize.Function": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/normalize/Function.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.EcmaScript": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "ecmascript.function.bind": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.lang.normalize.String": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/normalize/String.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.EcmaScript": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "ecmascript.string.trim": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          },
+          "ecmascript.string.startsWith": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          },
+          "ecmascript.string.endsWith": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          },
+          "ecmascript.string.codePointAt": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          },
+          "ecmascript.string.fromCodePoint": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.lang.normalize.Date": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/normalize/Date.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.EcmaScript": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "ecmascript.date.now": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          },
+          "ecmascript.date.parse": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.lang.normalize.Array": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/normalize/Array.js",
+      "dependsOn": {
+        "qx.bom.client.EcmaScript": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.lang.normalize.Error": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/normalize/Error.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.EcmaScript": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "ecmascript.error.toString": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.lang.normalize.Object": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/normalize/Object.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.EcmaScript": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "ecmascript.object.keys": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          },
+          "ecmascript.object.values": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          },
+          "ecmascript.object.is": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          },
+          "ecmascript.object.assign": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.lang.normalize.Number": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/normalize/Number.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.EcmaScript": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "ecmascript.number.EPSILON": {
+            "defer": true,
+            "className": "qx.bom.client.EcmaScript"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.bom.rest.Resource": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/rest/Resource.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.Emitter": {
+          "load": true
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.bom.request.Xhr": {},
+        "qx.bom.request.SimpleXhr": {},
+        "qx.lang.Type": {},
+        "qx.lang.Function": {},
+        "qx.util.Request": {},
+        "qx.lang.Json": {},
+        "qx.lang.Object": {}
+      },
+      "extends": "qx.event.Emitter",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "hasDefer": null
+    },
+    "qx.bom.Storage": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Storage.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Html": {
+          "load": true
+        },
+        "qx.bom.storage.Web": {},
+        "qx.bom.storage.UserData": {},
+        "qx.bom.storage.Memory": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "html.storage.local": {
+            "className": "qx.bom.client.Html"
+          },
+          "html.storage.userdata": {
+            "className": "qx.bom.client.Html"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.Template": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Template.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.dom.Element": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.Selection": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Selection.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Html": {
+          "load": true
+        },
+        "qx.dom.Node": {},
+        "qx.bom.Range": {},
+        "qx.util.StringSplit": {},
+        "qx.bom.client.Engine": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "html.selection": {
+            "load": true,
+            "className": "qx.bom.client.Html"
+          },
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.element.Transform": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Transform.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.CssTransform": {
+          "load": true
+        },
+        "qx.bom.Style": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "css.transform": {
+            "load": true,
+            "className": "qx.bom.client.CssTransform"
+          },
+          "css.transform.3d": {
+            "className": "qx.bom.client.CssTransform"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.Selector": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Selector.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.dom.Hierarchy": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/dom/Hierarchy.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.dom.Node": {},
+        "qx.bom.client.Html": {
+          "load": true
+        },
+        "qx.lang.Array": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "html.element.contains": {
+            "className": "qx.bom.client.Html"
+          },
+          "html.element.compareDocumentPosition": {
+            "className": "qx.bom.client.Html"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.client.Html": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Html.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "html.webworker",
+          "html.filereader",
+          "html.geolocation",
+          "html.audio",
+          "html.audio.ogg",
+          "html.audio.mp3",
+          "html.audio.wav",
+          "html.audio.au",
+          "html.audio.aif",
+          "html.video",
+          "html.video.ogg",
+          "html.video.h264",
+          "html.video.webm",
+          "html.storage.local",
+          "html.storage.session",
+          "html.storage.userdata",
+          "html.classlist",
+          "html.xpath",
+          "html.xul",
+          "html.canvas",
+          "html.svg",
+          "html.vml",
+          "html.dataset",
+          "html.element.contains",
+          "html.element.compareDocumentPosition",
+          "html.element.textcontent",
+          "html.console",
+          "html.image.naturaldimensions",
+          "html.history.state",
+          "html.selection",
+          "html.node.isequalnode",
+          "html.fullscreen"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.dev.FakeServer": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/dev/FakeServer.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Array": {},
+        "qx.dev.unit.Sinon": {}
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.event.handler.GestureCore": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/handler/GestureCore.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.bom.client.Device": {
+          "load": true
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.client.Browser": {
+          "load": true
+        },
+        "qx.bom.client.Event": {
+          "load": true
+        },
+        "qx.bom.Event": {},
+        "qx.bom.AnimationFrame": {},
+        "qx.lang.Function": {},
+        "qx.event.type.dom.Custom": {},
+        "qx.util.Wheel": {},
+        "qx.bom.client.OperatingSystem": {
+          "load": true
+        },
+        "qx.event.Timer": {}
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "environment": {
+        "provided": [],
+        "required": {
+          "device.touch": {
+            "load": true,
+            "className": "qx.bom.client.Device"
+          },
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          },
+          "browser.documentmode": {
+            "className": "qx.bom.client.Browser"
+          },
+          "event.mousewheel": {
+            "className": "qx.bom.client.Event"
+          },
+          "event.dispatchevent": {
+            "className": "qx.bom.client.Event"
+          },
+          "os.name": {
+            "className": "qx.bom.client.OperatingSystem"
+          },
+          "os.version": {
+            "className": "qx.bom.client.OperatingSystem"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.event.util.Keyboard": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/util/Keyboard.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.OperatingSystem": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "os.name": {
+            "load": true,
+            "className": "qx.bom.client.OperatingSystem"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.event.handler.OrientationCore": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/handler/OrientationCore.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.lang.Function": {},
+        "qx.bom.Event": {},
+        "qx.bom.Viewport": {}
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "hasDefer": null
+    },
+    "qx.event.type.dom.Pointer": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/type/dom/Pointer.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.type.dom.Custom": {
+          "load": true,
+          "construct": true
+        },
+        "qx.dom.Node": {},
+        "qx.bom.Viewport": {},
+        "qx.bom.client.Event": {
+          "load": true
+        },
+        "qx.bom.client.Engine": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.bom.client.OperatingSystem": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": "qx.event.type.dom.Custom",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "event.mouseevent": {
+            "className": "qx.bom.client.Event"
+          },
+          "event.mousecreateevent": {
+            "className": "qx.bom.client.Event"
+          },
+          "engine.name": {
+            "defer": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "os.name": {
+            "defer": true,
+            "className": "qx.bom.client.OperatingSystem"
+          },
+          "os.version": {
+            "defer": true,
+            "className": "qx.bom.client.OperatingSystem"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.event.handler.PointerCore": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/handler/PointerCore.js",
+      "dependsOn": {
+        "qx.bom.client.Event": {
+          "require": true,
+          "load": true,
+          "construct": true
+        },
+        "qx.bom.client.Device": {
+          "require": true,
+          "load": true,
+          "construct": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic",
+          "construct": true
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.bom.client.Engine": {
+          "load": true,
+          "construct": true
+        },
+        "qx.bom.client.Browser": {
+          "load": true,
+          "construct": true
+        },
+        "qx.lang.Function": {},
+        "qx.dom.Node": {},
+        "qx.event.Emitter": {},
+        "qx.bom.Event": {},
+        "qx.event.type.dom.Pointer": {},
+        "qx.bom.client.OperatingSystem": {
+          "load": true
+        },
+        "qx.lang.Array": {},
+        "qx.event.Utils": {}
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "load": true,
+            "className": "qx.bom.client.Engine",
+            "construct": true
+          },
+          "browser.documentmode": {
+            "load": true,
+            "className": "qx.bom.client.Browser",
+            "construct": true
+          },
+          "event.mspointer": {
+            "construct": true,
+            "className": "qx.bom.client.Event"
+          },
+          "device.touch": {
+            "construct": true,
+            "className": "qx.bom.client.Device"
+          },
+          "os.name": {
+            "className": "qx.bom.client.OperatingSystem"
+          },
+          "event.dispatchevent": {
+            "className": "qx.bom.client.Event"
+          },
+          "browser.name": {
+            "className": "qx.bom.client.Browser"
+          },
+          "browser.version": {
+            "className": "qx.bom.client.Browser"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.event.handler.TouchCore": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/handler/TouchCore.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.bom.client.OperatingSystem": {
+          "load": true
+        },
+        "qx.bom.client.Device": {
+          "load": true
+        },
+        "qx.lang.Function": {},
+        "qx.bom.client.Event": {
+          "load": true
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.Event": {},
+        "qx.bom.client.Browser": {
+          "load": true
+        },
+        "qx.bom.element.Style": {}
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "environment": {
+        "provided": [],
+        "required": {
+          "os.name": {
+            "load": true,
+            "className": "qx.bom.client.OperatingSystem"
+          },
+          "device.touch": {
+            "load": true,
+            "className": "qx.bom.client.Device"
+          },
+          "event.mspointer": {
+            "className": "qx.bom.client.Event"
+          },
+          "engine.version": {
+            "className": "qx.bom.client.Engine"
+          },
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          },
+          "browser.documentmode": {
+            "className": "qx.bom.client.Browser"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.util.Function": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/Function.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Array": {},
+        "qx.log.Logger": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.String": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/String.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.StringEscape": {},
+        "qx.lang.Object": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.core.IDisposable": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/IDisposable.js",
+      "dependsOn": {
+        "qx.Interface": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.Wrapper": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/Wrapper.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "Array",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.type.BaseArray": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/type/BaseArray.js",
+      "dependsOn": {
+        "qx.bom.client.Engine": {
+          "require": true,
+          "load": true
+        },
+        "qx.lang.normalize.Array": {
+          "require": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "Array",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.Theme": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/Theme.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.debug": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.theme.simple.Color": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/theme/simple/Color.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Theme": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Css": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "css.rgba": {
+            "load": true,
+            "className": "qx.bom.client.Css"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.theme.simple.Decoration": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/theme/simple/Decoration.js",
+      "dependsOn": {
+        "qx.Theme": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.test.MDecoration": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [
+        "qx.test.MDecoration"
+      ],
+      "implement": [],
+      "hasDefer": null,
+      "aliases": {
+        "decoration": "qx/decoration/Simple"
+      }
+    },
+    "qx.theme.simple.Font": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/theme/simple/Font.js",
+      "dependsOn": {
+        "qx.Theme": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null,
+      "fonts": [
+        "qx.theme.monospace"
+      ]
+    },
+    "qx.theme.simple.Appearance": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/theme/simple/Appearance.js",
+      "dependsOn": {
+        "qx.Theme": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.test.MAppearance": {
+          "load": true
+        },
+        "qx.theme.simple.Image": {}
+      },
+      "extends": null,
+      "include": [
+        "qx.test.MAppearance"
+      ],
+      "implement": [],
+      "hasDefer": null,
+      "assets": [
+        "qx/icon/${qx.icontheme}/16/apps/office-calendar.png",
+        "qx/icon/${qx.icontheme}/16/places/folder-open.png",
+        "qx/icon/${qx.icontheme}/16/places/folder.png",
+        "qx/icon/${qx.icontheme}/16/mimetypes/text-plain.png",
+        "qx/icon/${qx.icontheme}/16/actions/view-refresh.png",
+        "qx/icon/${qx.icontheme}/16/actions/window-close.png",
+        "qx/icon/${qx.icontheme}/16/actions/dialog-cancel.png",
+        "qx/icon/${qx.icontheme}/16/actions/dialog-ok.png"
+      ]
+    },
+    "qx.theme.icon.Tango": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/theme/icon/Tango.js",
+      "dependsOn": {
+        "qx.Theme": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null,
+      "aliases": {
+        "icon": "qx/icon/Tango"
+      }
+    },
+    "qx.data.IListData": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/data/IListData.js",
+      "dependsOn": {
+        "qx.Interface": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.util.OOUtil": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/OOUtil.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.client.CssAnimation": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/CssAnimation.js",
+      "dependsOn": {
+        "qx.bom.Stylesheet": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Style": {},
+        "qx.bom.Event": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "css.animation",
+          "css.animation.requestframe"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.element.AnimationCss": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/AnimationCss.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.CssAnimation": {
+          "load": true
+        },
+        "qx.bom.Stylesheet": {},
+        "qx.bom.Event": {},
+        "qx.lang.String": {},
+        "qx.bom.element.AnimationHandle": {},
+        "qx.bom.element.Transform": {},
+        "qx.bom.Style": {},
+        "qx.bom.client.OperatingSystem": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "css.animation": {
+            "load": true,
+            "className": "qx.bom.client.CssAnimation"
+          },
+          "qx.debug": {
+            "load": true
+          },
+          "os.name": {
+            "defer": true,
+            "className": "qx.bom.client.OperatingSystem"
+          },
+          "os.version": {
+            "defer": true,
+            "className": "qx.bom.client.OperatingSystem"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.bom.element.AnimationJs": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/AnimationJs.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Object": {},
+        "qx.bom.element.AnimationHandle": {},
+        "qx.bom.Style": {},
+        "qx.bom.element.Transform": {},
+        "qx.util.ColorUtil": {},
+        "qx.bom.AnimationFrame": {},
+        "qx.lang.String": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.Style": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Style.js",
+      "dependsOn": {
+        "qx.lang.String": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.dom.Node": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.log.Logger": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/log/Logger.js",
+      "dependsOn": {
+        "qx.dev.StackTrace": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic",
+          "defer": "runtime"
+        },
+        "qx.lang.Array": {},
+        "qx.log.appender.RingBuffer": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Function": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.bom.client.OperatingSystem": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/OperatingSystem.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "os.name",
+          "os.version"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.client.Stylesheet": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Stylesheet.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Stylesheet": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "html.stylesheet.createstylesheet",
+          "html.stylesheet.insertrule",
+          "html.stylesheet.deleterule",
+          "html.stylesheet.addimport",
+          "html.stylesheet.removeimport"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.util.Uri": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/Uri.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Type": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.element.BoxSizing": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/BoxSizing.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Css": {
+          "load": true
+        },
+        "qx.bom.Style": {},
+        "qx.bom.element.Style": {},
+        "qx.bom.Document": {},
+        "qx.dom.Node": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "css.boxsizing": {
+            "className": "qx.bom.client.Css"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.lang.Function": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/Function.js",
+      "dependsOn": {
+        "qx.lang.Array": {
+          "require": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.GlobalError": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.globalErrorHandling": {
+            "className": "qx.event.GlobalError"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.client.Css": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Css.js",
+      "dependsOn": {
+        "qx.bom.Style": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.client.Browser": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "css.textoverflow",
+          "css.placeholder",
+          "css.borderradius",
+          "css.boxshadow",
+          "css.gradient.linear",
+          "css.gradient.radial",
+          "css.gradient.legacywebkit",
+          "css.boxmodel",
+          "css.rgba",
+          "css.borderimage",
+          "css.borderimage.standardsyntax",
+          "css.usermodify",
+          "css.userselect",
+          "css.userselect.none",
+          "css.appearance",
+          "css.float",
+          "css.boxsizing",
+          "css.inlineblock",
+          "css.opacity",
+          "css.textShadow",
+          "css.alphaimageloaderneeded",
+          "css.pointerevents",
+          "css.flexboxSyntax"
+        ],
+        "required": {
+          "engine.name": {
+            "className": "qx.bom.client.Engine"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.bom.element.Clip": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Clip.js",
+      "dependsOn": {
+        "qx.lang.normalize.String": {
+          "require": true
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.element.Style": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.element.Cursor": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Cursor.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.element.Style": {},
+        "qx.bom.client.Engine": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.bom.client.Browser": {
+          "load": true,
+          "defer": "load"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "defer": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "engine.version": {
+            "defer": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "browser.documentmode": {
+            "defer": true,
+            "className": "qx.bom.client.Browser"
+          },
+          "browser.quirksmode": {
+            "defer": true,
+            "className": "qx.bom.client.Browser"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.bom.element.Opacity": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/Opacity.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {
+          "load": true
+        },
+        "qx.bom.client.Css": {
+          "load": true
+        },
+        "qx.bom.element.Style": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "engine.name": {
+            "load": true,
+            "className": "qx.bom.client.Engine"
+          },
+          "css.opacity": {
+            "className": "qx.bom.client.Css"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.client.CssTransition": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/CssTransition.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Style": {},
+        "qx.bom.Event": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "css.transition"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.data.Array": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/data/Array.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true,
+          "construct": true
+        },
+        "qx.data.marshal.MEventBubbling": {
+          "load": true
+        },
+        "qx.data.IListData": {
+          "load": true
+        },
+        "qx.lang.Array": {
+          "construct": true
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [
+        "qx.data.marshal.MEventBubbling"
+      ],
+      "implement": [
+        "qx.data.IListData"
+      ],
+      "hasDefer": true
+    },
+    "qx.util.Request": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/Request.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.Uri": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.client.Transport": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Transport.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "io.maxrequests",
+          "io.ssl",
+          "io.xhr"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.util.placement.AbstractAxis": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/placement/AbstractAxis.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.client.EcmaScript": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/EcmaScript.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "ecmascript.array.indexof",
+          "ecmascript.array.lastindexof",
+          "ecmascript.array.foreach",
+          "ecmascript.array.filter",
+          "ecmascript.array.map",
+          "ecmascript.array.some",
+          "ecmascript.array.find",
+          "ecmascript.array.findIndex",
+          "ecmascript.array.every",
+          "ecmascript.array.reduce",
+          "ecmascript.array.reduceright",
+          "ecmascript.array.includes",
+          "ecmascript.date.now",
+          "ecmascript.date.parse",
+          "ecmascript.error.toString",
+          "ecmascript.error.stacktrace",
+          "ecmascript.function.bind",
+          "ecmascript.object.keys",
+          "ecmascript.object.values",
+          "ecmascript.object.is",
+          "ecmascript.object.assign",
+          "ecmascript.number.EPSILON",
+          "ecmascript.string.startsWith",
+          "ecmascript.string.endsWith",
+          "ecmascript.string.trim",
+          "ecmascript.string.codePointAt",
+          "ecmascript.string.fromCodePoint",
+          "ecmascript.promise.native",
+          "ecmascript.function.async",
+          "ecmascript.mutationobserver",
+          "ecmascript.bigint",
+          "ecmascript.bigint.tolocalestring"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.request.SimpleXhr": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/request/SimpleXhr.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.Emitter": {
+          "load": true
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.core.ObjectRegistry": {
+          "construct": true
+        },
+        "qx.lang.Type": {},
+        "qx.util.Request": {},
+        "qx.bom.request.Xhr": {},
+        "qx.util.Uri": {},
+        "qx.lang.Function": {},
+        "qx.util.ResponseParser": {},
+        "qx.lang.Json": {},
+        "qx.bom.request.Script": {
+          "load": true
+        }
+      },
+      "extends": "qx.event.Emitter",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.debug.io": {
+            "className": "qx.bom.request.Script"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.lang.Json": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/Json.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Runtime": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "runtime.name": {
+            "className": "qx.bom.client.Runtime"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.bom.storage.Web": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/storage/Web.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Json": {},
+        "qx.lang.Type": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.storage.UserData": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/storage/UserData.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Json": {
+          "construct": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.storage.Memory": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/storage/Memory.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Json": {},
+        "qx.lang.Type": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.Range": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/Range.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Html": {
+          "load": true
+        },
+        "qx.dom.Node": {},
+        "qx.bom.Selection": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "html.selection": {
+            "load": true,
+            "className": "qx.bom.client.Html"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.util.StringSplit": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/StringSplit.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.client.CssTransform": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/CssTransform.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.Style": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "css.transform",
+          "css.transform.3d"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.dev.unit.Sinon": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/dev/unit/Sinon.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.AnimationFrame": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/AnimationFrame.js",
+      "dependsOn": {
+        "qx.lang.normalize.Date": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.Emitter": {
+          "load": true
+        },
+        "qx.bom.client.CssAnimation": {
+          "load": true
+        }
+      },
+      "extends": "qx.event.Emitter",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "css.animation.requestframe": {
+            "className": "qx.bom.client.CssAnimation"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.event.type.dom.Custom": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/type/dom/Custom.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Event": {
+          "load": true
+        },
+        "qx.lang.Object": {}
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "event.customevent": {
+            "className": "qx.bom.client.Event"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.util.Wheel": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/Wheel.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.event.Timer": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/Timer.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true,
+          "construct": true
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.event.GlobalError": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "hasDefer": null
+    },
+    "qx.event.Utils": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/Utils.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true
+        },
+        "qx.lang.Type": {}
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.promise": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.util.StringEscape": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/StringEscape.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.Interface": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/Interface.js",
+      "dependsOn": {
+        "qx.lang.normalize.Array": {
+          "require": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.OOUtil": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.debug": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.test.MDecoration": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/test/MDecoration.js",
+      "dependsOn": {
+        "qx.Theme": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.test.MAppearance": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/test/MAppearance.js",
+      "dependsOn": {
+        "qx.Theme": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.theme.simple.Image": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/theme/simple/Image.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [],
+      "hasDefer": null,
+      "assets": [
+        "qx/decoration/Simple/*",
+        "qx/static/blank.png"
+      ]
+    },
+    "qx.bom.element.AnimationHandle": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/element/AnimationHandle.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "construct": true
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.Emitter": {
+          "load": true
+        },
+        "qx.bom.client.CssAnimation": {
+          "load": true,
+          "construct": true
+        }
+      },
+      "extends": "qx.event.Emitter",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "css.animation": {
+            "construct": true,
+            "className": "qx.bom.client.CssAnimation"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.util.ColorUtil": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/ColorUtil.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.String": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.dev.StackTrace": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/dev/StackTrace.js",
+      "dependsOn": {
+        "qx.lang.normalize.String": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.EcmaScript": {
+          "load": true
+        },
+        "qx.lang.Array": {},
+        "qx.lang.Function": {},
+        "qx.core.ObjectRegistry": {},
+        "qx.lang.Type": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "ecmascript.error.stacktrace": {
+            "className": "qx.bom.client.EcmaScript"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.log.appender.RingBuffer": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/log/appender/RingBuffer.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.RingBuffer": {
+          "load": true
+        }
+      },
+      "extends": "qx.util.RingBuffer",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.event.GlobalError": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/GlobalError.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic",
+          "defer": "runtime"
+        },
+        "qx.core.WindowError": {},
+        "qx.core.GlobalError": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "qx.globalErrorHandling"
+        ],
+        "required": {
+          "qx.globalErrorHandling": {
+            "className": "qx.event.GlobalError"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.Class": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/Class.js",
+      "dependsOn": {
+        "qx.Interface": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.Mixin": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.lang.normalize.Array": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.lang.normalize.Date": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.lang.normalize.Error": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.lang.normalize.Function": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.lang.normalize.String": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.lang.normalize.Object": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.lang.normalize.Number": {
+          "require": true,
+          "defer": "runtime"
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Property": {
+          "load": true
+        },
+        "qx.util.OOUtil": {
+          "load": true
+        },
+        "qx.lang.Type": {},
+        "qx.lang.Function": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.debug": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.core.Object": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/Object.js",
+      "dependsOn": {
+        "qx.core.ObjectRegistry": {
+          "require": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.data.MBinding": {
+          "load": true
+        },
+        "qx.core.MLogging": {
+          "load": true
+        },
+        "qx.core.MEvent": {
+          "load": true
+        },
+        "qx.core.MProperty": {
+          "load": true
+        },
+        "qx.core.MObjectId": {
+          "load": true
+        },
+        "qx.core.MAssert": {
+          "load": true
+        },
+        "qx.core.Property": {
+          "load": true
+        },
+        "qx.core.IDisposable": {},
+        "qx.util.Uuid": {},
+        "qx.event.Registration": {},
+        "qx.util.DisposeUtil": {}
+      },
+      "extends": "Object",
+      "include": [
+        "qx.core.Environment",
+        "qx.data.MBinding",
+        "qx.core.MLogging",
+        "qx.core.MEvent",
+        "qx.core.MProperty",
+        "qx.core.MObjectId",
+        "qx.core.MAssert"
+      ],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.data.marshal.MEventBubbling": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/data/marshal/MEventBubbling.js",
+      "dependsOn": {
+        "qx.Mixin": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {},
+        "qx.Class": {},
+        "qx.lang.Function": {},
+        "qx.data.IListData": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.ObjectRegistry": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/ObjectRegistry.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.log.Logger": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": true
+    },
+    "qx.util.ResponseParser": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/ResponseParser.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.lang.Json": {
+          "load": true
+        },
+        "qx.xml.Document": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.client.Runtime": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Runtime.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Browser": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "runtime.name"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.util.RingBuffer": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/RingBuffer.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.WindowError": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/WindowError.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "Error",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.GlobalError": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/GlobalError.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic",
+          "construct": true
+        },
+        "qx.core.Assert": {
+          "construct": true
+        }
+      },
+      "extends": "Error",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.Mixin": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/Mixin.js",
+      "dependsOn": {
+        "qx.lang.normalize.Array": {
+          "require": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.OOUtil": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.debug": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.core.Property": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/Property.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.type.Data": {},
+        "qx.event.dispatch.Direct": {},
+        "qx.Promise": {},
+        "qx.lang.String": {},
+        "qx.Class": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.debug": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.data.MBinding": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/data/MBinding.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Mixin": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.data.SingleValueBinding": {},
+        "qx.Promise": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.promise": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.core.MLogging": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/MLogging.js",
+      "dependsOn": {
+        "qx.Mixin": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.log.Logger": {
+          "load": true
+        },
+        "qx.lang.Array": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.MEvent": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/MEvent.js",
+      "dependsOn": {
+        "qx.event.dispatch.Direct": {},
+        "qx.event.handler.Object": {},
+        "qx.Mixin": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.Registration": {
+          "load": true
+        },
+        "qx.Promise": {},
+        "qx.event.type.Data": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.MProperty": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/MProperty.js",
+      "dependsOn": {
+        "qx.Mixin": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Property": {},
+        "qx.Bootstrap": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.MObjectId": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/MObjectId.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Mixin": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.core.Object.allowUndefinedObjectId": {}
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.core.MAssert": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/MAssert.js",
+      "dependsOn": {
+        "qx.core.Assert": {
+          "require": true
+        },
+        "qx.Mixin": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.util.Uuid": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/Uuid.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [],
+      "hasDefer": null,
+      "commonjsModules": {
+        "crypto": [
+          "qx.util.Uuid:94"
+        ]
+      }
+    },
+    "qx.event.Registration": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/Registration.js",
+      "dependsOn": {
+        "qx.event.Manager": {
+          "require": true
+        },
+        "qx.dom.Node": {
+          "require": true
+        },
+        "qx.lang.Function": {
+          "require": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.ObjectRegistry": {},
+        "qx.event.type.Event": {},
+        "qx.event.Pool": {},
+        "qx.event.Utils": {},
+        "qx.Promise": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.promise": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.util.DisposeUtil": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/DisposeUtil.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.ObjectRegistry": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.xml.Document": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/xml/Document.js",
+      "dependsOn": {
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Plugin": {
+          "load": true,
+          "defer": "load"
+        },
+        "qx.bom.client.Xml": {
+          "load": true
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "plugin.activex": {
+            "className": "qx.bom.client.Plugin",
+            "defer": true
+          },
+          "xml.implementation": {
+            "className": "qx.bom.client.Xml"
+          },
+          "xml.domparser": {
+            "className": "qx.bom.client.Xml"
+          }
+        }
+      },
+      "hasDefer": true
+    },
+    "qx.core.Assert": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/Assert.js",
+      "dependsOn": {
+        "qx.lang.Type": {
+          "require": true
+        },
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.AssertionError": {},
+        "qx.lang.Json": {},
+        "qx.lang.Number": {},
+        "qx.lang.String": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.event.type.Data": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/type/Data.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.type.Event": {
+          "load": true
+        }
+      },
+      "extends": "qx.event.type.Event",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.event.dispatch.Direct": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/dispatch/Direct.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true
+        },
+        "qx.event.IEventDispatcher": {
+          "load": true
+        },
+        "qx.event.Registration": {
+          "load": true,
+          "defer": "runtime"
+        },
+        "qx.event.type.Event": {},
+        "qx.event.Utils": {}
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [
+        "qx.event.IEventDispatcher"
+      ],
+      "hasDefer": true
+    },
+    "qx.Promise": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/Promise.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true,
+          "construct": true
+        },
+        "qx.core.Assert": {
+          "construct": true
+        },
+        "qx.data.Array": {},
+        "qx.lang.Array": {},
+        "qx.log.Logger": {},
+        "qx.bom.Event": {},
+        "qx.lang.Type": {},
+        "qx.event.GlobalError": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "qx.promise.warnings",
+          "qx.promise.longStackTraces"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.data.SingleValueBinding": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/data/SingleValueBinding.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.AssertionError": {},
+        "qx.core.Object": {},
+        "qx.log.Logger": {},
+        "qx.lang.String": {},
+        "qx.lang.Function": {},
+        "qx.data.IListData": {},
+        "qx.core.ValidationError": {},
+        "qx.lang.Type": {},
+        "qx.lang.Array": {},
+        "qx.core.ObjectRegistry": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.event.handler.Object": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/handler/Object.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true
+        },
+        "qx.event.IEventHandler": {
+          "load": true
+        },
+        "qx.event.Registration": {
+          "load": true,
+          "defer": "runtime"
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [
+        "qx.event.IEventHandler"
+      ],
+      "hasDefer": true
+    },
+    "qx.event.Manager": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/Manager.js",
+      "dependsOn": {
+        "qx.bom.Event": {
+          "require": true,
+          "construct": true
+        },
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "construct": true
+        },
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.core.ObjectRegistry": {
+          "construct": true
+        },
+        "qx.event.GlobalError": {
+          "load": true,
+          "construct": true
+        },
+        "qx.util.DeferredCall": {
+          "construct": true
+        },
+        "qx.core.Assert": {},
+        "qx.lang.Array": {},
+        "qx.event.IEventHandler": {},
+        "qx.log.Logger": {},
+        "qx.event.Pool": {},
+        "qx.event.Utils": {},
+        "qx.util.DisposeUtil": {}
+      },
+      "extends": "Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.globalErrorHandling": {
+            "construct": true,
+            "className": "qx.event.GlobalError"
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.event.type.Event": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/type/Event.js",
+      "dependsOn": {
+        "qx.event.Registration": {},
+        "qx.core.Environment": {
+          "load": true,
+          "defer": "load",
+          "usage": "dynamic"
+        },
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true
+        },
+        "qx.event.Pool": {},
+        "qx.Promise": {}
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [],
+        "required": {
+          "qx.promise": {
+            "load": true
+          }
+        }
+      },
+      "hasDefer": null
+    },
+    "qx.event.Pool": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/Pool.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.util.ObjectPool": {
+          "load": true,
+          "construct": true
+        },
+        "qx.core.Object": {
+          "load": true
+        }
+      },
+      "extends": "qx.util.ObjectPool",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.bom.client.Plugin": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Plugin.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.bom.client.Engine": {},
+        "qx.bom.client.Browser": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "plugin.gears",
+          "plugin.quicktime",
+          "plugin.quicktime.version",
+          "plugin.windowsmedia",
+          "plugin.windowsmedia.version",
+          "plugin.divx",
+          "plugin.divx.version",
+          "plugin.silverlight",
+          "plugin.silverlight.version",
+          "plugin.pdf",
+          "plugin.pdf.version",
+          "plugin.activex",
+          "plugin.skype"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.bom.client.Xml": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/bom/client/Xml.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.xml.Document": {},
+        "qx.core.Environment": {
+          "defer": "runtime"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "environment": {
+        "provided": [
+          "xml.implementation",
+          "xml.domparser",
+          "xml.selectsinglenode",
+          "xml.selectnodes",
+          "xml.getelementsbytagnamens",
+          "xml.domproperties",
+          "xml.attributens",
+          "xml.createelementns",
+          "xml.createnode",
+          "xml.getqualifieditem"
+        ],
+        "required": {}
+      },
+      "hasDefer": true
+    },
+    "qx.core.AssertionError": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/AssertionError.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.type.BaseError": {
+          "load": true,
+          "construct": true
+        },
+        "qx.dev.StackTrace": {
+          "construct": true
+        }
+      },
+      "extends": "qx.type.BaseError",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.lang.Number": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/lang/Number.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.event.IEventDispatcher": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/IEventDispatcher.js",
+      "dependsOn": {
+        "qx.Interface": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.event.type.Event": {}
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.core.ValidationError": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/core/ValidationError.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.type.BaseError": {
+          "load": true
+        }
+      },
+      "extends": "qx.type.BaseError",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.event.IEventHandler": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/event/IEventHandler.js",
+      "dependsOn": {
+        "qx.Interface": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": null,
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.util.DeferredCall": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/DeferredCall.js",
+      "dependsOn": {
+        "qx.util.DeferredCallManager": {
+          "require": true,
+          "construct": true
+        },
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true,
+          "construct": true
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.util.ObjectPool": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/ObjectPool.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true,
+          "construct": true
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "hasDefer": null
+    },
+    "qx.type.BaseError": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/type/BaseError.js",
+      "dependsOn": {
+        "qx.Bootstrap": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "Error",
+      "include": [],
+      "implement": [],
+      "hasDefer": null
+    },
+    "qx.util.DeferredCallManager": {
+      "mtime": "2024-05-02T13:12:06.000Z",
+      "libraryName": "qx",
+      "filename": "/home/runner/work/qxl.packagebrowser/qxl.packagebrowser/packages/qx_packages/qooxdoo_qooxdoo_v7_7_1/source/class/qx/util/DeferredCallManager.js",
+      "dependsOn": {
+        "qx.Class": {
+          "load": true,
+          "usage": "dynamic"
+        },
+        "qx.core.Object": {
+          "load": true
+        },
+        "qx.core.IDisposable": {
+          "load": true
+        },
+        "qx.lang.Function": {
+          "construct": true
+        },
+        "qx.lang.Object": {},
+        "qx.event.GlobalError": {
+          "load": true,
+          "usage": "dynamic"
+        }
+      },
+      "extends": "qx.core.Object",
+      "include": [],
+      "implement": [
+        "qx.core.IDisposable"
+      ],
+      "hasDefer": null
+    }
+  },
+  "manglePrefixes": {
+    "nextPrefix": 105,
+    "classPrefixes": {
+      "qx.module.Blocker": "__P_2_",
+      "qx.module.Css": "__P_3_",
+      "qx.module.Event": "__P_4_",
+      "qx.module.Manipulating": "__P_5_",
+      "qx.module.MatchMedia": "__P_6_",
+      "qx.module.Placeholder": "__P_7_",
+      "qx.module.Template": "__P_8_",
+      "qx.module.TextSelection": "__P_9_",
+      "qx.module.Traversing": "__P_10_",
+      "qx.module.event.Keyboard": "__P_11_",
+      "qx.module.event.OrientationHandler": "__P_12_",
+      "qx.module.event.TouchHandler": "__P_13_",
+      "qx.ui.website.Calendar": "__P_14_",
+      "qx.ui.website.Carousel": "__P_15_",
+      "qx.ui.website.DatePicker": "__P_16_",
+      "qx.ui.website.Slider": "__P_17_",
+      "qx.ui.website.Table": "__P_18_",
+      "qx.ui.website.Tabs": "__P_19_",
+      "qx.ui.website.Widget": "__P_20_",
+      "qxWeb": "__P_21_",
+      "qx.Bootstrap": "__P_22_",
+      "qx.bom.element.Animation": "__P_23_",
+      "qx.bom.element.Attribute": "__P_24_",
+      "qx.bom.Html": "__P_25_",
+      "qx.bom.Input": "__P_26_",
+      "qx.bom.element.Dimension": "__P_27_",
+      "qx.bom.Viewport": "__P_28_",
+      "qx.bom.element.Location": "__P_29_",
+      "qx.lang.String": "__P_30_",
+      "qx.bom.element.Style": "__P_31_",
+      "qx.bom.element.Class": "__P_32_",
+      "qx.core.Environment": "__P_33_",
+      "qx.bom.client.Browser": "__P_34_",
+      "qx.bom.client.Engine": "__P_35_",
+      "qx.bom.client.Device": "__P_36_",
+      "qx.event.Emitter": "__P_37_",
+      "qx.bom.request.Xhr": "__P_38_",
+      "qx.bom.request.Script": "__P_39_",
+      "qx.bom.request.Jsonp": "__P_40_",
+      "qx.lang.Object": "__P_41_",
+      "qx.dom.Element": "__P_42_",
+      "qx.bom.MediaQuery": "__P_43_",
+      "qx.event.Messaging": "__P_44_",
+      "qx.bom.rest.Resource": "__P_45_",
+      "qx.bom.Storage": "__P_46_",
+      "qx.bom.Selection": "__P_47_",
+      "qx.bom.element.Transform": "__P_48_",
+      "qx.dev.FakeServer": "__P_49_",
+      "qx.event.handler.GestureCore": "__P_50_",
+      "qx.event.handler.OrientationCore": "__P_51_",
+      "qx.event.handler.PointerCore": "__P_52_",
+      "qx.event.handler.TouchCore": "__P_53_",
+      "qx.Theme": "__P_54_",
+      "qx.bom.element.AnimationCss": "__P_55_",
+      "qx.bom.element.AnimationJs": "__P_56_",
+      "qx.bom.Style": "__P_57_",
+      "qx.log.Logger": "__P_58_",
+      "qx.bom.client.OperatingSystem": "__P_59_",
+      "qx.bom.client.Stylesheet": "__P_60_",
+      "qx.util.Uri": "__P_61_",
+      "qx.bom.element.BoxSizing": "__P_62_",
+      "qx.bom.client.Css": "__P_63_",
+      "qx.bom.element.Cursor": "__P_64_",
+      "qx.data.Array": "__P_65_",
+      "qx.bom.request.SimpleXhr": "__P_66_",
+      "qx.bom.storage.Web": "__P_67_",
+      "qx.bom.storage.UserData": "__P_68_",
+      "qx.bom.storage.Memory": "__P_69_",
+      "qx.dev.unit.Sinon": "__P_70_",
+      "qx.bom.AnimationFrame": "__P_71_",
+      "qx.util.Wheel": "__P_72_",
+      "qx.event.Timer": "__P_73_",
+      "qx.event.Utils": "__P_74_",
+      "qx.Interface": "__P_75_",
+      "qx.bom.element.AnimationHandle": "__P_76_",
+      "qx.util.ColorUtil": "__P_77_",
+      "qx.dev.StackTrace": "__P_78_",
+      "qx.event.GlobalError": "__P_79_",
+      "qx.Class": "__P_80_",
+      "qx.core.Object": "__P_81_",
+      "qx.data.marshal.MEventBubbling": "__P_82_",
+      "qx.core.ObjectRegistry": "__P_83_",
+      "qx.util.ResponseParser": "__P_84_",
+      "qx.util.RingBuffer": "__P_85_",
+      "qx.core.WindowError": "__P_86_",
+      "qx.core.GlobalError": "__P_87_",
+      "qx.Mixin": "__P_88_",
+      "qx.core.Property": "__P_89_",
+      "qx.core.MLogging": "__P_90_",
+      "qx.core.MEvent": "__P_91_",
+      "qx.core.MObjectId": "__P_92_",
+      "qx.event.Registration": "__P_93_",
+      "qx.util.DisposeUtil": "__P_94_",
+      "qx.core.Assert": "__P_95_",
+      "qx.event.type.Data": "__P_96_",
+      "qx.Promise": "__P_97_",
+      "qx.data.SingleValueBinding": "__P_98_",
+      "qx.event.Manager": "__P_99_",
+      "qx.bom.client.Plugin": "__P_100_",
+      "qx.core.AssertionError": "__P_101_",
+      "qx.util.DeferredCall": "__P_102_",
+      "qx.util.ObjectPool": "__P_103_",
+      "qx.type.BaseError": "__P_104_",
+      "qx.util.DeferredCallManager": "__P_105_"
+    }
+  }
+}
