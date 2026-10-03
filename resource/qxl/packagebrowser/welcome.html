@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>qooxdoo &raquo; Package Browser</title>
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+  <h1>Welcome to the Package Browser</h1>
+  <p>qooxdoo's "plugin architecture" is called <span style="font-weight: bold">
+    qooxdoo package system</span> and has the following features:
+    <ul>
+    <li>
+      It allows to extend one's own application with useful functionality such
+      as file uploads, dialog widgets, vector graphics, themes, and much more.
+    </li>
+    <li>
+      It hosts components that have previously shipped with the framework, such as
+      the API viewer or the playground. You can also distribute whole qooxdoo
+      applications this way.
+    </li>
+  </ul>
+  <p>To learn how to install the packages or to publish your own qooxdoo library
+    as a package, please consult the <span style="font-weight: bold">documentation</span>
+    on <a href="javascript:void(window.open('/docs/#/cli/packages'))">the qooxdoo package system</a>.</p>
+  <p>This application serves to discover and maintain the available qooxdoo packages.</p>
+  <ul>
+    <li>
+      Please <span style="font-weight: bold">browse the packages</span> by owner
+      and repository on the left side or search the packages using the filter.
+      The state of the filter and of the selection in the list are persisted in
+      the URL, so you can link to the application state via its URL.
+    </li>
+    <li>
+      Check out the <span style="font-weight: bold">live demos</span> of
+      <a href="javascript:void(top.location.hash='filter~demos')">
+      all packages that contain a compilable application</a>.
+    </li>
+    <li>
+      This web app can also be used to control the quality of the packages. It
+      displays  <a href="javascript:void(top.location.hash='filter~problems')">
+      warnings and errors</a> that were logged during the compilation. In a future
+      version, linting and test results will also be displayed.
+    </li>
+    <li>
+      Please note that the package data is generally regenerated every 24 hours,
+      so you will see new packages and new releases after a certain delay. To
+      browse the latest and greatest versions of the packages, clone the
+      <a href="javascript:void(window.open('https://github.com/qooxdoo/qxl.packagebrowser'))">
+        qooxdoo/qxl.packagebrowser repo</a> and (re)build it with
+      <span class="code">qx serve --clean</span>.
+  </ul>
+</body>
+</html>
