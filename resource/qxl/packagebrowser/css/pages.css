@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 11pt;
+    font-family: "Trebuchet MS", Tahoma, Arial, "Bitstream Vera Sans", Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+#content{
+    margin: 20px;
+    width: 600px;
+}
+
+h1{
+    font-size: 18pt;
+    margin-top: 12pt;
+    margin-bottom: 12pt;
+    color: #134275;
+}
+
+h2{
+    font-size: 16pt;
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+    color: #134275;
+}
+
+h3{
+    font-size: 14pt;
+    margin-top: 6pt;
+    margin-bottom: 6pt;
+    color: #134275;
+}
+
+p{
+    font-size: 11pt;
+    line-height: 16pt;
+    margin-bottom: 6pt;
+}
+
+li{
+    margin-left: 16px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    list-style: square;
+}
+
+a{
+    text-decoration: none;
+    color: #134275;
+}
+
+td{
+    padding-top: 3px;
+    padding-right: 3px;
+    vertical-align: top;
+}
+
+td:first-child {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+pre {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 10pt;
+    white-space: pre-wrap;
+    width: auto;
+    display: block;
+    clear: both;
+    color: #555555;
+    padding: 1em 1em;
+    margin: 10px;
+    background: #f4f4f4;
+    border: solid 1px #e1e1e1
+}
+
+.notice {
+    width: auto;
+    display: block;
+    clear: both;
+    padding: 1em 1em;
+    margin: 10px;
+    background: rgba(255, 20, 0, 0.35);
+    border: solid 1px #e1e1e1
+}
+
+code, .code {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 10pt;
+    display: inline;
+    color: #555555;
+    background: #f4f4f4;
+    padding: 2px;
+}
